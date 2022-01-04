@@ -3,10 +3,10 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://ddd3h.github.io/blog/</loc>
-    <lastmod>2022-01-01T00:00:00+00:00</lastmod>
+    <lastmod>2022-01-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ddd3h.github.io/categories/</loc>
-    <lastmod>2022-01-01T00:00:00+00:00</lastmod>
+    <lastmod>2022-01-03T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -19,7 +19,7 @@
                 />
   </url><url>
     <loc>https://ddd3h.github.io/</loc>
-    <lastmod>2022-01-01T00:00:00+00:00</lastmod>
+    <lastmod>2022-01-03T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -30,6 +30,12 @@
                 hreflang="ja"
                 href="https://ddd3h.github.io/"
                 />
+  </url><url>
+    <loc>https://ddd3h.github.io/blog/2021-01-03-git/</loc>
+    <lastmod>2022-01-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ddd3h.github.io/categories/%E6%8A%80%E8%A1%93%E6%9B%B8/</loc>
+    <lastmod>2022-01-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ddd3h.github.io/categories/python/</loc>
     <lastmod>2022-01-01T00:00:00+00:00</lastmod>

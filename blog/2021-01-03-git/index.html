@@ -1,0 +1,538 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+  <meta charset="utf-8">
+<title>Gitを使い倒したい - ddd3hLab</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="twitter:card" content="summary_large_image">
+
+<meta property="og:site_name" content="ddd3hLab">
+<meta property="og:title" content="Gitを使い倒したい">
+<meta property="og:description" content="">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://ddd3h.github.io/blog/2021-01-03-git/">
+    <meta property="og:image" content="https://ddd3h.github.io/img/2022/01/pic1.png">
+    <meta property="og:image:alt" content="遺伝アルゴリズム">
+
+
+  <link rel="manifest" href="/favicon/site.webmanifest?v=1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png?v=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png?v=1">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png?v=1">
+  
+    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg?v=1" color="#ffffff">
+    <link rel="shortcut icon" href="/favicon/favicon.ico?v=1">
+    <meta name="msapplication-config" content="/favicon/browserconfig.xml?v=1">
+  
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+
+
+  <meta name="generator" content="Hugo 0.91.2" />
+  <link rel="stylesheet" href="/css/bundle.min.5233f2a4cd515395301b4154f6c1c621695e8cf53faa0935b76ac52fed7f4585.css" integrity="sha256-UjPypM1RU5UwG0FU9sHGIWlejPU/qgk1t2rFL&#43;1/RYU="><link rel="stylesheet" href="/css/add-on.css">
+</head>
+
+  <body>
+    
+
+<header id="site-header">
+  <nav id="site-nav">
+    <h1 class="nav-title">
+      <a href="/" class="nav">
+        
+          ブログ
+        
+      </a>
+    </h1>
+    <menu id="site-nav-menu" class="flyout-menu menu">
+      
+        
+          
+          <a href="/" class="nav link"><i class='fas fa-home'></i> ホーム</a>
+        
+      
+        
+          
+          <a href="/about" class="nav link"><i class='far fa-id-card'></i> このサイトについて</a>
+        
+      
+        
+          
+          <a href="/blog" class="nav link"><i class='far fa-newspaper'></i> ブログ</a>
+        
+      
+        
+          
+          <a href="/categories" class="nav link"><i class='fas fa-sitemap'></i> カテゴリ</a>
+        
+      
+        
+          
+          <a href="/contact" class="nav link"><i class='far fa-envelope'></i> お問い合わせ</a>
+        
+      
+      <a href="#share-menu" class="nav link share-toggle"><i class="fas fa-share-alt">&nbsp;</i>Share</a>
+      <a href="#search-input" class="nav link search-toggle"><i class="fas fa-search">&nbsp;</i>Search</a>
+    </menu>
+    <a href="#search-input" class="nav search-toggle"><i class="fas fa-search fa-2x">&nbsp;</i></a>
+    <a href="#share-menu" class="nav share-toggle"><i class="fas fa-share-alt fa-2x">&nbsp;</i></a>
+    <a href="#lang-menu" class="nav lang-toggle" lang="ja">ja</a>
+    <a href="#site-nav" class="nav nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
+  </nav>
+  <menu id="search" class="menu"><input id="search-input" class="search-input menu"></input><div id="search-results" class="search-results menu"></div></menu>
+  <menu id="lang-menu" class="flyout-menu menu">
+  <a href="#" lang="ja" class="nav link active">日本語 (ja)</a>
+  
+    
+      
+        <a href="/en" lang="en" class="nav no-lang link">English (en)</a>
+      
+    
+      
+    
+  
+</menu>
+
+  
+    <menu id="share-menu" class="flyout-menu menu">
+      <h1>Share Post</h1>
+      
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=Git%e3%82%92%e4%bd%bf%e3%81%84%e5%80%92%e3%81%97%e3%81%9f%e3%81%84&amp;url=https%3a%2f%2fddd3h.github.io%2fblog%2f2021-01-03-git%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
+        <p>Twitter</p>
+      </a>
+  
+
+  
+      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fddd3h.github.io%2fblog%2f2021-01-03-git%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
+        <p>Facebook</p>
+        </a>
+  
+
+  
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2fddd3h.github.io%2fblog%2f2021-01-03-git%2f&amp;title=Git%e3%82%92%e4%bd%bf%e3%81%84%e5%80%92%e3%81%97%e3%81%9f%e3%81%84" target="_blank" rel="noopener" class="nav share-btn reddit">
+          <p>Reddit</p>
+        </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fddd3h.github.io%2fblog%2f2021-01-03-git%2f&amp;title=Git%e3%82%92%e4%bd%bf%e3%81%84%e5%80%92%e3%81%97%e3%81%9f%e3%81%84" target="_blank" rel="noopener" class="nav share-btn linkedin">
+            <p>LinkedIn</p>
+          </a>
+  
+
+  
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fddd3h.github.io%2fblog%2f2021-01-03-git%2f&amp;description=Git%e3%82%92%e4%bd%bf%e3%81%84%e5%80%92%e3%81%97%e3%81%9f%e3%81%84" target="_blank" rel="noopener" class="nav share-btn pinterest">
+          <p>Pinterest</p>
+        </a>
+  
+
+  
+        <a href="mailto:?subject=%e3%81%93%e3%81%ae%e6%8a%95%e7%a8%bf%e3%82%92%e3%83%81%e3%82%a7%e3%83%83%e3%82%af%e3%81%99%e3%82%8b %e8%a5%bf%e6%bf%b1%e5%a4%a7%e5%b0%86&amp;body=https%3a%2f%2fddd3h.github.io%2fblog%2f2021-01-03-git%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
+          <p>Email</p>
+        </a>
+  
+
+
+    </menu>
+  
+</header>
+
+    <div id="wrapper">
+      <section id="site-intro" >
+  <a href="/"><img src="/img/main/profile.png" class="circle" width="100" alt="Photo of Author" /></a>
+  <header>
+    <h1>西濱大将</h1>
+  </header>
+  <main>
+    <p>その辺にいる物理学徒</p>
+  </main>
+  
+    <footer>
+      <ul class="socnet-icons">
+        
+        <li><a href="//github.com/ddd3h" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//facebook.com/daisuke.nishihama.63/" target="_blank" rel="noopener" title="Facebook" class="fab fa-facebook"></a></li>
+
+
+
+
+
+
+
+
+<li><a href="//instagram.com/daisukenishihama" target="_blank" rel="noopener" title="Instagram" class="fab fa-instagram"></a></li>
+
+<li><a href="//twitter.com/daisuke0603N" target="_blank" rel="noopener" title="Twitter" class="fab fa-twitter"></a></li>
+
+
+
+
+
+
+
+
+<li><a href="//researchgate.net/profile/Daisuke-Nishihama-2" target="_blank" rel="noopener" title="Research Gate"><i class="ai ai-researchgate"></i></a></li>
+
+
+<li><a href="mailto:daisukenishihama63@gmail.com" target="_blank" title="Email" class="far fa-envelope"></a></li>
+
+      </ul>
+    </footer>
+  
+</section>
+
+      <main id="site-main">
+        
+  <article>
+    <div class="post">
+      <header>
+  <div class="title">
+    
+      <h2><a href="/blog/2021-01-03-git/">Gitを使い倒したい</a></h2>
+    
+    
+  </div>
+  <div class="meta">
+    <time datetime="2022-01-03 00:00:00 &#43;0000 UTC">2022-01-03</time>
+    <p>西濱大将</p>
+    <p>1 分で読めます</p>
+  </div>
+</header>
+
+      <div id="socnet-share">
+        
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=Git%e3%82%92%e4%bd%bf%e3%81%84%e5%80%92%e3%81%97%e3%81%9f%e3%81%84&amp;url=https%3a%2f%2fddd3h.github.io%2fblog%2f2021-01-03-git%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
+        <p>Twitter</p>
+      </a>
+  
+
+  
+      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fddd3h.github.io%2fblog%2f2021-01-03-git%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
+        <p>Facebook</p>
+        </a>
+  
+
+  
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2fddd3h.github.io%2fblog%2f2021-01-03-git%2f&amp;title=Git%e3%82%92%e4%bd%bf%e3%81%84%e5%80%92%e3%81%97%e3%81%9f%e3%81%84" target="_blank" rel="noopener" class="nav share-btn reddit">
+          <p>Reddit</p>
+        </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fddd3h.github.io%2fblog%2f2021-01-03-git%2f&amp;title=Git%e3%82%92%e4%bd%bf%e3%81%84%e5%80%92%e3%81%97%e3%81%9f%e3%81%84" target="_blank" rel="noopener" class="nav share-btn linkedin">
+            <p>LinkedIn</p>
+          </a>
+  
+
+  
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fddd3h.github.io%2fblog%2f2021-01-03-git%2f&amp;description=Git%e3%82%92%e4%bd%bf%e3%81%84%e5%80%92%e3%81%97%e3%81%9f%e3%81%84" target="_blank" rel="noopener" class="nav share-btn pinterest">
+          <p>Pinterest</p>
+        </a>
+  
+
+  
+        <a href="mailto:?subject=%e3%81%93%e3%81%ae%e6%8a%95%e7%a8%bf%e3%82%92%e3%83%81%e3%82%a7%e3%83%83%e3%82%af%e3%81%99%e3%82%8b %e8%a5%bf%e6%bf%b1%e5%a4%a7%e5%b0%86&amp;body=https%3a%2f%2fddd3h.github.io%2fblog%2f2021-01-03-git%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
+          <p>Email</p>
+        </a>
+  
+
+
+      </div>
+      <div class="content">
+        <a href="/blog/2021-01-03-git/" class="image" style="--bg-image: url('/img/2022/01/pic1.png');">
+    <img src="/img/2022/01/pic1.png" alt="遺伝アルゴリズム">
+  </a>
+        
+        <h1 id="経緯">経緯</h1>
+<p>今まではサーバーの勉強なり色々兼ねてサイトを運営していたのですが，楽にサイトの管理ができないかと考え，HugoとGitで行うに至りました．そこでGitについての勉強メモとして掲載します．</p>
+<p>自分のサイトではMDファイルをHugoでHTML変換してGithub Pageのリポジトリに上げているので，そのpublicディレクトリをGit管理しようと思います．</p>
+<p>ここでのpublicディレクトリとはHTML変換後のファイルら保管されているフォルダーだと認識してください．</p>
+<h1 id="git-repositoryをインストールする">Git repositoryをインストールする</h1>
+<p>まず，Gitに上げたいディレクトリに移動します．今回は既にGitに上げたいフォルダ <code>public</code> があるので，<code>public</code>ディレクトリに移動します．</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-console" data-lang="console">$ cd public
+</code></pre></div><p>新しくディレクトリを作成する場合は</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ mkdir test
+</code></pre></div><p>などでディレクトリを作成してください．</p>
+<p>そのあとでGit repositoryをインストールします</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ git init
+Initialized empty Git repository in /Users/yuki/workspace/git_test/.git/
+</code></pre></div><p>ここでエラーが出る場合は，Gitがインストールされない場合があります．</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ git --version
+</code></pre></div><p>でご確認を．</p>
+<h1 id="ファイルをステージングする">ファイルをステージングする</h1>
+<p>各ファイルごとにステージさせる場合は</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ git add test.html
+</code></pre></div><p>と１個１個実行します．<code>-A</code>オプション（または<code>-all</code>）でディレクトリ内の変更があったファイルを一括でステージングさせることもできます．つまり</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ git add -A
+</code></pre></div><p>もし，変更の有無関係なくすべてのファイルをステージングさせる場合は</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ git add .
+</code></pre></div><p>を実行します．（とはいってもgitの性質上，<code>-A</code>と<code>.</code>は同じと考えるのが普通ですが&hellip;）</p>
+<h1 id="コミットする">コミットする</h1>
+<p>コミットします。<code>-m</code>オプションでコミットメッセージを添えられます．</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ git commit -m <span style="color:#e6db74">&#34;first commit&#34;</span>
+</code></pre></div><p><code>-m</code>オプションを使用しない場合，vimのような画面になるので変更内容等を確認してください．</p>
+<h1 id="リモートリポジトリに反映">リモートリポジトリに反映</h1>
+<p>指定した名前にリモートリポジトリのアドレスを関連付けます．</p>
+<p>リモートリポジトリはネット上に存在するため，ローカルリポジトリとのやり取りを行う時は，アドレス（パス）を指定する必要があります．</p>
+<p>作業の都度アドレスを指定するのも大変なので，ここで<code>origin</code>という名前と関連付け，以後<code>origin</code>として扱えるようにします．</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ git remote add origin git@github.com:ユーザー名/リポジトリ名.git
+</code></pre></div><h1 id="githubにssh接続する">Githubにssh接続する</h1>
+<p>ここかどこかでアクセス権のエラーが出ると思います．この場合の手順を載せておく．</p>
+<h2 id="公開鍵秘密鍵を作成する">公開鍵・秘密鍵を作成する</h2>
+<p>公開鍵暗号での認証には公開鍵と秘密鍵が必要になります．秘密鍵は自分で保持し，公開鍵は相手（ここではGitHub)に送ります．まずは公開鍵と秘密鍵のペアを生成します．</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-console" data-lang="console">$ cd ~/.ssh
+$ ssh-keygen -t rsa
+Generating public/private rsa key pair.
+Enter file in which to save the key (/Users/(username)/.ssh/id_rsa):
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+</code></pre></div><p>何か聞かれたら3回エンターを押せば，id_rsaとid_rsa.pubの2つの鍵が生成されます．なお，2回目，3回目はパラフレーズの設定（パスワード設定のようなもの）ですが，ここはなくてオーケーです．（慣れてきたらパラフレーズの設定もありですが，なくていいでしょう．）</p>
+<p>私は既に<code>id_rsa</code>を作っていたので別名で作成しました．この場合は</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-console" data-lang="console">$ ssh-keygen -t rsa -f ファイル名
+</code></pre></div><p>で作成できます．</p>
+<h2 id="公開鍵をgithubにアップする">公開鍵をGitHubにアップする</h2>
+<p><a href="https://github.com/settings/ssh">https://github.com/settings/ssh</a> で公開鍵の設定が出来ます．（GitHubに登録していることが前提条件です）</p>
+<p>画面右上の「Add SSH key」のボタンを押します。</p>
+<p><img src="../../static/img/2022/01/pic2.png" alt="スクリーンショット1"></p>
+<p>「title」に公開鍵名（好きにどうぞ），「key」に公開鍵の中身を入れます。</p>
+<p><img src="../../static/img/2022/01/pic3.png" alt="スクリーンショット2"></p>
+<p>なお、鍵の中身のクリップボードへのコピーは</p>
+<p>Macの場合は</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-console" data-lang="console">$ pbcopy &lt; ~/.ssh/id_rsa.pub
+</code></pre></div><p>Windowsの場合は</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-console" data-lang="console">$ clip &lt; ~/.ssh/id_rsa.pub
+</code></pre></div><p>です．</p>
+<h2 id="接続の確認">接続の確認</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-console" data-lang="console">$ ssh -T git@github.com
+Hi ddd3h! You&#39;ve successfully authenticated, but GitHub does not provide shell access
+</code></pre></div><p>で成功です．</p>
+<h1 id="コミットをプッシュする">コミットをプッシュする</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-console" data-lang="console">$ git push origin main
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 308 bytes | 308.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To github.com:ユーザー名/リポジトリ名.git
+ * [new branch]      main -&gt; main
+</code></pre></div>
+      </div>
+      <footer>
+        <div class="stats">
+  
+    <ul class="categories">
+      
+        
+          <li><a class="article-terms-link" href="/categories/%e6%8a%80%e8%a1%93%e6%9b%b8/">技術書</a></li>
+        
+      
+    </ul>
+  
+  
+    <ul class="tags">
+      <li>None</li>
+    </ul>
+  
+</div>
+
+      </footer>
+    </div>
+    
+      
+  <div class='post'>
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "ddd3hlab" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  </div>
+
+
+
+    
+  </article>
+  <div class="pagination">
+    
+    
+      <a href="/blog/2021-01-01-iden/" class="button right"><span>遺伝的アルゴリズム最終章</span></a>
+    
+  </div>
+
+      </main>
+      <section id="site-sidebar">
+  
+    <section id="recent-posts">
+      <header>
+        <h1>最近の投稿</h1>
+      </header>
+      
+      <article class="mini-post">
+          <a href="/blog/2021-01-03-git/" class="image" style="--bg-image: url('/img/2022/01/pic1.png');">
+    <img src="/img/2022/01/pic1.png" alt="遺伝アルゴリズム">
+  </a>
+        <header>
+          <h2><a href="/blog/2021-01-03-git/">Gitを使い倒したい</a></h2>
+          <time class="published" datetime="2022-01-03 00:00:00 &#43;0000 UTC">2022-01-03</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+          <a href="/blog/2021-01-01-iden/" class="image" style="--bg-image: url('/img/2022/01/pic1.png');">
+    <img src="/img/2022/01/pic1.png" alt="遺伝アルゴリズム">
+  </a>
+        <header>
+          <h2><a href="/blog/2021-01-01-iden/">遺伝的アルゴリズム最終章</a></h2>
+          <time class="published" datetime="2022-01-01 00:00:00 &#43;0000 UTC">2022-01-01</time>
+        </header>
+      </article>
+      
+      
+    </section>
+  
+
+  
+    
+
+      <section id="categories">
+        <header>
+          <h1><a href="/categories">カテゴリー</a></h1>
+        </header>
+        <ul>
+          
+          
+          <li>
+              <a href="/categories/python/">python<span class="count">1</span></a>
+          
+          <li>
+              <a href="/categories/%E6%8A%80%E8%A1%93%E6%9B%B8/">技術書<span class="count">1</span></a>
+          
+          <li>
+              <a href="/categories/%E9%81%BA%E4%BC%9D%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0/">遺伝アルゴリズム<span class="count">1</span></a>
+          
+          </li>
+        </ul>
+      </section>
+    
+  
+
+  
+    <section id="mini-bio">
+      <header>
+        <h1>本サイトについて</h1>
+      </header>
+      <p>このサイトはその辺にいる物理学徒の戯言を掲載していく</p>
+      <footer>
+        <a href="/about" class="button">もっと詳しく知る</a>
+      </footer>
+    </section>
+  
+</section>
+
+      <footer id="site-footer">
+  
+      <ul class="socnet-icons">
+        
+        <li><a href="//github.com/ddd3h" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//facebook.com/daisuke.nishihama.63/" target="_blank" rel="noopener" title="Facebook" class="fab fa-facebook"></a></li>
+
+
+
+
+
+
+
+
+<li><a href="//instagram.com/daisukenishihama" target="_blank" rel="noopener" title="Instagram" class="fab fa-instagram"></a></li>
+
+<li><a href="//twitter.com/daisuke0603N" target="_blank" rel="noopener" title="Twitter" class="fab fa-twitter"></a></li>
+
+
+
+
+
+
+
+
+<li><a href="//researchgate.net/profile/Daisuke-Nishihama-2" target="_blank" rel="noopener" title="Research Gate"><i class="ai ai-researchgate"></i></a></li>
+
+
+<li><a href="mailto:daisukenishihama63@gmail.com" target="_blank" title="Email" class="far fa-envelope"></a></li>
+
+      </ul>
+  
+  <p class="copyright">
+    © 2022 ddd3hLab
+      <br>
+    
+  </p>
+</footer>
+<a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
+
+      <script src="/js/highlight.js"></script>
+    
+    <script>hljs.highlightAll();</script><script src="/js/bundle.min.e012a691f03f050a1ece80c9f25942e4e06fa22fc07903f2b1f6258587323c84.js" integrity="sha256-4BKmkfA/BQoezoDJ8llC5OBvoi/AeQPysfYlhYcyPIQ="></script>
+    <script src="/js/add-on.js"></script>
+    </div>
+  </body>
+</html>
