@@ -13,8 +13,8 @@
 <meta property="og:description" content="">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ddd3h.github.io/blog/2021-01-03-git/">
-    <meta property="og:image" content="https://ddd3h.github.io/img/2022/01/pic1.png">
-    <meta property="og:image:alt" content="遺伝アルゴリズム">
+    <meta property="og:image" content="https://ddd3h.github.io/img/2022/01/pic4.png">
+    <meta property="og:image:alt" content="Hello.git">
 
 
   <link rel="manifest" href="/favicon/site.webmanifest?v=1">
@@ -269,8 +269,8 @@
 
       </div>
       <div class="content">
-        <a href="/blog/2021-01-03-git/" class="image" style="--bg-image: url('/img/2022/01/pic1.png');">
-    <img src="/img/2022/01/pic1.png" alt="遺伝アルゴリズム">
+        <a href="/blog/2021-01-03-git/" class="image" style="--bg-image: url('/img/2022/01/pic4.png');">
+    <img src="/img/2022/01/pic4.png" alt="Hello.git">
   </a>
         
         <h1 id="経緯">経緯</h1>
@@ -299,13 +299,13 @@ Initialized empty Git repository in /Users/yuki/workspace/git_test/.git/
 </code></pre></div><p>を実行します．（とはいってもgitの性質上，<code>-A</code>と<code>.</code>は同じと考えるのが普通ですが&hellip;）</p>
 <h1 id="コミットする">コミットする</h1>
 <p>コミットします。<code>-m</code>オプションでコミットメッセージを添えられます．</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ git commit -m <span style="color:#e6db74">&#34;first commit&#34;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-console" data-lang="console">$ git commit -m <span style="color:#e6db74">&#34;first commit&#34;</span>
 </code></pre></div><p><code>-m</code>オプションを使用しない場合，vimのような画面になるので変更内容等を確認してください．</p>
 <h1 id="リモートリポジトリに反映">リモートリポジトリに反映</h1>
 <p>指定した名前にリモートリポジトリのアドレスを関連付けます．</p>
 <p>リモートリポジトリはネット上に存在するため，ローカルリポジトリとのやり取りを行う時は，アドレス（パス）を指定する必要があります．</p>
 <p>作業の都度アドレスを指定するのも大変なので，ここで<code>origin</code>という名前と関連付け，以後<code>origin</code>として扱えるようにします．</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ git remote add origin git@github.com:ユーザー名/リポジトリ名.git
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-console" data-lang="console">$ git remote add origin git@github.com:ユーザー名/リポジトリ名.git
 </code></pre></div><h1 id="githubにssh接続する">Githubにssh接続する</h1>
 <p>ここかどこかでアクセス権のエラーが出ると思います．この場合の手順を載せておく．</p>
 <h2 id="公開鍵秘密鍵を作成する">公開鍵・秘密鍵を作成する</h2>
@@ -323,10 +323,9 @@ Enter same passphrase again:
 <h2 id="公開鍵をgithubにアップする">公開鍵をGitHubにアップする</h2>
 <p><a href="https://github.com/settings/ssh">https://github.com/settings/ssh</a> で公開鍵の設定が出来ます．（GitHubに登録していることが前提条件です）</p>
 <p>画面右上の「Add SSH key」のボタンを押します。</p>
-<p><img src="img/2022/01/pic2.png" alt="スクリーンショット1"></p>
+<p><img src="https://ddd3h.github.io/img/2022/01/pic2.png" alt="スクリーンショット1"></p>
 <p>「title」に公開鍵名（好きにどうぞ），「key」に公開鍵の中身を入れます。</p>
-<p><img src="img/2022/01/pic3.png" alt="スクリーンショット2"></p>
-<p>&lt; img src=&ldquo;img/2022/01/pic2.png&rdquo; alt=&ldquo;画像1&rdquo; &gt;</p>
+<p><img src="https://ddd3h.github.io/img/2022/01/pic3.png" alt="スクリーンショット2"></p>
 <p>なお、鍵の中身のクリップボードへのコピーは</p>
 <p>Macの場合は</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-console" data-lang="console">$ pbcopy &lt; ~/.ssh/id_rsa.pub
@@ -345,7 +344,7 @@ Compressing objects: 100% (2/2), done.
 Writing objects: 100% (3/3), 308 bytes | 308.00 KiB/s, done.
 Total 3 (delta 0), reused 0 (delta 0)
 To github.com:ユーザー名/リポジトリ名.git
- * [new branch]      main -&gt; main
+ 9880f4c..7930122      main -&gt; main
 </code></pre></div>
       </div>
       <footer>
@@ -361,7 +360,13 @@ To github.com:ユーザー名/リポジトリ名.git
   
   
     <ul class="tags">
-      <li>None</li>
+      
+        
+          <li><a class="article-terms-link" href="/tags/git/">git</a></li>
+        
+          <li><a class="article-terms-link" href="/tags/%e3%82%b5%e3%83%bc%e3%83%90%e3%83%bc/">サーバー</a></li>
+        
+      
     </ul>
   
 </div>
@@ -413,8 +418,8 @@ To github.com:ユーザー名/リポジトリ名.git
       </header>
       
       <article class="mini-post">
-          <a href="/blog/2021-01-03-git/" class="image" style="--bg-image: url('/img/2022/01/pic1.png');">
-    <img src="/img/2022/01/pic1.png" alt="遺伝アルゴリズム">
+          <a href="/blog/2021-01-03-git/" class="image" style="--bg-image: url('/img/2022/01/pic4.png');">
+    <img src="/img/2022/01/pic4.png" alt="Hello.git">
   </a>
         <header>
           <h2><a href="/blog/2021-01-03-git/">Gitを使い倒したい</a></h2>
@@ -432,40 +437,6 @@ To github.com:ユーザー名/リポジトリ名.git
         </header>
       </article>
       
-      <article class="mini-post">
-          <a href="/blog/markdown-syntax/" class="image" style="--bg-image: url('/img/2019/03/pic01.jpg');">
-    <img class="stretchH" src="/img/2019/03/pic01.jpg" alt="Mountain Range Through Clouds">
-  </a>
-        <header>
-          <h2><a href="/blog/markdown-syntax/">Markdown Syntax Guide</a></h2>
-          <time class="published" datetime="2019-03-11 00:00:00 &#43;0000 UTC">2019-03-11</time>
-        </header>
-      </article>
-      
-      <article class="mini-post">
-          <a href="/blog/rich-content/" class="image" style="--bg-image: url('/img/main/logo.jpg');">
-    <img class="stretchV" src="/img/main/logo.jpg" alt="Fox">
-  </a>
-        <header>
-          <h2><a href="/blog/rich-content/">Rich Content</a></h2>
-          <time class="published" datetime="2019-03-10 00:00:00 &#43;0000 UTC">2019-03-10</time>
-        </header>
-      </article>
-      
-      <article class="mini-post">
-          <a href="/blog/placeholder-text/" class="image" style="--bg-image: url('/img/2019/03/pic03.jpg');">
-    <img class="stretchH" src="/img/2019/03/pic03.jpg" alt="Valley">
-  </a>
-        <header>
-          <h2><a href="/blog/placeholder-text/">Placeholder Text</a></h2>
-          <time class="published" datetime="2019-03-09 00:00:00 &#43;0000 UTC">2019-03-09</time>
-        </header>
-      </article>
-      
-      
-        <footer>
-          <a href="/blog" class="button">続きを見る</a>
-        </footer>
       
     </section>
   
@@ -482,12 +453,6 @@ To github.com:ユーザー名/リポジトリ名.git
           
           <li>
               <a href="/categories/python/">python<span class="count">1</span></a>
-          
-          <li>
-              <a href="/categories/syntax/">syntax<span class="count">1</span></a>
-          
-          <li>
-              <a href="/categories/themes/">themes<span class="count">1</span></a>
           
           <li>
               <a href="/categories/%E6%8A%80%E8%A1%93%E6%9B%B8/">技術書<span class="count">1</span></a>

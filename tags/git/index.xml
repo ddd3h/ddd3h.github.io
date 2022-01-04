@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blog on ddd3hLab</title>
-    <link>https://ddd3h.github.io/blog/</link>
-    <description>Recent content in Blog on ddd3hLab</description>
+    <title>git on ddd3hLab</title>
+    <link>https://ddd3h.github.io/tags/git/</link>
+    <description>Recent content in git on ddd3hLab</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Mon, 03 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://ddd3h.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 03 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://ddd3h.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Gitを使い倒したい</title>
       <link>https://ddd3h.github.io/blog/2021-01-03-git/</link>
@@ -32,17 +32,6 @@ $ git commit -m &amp;#34;first commit&amp;#34; -mオプションを使用しな�
 リモートリポジトリはネット上に存在するため，ローカルリポジトリとのやり取りを行う時は，アドレス（パス）を指定する必要があります．
 作業の都度アドレスを指定するのも大変なので，ここでoriginという名前と関連付け，以後originとして扱えるようにします．
 $ git remote add origin git@github.com:ユーザー名/リポジトリ名.git Githubにssh接続する ここかどこかでアクセス権のエラーが出ると思います．この場合の手順を載せておく．</description>
-    </item>
-    
-    <item>
-      <title>遺伝的アルゴリズム最終章</title>
-      <link>https://ddd3h.github.io/blog/2021-01-01-iden/</link>
-      <pubDate>Sat, 01 Jan 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://ddd3h.github.io/blog/2021-01-01-iden/</guid>
-      <description>遺伝的アルゴリズムの最終章 遺伝的アルゴリズムのゼミでは，アルゴリズムの概要から基礎的な内容まで遠回りをしながら一旦プログラムを書いてみて，修正するという形をとってきた。最終章では，今までしてきたことを総まとめる形で終えたい
-モジュールをインポートしよう！ 今回の「遺伝的アルゴリズム」では  Numpy  行列（多次元配列）などの数値計算に便利なツール   Pandas  表などを扱うのに便利なツール  の２つを使用した。モジュールの入れ方は    import numpy as np import pandas as pd とすればいい。ただし，https://blueqat.com/blueqatcloud を使う者や，Pandasでエラーが出る者は !pip install openpyxlを最後の行に入れるといい！
-今までのプログラムを段階ごとに関数にしよう！ エクセルデータを読み取り，データを返す関数 def read_excel(): #Excelデータの整形 df = pd.read_excel(&amp;#34;iden.xlsx&amp;#34;, sheet_name=&amp;#34;Sheet1&amp;#34;) df = df.iloc[4:14,1:33] df = df.fillna(0) df = df.replace(&amp;#34;◎&amp;#34;,2) #休日数のテーブルを作成 holiday = df.iloc[:,31:32].reset_index(drop=True) holiday.columns = [&amp;#34;休日数&amp;#34;] #基礎テーブルの作成 kiso = df.iloc[:,0:31].reset_index(drop=True) kiso.columns = [i+1 for i in range(len(kiso.columns))] return kiso, holiday 引数はなしの関数であることに注意！！</description>
     </item>
     
   </channel>
