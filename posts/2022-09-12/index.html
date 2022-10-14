@@ -15,14 +15,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   
-  <title>About &middot; ddd3hLab</title>
-  <meta name="title" content="About &middot; ddd3hLab" />
+  <title>便利なFish Shellをインストールしよう &middot; ddd3hLab</title>
+  <meta name="title" content="便利なFish Shellをインストールしよう &middot; ddd3hLab" />
   
   <meta name="description" content="その辺にいる物理学徒の戯言を投稿するサイト" />
   
   
   
-  <link rel="canonical" href="/about/" />
+  <link rel="canonical" href="/posts/2022-09-12/" />
   
   
   
@@ -71,50 +71,59 @@
   
   
   
-  <meta property="og:title" content="About" />
-<meta property="og:description" content="Daisuke NISHIHAMA # その辺にいる宇宙物理学を愛する物理学徒の戯言を投稿するサイト。とりあえず著者について書けるようことはもそんな無いので掻き集めた自己紹介的内容なのでお許しを．
-著者は 物理学、数値解析情、電子回路設計、報通信工学が専門分野。
-画像は知らぬ間に撮られていたも関わらず何気にお気に入りのやつ。
-来歴 # 2000年06月 埼玉県草加市にて誕生する。 2014年08月 Android向けに提供していたメーラーアプリ「Bluemail」の日本語監修を担当する。 2017年01月 同アプリの日本語監修を引退 2019年03月 春日部共栄高等学校卒業 2020年04月 埼玉大学理学部物理学科入学 2020年11月 COREのハイブリットロケット開発チーム「ミソラ工房」に所属し、第16回能代宇宙イベントにて「HIBARI1」のシミュレーションを担当。 2020年12月 CanSat機体「SC-5」の電装班長 2021年03月 ハイブリットロケット開発チーム「Duo」にてノーズ電装を担当し、御宿共同打上実験にて４年ぶりのデータ回収を実現する。 2021年10月 エムラボ株式会社入社（プログラミング講師） 2021年12月 CanSat機体「SC-2.1」PM 2022年03月 株式会社MediHub IT顧問就任 2022年04月 埼玉大学宇宙工学サークルあかとき代表 2022年04月 CanSat機体「SC-11」電装班長 2022年05月 スペースバルーン「ANCO-project」電装班兼、GUIプロジェクトPM 2022年07月 エムラボ株式会社退社（プログラミング講師） 実績 # Simulation Software FROGS Python ver." />
+  <meta property="og:title" content="便利なFish Shellをインストールしよう" />
+<meta property="og:description" content="さていつものように brew install fish をしてみるが、残念ながら買ったばっかりのMacにはHomebrewは入っていない。
+Homebrewをインストールする # そこでHomebrewのインストールから始めなくてはいけない。
+/bin/bash -c &#34;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)&#34;``` HomebrewはMacユーザーにとっては便利なツールであるからインストールしておいて損はないだろう。
+さて、インストールできたらここからが本番である。
+私のMacはすでにデフォルトでZshが採用されている．以前のMacではBashを使い続け、Appleからの「Zshに変更しましょう」みたいなやつを無視し続けてきた。
+（こういうところで「新しい」Macというのを感じることになるとは……）
+さてインストールが完了するとこんなエラーが出た。
+Warning: /opt/homebrew/bin is not in your PATH. Instructions on how to configure your shell for Homebrew can be found in the &#39;Next steps&#39; section below." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/about/" /><meta property="article:section" content="" />
+<meta property="og:url" content="/posts/2022-09-12/" /><meta property="og:image" content="/posts/2022-09-12/feature.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-09-12T20:50:09+09:00" />
+<meta property="article:modified_time" content="2022-09-12T20:50:09+09:00" /><meta property="og:site_name" content="ddd3hLab" />
 
-<meta property="og:site_name" content="ddd3hLab" />
 
-
-  <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="About"/>
-<meta name="twitter:description" content="Daisuke NISHIHAMA # その辺にいる宇宙物理学を愛する物理学徒の戯言を投稿するサイト。とりあえず著者について書けるようことはもそんな無いので掻き集めた自己紹介的内容なのでお許しを．
-著者は 物理学、数値解析情、電子回路設計、報通信工学が専門分野。
-画像は知らぬ間に撮られていたも関わらず何気にお気に入りのやつ。
-来歴 # 2000年06月 埼玉県草加市にて誕生する。 2014年08月 Android向けに提供していたメーラーアプリ「Bluemail」の日本語監修を担当する。 2017年01月 同アプリの日本語監修を引退 2019年03月 春日部共栄高等学校卒業 2020年04月 埼玉大学理学部物理学科入学 2020年11月 COREのハイブリットロケット開発チーム「ミソラ工房」に所属し、第16回能代宇宙イベントにて「HIBARI1」のシミュレーションを担当。 2020年12月 CanSat機体「SC-5」の電装班長 2021年03月 ハイブリットロケット開発チーム「Duo」にてノーズ電装を担当し、御宿共同打上実験にて４年ぶりのデータ回収を実現する。 2021年10月 エムラボ株式会社入社（プログラミング講師） 2021年12月 CanSat機体「SC-2.1」PM 2022年03月 株式会社MediHub IT顧問就任 2022年04月 埼玉大学宇宙工学サークルあかとき代表 2022年04月 CanSat機体「SC-11」電装班長 2022年05月 スペースバルーン「ANCO-project」電装班兼、GUIプロジェクトPM 2022年07月 エムラボ株式会社退社（プログラミング講師） 実績 # Simulation Software FROGS Python ver."/>
+  <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="/posts/2022-09-12/feature.png"/>
+<meta name="twitter:title" content="便利なFish Shellをインストールしよう"/>
+<meta name="twitter:description" content="さていつものように brew install fish をしてみるが、残念ながら買ったばっかりのMacにはHomebrewは入っていない。
+Homebrewをインストールする # そこでHomebrewのインストールから始めなくてはいけない。
+/bin/bash -c &#34;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)&#34;``` HomebrewはMacユーザーにとっては便利なツールであるからインストールしておいて損はないだろう。
+さて、インストールできたらここからが本番である。
+私のMacはすでにデフォルトでZshが採用されている．以前のMacではBashを使い続け、Appleからの「Zshに変更しましょう」みたいなやつを無視し続けてきた。
+（こういうところで「新しい」Macというのを感じることになるとは……）
+さてインストールが完了するとこんなエラーが出た。
+Warning: /opt/homebrew/bin is not in your PATH. Instructions on how to configure your shell for Homebrew can be found in the &#39;Next steps&#39; section below."/>
 
   
   <script type="application/ld+json">
   [{
     "@context": "https://schema.org",
     "@type": "Article",
-    "articleSection": "",
-    "name": "About",
-    "headline": "About",
+    "articleSection": "Posts",
+    "name": "便利なFish Shellをインストールしよう",
+    "headline": "便利なFish Shellをインストールしよう",
     
-    "abstract": "Daisuke NISHIHAMA # その辺にいる宇宙物理学を愛する物理学徒の戯言を投稿するサイト。とりあえず著者について書けるようことはもそんな無いので掻き集めた自己紹介的内容なのでお許しを．\n著者は 物理学、数値解析情、電子回路設計、報通信工学が専門分野。\n画像は知らぬ間に撮られていたも関わらず何気にお気に入りのやつ。\n来歴 # 2000年06月 埼玉県草加市にて誕生する。 2014年08月 Android向けに提供していたメーラーアプリ「Bluemail」の日本語監修を担当する。 2017年01月 同アプリの日本語監修を引退 2019年03月 春日部共栄高等学校卒業 2020年04月 埼玉大学理学部物理学科入学 2020年11月 COREのハイブリットロケット開発チーム「ミソラ工房」に所属し、\u0008第16回能代宇宙イベントにて「HIBARI1」のシミュレーションを担当。 2020年12月 CanSat機体「SC-5」の電装班長 2021年03月 ハイブリットロケット開発チーム「Duo」にてノーズ電装を担当し、御宿共同打上実験にて４年ぶりのデータ回収を実現する。 2021年10月 エムラボ株式会社入社（プログラミング講師） 2021年12月 CanSat機体「SC-2.1」PM 2022年03月 株式会社MediHub IT顧問就任 2022年04月 埼玉大学宇宙工学サークルあかとき代表 2022年04月 CanSat機体「SC-11」電装班長 2022年05月 スペースバルーン「ANCO-project」電装班兼、GUIプロジェクトPM 2022年07月 エムラボ株式会社退社（プログラミング講師） 実績 # Simulation Software FROGS Python ver.",
+    "abstract": "さていつものように brew install fish をしてみるが、残念ながら買ったばっかりのMacにはHomebrewは入っていない。\nHomebrewをインストールする # そこでHomebrewのインストールから始めなくてはいけない。\n\/bin\/bash -c \u0026#34;$(curl -fsSL https:\/\/raw.githubusercontent.com\/Homebrew\/install\/master\/install.sh)\u0026#34;``` HomebrewはMacユーザーにとっては便利なツールであるからインストールしておいて損はないだろう。\nさて、インストールできたらここからが本番である。\n私のMacはすでにデフォルトでZshが採用されている．以前のMacではBashを使い続け、Appleからの「Zshに変更しましょう」みたいなやつを無視し続けてきた。\n（こういうところで「新しい」Macというのを感じることになるとは……）\nさてインストールが完了するとこんなエラーが出た。\nWarning: \/opt\/homebrew\/bin is not in your PATH. Instructions on how to configure your shell for Homebrew can be found in the \u0026#39;Next steps\u0026#39; section below.",
     "inLanguage": "ja",
-    "url" : "\/about\/",
+    "url" : "\/posts\/2022-09-12\/",
     "author" : {
       "@type": "Person",
       "name": "Daisuke NISHIHAMA"
     },
+    "copyrightYear": "2022",
+    "dateCreated": "2022-09-12T20:50:09\u002b09:00",
+    "datePublished": "2022-09-12T20:50:09\u002b09:00",
     
+    "dateModified": "2022-09-12T20:50:09\u002b09:00",
     
-    
-    
-    
-    
-    
+    "keywords": ["日記"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "134"
+    "wordCount": "313"
   }]
   </script>
 
@@ -421,6 +430,8 @@
   
     
   
+    
+  
   <li class="inline hidden">
     <a
       class="hover:underline decoration-neutral-300 dark:underline-neutral-600"
@@ -430,11 +441,20 @@
   </li>
 
   
+  <li class="inline ">
+    <a
+      class="hover:underline decoration-neutral-300 dark:underline-neutral-600"
+      href="/posts/"
+      >Posts</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
   <li class="inline hidden">
     <a
       class="hover:underline decoration-neutral-300 dark:underline-neutral-600"
-      href="/about/"
-      >About</a
+      href="/posts/2022-09-12/"
+      >便利なFish Shellをインストールしよう</a
     ><span class="px-1 text-primary-500">/</span>
   </li>
 
@@ -443,7 +463,7 @@
 
     
     <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-      About
+      便利なFish Shellをインストールしよう
     </h1>
     <div class="mt-8 mb-12 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
       
@@ -461,20 +481,54 @@
 
   
   
-
+    
   
 
   
 
   
+    
+  
+
+  
+    
+  
 
   
 
+  
+    
   
 
 
   <div class="flex flex-row flex-wrap items-center">
     
+    
+      <time datetime="2022-09-12 20:50:09 &#43;0900 JST">2022年 9月 12日</time><span class="px-2 text-primary-500">&middot;</span><span>313 文字</span><span class="px-2 text-primary-500">&middot;</span><span title="読むのに必要な時間">2 分</span><span class="px-2 text-primary-500">&middot;</span>
+
+
+  
+    
+  
+  
+
+<span class="mb-[2px]">
+  <a
+    href="#/posts/2022-09-12/index.md"
+    class="text-lg hover:text-primary-500"
+    rel="noopener noreferrer"
+    target="_blank"
+    title="編集"
+    >
+
+  <span class="relative inline-block align-text-bottom icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M490.3 40.4C512.2 62.27 512.2 97.73 490.3 119.6L460.3 149.7L362.3 51.72L392.4 21.66C414.3-.2135 449.7-.2135 471.6 21.66L490.3 40.4zM172.4 241.7L339.7 74.34L437.7 172.3L270.3 339.6C264.2 345.8 256.7 350.4 248.4 353.2L159.6 382.8C150.1 385.6 141.5 383.4 135 376.1C128.6 370.5 126.4 361 129.2 352.4L158.8 263.6C161.6 255.3 166.2 247.8 172.4 241.7V241.7zM192 63.1C209.7 63.1 224 78.33 224 95.1C224 113.7 209.7 127.1 192 127.1H96C78.33 127.1 64 142.3 64 159.1V416C64 433.7 78.33 448 96 448H352C369.7 448 384 433.7 384 416V319.1C384 302.3 398.3 287.1 416 287.1C433.7 287.1 448 302.3 448 319.1V416C448 469 405 512 352 512H96C42.98 512 0 469 0 416V159.1C0 106.1 42.98 63.1 96 63.1H192z"/></svg>
+
+  </span>
+
+</a
+  >
+</span>
     
 
     
@@ -501,19 +555,16 @@
   >
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#来歴">来歴</a></li>
-    <li><a href="#実績">実績</a></li>
-    <li><a href="#技術">技術</a>
+    <li><a href="#homebrewをインストールする">Homebrewをインストールする</a></li>
+    <li><a href="#ようやくfishをインストール">ようやくfishをインストール。</a></li>
+    <li><a href="#自分好みのfishに変更する">自分好みのfishに変更する</a></li>
+    <li><a href="#パッケージマネジャーfisherをインストールする">パッケージマネジャーfisherをインストールする</a></li>
+    <li><a href="#プラグインをインストールする">プラグインをインストールする</a>
       <ul>
-        <li><a href="#python">Python</a></li>
-        <li><a href="#c言語">C言語</a></li>
-        <li><a href="#c">C++</a></li>
-        <li><a href="#julia">Julia</a></li>
+        <li><a href="#z">z</a></li>
       </ul>
     </li>
-    <li><a href="#記事講演">記事・講演</a></li>
-    <li><a href="#教育活動">教育活動</a></li>
-    <li><a href="#連絡先">連絡先</a></li>
+    <li><a href="#頑張った成果を見よう">頑張った成果を見よう</a></li>
   </ul>
 </nav>
   </div>
@@ -523,94 +574,109 @@
       </div>
       
       <div class="min-w-0 min-h-0 max-w-prose">
-        <h1 id="daisuke-nishihama" class="relative group">Daisuke NISHIHAMA <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#daisuke-nishihama" aria-label="アンカー">#</a></span></h1>
-<p>その辺にいる宇宙物理学を愛する物理学徒の戯言を投稿するサイト。とりあえず著者について書けるようことはもそんな無いので掻き集めた自己紹介的内容なのでお許しを．</p>
-<p>著者は 物理学、数値解析情、電子回路設計、報通信工学が専門分野。</p>
-<p>
-
-
-
-  
-  
-    
-  
-  
-    <figure>
-      <img
-        class="my-0 rounded-md"
-        srcset="
-          /img/profile_hu03ffcc50bbba19c20cea6fb6718469a6_27394_330x0_resize_q75_box.jpg 330w,
-          /img/profile_hu03ffcc50bbba19c20cea6fb6718469a6_27394_660x0_resize_q75_box.jpg 660w,
-          /img/profile_hu03ffcc50bbba19c20cea6fb6718469a6_27394_1024x0_resize_q75_box.jpg 1024w,
-          /img/profile_hu03ffcc50bbba19c20cea6fb6718469a6_27394_1320x0_resize_q75_box.jpg 2x"
-        src="/img/profile_hu03ffcc50bbba19c20cea6fb6718469a6_27394_660x0_resize_q75_box.jpg"
-        alt=""
-      />
-      
-    </figure>
-  
-
-</p>
-<p>画像は知らぬ間に撮られていたも関わらず何気にお気に入りのやつ。</p>
-<hr>
-<h2 id="来歴" class="relative group">来歴 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e6%9d%a5%e6%ad%b4" aria-label="アンカー">#</a></span></h2>
-<ul>
-<li>2000年06月 埼玉県草加市にて誕生する。</li>
-<li>2014年08月 Android向けに提供していたメーラーアプリ「Bluemail」の日本語監修を担当する。</li>
-<li>2017年01月 同アプリの日本語監修を引退</li>
-<li>2019年03月 春日部共栄高等学校卒業</li>
-<li>2020年04月 埼玉大学理学部物理学科入学</li>
-<li>2020年11月 COREのハイブリットロケット開発チーム「ミソラ工房」に所属し、第16回能代宇宙イベントにて「HIBARI1」のシミュレーションを担当。</li>
-<li>2020年12月 CanSat機体「SC-5」の電装班長</li>
-<li>2021年03月 ハイブリットロケット開発チーム「Duo」にてノーズ電装を担当し、御宿共同打上実験にて４年ぶりのデータ回収を実現する。</li>
-<li>2021年10月 エムラボ株式会社入社（プログラミング講師）</li>
-<li>2021年12月 CanSat機体「SC-2.1」PM</li>
-<li>2022年03月 株式会社MediHub IT顧問就任</li>
-<li>2022年04月 埼玉大学宇宙工学サークルあかとき代表</li>
-<li>2022年04月 CanSat機体「SC-11」電装班長</li>
-<li>2022年05月 スペースバルーン「ANCO-project」電装班兼、GUIプロジェクトPM</li>
-<li>2022年07月 エムラボ株式会社退社（プログラミング講師）</li>
-</ul>
-<hr>
-<h2 id="実績" class="relative group">実績 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e5%ae%9f%e7%b8%be" aria-label="アンカー">#</a></span></h2>
-<p><em><strong>Simulation Software FROGS Python ver.</strong>, CORE – (2020)</em></p>
-<p>MATLABで既に開発が進んでいた飛翔シュミレーション「FROGS」をPython版で開発を行った。</p>
-<p><em><strong>Study on relationship between tidal force and atmosphereic pressure</strong>, Saitama University – (2021)</em></p>
-<p>2021年に投稿した潮汐力と気圧の関係に関する研究。</p>
-<p><em><strong>Development of algorithm for 0m goal of CanSat by various sensors</strong>, AKTK – (2022)</em></p>
-<p>センサーによる0 mゴール用のアルゴリズムの開発を行い、2022年4月にその有効性を示した。</p>
-<p><em><strong>Development of a GUI display of comprehensive received data</strong>, AKTK – (2022)</em></p>
-<p>スペースバルーンプロジェクト「ANCO-project」にて使用する受信データをGUI表示するプログラムの開発を行った。</p>
-<hr>
-<h2 id="技術" class="relative group">技術 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e6%8a%80%e8%a1%93" aria-label="アンカー">#</a></span></h2>
-<h3 id="python" class="relative group">Python <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#python" aria-label="アンカー">#</a></span></h3>
-<p><strong>読みやすく、それで簡単に書ける</strong>。そのため、私にとって主力のプログラミング言語である。<a href="https://ipython.org/">IPython</a>や<a href="https://jupyter.org/">Jupyter</a>といった開発環境に加え、Pythonの苦手な繰り返し作業をC言語にさせることのできる<a href="https://cython.org/">Cython</a>などライブラリが方法である。特に、私は科学計算に用いることが多いため、<a href="https://matplotlib.org/">Matplotlib</a>、<a href="https://pandas.pydata.org/">Pandas</a>、<a href="https://numpy.org/">Numpy</a>、<a href="https://scipy.org/">Scipy</a>などを用いることが多い。</p>
-<h3 id="c言語" class="relative group">C言語 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#c%e8%a8%80%e8%aa%9e" aria-label="アンカー">#</a></span></h3>
-<p>1972年に誕生し、非常に長い歴史を持ち、OSや組み込み系の開発などに用いられる。特にC言語はPythonのような<a href="https://ja.wikipedia.org/wiki/%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%97%E3%83%AA%E3%82%BF">インタプリタ言語</a>ではなく、<a href="https://ja.wikipedia.org/wiki/%E3%82%B3%E3%83%B3%E3%83%91%E3%82%A4%E3%83%A9">コンパイル方式</a>であり、また変数の型を厳密に定義付けられるため非常に高速で、速度が求められる大掛かりな計算においては科学計算を主に扱う私にとって欠かせない存在。コンパイルには<a href="https://gcc.gnu.org/">GNU Compiler Collection (GCC)</a>を用いる。</p>
-<h3 id="c" class="relative group">C++ <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#c" aria-label="アンカー">#</a></span></h3>
-<p>C言語と似た言語であるが、データ構造を定義でき、例外処理が可能であることからC言語よりも１つ上の存在である。より高度な処理を行うときに重宝する。また、<a href="https://ja.wikipedia.org/wiki/%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF">マイコン</a>の１つである<a href="https://www.arduino.cc/">Arduino</a>も、C++をベースにしたArduino言語で記述できるため非常に有用性も高い。</p>
-<h3 id="julia" class="relative group">Julia <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#julia" aria-label="アンカー">#</a></span></h3>
-<p>現在、開発途中でひよこの言語。C言語とPythonのいいとこ取りをしたプログラミング言語であり、非常に高速かつ簡単に記述できる。私が初めて独学ではなく、他者と交えてゼミで学習したプログラミング言語である。体系的に学んだはいいが、PythonやC言語に逃げてしまい、あまり使ってない。▶ <a href="https://benlauwens.github.io/ThinkJulia.jl/latest/book.html">Think Julia: How to Think Like a Computer Scientist</a></p>
-<hr>
-<h2 id="記事講演" class="relative group">記事・講演 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e8%a8%98%e4%ba%8b%e8%ac%9b%e6%bc%94" aria-label="アンカー">#</a></span></h2>
-<ul>
-<li>調整中</li>
-</ul>
-<hr>
-<h2 id="教育活動" class="relative group">教育活動 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e6%95%99%e8%82%b2%e6%b4%bb%e5%8b%95" aria-label="アンカー">#</a></span></h2>
-<ul>
-<li>調整中</li>
-</ul>
-<hr>
-<h2 id="連絡先" class="relative group">連絡先 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e9%80%a3%e7%b5%a1%e5%85%88" aria-label="アンカー">#</a></span></h2>
-<p>📧 <a href="mailto:daisukenishihama63@gmail.com">daisukenishihama63@gmail.com</a></p>
-<p>🐦 Twitter</p>
-<p>🔗 LinkedIn</p>
-
+        <p>さていつものように <code>brew install fish</code> をしてみるが、残念ながら買ったばっかりのMacにはHomebrewは入っていない。</p>
+<h2 id="homebrewをインストールする" class="relative group">Homebrewをインストールする <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#homebrew%e3%82%92%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%88%e3%83%bc%e3%83%ab%e3%81%99%e3%82%8b" aria-label="アンカー">#</a></span></h2>
+<p>そこでHomebrewのインストールから始めなくてはいけない。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">/bin/bash -c <span class="s2">&#34;</span><span class="k">$(</span>curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh<span class="k">)</span><span class="s2">&#34;</span><span class="sb">```</span>
+</span></span></code></pre></div><p>HomebrewはMacユーザーにとっては便利なツールであるからインストールしておいて損はないだろう。</p>
+<p>さて、インストールできたらここからが本番である。</p>
+<p>私のMacはすでにデフォルトでZshが採用されている．以前のMacではBashを使い続け、Appleからの「Zshに変更しましょう」みたいなやつを無視し続けてきた。</p>
+<p>（こういうところで「新しい」Macというのを感じることになるとは……）</p>
+<p>さてインストールが完了するとこんなエラーが出た。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">Warning: /opt/homebrew/bin is not in your PATH.
+</span></span><span class="line"><span class="cl">  Instructions on how to configure your shell <span class="k">for</span> Homebrew
+</span></span><span class="line"><span class="cl">  can be found in the <span class="s1">&#39;Next steps&#39;</span> section below.
+</span></span><span class="line"><span class="cl"><span class="o">==</span>&gt; Installation successful!
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">==</span>&gt; Homebrew has enabled anonymous aggregate formulae and cask analytics.
+</span></span><span class="line"><span class="cl">Read the analytics documentation <span class="o">(</span>and how to opt-out<span class="o">)</span> here:
+</span></span><span class="line"><span class="cl">  https://docs.brew.sh/Analytics
+</span></span><span class="line"><span class="cl">No analytics data has been sent yet <span class="o">(</span>nor will any be during this install run<span class="o">)</span>.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">==</span>&gt; Homebrew is run entirely by unpaid volunteers. Please consider donating:
+</span></span><span class="line"><span class="cl">  https://github.com/Homebrew/brew#donations
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">==</span>&gt; Next steps:
+</span></span><span class="line"><span class="cl">- Run these two commands in your terminal to add Homebrew to your PATH:
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s1">&#39;eval &#34;$(/opt/homebrew/bin/brew shellenv)&#34;&#39;</span> &gt;&gt; /Users/daisuke/.zprofile
+</span></span><span class="line"><span class="cl">    <span class="nb">eval</span> <span class="s2">&#34;</span><span class="k">$(</span>/opt/homebrew/bin/brew shellenv<span class="k">)</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">- Run brew <span class="nb">help</span> to get started
+</span></span><span class="line"><span class="cl">- Further documentation:
+</span></span><span class="line"><span class="cl">    https://docs.brew.sh
+</span></span></code></pre></div><p>PATHが通らなかったらしい。とりあえず，PATHを通そう。</p>
+<p>ここでzshにはbashと同様に <code>.zshrc</code> と <code>zprofile</code> という2つが存在する。zshrcはログインシェルとインタラクティブシェルの場合だけ読み込まれる。 <code>zprofile</code> はログインシェルの場合に１度だけ読み込まれる。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">vi ~/.zprofile
+</span></span></code></pre></div><p>この中に</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span>/opt/homebrew/bin:<span class="nv">$PATH</span>
+</span></span></code></pre></div><p>を最終行に追記してください。</p>
+<h2 id="ようやくfishをインストール" class="relative group">ようやくfishをインストール。 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e3%82%88%e3%81%86%e3%82%84%e3%81%8ffish%e3%82%92%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%88%e3%83%bc%e3%83%ab" aria-label="アンカー">#</a></span></h2>
+<p>さてbrewをインストールすることができたのでfishをインストールするぞ。</p>
+<p>あ、自分でPathを通しておいて気づきませんでしたが、<code>brew</code>は、Apple Siliconでは <code>/opt/homebrew/bin/brew</code> にあるそうです。</p>
+<p>まじかよ。。。</p>
+<p>それが本当に最適かどうかは分からないのですが、とりあえずfishを動かすためにshellのPathを変更します。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo vi /etc/shells   <span class="c1">#  末尾に /opt/homebrew/bin/fish を追加</span>
+</span></span><span class="line"><span class="cl">chsh -s /opt/homebrew/bin/fish
+</span></span></code></pre></div><p>自分はHyperをターミナルに使用しているのですが、Mac本体の再起動が必要そうです。</p>
+<p>同じようにGitHubで嘆いている人を見かけたのですが、論破されてました。</p>
+<blockquote>
+<p>In the words of my school IT director, &ldquo;did you doa restart?”</p>
+</blockquote>
+<p><a href="https://github.com/vercel/hyper/issues/4266#issuecomment-971099990">Hyper doesn&rsquo;t use default shell on MacOS · Issue #4266 · vercel/hyper</a></p>
+<p>本当にそうですね。同じように問題が起こった人は、再起動をしましょう。</p>
+<p>この後、fish側の環境変数やらの設定をしましょう。</p>
+<p>同じことを２度もしてるような感じもするので、面倒臭ければzshをdefaultのshellにして、起動とともにfishを起動するようにしてもいいかも知れません。</p>
+<p>fishの設定は <code>~/.config/fish/config.fish</code> に記述します。</p>
+<p>私はPython等の都合もあり、以下のようにしました。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="k">if</span> status is-interactive
+</span></span><span class="line"><span class="cl">    <span class="c1"># Commands to run in interactive sessions can go here</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">set</span> -x PATH /opt/homebrew/bin <span class="nv">$PATH</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">set</span> -x PATH /Library/Frameworks/Python.framework/Versions/3.10/bin <span class="nv">$PATH</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">alias</span> python <span class="s1">&#39;python3&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">alias</span> pip <span class="s1">&#39;pip3&#39;</span>
+</span></span><span class="line"><span class="cl">end
+</span></span></code></pre></div><p>これを書いた後は、fishをより便利におしゃれにしていきます。</p>
+<h2 id="自分好みのfishに変更する" class="relative group">自分好みのfishに変更する <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e8%87%aa%e5%88%86%e5%a5%bd%e3%81%bf%e3%81%aefish%e3%81%ab%e5%a4%89%e6%9b%b4%e3%81%99%e3%82%8b" aria-label="アンカー">#</a></span></h2>
+<p>私は <code>oh-my-fish</code> のテーマを使います。</p>
+<p>フォントもそれに対応したものをインストールしましょう。</p>
+<p>インストールが完了したら、使用されてるターミナルからフォントを変更してください。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">fisher install oh-my-fish/theme-bobthefish
+</span></span><span class="line"><span class="cl">git clone https://github.com/powerline/fonts.git
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> fonts
+</span></span><span class="line"><span class="cl">./install.sh
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span>
+</span></span><span class="line"><span class="cl">rm -rf ./fonts
+</span></span></code></pre></div><h2 id="パッケージマネジャーfisherをインストールする" class="relative group">パッケージマネジャーfisherをインストールする <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e3%83%91%e3%83%83%e3%82%b1%e3%83%bc%e3%82%b8%e3%83%9e%e3%83%8d%e3%82%b8%e3%83%a3%e3%83%bcfisher%e3%82%92%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%88%e3%83%bc%e3%83%ab%e3%81%99%e3%82%8b" aria-label="アンカー">#</a></span></h2>
+<p>fisherは便利なので入れとくといいです。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
+</span></span></code></pre></div><h2 id="プラグインをインストールする" class="relative group">プラグインをインストールする <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e3%83%97%e3%83%a9%e3%82%b0%e3%82%a4%e3%83%b3%e3%82%92%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%88%e3%83%bc%e3%83%ab%e3%81%99%e3%82%8b" aria-label="アンカー">#</a></span></h2>
+<h3 id="z" class="relative group">z <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#z" aria-label="アンカー">#</a></span></h3>
+<p>今回はディレクトリの履歴から検索して表示してくれるzというプラグインのみを入れます。めちゃ便利です。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">brew install z
+</span></span><span class="line"><span class="cl">fisher install jethrokuan/z
+</span></span></code></pre></div><h2 id="頑張った成果を見よう" class="relative group">頑張った成果を見よう <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e9%a0%91%e5%bc%b5%e3%81%a3%e3%81%9f%e6%88%90%e6%9e%9c%e3%82%92%e8%a6%8b%e3%82%88%e3%81%86" aria-label="アンカー">#</a></span></h2>
+<p>Apple Siliconの環境設定頑張ったので</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">fisher install laughedelic/fish_logo
+</span></span><span class="line"><span class="cl">fish_logo
+</span></span></code></pre></div><p>をして達成感を味わいましょう笑</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">                 ___
+</span></span><span class="line"><span class="cl">  <span class="nv">___</span><span class="o">======</span><span class="nv">____</span><span class="o">=</span>---<span class="o">=)</span>
+</span></span><span class="line"><span class="cl">/T            <span class="se">\_</span>--<span class="o">===)</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span> <span class="se">\ </span><span class="o">(</span>O<span class="o">)</span>   <span class="se">\~</span>    <span class="se">\_</span>-<span class="o">==)</span>
+</span></span><span class="line"><span class="cl"> <span class="se">\ </span>     / <span class="o">)</span>J~~    <span class="se">\-</span><span class="o">=)</span>
+</span></span><span class="line"><span class="cl">  <span class="se">\\</span>___/  <span class="o">)</span>JJ~~~   <span class="se">\)</span>
+</span></span><span class="line"><span class="cl">   <span class="se">\_</span>____/JJJ~~~~    <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>   / <span class="se">\ </span> , <span class="se">\J</span>~~~~~     <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  <span class="o">(</span>-<span class="se">\)\=</span><span class="p">|</span><span class="se">\\\~</span>~~~       L__
+</span></span><span class="line"><span class="cl">  <span class="o">(</span><span class="se">\\</span><span class="o">)</span>  <span class="o">(</span><span class="se">\\\)</span>_           <span class="se">\=</span><span class="o">=</span>__
+</span></span><span class="line"><span class="cl">   <span class="se">\V</span>    <span class="se">\\\)</span> <span class="o">===</span>_____   <span class="se">\\\\\\</span>
+</span></span><span class="line"><span class="cl">          <span class="se">\V</span><span class="o">)</span>     <span class="se">\_</span><span class="o">)</span> <span class="se">\\\\</span>JJ<span class="se">\J\)</span>
+</span></span><span class="line"><span class="cl">                      /J<span class="se">\J</span>T<span class="se">\J</span>JJJ<span class="o">)</span>
+</span></span><span class="line"><span class="cl">                      <span class="o">(</span>JJJ<span class="p">|</span> <span class="se">\U</span>UU<span class="o">)</span>
+</span></span></code></pre></div>
       </div>
       <script>
         if (typeof auth !== 'undefined') {
-          var oid = "views_about.md"
+          var oid = "views_posts\/2022-09-12\/index.md"
           var id = oid ? oid.replaceAll("/", "-") : oid
 
           var viewed = localStorage.getItem(id);
@@ -812,7 +878,7 @@
       
         <a
           class="m-1 inline-block min-w-[2.4rem] rounded bg-neutral-300 p-1 text-center text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-          href="https://twitter.com/intent/tweet/?url=/about/&amp;text=About"
+          href="https://twitter.com/intent/tweet/?url=/posts/2022-09-12/&amp;text=%e4%be%bf%e5%88%a9%e3%81%aaFish%20Shell%e3%82%92%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%88%e3%83%bc%e3%83%ab%e3%81%97%e3%82%88%e3%81%86"
           title="Twitterに投稿する"
           aria-label="Twitterに投稿する"
           >
@@ -829,7 +895,7 @@
       
         <a
           class="m-1 inline-block min-w-[2.4rem] rounded bg-neutral-300 p-1 text-center text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-          href="https://www.facebook.com/sharer/sharer.php?u=/about/&amp;quote=About"
+          href="https://www.facebook.com/sharer/sharer.php?u=/posts/2022-09-12/&amp;quote=%e4%be%bf%e5%88%a9%e3%81%aaFish%20Shell%e3%82%92%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%88%e3%83%bc%e3%83%ab%e3%81%97%e3%82%88%e3%81%86"
           title="Facebookでシェアする"
           aria-label="Facebookでシェアする"
           >
@@ -846,7 +912,7 @@
       
         <a
           class="m-1 inline-block min-w-[2.4rem] rounded bg-neutral-300 p-1 text-center text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-          href="https://pinterest.com/pin/create/bookmarklet/?url=/about/&amp;description=About"
+          href="https://pinterest.com/pin/create/bookmarklet/?url=/posts/2022-09-12/&amp;description=%e4%be%bf%e5%88%a9%e3%81%aaFish%20Shell%e3%82%92%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%88%e3%83%bc%e3%83%ab%e3%81%97%e3%82%88%e3%81%86"
           title="Pinterestでピンする"
           aria-label="Pinterestでピンする"
           >
@@ -863,7 +929,7 @@
       
         <a
           class="m-1 inline-block min-w-[2.4rem] rounded bg-neutral-300 p-1 text-center text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-          href="mailto:?body=/about/&amp;subject=About"
+          href="mailto:?body=/posts/2022-09-12/&amp;subject=%e4%be%bf%e5%88%a9%e3%81%aaFish%20Shell%e3%82%92%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%88%e3%83%bc%e3%83%ab%e3%81%97%e3%82%88%e3%81%86"
           title=" Eメールを送る"
           aria-label=" Eメールを送る"
           >
@@ -882,12 +948,84 @@
 
     
   
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+      <div class="flex justify-between pt-3">
+        <span>
+          
+            <a class="flex group" href="/posts/2021-09-30/">
+              <span
+                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
+                >&larr;</span
+              >
+              <span
+                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
+                >&rarr;</span
+              >
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >相対論を用いてタイムトラベルを語るのは強引か？</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2021-09-30 20:50:09 &#43;0900 JST">2021年 9月 30日</time>
+                  
+                </span>
+              </span>
+            </a>
+          
+        </span>
+        <span>
+          
+            <a class="flex text-right group" href="/posts/2022-09-13/">
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >TeX打ちの最高環境を構築したい</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2022-09-13 20:50:09 &#43;0900 JST">2022年 9月 13日</time>
+                  
+                </span>
+              </span>
+              <span
+                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
+                >&rarr;</span
+              >
+              <span
+                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
+                >&larr;</span
+              >
+            </a>
+          
+        </span>
+      </div>
+    </div>
+  
 
 
     
   </footer>
 </article>
 
+        
+          <div
+            class="pointer-events-none absolute top-[100vh] bottom-0 w-12 ltr:right-0 rtl:left-0"
+          >
+            <a
+              href="#the-top"
+              class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 backdrop-blur hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+              aria-label="TOPへスクロール"
+              title="TOPへスクロール"
+            >
+              &uarr;
+            </a>
+          </div>
         
       </main><footer class="py-10 print:hidden">
   

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>ddd3hLab</title>
-    <link>/</link>
-    <description>Recent content on ddd3hLab</description>
+    <title>日記 on ddd3hLab</title>
+    <link>/categories/%E6%97%A5%E8%A8%98/</link>
+    <description>Recent content in 日記 on ddd3hLab</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Tue, 13 Sep 2022 20:50:09 +0900</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 13 Sep 2022 20:50:09 +0900</lastBuildDate><atom:link href="/categories/%E6%97%A5%E8%A8%98/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>TeX打ちの最高環境を構築したい</title>
       <link>/posts/2022-09-13/</link>
@@ -57,18 +57,6 @@ Warning: /opt/homebrew/bin is not in your PATH. Instructions on how to configure
 $$ ds^2 = \eta_{\mu \nu} dx^\mu dx^\nu $$
 と表せる．ここで地球に観測者がいる系を静止系と呼び，光速で移動している系を移動系ということにする．静止系において光速で移動している観測者を見るとその移動距離は $c^2 dt^2$ であるから世界距離
 $$ d s^2 = \eta_{\mu \nu} dx^\mu dx^\nu = - c^2 dt^2 + c^2 dt^2 = 0 $$</description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/about/</guid>
-      <description>Daisuke NISHIHAMA # その辺にいる宇宙物理学を愛する物理学徒の戯言を投稿するサイト。とりあえず著者について書けるようことはもそんな無いので掻き集めた自己紹介的内容なのでお許しを．
-著者は 物理学、数値解析情、電子回路設計、報通信工学が専門分野。
-画像は知らぬ間に撮られていたも関わらず何気にお気に入りのやつ。
-来歴 # 2000年06月 埼玉県草加市にて誕生する。 2014年08月 Android向けに提供していたメーラーアプリ「Bluemail」の日本語監修を担当する。 2017年01月 同アプリの日本語監修を引退 2019年03月 春日部共栄高等学校卒業 2020年04月 埼玉大学理学部物理学科入学 2020年11月 COREのハイブリットロケット開発チーム「ミソラ工房」に所属し、第16回能代宇宙イベントにて「HIBARI1」のシミュレーションを担当。 2020年12月 CanSat機体「SC-5」の電装班長 2021年03月 ハイブリットロケット開発チーム「Duo」にてノーズ電装を担当し、御宿共同打上実験にて４年ぶりのデータ回収を実現する。 2021年10月 エムラボ株式会社入社（プログラミング講師） 2021年12月 CanSat機体「SC-2.1」PM 2022年03月 株式会社MediHub IT顧問就任 2022年04月 埼玉大学宇宙工学サークルあかとき代表 2022年04月 CanSat機体「SC-11」電装班長 2022年05月 スペースバルーン「ANCO-project」電装班兼、GUIプロジェクトPM 2022年07月 エムラボ株式会社退社（プログラミング講師） 実績 # Simulation Software FROGS Python ver.</description>
     </item>
     
   </channel>
