@@ -1,13 +1,8 @@
 
 
 <!DOCTYPE html>
-<html
-  lang="jp"
-  dir="ltr"
-  class="scroll-smooth"
-  data-default-appearance="light"
-  data-auto-appearance="true"
-><head>
+<html lang="jp" dir="ltr" class="scroll-smooth" data-default-appearance="dark"
+  data-auto-appearance="true"><head>
   <meta charset="utf-8" />
   
   <meta http-equiv="content-language" content="ja" />
@@ -33,8 +28,8 @@
   
   
   
-  <link type="text/css" rel="stylesheet" href="/css/main.bundle.min.3f7a3d89b943c3dacb033ff4448c83a5b58692eb75f99e903ee759443c690298da06dc2cc7adc967ae51bb50103acfa1b65f99a428ef2ff09176f2519b277273.css"
-    integrity="sha512-P3o9iblDw9rLAz/0RIyDpbWGkut1&#43;Z6QPudZRDxpApjaBtwsx63JZ65Ru1AQOs&#43;htl&#43;ZpCjvL/CRdvJRmydycw==" />
+  <link type="text/css" rel="stylesheet" href="/css/main.bundle.min.21e363418a7854b482803dfcf1d2f5a499b706d500fcd131020c6263980a2db0d26e8f977b71ed7228eb53f46807d51f0d9a26e9ae2724ba123637ad4d1addbf.css"
+    integrity="sha512-IeNjQYp4VLSCgD388dL1pJm3BtUA/NExAgxiY5gKLbDSbo&#43;Xe3HtcijrU/RoB9UfDZom6a4nJLoSNjetTRrdvw==" />
   
   
   <script type="text/javascript" src="/js/main.min.cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e.js" integrity="sha512-z4PhNX7vuL3xVChQ1m2AB9Yg5AULVxXcg/SpIdNs6c5H0NE8XYXysP&#43;DGNKHfuwvY7kxvUdBeoGlODJ6&#43;SfaPg=="></script>
@@ -54,8 +49,8 @@
   
   
   
-  <script defer type="text/javascript" id="script-bundle" src="/js/main.bundle.min.d535b8b104fbf5cdc592bf3729c592b7de370787e7d3d703691adbd733f84fc4427cafa8ab6f59ad6d01670bd2033f569322fa915928bfef4bd07f34cedd516b.js"
-    integrity="sha512-1TW4sQT79c3Fkr83KcWSt943B4fn09cDaRrb1zP4T8RCfK&#43;oq29ZrW0BZwvSAz9WkyL6kVkov&#43;9L0H80zt1Raw==" data-copy="" data-copied=""></script>
+  <script defer type="text/javascript" id="script-bundle" src="/js/main.bundle.min.3ddcf04f5b0d4c32f72e726d3c12eebccd8c3c9f9daa9a13414808895de0ae1e1cdddda6849680d5bd96dbb60d0b1e0b24c29f5c83e5631e55e7e6bc02015490.js"
+    integrity="sha512-PdzwT1sNTDL3LnJtPBLuvM2MPJ&#43;dqpoTQUgIiV3grh4c3d2mhJaA1b2W27YNCx4LJMKfXIPlYx5V5&#43;a8AgFUkA==" data-copy="" data-copied=""></script>
   
   <script src="/js/zoom.min.js"></script>
   
@@ -77,17 +72,15 @@
 実際どうなのか検討する記事である．
 まず，結論を先に話すと双子のパラドックスの問題解消のために，一般相対論を出すものもいるが，一般相対論なんかを使わずとも特殊相対論で十分に解消できる．
 さらに，光速で進む物体の時間は静止系よりも時間がゆっくり進むし，慣性系に戻ってきても時間は相対的には遅れている．つまり，同い年だったのに数年後には10歳差ということもありうる．
-相対論の復習 # 光速 $c$ に近い速度で進む物体においてはNewtonの運動方程式は適応できない．このような状況では相対論的効果も考慮し，考えなくてはいけない．
-世界距離 # 今回のタイトルでは「世界距離」という言葉を使わせていただいたが，書籍によっては「世界間隔」と表記するものも多い．どちらも同じことを指しているので本サイトでは前者で統一する．
-世界距離は四次元座標 $x^\mu$，Minkowski計量 $\eta_{\mu \nu}$を用いて
+相対論の復習&gt; 相対論の復習 # 光速 \(c\) に近い速度で進む物体においてはNewtonの運動方程式は適応できない．このような状況では相対論的効果も考慮し，考えなくてはいけない．
+世界距離&gt; 世界距離 # 今回のタイトルでは「世界距離」という言葉を使わせていただいたが，書籍によっては「世界間隔」と表記するものも多い．どちらも同じことを指しているので本サイトでは前者で統一する．
+世界距離は四次元座標 \(x^\mu\)，Minkowski計量 \(\eta_{\mu \nu}\)を用いて
 $$ ds^2 = \eta_{\mu \nu} dx^\mu dx^\nu $$
-と表せる．ここで地球に観測者がいる系を静止系と呼び，光速で移動している系を移動系ということにする．静止系において光速で移動している観測者を見るとその移動距離は $c^2 dt^2$ であるから世界距離
-$$ d s^2 = \eta_{\mu \nu} dx^\mu dx^\nu = - c^2 dt^2 &#43; c^2 dt^2 = 0 $$" />
+と表せる．ここで地球に観測者がいる系を静止系と呼び，光速で移動している系を移動系ということにする．静止系において光速で移動している観測者を見るとその移動距離は \(c^2 dt^2\) であるから世界距離" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/posts/2021-09-30/" /><meta property="og:image" content="/posts/2021-09-30/feature.jpg"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2021-09-30T20:50:09+09:00" />
 <meta property="article:modified_time" content="2021-09-30T20:50:09+09:00" /><meta property="og:site_name" content="ddd3hLab" />
-
 
   <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="/posts/2021-09-30/feature.jpg"/>
@@ -97,12 +90,11 @@ $$ d s^2 = \eta_{\mu \nu} dx^\mu dx^\nu = - c^2 dt^2 &#43; c^2 dt^2 = 0 $$" />
 実際どうなのか検討する記事である．
 まず，結論を先に話すと双子のパラドックスの問題解消のために，一般相対論を出すものもいるが，一般相対論なんかを使わずとも特殊相対論で十分に解消できる．
 さらに，光速で進む物体の時間は静止系よりも時間がゆっくり進むし，慣性系に戻ってきても時間は相対的には遅れている．つまり，同い年だったのに数年後には10歳差ということもありうる．
-相対論の復習 # 光速 $c$ に近い速度で進む物体においてはNewtonの運動方程式は適応できない．このような状況では相対論的効果も考慮し，考えなくてはいけない．
-世界距離 # 今回のタイトルでは「世界距離」という言葉を使わせていただいたが，書籍によっては「世界間隔」と表記するものも多い．どちらも同じことを指しているので本サイトでは前者で統一する．
-世界距離は四次元座標 $x^\mu$，Minkowski計量 $\eta_{\mu \nu}$を用いて
+相対論の復習&gt; 相対論の復習 # 光速 \(c\) に近い速度で進む物体においてはNewtonの運動方程式は適応できない．このような状況では相対論的効果も考慮し，考えなくてはいけない．
+世界距離&gt; 世界距離 # 今回のタイトルでは「世界距離」という言葉を使わせていただいたが，書籍によっては「世界間隔」と表記するものも多い．どちらも同じことを指しているので本サイトでは前者で統一する．
+世界距離は四次元座標 \(x^\mu\)，Minkowski計量 \(\eta_{\mu \nu}\)を用いて
 $$ ds^2 = \eta_{\mu \nu} dx^\mu dx^\nu $$
-と表せる．ここで地球に観測者がいる系を静止系と呼び，光速で移動している系を移動系ということにする．静止系において光速で移動している観測者を見るとその移動距離は $c^2 dt^2$ であるから世界距離
-$$ d s^2 = \eta_{\mu \nu} dx^\mu dx^\nu = - c^2 dt^2 &#43; c^2 dt^2 = 0 $$"/>
+と表せる．ここで地球に観測者がいる系を静止系と呼び，光速で移動している系を移動系ということにする．静止系において光速で移動している観測者を見るとその移動距離は \(c^2 dt^2\) であるから世界距離"/>
 
   
   <script type="application/ld+json">
@@ -113,12 +105,12 @@ $$ d s^2 = \eta_{\mu \nu} dx^\mu dx^\nu = - c^2 dt^2 &#43; c^2 dt^2 = 0 $$"/>
     "name": "相対論を用いてタイムトラベルを語るのは強引か？",
     "headline": "相対論を用いてタイムトラベルを語るのは強引か？",
     
-    "abstract": "タイムトラベルという言葉を用いるとき，ときどき半半ば強引に「相対論によると」光速に近ければ時間は遅くなるという話が存在する．確かに光速で進む物体の時間は静止系よりも時間がゆっくり進むことになるし，一種のタイムトラベルとも言えそうである．\nしかし，双子のパラドックスという概念を引き合いにしてその理屈はおかしいと主張する人が少数いる．\n実際どうなのか検討する記事である．\nまず，結論を先に話すと双子のパラドックスの問題解消のために，一般相対論を出すものもいるが，一般相対論なんかを使わずとも特殊相対論で十分に解消できる．\nさらに，光速で進む物体の時間は静止系よりも時間がゆっくり進むし，慣性系に戻ってきても時間は相対的には遅れている．つまり，同い年だったのに数年後には10歳差ということもありうる．\n相対論の復習 # 光速 $c$ に近い速度で進む物体においてはNewtonの運動方程式は適応できない．このような状況では相対論的効果も考慮し，考えなくてはいけない．\n世界距離 # 今回のタイトルでは「世界距離」という言葉を使わせていただいたが，書籍によっては「世界間隔」と表記するものも多い．どちらも同じことを指しているので本サイトでは前者で統一する．\n世界距離は四次元座標 $x^\\mu$，Minkowski計量 $\\eta_{\\mu \\nu}$を用いて\n$$ ds^2 = \\eta_{\\mu \\nu} dx^\\mu dx^\\nu $$\nと表せる．ここで地球に観測者がいる系を静止系と呼び，光速で移動している系を移動系ということにする．静止系において光速で移動している観測者を見るとその移動距離は $c^2 dt^2$ であるから世界距離\n$$ d s^2 = \\eta_{\\mu \\nu} dx^\\mu dx^\\nu = - c^2 dt^2 \u002b c^2 dt^2 = 0 $$",
+    "abstract": "タイムトラベルという言葉を用いるとき，ときどき半半ば強引に「相対論によると」光速に近ければ時間は遅くなるという話が存在する．確かに光速で進む物体の時間は静止系よりも時間がゆっくり進むことになるし，一種のタイムトラベルとも言えそうである．\nしかし，双子のパラドックスという概念を引き合いにしてその理屈はおかしいと主張する人が少数いる．\n実際どうなのか検討する記事である．\nまず，結論を先に話すと双子のパラドックスの問題解消のために，一般相対論を出すものもいるが，一般相対論なんかを使わずとも特殊相対論で十分に解消できる．\nさらに，光速で進む物体の時間は静止系よりも時間がゆっくり進むし，慣性系に戻ってきても時間は相対的には遅れている．つまり，同い年だったのに数年後には10歳差ということもありうる．\n相対論の復習\u003e 相対論の復習 # 光速 \\(c\\) に近い速度で進む物体においてはNewtonの運動方程式は適応できない．このような状況では相対論的効果も考慮し，考えなくてはいけない．\n世界距離\u003e 世界距離 # 今回のタイトルでは「世界距離」という言葉を使わせていただいたが，書籍によっては「世界間隔」と表記するものも多い．どちらも同じことを指しているので本サイトでは前者で統一する．\n世界距離は四次元座標 \\(x^\\mu\\)，Minkowski計量 \\(\\eta_{\\mu \\nu}\\)を用いて\n$$ ds^2 = \\eta_{\\mu \\nu} dx^\\mu dx^\\nu $$\nと表せる．ここで地球に観測者がいる系を静止系と呼び，光速で移動している系を移動系ということにする．静止系において光速で移動している観測者を見るとその移動距離は \\(c^2 dt^2\\) であるから世界距離",
     "inLanguage": "ja",
     "url" : "\/posts\/2021-09-30\/",
     "author" : {
       "@type": "Person",
-      "name": "Daisuke NISHIHAMA"
+      "name": "ddd3hLab"
     },
     "copyrightYear": "2021",
     "dateCreated": "2021-09-30T20:50:09\u002b09:00",
@@ -129,14 +121,14 @@ $$ d s^2 = \eta_{\mu \nu} dx^\mu dx^\nu = - c^2 dt^2 &#43; c^2 dt^2 = 0 $$"/>
     "keywords": ["日記"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "88"
+    "wordCount": "93"
   }]
   </script>
 
 
   
   
-  <meta name="author" content="Daisuke NISHIHAMA" />
+  <meta name="author" content="ddd3hLab" />
   
   
   
@@ -168,6 +160,144 @@ $$ d s^2 = \eta_{\mu \nu} dx^\mu dx^\nu = - c^2 dt^2 &#43; c^2 dt^2 = 0 $$"/>
 
 
 
+  
+  
+  <link
+    type="text/css" rel="stylesheet"
+    href="/lib/katex/katex.min.990c289bc36ce28a7e1f6f680e40ff2d73bf3ac5cfbc215f92066414056b86178fcd12d4f0d508dcd926e373615944a68f7a7909c6b61d3124310997411c0341.css"
+    integrity="sha512-mQwom8Ns4op&#43;H29oDkD/LXO/OsXPvCFfkgZkFAVrhhePzRLU8NUI3Nkm43NhWUSmj3p5Cca2HTEkMQmXQRwDQQ=="
+  />
+  
+  
+  <script defer src="/lib/katex/katex.min.b0748d2c40912522be045b3b13c0e215cea97fa9fdd1b2c8f391268b0d6386b79db9984add55e0abd978900b7d79320760072e4012872f4d502ace3fdd7825f2.js" integrity="sha512-sHSNLECRJSK&#43;BFs7E8DiFc6pf6n90bLI85Emiw1jhreduZhK3VXgq9l4kAt9eTIHYAcuQBKHL01QKs4/3Xgl8g=="></script>
+  
+  
+  <script defer src="/lib/katex/auto-render.min.8968ae052e67b7aafad1f0b3dba35dd19a9ed276e4d594c841b9772afee462c5fec8a314147ce3687dbe02733abe9d97b3e80d99a0405562634a6b8fc3be847e.js" integrity="sha512-iWiuBS5nt6r60fCz26Nd0Zqe0nbk1ZTIQbl3Kv7kYsX&#43;yKMUFHzjaH2&#43;AnM6vp2Xs&#43;gNmaBAVWJjSmuPw76Efg==" onload="renderMathInElement(document.body);"></script>
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+  
+  
+
 
   
   
@@ -177,55 +307,83 @@ $$ d s^2 = \eta_{\mu \nu} dx^\mu dx^\nu = - c^2 dt^2 &#43; c^2 dt^2 = 0 $$"/>
 
   
   
-  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
   
   
   
 </head><body
-    class="flex flex-col h-screen px-6 m-auto text-lg leading-7 max-w-7xl bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32"
-  >
-    <div id="the-top" class="absolute flex self-center">
-      <a
-        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
-        href="#main-content"
-        ><span class="font-bold text-primary-600 ltr:pr-2 rtl:pl-2 dark:text-primary-400"
-          >&darr;</span
-        >メインコンテンツへスキップ</a
-      >
-    </div>
-    
-    
-      <div style="padding-left:0;padding-right:0"
+  class="flex flex-col h-screen px-6 m-auto text-lg leading-7 max-w-7xl bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32">
+  <div id="the-top" class="absolute flex self-center">
+    <a class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+      href="#main-content"><span
+        class="font-bold text-primary-600 ltr:pr-2 rtl:pl-2 dark:text-primary-400">&darr;</span>メインコンテンツへスキップ</a>
+  </div>
+  
+  
+  <div style="padding-left:0;padding-right:0;padding-top:2px;padding-bottom:3px"
     class="flex items-center justify-between px-4 py-6 sm:px-6 md:justify-start space-x-3">
     
     <div class="flex flex-1 items-center justify-between">
         <nav class="flex space-x-3">
 
             <a href="/" class="text-base font-medium text-gray-500 hover:text-gray-900">ddd3hLab</a>
-
+            
+            
         </nav>
         <div class="hidden md:flex items-center space-x-5 md:ml-12">
 
             
             
-            <a href="/about/" class="text-base font-medium text-gray-500 hover:text-gray-900" title="About">About</a>
+            <a href="/about/"  class="text-base font-medium text-gray-500 hover:text-gray-900" title="About">
+                
+
+
+                
+                About
+            </a>
             
-            <a href="/posts/" class="text-base font-medium text-gray-500 hover:text-gray-900" title="Posts">Blog</a>
+            <a href="/docs/"  class="text-base font-medium text-gray-500 hover:text-gray-900" title="Docs">
+                
+
+
+                
+                Docs
+            </a>
             
-            <a href="/categories/" class="text-base font-medium text-gray-500 hover:text-gray-900" title="Categories">Categories</a>
+            <a href="/posts/"  class="text-base font-medium text-gray-500 hover:text-gray-900" title="Posts">
+                
+
+
+                
+                Blog
+            </a>
             
-            <a href="/tags/" class="text-base font-medium text-gray-500 hover:text-gray-900" title="Tags">Tags</a>
+            <a href="/categories/"  class="text-base font-medium text-gray-500 hover:text-gray-900" title="Categories">
+                
+
+
+                
+                Categories
+            </a>
+            
+            <a href="/tags/"  class="text-base font-medium text-gray-500 hover:text-gray-900" title="Tags">
+                
+
+
+                
+                Tags
+            </a>
             
             
 
-            <span></span>
+            
+
 
             
             <button id="search-button" class="text-base hover:text-primary-600 dark:hover:text-primary-400"
-                title="">
+                title="検索 (/)">
                 
 
-  <span class="relative inline-block align-text-bottom icon">
+  <span class="relative block icon">
     <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
 
   </span>
@@ -236,13 +394,14 @@ $$ d s^2 = \eta_{\mu \nu} dx^\mu dx^\nu = - c^2 dt^2 &#43; c^2 dt^2 = 0 $$"/>
 
             
             
+            
             <div
                 class="ltr:mr-14 rtl:ml-14 cursor-pointer text-sm text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400">
                 <button id="appearance-switcher" type="button">
                     <div class="flex items-center justify-center h-12 dark:hidden">
                         
 
-  <span class="relative inline-block align-text-bottom icon">
+  <span class="relative block icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
 
   </span>
@@ -252,7 +411,7 @@ $$ d s^2 = \eta_{\mu \nu} dx^\mu dx^\nu = - c^2 dt^2 &#43; c^2 dt^2 = 0 $$"/>
                     <div class="items-center justify-center hidden h-12 dark:flex">
                         
 
-  <span class="relative inline-block align-text-bottom icon">
+  <span class="relative block icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
 
   </span>
@@ -269,11 +428,14 @@ $$ d s^2 = \eta_{\mu \nu} dx^\mu dx^\nu = - c^2 dt^2 &#43; c^2 dt^2 = 0 $$"/>
             <span></span>
 
             
+
+
+            
             <button id="search-button-mobile" class="text-base hover:text-primary-600 dark:hover:text-primary-400"
-                title="">
+                title="検索 (/)">
                 
 
-  <span class="relative inline-block align-text-bottom icon">
+  <span class="relative block icon">
     <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
 
   </span>
@@ -288,7 +450,7 @@ $$ d s^2 = \eta_{\mu \nu} dx^\mu dx^\nu = - c^2 dt^2 &#43; c^2 dt^2 = 0 $$"/>
                 <div class="flex items-center justify-center h-12 dark:hidden">
                     
 
-  <span class="relative inline-block align-text-bottom icon">
+  <span class="relative block icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
 
   </span>
@@ -298,7 +460,7 @@ $$ d s^2 = \eta_{\mu \nu} dx^\mu dx^\nu = - c^2 dt^2 &#43; c^2 dt^2 = 0 $$"/>
                 <div class="items-center justify-center hidden h-12 dark:flex">
                     
 
-  <span class="relative inline-block align-text-bottom icon">
+  <span class="relative block icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
 
   </span>
@@ -317,21 +479,21 @@ $$ d s^2 = \eta_{\mu \nu} dx^\mu dx^\nu = - c^2 dt^2 &#43; c^2 dt^2 = 0 $$"/>
             <div class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400">
                 
 
-  <span class="relative inline-block align-text-bottom icon">
+  <span class="relative block icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
 
   </span>
 
 
             </div>
-            <div id="menu-wrapper" style="padding-top:25px;"
+            <div id="menu-wrapper" style="padding-top:5px;"
                 class="fixed inset-0 z-30 invisible w-screen h-screen m-auto overflow-auto transition-opacity opacity-0 cursor-default bg-neutral-100/50 backdrop-blur-sm dark:bg-neutral-900/50">
                 <ul
                     class="flex movedown flex-col w-full px-6 py-6 mx-auto overflow-visible list-none ltr:text-right rtl:text-left max-w-7xl sm:px-14 md:px-24 lg:px-32 sm:py-10 sm:pt-10">
                     <li class="mb-1">
-                        <span class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400">
+                        <span class="cursor-pointer inline-block align-text-bottom hover:text-primary-600 dark:hover:text-primary-400">
 
-  <span class="relative inline-block align-text-bottom icon">
+  <span class="relative block icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
 
   </span>
@@ -342,23 +504,58 @@ $$ d s^2 = \eta_{\mu \nu} dx^\mu dx^\nu = - c^2 dt^2 &#43; c^2 dt^2 = 0 $$"/>
                     
                     
                     <li class="mb-1">
-                        <a class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
-                            href="/about/" title="About">About</a>
+                        <a  class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+                            href="/about/" title="About">
+                            <span class="inline-block align-text-bottom">
+
+</span>
+                            
+                            About
+                        </a>
                     </li>
                     
                     <li class="mb-1">
-                        <a class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
-                            href="/posts/" title="Posts">Blog</a>
+                        <a  class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+                            href="/docs/" title="Docs">
+                            <span class="inline-block align-text-bottom">
+
+</span>
+                            
+                            Docs
+                        </a>
                     </li>
                     
                     <li class="mb-1">
-                        <a class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
-                            href="/categories/" title="Categories">Categories</a>
+                        <a  class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+                            href="/posts/" title="Posts">
+                            <span class="inline-block align-text-bottom">
+
+</span>
+                            
+                            Blog
+                        </a>
                     </li>
                     
                     <li class="mb-1">
-                        <a class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
-                            href="/tags/" title="Tags">Tags</a>
+                        <a  class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+                            href="/categories/" title="Categories">
+                            <span class="inline-block align-text-bottom">
+
+</span>
+                            
+                            Categories
+                        </a>
+                    </li>
+                    
+                    <li class="mb-1">
+                        <a  class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+                            href="/tags/" title="Tags">
+                            <span class="inline-block align-text-bottom">
+
+</span>
+                            
+                            Tags
+                        </a>
                     </li>
                     
                     
@@ -369,67 +566,22 @@ $$ d s^2 = \eta_{\mu \nu} dx^\mu dx^\nu = - c^2 dt^2 &#43; c^2 dt^2 = 0 $$"/>
     </div>
 </div>
 
+  
+  <div class="relative flex flex-col grow">
+    <main id="main-content" class="grow">
+      
 
 
-<div id="mobile-menu"
-    class="fixed inset-0 z-30 invisible w-screen h-screen m-auto overflow-auto transition-opacity opacity-0 cursor-default bg-neutral-100/50 backdrop-blur-sm dark:bg-neutral-900/50">
-    <ul
-        class="flex movedown flex-col w-full px-6 py-6 mx-auto overflow-visible list-none ltr:text-right rtl:text-left max-w-7xl sm:px-14 md:px-24 lg:px-32 sm:py-10 sm:pt-10">
-        <li class="mb-1">
-            <span class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400">
-
-  <span class="relative inline-block align-text-bottom icon">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
-
-  </span>
-
-</span>
-        </li>
-        
-        
-        <li class="mb-1">
-            <a class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
-                href="/about/" title="About">About</a>
-        </li>
-        
-        <li class="mb-1">
-            <a class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
-                href="/posts/" title="Posts">Blog</a>
-        </li>
-        
-        <li class="mb-1">
-            <a class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
-                href="/categories/" title="Categories">Categories</a>
-        </li>
-        
-        <li class="mb-1">
-            <a class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
-                href="/tags/" title="Tags">Tags</a>
-        </li>
-        
-        
-        
-        <li>
-            <button id="search-button-mobile" class="text-base hover:text-primary-600 dark:hover:text-primary-400">
-                
-
-  <span class="relative inline-block align-text-bottom icon">
-    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
-
-  </span>
-
-
-            </button>
-        </li>
-        
-    </ul>
-</div>
-    
-    <div class="relative flex flex-col grow">
-      <main id="main-content" class="grow">
-        
 <article>
-  <header class="max-w-prose">
+  
+  
+  
+  
+        
+            <div class="w-full h-36 md:h-56 lg:h-72 single_hero_basic nozoom" style="background-image:url(/posts/2021-09-30/feature_hu7fa9fd1804346ab12f0b82b55a7e875e_11298_1200x0_resize_q75_box.jpg);"></div>
+        
+    
+  <header id="single_header" class="mt-5 max-w-prose">
     
     <ol class="text-sm text-neutral-500 dark:text-neutral-400 print:hidden">
   
@@ -471,46 +623,50 @@ $$ d s^2 = \eta_{\mu \nu} dx^\mu dx^\nu = - c^2 dt^2 &#43; c^2 dt^2 = 0 $$"/>
     <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
       相対論を用いてタイムトラベルを語るのは強引か？
     </h1>
-    <div class="mt-8 mb-12 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+    <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
       
 
 
 
 
 
-  
-  
 
 
 
-  
-
-  
-  
-    
-  
-
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-
-  
-    
-  
 
 
-  <div class="flex flex-row flex-wrap items-center">
-    
-    
-      <time datetime="2021-09-30 20:50:09 &#43;0900 JST">2021年 9月 30日</time><span class="px-2 text-primary-500">&middot;</span><span>88 文字</span><span class="px-2 text-primary-500">&middot;</span><span title="読むのに必要な時間">1 分</span><span class="px-2 text-primary-500">&middot;</span>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  <time datetime="2021-09-30 20:50:09 &#43;0900 JST">2021年 9月 30日</time><span class="px-2 text-primary-500">&middot;</span><span>93 文字</span><span class="px-2 text-primary-500">&middot;</span><span title="読むのに必要な時間">1 分</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -525,34 +681,60 @@ $$ d s^2 = \eta_{\mu \nu} dx^\mu dx^\nu = - c^2 dt^2 &#43; c^2 dt^2 = 0 $$"/>
     rel="noopener noreferrer"
     target="_blank"
     title="編集"
-    >
+    ><span class="inline-block align-text-bottom">
 
-  <span class="relative inline-block align-text-bottom icon">
+  <span class="relative block icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M490.3 40.4C512.2 62.27 512.2 97.73 490.3 119.6L460.3 149.7L362.3 51.72L392.4 21.66C414.3-.2135 449.7-.2135 471.6 21.66L490.3 40.4zM172.4 241.7L339.7 74.34L437.7 172.3L270.3 339.6C264.2 345.8 256.7 350.4 248.4 353.2L159.6 382.8C150.1 385.6 141.5 383.4 135 376.1C128.6 370.5 126.4 361 129.2 352.4L158.8 263.6C161.6 255.3 166.2 247.8 172.4 241.7V241.7zM192 63.1C209.7 63.1 224 78.33 224 95.1C224 113.7 209.7 127.1 192 127.1H96C78.33 127.1 64 142.3 64 159.1V416C64 433.7 78.33 448 96 448H352C369.7 448 384 433.7 384 416V319.1C384 302.3 398.3 287.1 416 287.1C433.7 287.1 448 302.3 448 319.1V416C448 469 405 512 352 512H96C42.98 512 0 469 0 416V159.1C0 106.1 42.98 63.1 96 63.1H192z"/></svg>
 
   </span>
 
-</a
+</span></a
   >
 </span>
-    
-
-    
-    
-  </div>
+  
 
   
   
+</div>
+
+
+
+
+
 
 
     </div>
   </header>
   <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
-     <div class="order-first px-0 lg:order-last lg:max-w-xs ltr:lg:pl-8 rtl:lg:pr-8">
-      <div class="toc ltr:pl-5 rtl:pr-5 print:hidden lg:sticky lg:top-10">
-        <details open class="mt-0 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5">
+     
+    <div class="order-first sm:max-w-prose lg:ml-auto px-0 lg:order-last lg:max-w-xs ltr:lg:pl-8 rtl:lg:pr-8">
+      <div class="toc ltr:pl-5 rtl:pr-5 print:hidden lg:sticky  lg:top-10 ">
+        <details open class="mt-0 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 hidden lg:block">
   <summary
     class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden"
+  >
+    目次
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600"
+  >
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#相対論の復習">相対論の復習</a>
+      <ul>
+        <li><a href="#世界距離">世界距離</a></li>
+        <li><a href="#双子のパラドックス">双子のパラドックス</a></li>
+      </ul>
+    </li>
+    <li><a href="#双子のパラドックスの解消">双子のパラドックスの解消</a></li>
+    <li><a href="#相対論を用いてタイムトラベルを話すのは">相対論を用いてタイムトラベルを話すのは&hellip;</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+<details class="mt-0 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden"
   >
     目次
   </summary>
@@ -578,20 +760,36 @@ $$ d s^2 = \eta_{\mu \nu} dx^\mu dx^\nu = - c^2 dt^2 &#43; c^2 dt^2 = 0 $$"/>
       </div>
       
       <div class="min-w-0 min-h-0 max-w-prose">
-        <p>タイムトラベルという言葉を用いるとき，ときどき半半ば強引に「相対論によると」光速に近ければ時間は遅くなるという話が存在する．確かに光速で進む物体の時間は静止系よりも時間がゆっくり進むことになるし，一種のタイムトラベルとも言えそうである．</p>
+        
+
+        
+
+<p>タイムトラベルという言葉を用いるとき，ときどき半半ば強引に「相対論によると」光速に近ければ時間は遅くなるという話が存在する．確かに光速で進む物体の時間は静止系よりも時間がゆっくり進むことになるし，一種のタイムトラベルとも言えそうである．</p>
 <p>しかし，双子のパラドックスという概念を引き合いにしてその理屈はおかしいと主張する人が少数いる．</p>
 <p>実際どうなのか検討する記事である．</p>
 <p>まず，結論を先に話すと双子のパラドックスの問題解消のために，一般相対論を出すものもいるが，<strong>一般相対論なんかを使わずとも特殊相対論で十分に解消できる</strong>．</p>
 <p>さらに，光速で進む物体の時間は静止系よりも時間がゆっくり進むし，慣性系に戻ってきても時間は相対的には遅れている．つまり，同い年だったのに数年後には10歳差ということもありうる．</p>
-<h2 id="相対論の復習" class="relative group">相対論の復習 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e7%9b%b8%e5%af%be%e8%ab%96%e3%81%ae%e5%be%a9%e7%bf%92" aria-label="アンカー">#</a></span></h2>
-<p>光速 $c$ に近い速度で進む物体においてはNewtonの運動方程式は適応できない．このような状況では相対論的効果も考慮し，考えなくてはいけない．</p>
-<h3 id="世界距離" class="relative group">世界距離 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e4%b8%96%e7%95%8c%e8%b7%9d%e9%9b%a2" aria-label="アンカー">#</a></span></h3>
-<p>今回のタイトルでは「世界距離」という言葉を使わせていただいたが，書籍によっては「世界間隔」と表記するものも多い．どちらも同じことを指しているので本サイトでは前者で統一する．</p>
-<p>世界距離は四次元座標 $x^\mu$，Minkowski計量 $\eta_{\mu \nu}$を用いて</p>
+<div id="相対論の復習" class="anchor">相対論の復習></div>
+<h2 class="relative group">相対論の復習 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%e7%9b%b8%e5%af%be%e8%ab%96%e3%81%ae%e5%be%a9%e7%bf%92" aria-label="アンカー">#</a></span>        
+    
+</h2><p>光速 \(c\) に近い速度で進む物体においてはNewtonの運動方程式は適応できない．このような状況では相対論的効果も考慮し，考えなくてはいけない．</p>
+<div id="世界距離" class="anchor">世界距離></div>
+<h3 class="relative group">世界距離 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%e4%b8%96%e7%95%8c%e8%b7%9d%e9%9b%a2" aria-label="アンカー">#</a></span>        
+    
+</h3><p>今回のタイトルでは「世界距離」という言葉を使わせていただいたが，書籍によっては「世界間隔」と表記するものも多い．どちらも同じことを指しているので本サイトでは前者で統一する．</p>
+<p>世界距離は四次元座標 \(x^\mu\)，Minkowski計量 \(\eta_{\mu \nu}\)を用いて</p>
 <p>$$
 ds^2 = \eta_{\mu \nu} dx^\mu dx^\nu
 $$</p>
-<p>と表せる．ここで地球に観測者がいる系を静止系と呼び，光速で移動している系を移動系ということにする．静止系において光速で移動している観測者を見るとその移動距離は $c^2 dt^2$ であるから世界距離</p>
+<p>と表せる．ここで地球に観測者がいる系を静止系と呼び，光速で移動している系を移動系ということにする．静止系において光速で移動している観測者を見るとその移動距離は \(c^2 dt^2\) であるから世界距離</p>
 <p>$$
 d s^2 = \eta_{\mu \nu} dx^\mu dx^\nu = - c^2 dt^2 + c^2 dt^2 = 0
 $$</p>
@@ -604,11 +802,18 @@ $$</p>
 <p>$$
 ds^2 = ds&rsquo;^2
 $$</p>
-<p>がいえる．ゆえに，$dt&rsquo; = 0$ がいえて時間は静止しているように見えることが分かる．</p>
-<h3 id="双子のパラドックス" class="relative group">双子のパラドックス <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e5%8f%8c%e5%ad%90%e3%81%ae%e3%83%91%e3%83%a9%e3%83%89%e3%83%83%e3%82%af%e3%82%b9" aria-label="アンカー">#</a></span></h3>
-<p>ここでどんなパラドックスが生じるかといえば以上の議論は<strong>あくまでも相対的な事柄</strong>でしか無い．</p>
+<p>がいえる．ゆえに，\(dt&rsquo; = 0\) がいえて時間は静止しているように見えることが分かる．</p>
+<div id="双子のパラドックス" class="anchor">双子のパラドックス></div>
+<h3 class="relative group">双子のパラドックス 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%e5%8f%8c%e5%ad%90%e3%81%ae%e3%83%91%e3%83%a9%e3%83%89%e3%83%83%e3%82%af%e3%82%b9" aria-label="アンカー">#</a></span>        
+    
+</h3><p>ここでどんなパラドックスが生じるかといえば以上の議論は<strong>あくまでも相対的な事柄</strong>でしか無い．</p>
 <p>つまり，光速で移動している系（移動系）から地球を見れば地球が光速で移動しているわけである．つまり，移動系から見れば静止系の時間が止まっているし，静止系から見れば移動系の時間が止まっているのである．</p>
 <p>
+
 
 
 
@@ -623,50 +828,41 @@ $$</p>
 
 </p>
 <p>すなわち双子A, Bのうち片方Bだけが光速で地球から旅をして帰ってきたとき異なる時間を持つ（お互い相手の時計は止まってると思っている）二人が出会うため，矛盾が生じてしまう．これを双子パラドックスと呼んでいる．</p>
-<h2 id="双子のパラドックスの解消" class="relative group">双子のパラドックスの解消 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e5%8f%8c%e5%ad%90%e3%81%ae%e3%83%91%e3%83%a9%e3%83%89%e3%83%83%e3%82%af%e3%82%b9%e3%81%ae%e8%a7%a3%e6%b6%88" aria-label="アンカー">#</a></span></h2>
-<p>これは単純な問題である．上の議論は特殊相対性原理に則っているため，慣性系でしか議論はできない．しかし，移動系は一旦，地球に戻るためにUターンもしくは減速を行うはずである．つまりこの際に<strong>慣性系は破れ加速度系となってしまう</strong>．</p>
+<div id="双子のパラドックスの解消" class="anchor">双子のパラドックスの解消></div>
+<h2 class="relative group">双子のパラドックスの解消 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%e5%8f%8c%e5%ad%90%e3%81%ae%e3%83%91%e3%83%a9%e3%83%89%e3%83%83%e3%82%af%e3%82%b9%e3%81%ae%e8%a7%a3%e6%b6%88" aria-label="アンカー">#</a></span>        
+    
+</h2><p>これは単純な問題である．上の議論は特殊相対性原理に則っているため，慣性系でしか議論はできない．しかし，移動系は一旦，地球に戻るためにUターンもしくは減速を行うはずである．つまりこの際に<strong>慣性系は破れ加速度系となってしまう</strong>．</p>
 <p><mark>ゆえに，移動系から見てはいけないのだ．</mark></p>
 <p>地球（静止系）は常に慣性系であるのでこちらで議論した結末は問題なく正しい．ゆえに，<mark>双子の片方Bは光速で移動しているため時間は静止しているため出発時と同じ年齢で時間は一切進まずに帰ってくる</mark>，というのが正解となる．</p>
 <p>一般相対論など不必要であるし，きちんと慣性系のみだけで議論すればいいだけの話である．</p>
-<h2 id="相対論を用いてタイムトラベルを話すのは" class="relative group">相対論を用いてタイムトラベルを話すのは&hellip; <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%e7%9b%b8%e5%af%be%e8%ab%96%e3%82%92%e7%94%a8%e3%81%84%e3%81%a6%e3%82%bf%e3%82%a4%e3%83%a0%e3%83%88%e3%83%a9%e3%83%99%e3%83%ab%e3%82%92%e8%a9%b1%e3%81%99%e3%81%ae%e3%81%af" aria-label="アンカー">#</a></span></h2>
-<p>タイムトラベルというのが何なのかの定義付けにはよるが，上で議論したように実際に移動した系とそうでない系で時間に隔たりができる．</p>
+<div id="相対論を用いてタイムトラベルを話すのは" class="anchor">相対論を用いてタイムトラベルを話すのは&hellip;></div>
+<h2 class="relative group">相対論を用いてタイムトラベルを話すのは&hellip; 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%e7%9b%b8%e5%af%be%e8%ab%96%e3%82%92%e7%94%a8%e3%81%84%e3%81%a6%e3%82%bf%e3%82%a4%e3%83%a0%e3%83%88%e3%83%a9%e3%83%99%e3%83%ab%e3%82%92%e8%a9%b1%e3%81%99%e3%81%ae%e3%81%af" aria-label="アンカー">#</a></span>        
+    
+</h2><p>タイムトラベルというのが何なのかの定義付けにはよるが，上で議論したように実際に移動した系とそうでない系で時間に隔たりができる．</p>
 <p>それゆえ，タイムトラベルと呼ぶのは問題ないだろうし強引とまでは言い難いのかもしれない．</p>
+
+        </br></br>
+        
 
       </div>
       <script>
-        if (typeof auth !== 'undefined') {
-          var oid = "views_posts\/2021-09-30\/index.md"
-          var id = oid ? oid.replaceAll("/", "-") : oid
-
-          var viewed = localStorage.getItem(id);
-
-          if (!viewed) {
-            auth.signInAnonymously()
-              .then(() => {
-                var docRef = db.collection('views').doc(id)
-                localStorage.setItem(id, true);
-                docRef.get().then((doc) => {
-                  if (doc.exists) {
-                    db.collection('views').doc(id).update({
-                      views: firebase.firestore.FieldValue.increment(1)
-                    });
-                  } else {
-                    db.collection('views').doc(id).set({ views: 1 })
-                  }
-                }).catch((error) => {
-                  console.log("Error getting document:", error);
-                });
-              })
-              .catch((error) => {
-                var errorCode = error.code;
-                var errorMessage = error.message;
-                console.error(errorCode, errorMessage)
-              });
-          }
-        }
+        var oid = "views_posts\/2021-09-30\/index.md"
+        var oid_likes = "likes_posts\/2021-09-30\/index.md"
       </script>
+      
+      
+      <script type="text/javascript" src="/js/page.min.0e49973b4ad0a382c7c6012d8bff8226316642daabc4f8a20477bd08674f3da6e2fa993bc20ad4f51e7c5bb68e6f913a207a7c4fe37ea0e7b806894afce0a64e.js" integrity="sha512-DkmXO0rQo4LHxgEti/&#43;CJjFmQtqrxPiiBHe9CGdPPabi&#43;pk7wgrU9R58W7aOb5E6IHp8T&#43;N&#43;oOe4BolK/OCmTg=="></script>
   </section>
   <footer class="pt-8 max-w-prose print:hidden">
+
     
   <div class="flex">
     
@@ -677,7 +873,7 @@ $$</p>
           class="!mt-0 !mb-0 h-24 w-24 rounded-full ltr:mr-4 rtl:ml-4"
           width="96"
           height="96"
-          alt="Daisuke NISHIHAMA"
+          alt="ddd3hLab"
           src="/img/profile_hu03ffcc50bbba19c20cea6fb6718469a6_27394_192x192_fill_q75_box_smart1.jpg"
         />
       
@@ -688,7 +884,7 @@ $$</p>
           著者
         </div>
         <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
-          Daisuke NISHIHAMA
+          ddd3hLab
         </div>
       
       
@@ -704,14 +900,14 @@ $$</p>
           target="_blank"
           aria-label="Email"
           rel="me noopener noreferrer"
-          >
+          ><span class="inline-block align-text-bottom">
 
-  <span class="relative inline-block align-text-bottom icon">
+  <span class="relative block icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M207.8 20.73c-93.45 18.32-168.7 93.66-187 187.1c-27.64 140.9 68.65 266.2 199.1 285.1c19.01 2.888 36.17-12.26 36.17-31.49l.0001-.6631c0-15.74-11.44-28.88-26.84-31.24c-84.35-12.98-149.2-86.13-149.2-174.2c0-102.9 88.61-185.5 193.4-175.4c91.54 8.869 158.6 91.25 158.6 183.2l0 16.16c0 22.09-17.94 40.05-40 40.05s-40.01-17.96-40.01-40.05v-120.1c0-8.847-7.161-16.02-16.01-16.02l-31.98 .0036c-7.299 0-13.2 4.992-15.12 11.68c-24.85-12.15-54.24-16.38-86.06-5.106c-38.75 13.73-68.12 48.91-73.72 89.64c-9.483 69.01 43.81 128 110.9 128c26.44 0 50.43-9.544 69.59-24.88c24 31.3 65.23 48.69 109.4 37.49C465.2 369.3 496 324.1 495.1 277.2V256.3C495.1 107.1 361.2-9.332 207.8 20.73zM239.1 304.3c-26.47 0-48-21.56-48-48.05s21.53-48.05 48-48.05s48 21.56 48 48.05S266.5 304.3 239.1 304.3z"/></svg>
 
   </span>
 
-</a
+</span></a
         >
       
     
@@ -722,14 +918,14 @@ $$</p>
           target="_blank"
           aria-label="Facebook"
           rel="me noopener noreferrer"
-          >
+          ><span class="inline-block align-text-bottom">
 
-  <span class="relative inline-block align-text-bottom icon">
+  <span class="relative block icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg>
 
   </span>
 
-</a
+</span></a
         >
       
     
@@ -740,14 +936,14 @@ $$</p>
           target="_blank"
           aria-label="Github"
           rel="me noopener noreferrer"
-          >
+          ><span class="inline-block align-text-bottom">
 
-  <span class="relative inline-block align-text-bottom icon">
+  <span class="relative block icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
 
   </span>
 
-</a
+</span></a
         >
       
     
@@ -758,14 +954,14 @@ $$</p>
           target="_blank"
           aria-label="Instagram"
           rel="me noopener noreferrer"
-          >
+          ><span class="inline-block align-text-bottom">
 
-  <span class="relative inline-block align-text-bottom icon">
+  <span class="relative block icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
 
   </span>
 
-</a
+</span></a
         >
       
     
@@ -776,14 +972,14 @@ $$</p>
           target="_blank"
           aria-label="Researchgate"
           rel="me noopener noreferrer"
-          >
+          ><span class="inline-block align-text-bottom">
 
-  <span class="relative inline-block align-text-bottom icon">
+  <span class="relative block icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 32v448h448V32H0zm262.2 334.4c-6.6 3-33.2 6-50-14.2-9.2-10.6-25.3-33.3-42.2-63.6-8.9 0-14.7 0-21.4-.6v46.4c0 23.5 6 21.2 25.8 23.9v8.1c-6.9-.3-23.1-.8-35.6-.8-13.1 0-26.1.6-33.6.8v-8.1c15.5-2.9 22-1.3 22-23.9V225c0-22.6-6.4-21-22-23.9V193c25.8 1 53.1-.6 70.9-.6 31.7 0 55.9 14.4 55.9 45.6 0 21.1-16.7 42.2-39.2 47.5 13.6 24.2 30 45.6 42.2 58.9 7.2 7.8 17.2 14.7 27.2 14.7v7.3zm22.9-135c-23.3 0-32.2-15.7-32.2-32.2V167c0-12.2 8.8-30.4 34-30.4s30.4 17.9 30.4 17.9l-10.7 7.2s-5.5-12.5-19.7-12.5c-7.9 0-19.7 7.3-19.7 19.7v26.8c0 13.4 6.6 23.3 17.9 23.3 14.1 0 21.5-10.9 21.5-26.8h-17.9v-10.7h30.4c0 20.5 4.7 49.9-34 49.9zm-116.5 44.7c-9.4 0-13.6-.3-20-.8v-69.7c6.4-.6 15-.6 22.5-.6 23.3 0 37.2 12.2 37.2 34.5 0 21.9-15 36.6-39.7 36.6z"/></svg>
 
   </span>
 
-</a
+</span></a
         >
       
     
@@ -794,14 +990,14 @@ $$</p>
           target="_blank"
           aria-label="Twitter"
           rel="me noopener noreferrer"
-          >
+          ><span class="inline-block align-text-bottom">
 
-  <span class="relative inline-block align-text-bottom icon">
+  <span class="relative block icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
 
   </span>
 
-</a
+</span></a
         >
       
     
@@ -812,14 +1008,14 @@ $$</p>
           target="_blank"
           aria-label="Youtube"
           rel="me noopener noreferrer"
-          >
+          ><span class="inline-block align-text-bottom">
 
-  <span class="relative inline-block align-text-bottom icon">
+  <span class="relative block icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
 
   </span>
 
-</a
+</span></a
         >
       
     
@@ -830,76 +1026,95 @@ $$</p>
   </div>
 
 
+
+    
+    
+    
+
+    
+      
+    
+
+    
+
     
   
   <section class="flex flex-row flex-wrap justify-center pt-4 text-xl">
     
       
-        <a
-          class="m-1 inline-block min-w-[2.4rem] rounded bg-neutral-300 p-1 text-center text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-          href="https://twitter.com/intent/tweet/?url=/posts/2021-09-30/&amp;text=%e7%9b%b8%e5%af%be%e8%ab%96%e3%82%92%e7%94%a8%e3%81%84%e3%81%a6%e3%82%bf%e3%82%a4%e3%83%a0%e3%83%88%e3%83%a9%e3%83%99%e3%83%ab%e3%82%92%e8%aa%9e%e3%82%8b%e3%81%ae%e3%81%af%e5%bc%b7%e5%bc%95%e3%81%8b%ef%bc%9f"
-          title="Twitterに投稿する"
-          aria-label="Twitterに投稿する"
-          >
+      <a
+      target="_blank"
+      class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
+      href="https://twitter.com/intent/tweet/?url=/posts/2021-09-30/&amp;text=%e7%9b%b8%e5%af%be%e8%ab%96%e3%82%92%e7%94%a8%e3%81%84%e3%81%a6%e3%82%bf%e3%82%a4%e3%83%a0%e3%83%88%e3%83%a9%e3%83%99%e3%83%ab%e3%82%92%e8%aa%9e%e3%82%8b%e3%81%ae%e3%81%af%e5%bc%b7%e5%bc%95%e3%81%8b%ef%bc%9f"
+      title="Twitterに投稿する"
+      aria-label="Twitterに投稿する"
+      >
+      
 
-  <span class="relative inline-block align-text-bottom icon">
+  <span class="relative block icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
 
   </span>
 
-</a
-        >
+
+    </a>
       
     
       
-        <a
-          class="m-1 inline-block min-w-[2.4rem] rounded bg-neutral-300 p-1 text-center text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-          href="https://www.facebook.com/sharer/sharer.php?u=/posts/2021-09-30/&amp;quote=%e7%9b%b8%e5%af%be%e8%ab%96%e3%82%92%e7%94%a8%e3%81%84%e3%81%a6%e3%82%bf%e3%82%a4%e3%83%a0%e3%83%88%e3%83%a9%e3%83%99%e3%83%ab%e3%82%92%e8%aa%9e%e3%82%8b%e3%81%ae%e3%81%af%e5%bc%b7%e5%bc%95%e3%81%8b%ef%bc%9f"
-          title="Facebookでシェアする"
-          aria-label="Facebookでシェアする"
-          >
+      <a
+      target="_blank"
+      class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
+      href="https://www.facebook.com/sharer/sharer.php?u=/posts/2021-09-30/&amp;quote=%e7%9b%b8%e5%af%be%e8%ab%96%e3%82%92%e7%94%a8%e3%81%84%e3%81%a6%e3%82%bf%e3%82%a4%e3%83%a0%e3%83%88%e3%83%a9%e3%83%99%e3%83%ab%e3%82%92%e8%aa%9e%e3%82%8b%e3%81%ae%e3%81%af%e5%bc%b7%e5%bc%95%e3%81%8b%ef%bc%9f"
+      title="Facebookでシェアする"
+      aria-label="Facebookでシェアする"
+      >
+      
 
-  <span class="relative inline-block align-text-bottom icon">
+  <span class="relative block icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg>
 
   </span>
 
-</a
-        >
+
+    </a>
       
     
       
-        <a
-          class="m-1 inline-block min-w-[2.4rem] rounded bg-neutral-300 p-1 text-center text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-          href="https://pinterest.com/pin/create/bookmarklet/?url=/posts/2021-09-30/&amp;description=%e7%9b%b8%e5%af%be%e8%ab%96%e3%82%92%e7%94%a8%e3%81%84%e3%81%a6%e3%82%bf%e3%82%a4%e3%83%a0%e3%83%88%e3%83%a9%e3%83%99%e3%83%ab%e3%82%92%e8%aa%9e%e3%82%8b%e3%81%ae%e3%81%af%e5%bc%b7%e5%bc%95%e3%81%8b%ef%bc%9f"
-          title="Pinterestでピンする"
-          aria-label="Pinterestでピンする"
-          >
+      <a
+      target="_blank"
+      class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
+      href="https://pinterest.com/pin/create/bookmarklet/?url=/posts/2021-09-30/&amp;description=%e7%9b%b8%e5%af%be%e8%ab%96%e3%82%92%e7%94%a8%e3%81%84%e3%81%a6%e3%82%bf%e3%82%a4%e3%83%a0%e3%83%88%e3%83%a9%e3%83%99%e3%83%ab%e3%82%92%e8%aa%9e%e3%82%8b%e3%81%ae%e3%81%af%e5%bc%b7%e5%bc%95%e3%81%8b%ef%bc%9f"
+      title="Pinterestでピンする"
+      aria-label="Pinterestでピンする"
+      >
+      
 
-  <span class="relative inline-block align-text-bottom icon">
+  <span class="relative block icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M496 256c0 137-111 248-248 248-25.6 0-50.2-3.9-73.4-11.1 10.1-16.5 25.2-43.5 30.8-65 3-11.6 15.4-59 15.4-59 8.1 15.4 31.7 28.5 56.8 28.5 74.8 0 128.7-68.8 128.7-154.3 0-81.9-66.9-143.2-152.9-143.2-107 0-163.9 71.8-163.9 150.1 0 36.4 19.4 81.7 50.3 96.1 4.7 2.2 7.2 1.2 8.3-3.3.8-3.4 5-20.3 6.9-28.1.6-2.5.3-4.7-1.7-7.1-10.1-12.5-18.3-35.3-18.3-56.6 0-54.7 41.4-107.6 112-107.6 60.9 0 103.6 41.5 103.6 100.9 0 67.1-33.9 113.6-78 113.6-24.3 0-42.6-20.1-36.7-44.8 7-29.5 20.5-61.3 20.5-82.6 0-19-10.2-34.9-31.4-34.9-24.9 0-44.9 25.7-44.9 60.2 0 22 7.4 36.8 7.4 36.8s-24.5 103.8-29 123.2c-5 21.4-3 51.6-.9 71.2C65.4 450.9 0 361.1 0 256 0 119 111 8 248 8s248 111 248 248z"/></svg>
 
   </span>
 
-</a
-        >
+
+    </a>
       
     
       
-        <a
-          class="m-1 inline-block min-w-[2.4rem] rounded bg-neutral-300 p-1 text-center text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-          href="mailto:?body=/posts/2021-09-30/&amp;subject=%e7%9b%b8%e5%af%be%e8%ab%96%e3%82%92%e7%94%a8%e3%81%84%e3%81%a6%e3%82%bf%e3%82%a4%e3%83%a0%e3%83%88%e3%83%a9%e3%83%99%e3%83%ab%e3%82%92%e8%aa%9e%e3%82%8b%e3%81%ae%e3%81%af%e5%bc%b7%e5%bc%95%e3%81%8b%ef%bc%9f"
-          title=" Eメールを送る"
-          aria-label=" Eメールを送る"
-          >
+      <a
+      target="_blank"
+      class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
+      href="mailto:?body=/posts/2021-09-30/&amp;subject=%e7%9b%b8%e5%af%be%e8%ab%96%e3%82%92%e7%94%a8%e3%81%84%e3%81%a6%e3%82%bf%e3%82%a4%e3%83%a0%e3%83%88%e3%83%a9%e3%83%99%e3%83%ab%e3%82%92%e8%aa%9e%e3%82%8b%e3%81%ae%e3%81%af%e5%bc%b7%e5%bc%95%e3%81%8b%ef%bc%9f"
+      title=" Eメールを送る"
+      aria-label=" Eメールを送る"
+      >
+      
 
-  <span class="relative inline-block align-text-bottom icon">
+  <span class="relative block icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M207.8 20.73c-93.45 18.32-168.7 93.66-187 187.1c-27.64 140.9 68.65 266.2 199.1 285.1c19.01 2.888 36.17-12.26 36.17-31.49l.0001-.6631c0-15.74-11.44-28.88-26.84-31.24c-84.35-12.98-149.2-86.13-149.2-174.2c0-102.9 88.61-185.5 193.4-175.4c91.54 8.869 158.6 91.25 158.6 183.2l0 16.16c0 22.09-17.94 40.05-40 40.05s-40.01-17.96-40.01-40.05v-120.1c0-8.847-7.161-16.02-16.01-16.02l-31.98 .0036c-7.299 0-13.2 4.992-15.12 11.68c-24.85-12.15-54.24-16.38-86.06-5.106c-38.75 13.73-68.12 48.91-73.72 89.64c-9.483 69.01 43.81 128 110.9 128c26.44 0 50.43-9.544 69.59-24.88c24 31.3 65.23 48.69 109.4 37.49C465.2 369.3 496 324.1 495.1 277.2V256.3C495.1 107.1 361.2-9.332 207.8 20.73zM239.1 304.3c-26.47 0-48-21.56-48-48.05s21.53-48.05 48-48.05s48 21.56 48 48.05S266.5 304.3 239.1 304.3z"/></svg>
 
   </span>
 
-</a
-        >
+
+    </a>
       
     
   </section>
@@ -918,7 +1133,7 @@ $$</p>
         </span>
         <span>
           
-            <a class="flex text-right group" href="/posts/2022-09-12/">
+            <a class="flex text-right group ml-3" href="/posts/2022-09-12/">
               <span class="flex flex-col">
                 <span
                   class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
@@ -950,25 +1165,35 @@ $$</p>
   </footer>
 </article>
 
+      
+      <div class="pointer-events-none absolute top-[100vh] bottom-0 w-12 ltr:right-0 rtl:left-0">
+        <a href="#the-top"
+          class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 mb-16 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 backdrop-blur hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+          aria-label="" title="">
+          &uarr;
+        </a>
+      </div>
+      
+    </main><footer class="py-10 print:hidden">
+  
+  
+    
+    <nav class="flex flex-row pb-4 text-base font-medium text-neutral-500 dark:text-neutral-400">
+      <ul class="flex flex-col list-none sm:flex-row">
         
-      </main><footer class="py-10 print:hidden">
-  
-  
-  <nav class="pb-4 text-base font-medium text-neutral-500 dark:text-neutral-400">
-    <ul class="flex flex-col list-none sm:flex-row">
-      
-      <li class="mb-1 ltr:text-right rtl:text-left sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0">
-        <a class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2" href="/tags/"
-          title="Tags">Tags</a>
-      </li>
-      
-      <li class="mb-1 ltr:text-right rtl:text-left sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0">
-        <a class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2" href="/categories/"
-          title="Categories">Categories</a>
-      </li>
-      
-    </ul>
-  </nav>
+        <li class="flex mb-1 ltr:text-right rtl:text-left sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0">
+          <a class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2" href="/tags/"
+            title="Tags">Tags</a>
+        </li>
+        
+        <li class="flex mb-1 ltr:text-right rtl:text-left sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0">
+          <a class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2" href="/categories/"
+            title="Categories">Categories</a>
+        </li>
+        
+      </ul>
+    </nav>
+    
   
   <div class="flex items-center justify-between">
 
@@ -976,8 +1201,8 @@ $$</p>
     
     <p class="text-sm text-neutral-500 dark:text-neutral-400">
       &copy;
-      2022
-      Daisuke NISHIHAMA
+      2023
+      ddd3hLab
     </p>
     
 
@@ -988,55 +1213,30 @@ $$</p>
       
       Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
         href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
-        href="https://nunocoracao.github.io/blowfish/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+        href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
     </p>
     
 
   </div>
   <script>
+    
     mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
       margin: 24,
       background: 'rgba(0,0,0,0.5)',
       scrollOffset: 0,
     })
+    
   </script>
   
   
-  <script type="text/javascript" src="/js/process.min.f61c60504e7e9bc2bed3dade7f854248a97a58a590bc8d3fc30d48ee6de3964be61539e74da6ff53fc55b3cba9de8f221526f5cfe1e21c0328a6b17e3ef76cf6.js" integrity="sha512-9hxgUE5&#43;m8K&#43;09ref4VCSKl6WKWQvI0/ww1I7m3jlkvmFTnnTab/U/xVs8up3o8iFSb1z&#43;HiHAMoprF&#43;Pvds9g=="></script>
+  <script type="text/javascript" src="/js/process.min.2166d3adac1679c00a75161830ab5725d3efc0e3d3f8c2453fb01d0907948436c25f0f8a7ad824322fa22f3f9c85fd4d0a1d5c856f53b862157da25a57dc3d52.js" integrity="sha512-IWbTrawWecAKdRYYMKtXJdPvwOPT&#43;MJFP7AdCQeUhDbCXw&#43;KetgkMi&#43;iLz&#43;chf1NCh1chW9TuGIVfaJaV9w9Ug=="></script>
   
   
-  <script type="text/javascript" async
-  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-  MathJax.Hub.Config({
-  tex2jax: {
-    inlineMath: [['$','$'], ['\\(','\\)']],
-    displayMath: [['$$','$$'], ['\\[','\\]']],
-    processEscapes: true,
-    processEnvironments: true,
-    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-    TeX: { equationNumbers: { autoNumber: "AMS" },
-         extensions: ["AMSmath.js", "AMSsymbols.js"] }
-  }
-  });
-  MathJax.Hub.Queue(function() {
-    
-    
-    
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i = 0; i < all.length; i += 1) {
-        all[i].SourceElement().parentNode.className += ' has-jax';
-    }
-  });
-
-  MathJax.Hub.Config({
-  
-  TeX: { equationNumbers: { autoNumber: "AMS" } }
-  });
-</script> 
 </footer><div
   id="search-wrapper"
-  class="invisible fixed inset-0 z-50 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh]"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh]"
   data-url=""
+  style="z-index:500"
 >
   <div
     id="search-modal"
@@ -1047,7 +1247,7 @@ $$</p>
         <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
           
 
-  <span class="relative inline-block align-text-bottom icon">
+  <span class="relative block icon">
     <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
 
   </span>
@@ -1058,7 +1258,7 @@ $$</p>
           type="search"
           id="search-query"
           class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
-          placeholder="Search"
+          placeholder="検索"
           tabindex="0"
         />
       </form>
@@ -1069,7 +1269,7 @@ $$</p>
       >
         
 
-  <span class="relative inline-block align-text-bottom icon">
+  <span class="relative block icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
 
   </span>
@@ -1085,6 +1285,7 @@ $$</p>
   </div>
 </div>
 
-    </div>
-  </body>
+  </div>
+</body>
+
 </html>

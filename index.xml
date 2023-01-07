@@ -14,14 +14,15 @@
       
       <guid>/posts/2022-09-13/</guid>
       <description>※ Windowsの方はTeXstudioを脳筋でインストールしてコンパイラ設定とビルド設定していただけば使えます。また、後日、通常のコンパイル速度の10倍高速にコンパイルできる方法の記事を上げたいと思います。
-新しくMac/Linuxを用意したのなら # MacTeXをインストールします
+新しくMac/Linuxを用意したのなら&gt; 新しくMac/Linuxを用意したのなら # MacTeXをインストールします
 MacTeX - TeX Users Group
 TeXstudioをIDEとしていつも使用しているのですが、残念ながら最新版のv4.3.1はなぜか、Google日本語入力での入力ができません（Mac純正のIMEをご利用の方は気にせず最新版をインストールしてください）。
 そこでv3.1.2をインストールすることにしました（このバージョンに特段理由はありません）。こちらからダウンロードできます。
 TeXstudio - A LaTeX Editor - Browse /3.1.2 at SourceForge.net
 最新版はこちらです。
 https://www.texstudio.org/
-TeXstudioの設定 # コンパイルシステムの変更 # ダウンロードが完了したら、TeXstudio &amp;gt; 環境設定 &amp;gt; コマンド からLaTeXのコンパイルシステムをplatexに変更します。設定は以下のように変更します。</description>
+TeXstudioの設定&gt; TeXstudioの設定 # コンパイルシステムの変更&gt; コンパイルシステムの変更 # ダウンロードが完了したら、TeXstudio &amp;gt; 環境設定 &amp;gt; コマンド からLaTeXのコンパイルシステムをplatexに変更します。設定は以下のように変更します。</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/posts/2022-09-13/feature.png" />
     </item>
     
     <item>
@@ -31,13 +32,14 @@ TeXstudioの設定 # コンパイルシステムの変更 # ダウンロード�
       
       <guid>/posts/2022-09-12/</guid>
       <description>さていつものように brew install fish をしてみるが、残念ながら買ったばっかりのMacにはHomebrewは入っていない。
-Homebrewをインストールする # そこでHomebrewのインストールから始めなくてはいけない。
+Homebrewをインストールする&gt; Homebrewをインストールする # そこでHomebrewのインストールから始めなくてはいけない。
 /bin/bash -c &amp;#34;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)&amp;#34;``` HomebrewはMacユーザーにとっては便利なツールであるからインストールしておいて損はないだろう。
 さて、インストールできたらここからが本番である。
 私のMacはすでにデフォルトでZshが採用されている．以前のMacではBashを使い続け、Appleからの「Zshに変更しましょう」みたいなやつを無視し続けてきた。
 （こういうところで「新しい」Macというのを感じることになるとは……）
 さてインストールが完了するとこんなエラーが出た。
 Warning: /opt/homebrew/bin is not in your PATH. Instructions on how to configure your shell for Homebrew can be found in the &amp;#39;Next steps&amp;#39; section below.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/posts/2022-09-12/feature.png" />
     </item>
     
     <item>
@@ -51,12 +53,12 @@ Warning: /opt/homebrew/bin is not in your PATH. Instructions on how to configure
 実際どうなのか検討する記事である．
 まず，結論を先に話すと双子のパラドックスの問題解消のために，一般相対論を出すものもいるが，一般相対論なんかを使わずとも特殊相対論で十分に解消できる．
 さらに，光速で進む物体の時間は静止系よりも時間がゆっくり進むし，慣性系に戻ってきても時間は相対的には遅れている．つまり，同い年だったのに数年後には10歳差ということもありうる．
-相対論の復習 # 光速 $c$ に近い速度で進む物体においてはNewtonの運動方程式は適応できない．このような状況では相対論的効果も考慮し，考えなくてはいけない．
-世界距離 # 今回のタイトルでは「世界距離」という言葉を使わせていただいたが，書籍によっては「世界間隔」と表記するものも多い．どちらも同じことを指しているので本サイトでは前者で統一する．
-世界距離は四次元座標 $x^\mu$，Minkowski計量 $\eta_{\mu \nu}$を用いて
+相対論の復習&gt; 相対論の復習 # 光速 \(c\) に近い速度で進む物体においてはNewtonの運動方程式は適応できない．このような状況では相対論的効果も考慮し，考えなくてはいけない．
+世界距離&gt; 世界距離 # 今回のタイトルでは「世界距離」という言葉を使わせていただいたが，書籍によっては「世界間隔」と表記するものも多い．どちらも同じことを指しているので本サイトでは前者で統一する．
+世界距離は四次元座標 \(x^\mu\)，Minkowski計量 \(\eta_{\mu \nu}\)を用いて
 $$ ds^2 = \eta_{\mu \nu} dx^\mu dx^\nu $$
-と表せる．ここで地球に観測者がいる系を静止系と呼び，光速で移動している系を移動系ということにする．静止系において光速で移動している観測者を見るとその移動距離は $c^2 dt^2$ であるから世界距離
-$$ d s^2 = \eta_{\mu \nu} dx^\mu dx^\nu = - c^2 dt^2 + c^2 dt^2 = 0 $$</description>
+と表せる．ここで地球に観測者がいる系を静止系と呼び，光速で移動している系を移動系ということにする．静止系において光速で移動している観測者を見るとその移動距離は \(c^2 dt^2\) であるから世界距離</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/posts/2021-09-30/feature.jpg" />
     </item>
     
     <item>
@@ -65,10 +67,30 @@ $$ d s^2 = \eta_{\mu \nu} dx^\mu dx^\nu = - c^2 dt^2 + c^2 dt^2 = 0 $$</descript
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/about/</guid>
-      <description>Daisuke NISHIHAMA # その辺にいる宇宙物理学を愛する物理学徒の戯言を投稿するサイト。とりあえず著者について書けるようことはもそんな無いので掻き集めた自己紹介的内容なのでお許しを．
-著者は 物理学、数値解析情、電子回路設計、報通信工学が専門分野。
-画像は知らぬ間に撮られていたも関わらず何気にお気に入りのやつ。
-来歴 # 2000年06月 埼玉県草加市にて誕生する。 2014年08月 Android向けに提供していたメーラーアプリ「Bluemail」の日本語監修を担当する。 2017年01月 同アプリの日本語監修を引退 2019年03月 春日部共栄高等学校卒業 2020年04月 埼玉大学理学部物理学科入学 2020年11月 COREのハイブリットロケット開発チーム「ミソラ工房」に所属し、第16回能代宇宙イベントにて「HIBARI1」のシミュレーションを担当。 2020年12月 CanSat機体「SC-5」の電装班長 2021年03月 ハイブリットロケット開発チーム「Duo」にてノーズ電装を担当し、御宿共同打上実験にて４年ぶりのデータ回収を実現する。 2021年10月 エムラボ株式会社入社（プログラミング講師） 2021年12月 CanSat機体「SC-2.1」PM 2022年03月 株式会社MediHub IT顧問就任 2022年04月 埼玉大学宇宙工学サークルあかとき代表 2022年04月 CanSat機体「SC-11」電装班長 2022年05月 スペースバルーン「ANCO-project」電装班兼、GUIプロジェクトPM 2022年07月 エムラボ株式会社退社（プログラミング講師） 実績 # Simulation Software FROGS Python ver.</description>
+      <description>ddd3hLab（本サイト）は、物理学徒が日々気になったことを独自に研究したり、開発を行ったことを記録しまとめ、ときには戯言を公開したりするサイトである。
+著者は、西濱 大将（にしはま だいすけ、Daisuke NISHIHAMA）で、専門は宇宙理論物理学、宇宙実験物理学、数値解析、電子回路設計、情報通信工学である。
+来歴&gt; 来歴 # 2000年06月 埼玉県草加市にて誕生する。 2014年08月 Android向けに提供していたメーラーアプリ「Bluemail」の日本語監修を担当（2017年01月引退） 2019年03月 春日部共栄高等学校卒業 2020年04月 埼玉大学理学部物理学科入学 2020年05月 あかとき1・CORE2に入会 2020年10月 自作ロケットエンジン「LIATRIS.musica」燃焼試験を実施、Ground Support Equipment (GSE) を運用する。 2020年11月 COREのハイブリットロケット開発チーム「ミソラ工房」に所属し、第16回能代宇宙イベントにて「HIBARI1」のシミュレーションを担当。 2020年12月 CanSat機体「SC-5」の電装班長 2020年02月 自作ロケットエンジン「LIATRIS.musica」燃焼試験、GSE運用 2021年03月 ハイブリットロケット開発チーム「Duo」にてノーズ電装を担当し、御宿共同打上実験にて４年ぶりのデータ回収を実現する。独自開発した放射線検出器を搭載したCanSat機体「SC-4」の回収。 CORE 2021年3月御宿共同打上実験PV（フルバージョン） - YouTube　3 2021年04月 CORE埼玉大学支部を創設。 初代代表（2022年3月退任） CORE本部会計監査（2022年3月退任） 2021年10月 エムラボ株式会社にプログラミング講師として入社（2022年07月退社） 2021年12月 CanSat機体「SC-2.</description>
+      
+    </item>
+    
+    <item>
+      <title>Docs</title>
+      <link>/docs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/</guid>
+      <description> Date Title Key 2022-01-08 Findings gained through computational physics Report Document </description>
+      
+    </item>
+    
+    <item>
+      <title>オゾンと放射線の関わりを解き明かす—ANCO-Project</title>
+      <link>/research/anco/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/research/anco/</guid>
+      <description>オゾンと放射線の関わりを解き明かす—ANCO-Project&gt; オゾンと放射線の関わりを解き明かす—ANCO-Project # Uncovering the relationship between ozone and radiation―ANCO-Project&gt; Uncovering the relationship between ozone and radiation―ANCO-Project # 会議発表論文足立 恭果 , 石﨑 大貴 , 佐藤 正騎 , 須田 亮介 , 清本 拓人 , 西濱 大将 , 宮崎 剛 , 蛯澤 悠 , 宇井 瞭介 , 飯田 和大 , 金子 尚広 , 徳光 和哉 , 大塲 翔悟 , 勝野 太智 , 山本 大凱 , 川瀬 幹己</description>
+      
     </item>
     
   </channel>
