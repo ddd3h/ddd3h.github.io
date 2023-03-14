@@ -6,7 +6,31 @@
     <description>Recent content on ddd3hLab</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Tue, 13 Sep 2022 20:50:09 +0900</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 13 Mar 2023 15:00:09 +0900</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HEAsoftのインストール</title>
+      <link>/posts/linux/cosmic_tips/</link>
+      <pubDate>Mon, 13 Mar 2023 15:00:09 +0900</pubDate>
+      
+      <guid>/posts/linux/cosmic_tips/</guid>
+      <description>&amp;ldquo;HEAsoft&amp;quot;って何？&gt; &amp;ldquo;HEAsoft&amp;quot;って何？ # HEAsoftは、高エネルギー天体物理学に関連するデータ解析ソフトウェアのパッケージです。このパッケージには、NASAの多くのX線天文衛星ミッションで使用されるデータ解析ソフトウェアが含まれています。たとえば、Chandra X線天文台、XMM-Newton、Suzakuなどが挙げられます。
+HEAsoftには、X線天文学に関する多くのツールが含まれており、X線スペクトルの分析、背景の推定、画像処理、時系列解析などが可能です。HEAsoftは、主にUNIXベースのシステムで動作することが意図されていますが、WindowsやMac OS Xなどのプラットフォームでも使用することができます。
+HEAsoftは、NASAの高エネルギー天体物理学の研究者や、天文学者、物理学者、コンピューターサイエンティスト、その他の関連分野の研究者によって使用されています。
+http://heasarc.gsfc.nasa.gov/docs/software.html
+ダウンロード&gt; ダウンロード # NASAのサイトからHEAsoftのSource Codeをダウンロードする。ダウンロードサイトは https://heasarc.gsfc.nasa.gov/docs/software/lheasoft/download.html
+ダウンロードサイトで
+STEP1：適切な自分のPC環境を選ぶ。
+STEP2：個々のミッションファイルを選ぶ。今後、様々な衛星データを扱う予定ならば「All」でよい。
+以上が完了したら「Submit」
+「tar.gz」ファイルがダウンロードされる。
+tar.gzファイルはtarが非圧縮でファイルをひとまとまりにするもの、gzは圧縮。
+ダウンロード時間（１〜２時間かかる）は長いのでコーヒーブレイクでも楽しむと良い。
+下に載せたやり方であれば5分足らずで完了する。 あまりにも遅い場合、国内サーバーにUbuntuのバージョンのみではあるが、（期間限定で）サーバー上においておくので、そこからダウンロードしてもよい。
+やりかた
+ターミナルで以下のコマンド2行を実行する wget --keep-session-cookies --save-cookies=&amp;#34;cookies.txt&amp;#34; &amp;#34;https://20.</description>
+      
+    </item>
+    
     <item>
       <title>TeX打ちの最高環境を構築したい</title>
       <link>/posts/2022-09-13/</link>
@@ -79,7 +103,7 @@ $$ ds^2 = \eta_{\mu \nu} dx^\mu dx^\nu $$
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/</guid>
-      <description> Date Title Key 2022-01-08 Findings gained through computational physics Report Document 2022-02-08 Python講座_slide スライド 資料 </description>
+      <description> Date Title Key 2022-01-08 Findings gained through computational physics Report Document 2023-02-08 Python講座_slide スライド 資料 </description>
       
     </item>
     
