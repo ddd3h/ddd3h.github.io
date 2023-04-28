@@ -10,14 +10,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   
-  <title>TeX打ちの最高環境を構築したい &middot; ddd3hLab</title>
-  <meta name="title" content="TeX打ちの最高環境を構築したい &middot; ddd3hLab" />
+  <title>HEAsoftを高速ダウンロードする &middot; ddd3hLab</title>
+  <meta name="title" content="HEAsoftを高速ダウンロードする &middot; ddd3hLab" />
   
   <meta name="description" content="その辺にいる物理学徒の戯言を投稿するサイト" />
   
   
   
-  <link rel="canonical" href="/posts/2022-09-13/" />
+  <link rel="canonical" href="/posts/2023-03-13/" />
   
   
   
@@ -66,33 +66,45 @@
   
   
   
-  <meta property="og:title" content="TeX打ちの最高環境を構築したい" />
-<meta property="og:description" content="※ Windowsの方はTeXstudioを脳筋でインストールしてコンパイラ設定とビルド設定していただけば使えます。また、後日、通常のコンパイル速度の10倍高速にコンパイルできる方法の記事を上げたいと思います。
-新しくMac/Linuxを用意したのなら&gt; 新しくMac/Linuxを用意したのなら # MacTeXをインストールします
-MacTeX - TeX Users Group
-TeXstudioをIDEとしていつも使用しているのですが、残念ながら最新版のv4.3.1はなぜか、Google日本語入力での入力ができません（Mac純正のIMEをご利用の方は気にせず最新版をインストールしてください）。
-そこでv3.1.2をインストールすることにしました（このバージョンに特段理由はありません）。こちらからダウンロードできます。
-TeXstudio - A LaTeX Editor - Browse /3.1.2 at SourceForge.net
-最新版はこちらです。
-https://www.texstudio.org/
-TeXstudioの設定&gt; TeXstudioの設定 # コンパイルシステムの変更&gt; コンパイルシステムの変更 # ダウンロードが完了したら、TeXstudio &gt; 環境設定 &gt; コマンド からLaTeXのコンパイルシステムをplatexに変更します。設定は以下のように変更します。" />
+  <meta property="og:title" content="HEAsoftを高速ダウンロードする" />
+<meta property="og:description" content="&ldquo;HEAsoft&quot;って何？&gt; &ldquo;HEAsoft&quot;って何？ # HEAsoftは、高エネルギー天体物理学に関連するデータ解析ソフトウェアのパッケージです。このパッケージには、NASAの多くのX線天文衛星ミッションで使用されるデータ解析ソフトウェアが含まれています。たとえば、Chandra X線天文台、XMM-Newton、Suzakuなどが挙げられます。
+HEAsoftには、X線天文学に関する多くのツールが含まれており、X線スペクトルの分析、背景の推定、画像処理、時系列解析などが可能です。HEAsoftは、主にUNIXベースのシステムで動作することが意図されていますが、WindowsやMac OS Xなどのプラットフォームでも使用することができます。
+HEAsoftは、NASAの高エネルギー天体物理学の研究者や、天文学者、物理学者、コンピューターサイエンティスト、その他の関連分野の研究者によって使用されています。
+http://heasarc.gsfc.nasa.gov/docs/software.html
+ダウンロード&gt; ダウンロード # NASAのサイトからHEAsoftのSource Codeをダウンロードする。ダウンロードサイトは https://heasarc.gsfc.nasa.gov/docs/software/lheasoft/download.html
+ダウンロードサイトで
+STEP1：適切な自分のPC環境を選ぶ。
+STEP2：個々のミッションファイルを選ぶ。今後、様々な衛星データを扱う予定ならば「All」でよい。
+以上が完了したら「Submit」
+「tar.gz」ファイルがダウンロードされる。
+tar.gzファイルはtarが非圧縮でファイルをひとまとまりにするもの、gzは圧縮。
+ダウンロード時間（１〜２時間かかる）は長いのでコーヒーブレイクでも楽しむと良い。
+下に載せたやり方であれば5分足らずで完了する。 あまりにも遅い場合、国内サーバーにUbuntuのバージョンのみではあるが、（期間限定で）サーバー上においておくので、そこからダウンロードしてもよい。
+やりかた
+ターミナルで以下のコマンド2行を実行する wget --keep-session-cookies --save-cookies=&#34;cookies.txt&#34; &#34;https://20." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/posts/2022-09-13/" /><meta property="og:image" content="/posts/2022-09-13/feature.png"/><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2022-09-13T20:50:09+09:00" />
-<meta property="article:modified_time" content="2022-09-13T20:50:09+09:00" /><meta property="og:site_name" content="ddd3hLab" />
+<meta property="og:url" content="/posts/2023-03-13/" /><meta property="og:image" content="/posts/2023-03-13/feature.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-03-13T15:00:09+09:00" />
+<meta property="article:modified_time" content="2023-03-13T15:00:09+09:00" /><meta property="og:site_name" content="ddd3hLab" />
 
   <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="/posts/2022-09-13/feature.png"/>
-<meta name="twitter:title" content="TeX打ちの最高環境を構築したい"/>
-<meta name="twitter:description" content="※ Windowsの方はTeXstudioを脳筋でインストールしてコンパイラ設定とビルド設定していただけば使えます。また、後日、通常のコンパイル速度の10倍高速にコンパイルできる方法の記事を上げたいと思います。
-新しくMac/Linuxを用意したのなら&gt; 新しくMac/Linuxを用意したのなら # MacTeXをインストールします
-MacTeX - TeX Users Group
-TeXstudioをIDEとしていつも使用しているのですが、残念ながら最新版のv4.3.1はなぜか、Google日本語入力での入力ができません（Mac純正のIMEをご利用の方は気にせず最新版をインストールしてください）。
-そこでv3.1.2をインストールすることにしました（このバージョンに特段理由はありません）。こちらからダウンロードできます。
-TeXstudio - A LaTeX Editor - Browse /3.1.2 at SourceForge.net
-最新版はこちらです。
-https://www.texstudio.org/
-TeXstudioの設定&gt; TeXstudioの設定 # コンパイルシステムの変更&gt; コンパイルシステムの変更 # ダウンロードが完了したら、TeXstudio &gt; 環境設定 &gt; コマンド からLaTeXのコンパイルシステムをplatexに変更します。設定は以下のように変更します。"/>
+<meta name="twitter:image" content="/posts/2023-03-13/feature.png"/>
+<meta name="twitter:title" content="HEAsoftを高速ダウンロードする"/>
+<meta name="twitter:description" content="&ldquo;HEAsoft&quot;って何？&gt; &ldquo;HEAsoft&quot;って何？ # HEAsoftは、高エネルギー天体物理学に関連するデータ解析ソフトウェアのパッケージです。このパッケージには、NASAの多くのX線天文衛星ミッションで使用されるデータ解析ソフトウェアが含まれています。たとえば、Chandra X線天文台、XMM-Newton、Suzakuなどが挙げられます。
+HEAsoftには、X線天文学に関する多くのツールが含まれており、X線スペクトルの分析、背景の推定、画像処理、時系列解析などが可能です。HEAsoftは、主にUNIXベースのシステムで動作することが意図されていますが、WindowsやMac OS Xなどのプラットフォームでも使用することができます。
+HEAsoftは、NASAの高エネルギー天体物理学の研究者や、天文学者、物理学者、コンピューターサイエンティスト、その他の関連分野の研究者によって使用されています。
+http://heasarc.gsfc.nasa.gov/docs/software.html
+ダウンロード&gt; ダウンロード # NASAのサイトからHEAsoftのSource Codeをダウンロードする。ダウンロードサイトは https://heasarc.gsfc.nasa.gov/docs/software/lheasoft/download.html
+ダウンロードサイトで
+STEP1：適切な自分のPC環境を選ぶ。
+STEP2：個々のミッションファイルを選ぶ。今後、様々な衛星データを扱う予定ならば「All」でよい。
+以上が完了したら「Submit」
+「tar.gz」ファイルがダウンロードされる。
+tar.gzファイルはtarが非圧縮でファイルをひとまとまりにするもの、gzは圧縮。
+ダウンロード時間（１〜２時間かかる）は長いのでコーヒーブレイクでも楽しむと良い。
+下に載せたやり方であれば5分足らずで完了する。 あまりにも遅い場合、国内サーバーにUbuntuのバージョンのみではあるが、（期間限定で）サーバー上においておくので、そこからダウンロードしてもよい。
+やりかた
+ターミナルで以下のコマンド2行を実行する wget --keep-session-cookies --save-cookies=&#34;cookies.txt&#34; &#34;https://20."/>
 
   
   <script type="application/ld+json">
@@ -100,26 +112,26 @@ TeXstudioの設定&gt; TeXstudioの設定 # コンパイルシステムの変更
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Posts",
-    "name": "TeX打ちの最高環境を構築したい",
-    "headline": "TeX打ちの最高環境を構築したい",
+    "name": "HEAsoftを高速ダウンロードする",
+    "headline": "HEAsoftを高速ダウンロードする",
     
-    "abstract": "※ Windowsの方はTeXstudioを脳筋でインストールしてコンパイラ設定とビルド設定していただけば使えます。また、後日、通常のコンパイル速度の10倍高速にコンパイルできる方法の記事を上げたいと思います。\n新しくMac\/Linuxを用意したのなら\u003e 新しくMac\/Linuxを用意したのなら # MacTeXをインストールします\nMacTeX - TeX Users Group\nTeXstudioをIDEとしていつも使用しているのですが、残念ながら最新版のv4.3.1はなぜか、Google日本語入力での入力ができません（Mac純正のIMEをご利用の方は気にせず最新版をインストールしてください）。\nそこでv3.1.2をインストールすることにしました（このバージョンに特段理由はありません）。こちらからダウンロードできます。\nTeXstudio - A LaTeX Editor - Browse \/3.1.2 at SourceForge.net\n最新版はこちらです。\nhttps:\/\/www.texstudio.org\/\nTeXstudioの設定\u003e TeXstudioの設定 # コンパイルシステムの変更\u003e コンパイルシステムの変更 # ダウンロードが完了したら、TeXstudio \u0026gt; 環境設定 \u0026gt; コマンド からLaTeXのコンパイルシステムをplatexに変更します。設定は以下のように変更します。",
+    "abstract": "\u0026ldquo;HEAsoft\u0026quot;って何？\u003e \u0026ldquo;HEAsoft\u0026quot;って何？ # HEAsoftは、高エネルギー天体物理学に関連するデータ解析ソフトウェアのパッケージです。このパッケージには、NASAの多くのX線天文衛星ミッションで使用されるデータ解析ソフトウェアが含まれています。たとえば、Chandra X線天文台、XMM-Newton、Suzakuなどが挙げられます。\nHEAsoftには、X線天文学に関する多くのツールが含まれており、X線スペクトルの分析、背景の推定、画像処理、時系列解析などが可能です。HEAsoftは、主にUNIXベースのシステムで動作することが意図されていますが、WindowsやMac OS Xなどのプラットフォームでも使用することができます。\nHEAsoftは、NASAの高エネルギー天体物理学の研究者や、天文学者、物理学者、コンピューターサイエンティスト、その他の関連分野の研究者によって使用されています。\nhttp:\/\/heasarc.gsfc.nasa.gov\/docs\/software.html\nダウンロード\u003e ダウンロード # NASAのサイトからHEAsoftのSource Codeをダウンロードする。ダウンロードサイトは https:\/\/heasarc.gsfc.nasa.gov\/docs\/software\/lheasoft\/download.html\nダウンロードサイトで\nSTEP1：適切な自分のPC環境を選ぶ。\nSTEP2：個々のミッションファイルを選ぶ。今後、様々な衛星データを扱う予定ならば「All」でよい。\n以上が完了したら「Submit」\n「tar.gz」ファイルがダウンロードされる。\ntar.gzファイルはtarが非圧縮でファイルをひとまとまりにするもの、gzは圧縮。\nダウンロード時間（１〜２時間かかる）は長いのでコーヒーブレイクでも楽しむと良い。\n下に載せたやり方であれば5分足らずで完了する。 あまりにも遅い場合、国内サーバーにUbuntuのバージョンのみではあるが、（期間限定で）サーバー上においておくので、そこからダウンロードしてもよい。\nやりかた\nターミナルで以下のコマンド2行を実行する wget --keep-session-cookies --save-cookies=\u0026#34;cookies.txt\u0026#34; \u0026#34;https:\/\/20.",
     "inLanguage": "ja",
-    "url" : "\/posts\/2022-09-13\/",
+    "url" : "\/posts\/2023-03-13\/",
     "author" : {
       "@type": "Person",
       "name": "ddd3hLab"
     },
-    "copyrightYear": "2022",
-    "dateCreated": "2022-09-13T20:50:09\u002b09:00",
-    "datePublished": "2022-09-13T20:50:09\u002b09:00",
+    "copyrightYear": "2023",
+    "dateCreated": "2023-03-13T15:00:09\u002b09:00",
+    "datePublished": "2023-03-13T15:00:09\u002b09:00",
     
-    "dateModified": "2022-09-13T20:50:09\u002b09:00",
+    "dateModified": "2023-03-13T15:00:09\u002b09:00",
     
-    "keywords": ["日記"],
+    "keywords": ["Linux"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "167"
+    "wordCount": "142"
   }]
   </script>
 
@@ -438,7 +450,7 @@ TeXstudioの設定&gt; TeXstudioの設定 # コンパイルシステムの変更
   
   
         
-            <div class="w-full h-36 md:h-56 lg:h-72 single_hero_basic nozoom" style="background-image:url(/posts/2022-09-13/feature_hu001b19c307317f5517885fac4a72e01d_138949_1200x0_resize_box_3.png);"></div>
+            <div class="w-full h-36 md:h-56 lg:h-72 single_hero_basic nozoom" style="background-image:url(/posts/2023-03-13/feature_hu8a2de539ba901582d771a781e4f7a452_435987_1200x0_resize_box_3.png);"></div>
         
     
   <header id="single_header" class="mt-5 max-w-prose">
@@ -471,8 +483,8 @@ TeXstudioの設定&gt; TeXstudioの設定 # コンパイルシステムの変更
   <li class="inline hidden">
     <a
       class="hover:underline decoration-neutral-300 dark:underline-neutral-600"
-      href="/posts/2022-09-13/"
-      >TeX打ちの最高環境を構築したい</a
+      href="/posts/2023-03-13/"
+      >HEAsoftを高速ダウンロードする</a
     ><span class="px-1 text-primary-500">/</span>
   </li>
 
@@ -481,7 +493,7 @@ TeXstudioの設定&gt; TeXstudioの設定 # コンパイルシステムの変更
 
     
     <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-      TeX打ちの最高環境を構築したい
+      HEAsoftを高速ダウンロードする
     </h1>
     <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
       
@@ -526,7 +538,7 @@ TeXstudioの設定&gt; TeXstudioの設定 # コンパイルシステムの変更
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2022-09-13 20:50:09 &#43;0900 JST">2022年 9月 13日</time><span class="px-2 text-primary-500">&middot;</span><span>167 文字</span><span class="px-2 text-primary-500">&middot;</span><span title="読むのに必要な時間">1 分</span><span class="px-2 text-primary-500">&middot;</span>
+  <time datetime="2023-03-13 15:00:09 &#43;0900 JST">2023年 3月 13日</time><span class="px-2 text-primary-500">&middot;</span><span>142 文字</span><span class="px-2 text-primary-500">&middot;</span><span title="読むのに必要な時間">1 分</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -536,7 +548,7 @@ TeXstudioの設定&gt; TeXstudioの設定 # コンパイルシステムの変更
 
 <span class="mb-[2px]">
   <a
-    href="#/posts/2022-09-13/index.md"
+    href="#/posts/2023-03-13/index.md"
     class="text-lg hover:text-primary-500"
     rel="noopener noreferrer"
     target="_blank"
@@ -580,20 +592,8 @@ TeXstudioの設定&gt; TeXstudioの設定 # コンパイルシステムの変更
   >
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#新しくmaclinuxを用意したのなら">新しくMac/Linuxを用意したのなら</a></li>
-    <li><a href="#texstudioの設定">TeXstudioの設定</a>
-      <ul>
-        <li><a href="#コンパイルシステムの変更">コンパイルシステムの変更</a></li>
-        <li><a href="#ビルドの変更">ビルドの変更</a></li>
-      </ul>
-    </li>
-    <li><a href="#組み込みpdfビュアーで日本語を見れるようにする">組み込みPDFビュアーで日本語を見れるようにする</a></li>
-    <li><a href="#スタイルをよくする">スタイルをよくする</a></li>
-    <li><a href="#バックスラッシュで自動補完が使えない方へ">バックスラッシュ「\」で自動補完が使えない方へ</a>
-      <ul>
-        <li><a href="#設定">設定</a></li>
-      </ul>
-    </li>
+    <li><a href="#heasoftって何">&ldquo;HEAsoft&quot;って何？</a></li>
+    <li><a href="#ダウンロード">ダウンロード</a></li>
   </ul>
 </nav>
   </div>
@@ -609,20 +609,8 @@ TeXstudioの設定&gt; TeXstudioの設定 # コンパイルシステムの変更
   >
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#新しくmaclinuxを用意したのなら">新しくMac/Linuxを用意したのなら</a></li>
-    <li><a href="#texstudioの設定">TeXstudioの設定</a>
-      <ul>
-        <li><a href="#コンパイルシステムの変更">コンパイルシステムの変更</a></li>
-        <li><a href="#ビルドの変更">ビルドの変更</a></li>
-      </ul>
-    </li>
-    <li><a href="#組み込みpdfビュアーで日本語を見れるようにする">組み込みPDFビュアーで日本語を見れるようにする</a></li>
-    <li><a href="#スタイルをよくする">スタイルをよくする</a></li>
-    <li><a href="#バックスラッシュで自動補完が使えない方へ">バックスラッシュ「\」で自動補完が使えない方へ</a>
-      <ul>
-        <li><a href="#設定">設定</a></li>
-      </ul>
-    </li>
+    <li><a href="#heasoftって何">&ldquo;HEAsoft&quot;って何？</a></li>
+    <li><a href="#ダウンロード">ダウンロード</a></li>
   </ul>
 </nav>
   </div>
@@ -634,161 +622,168 @@ TeXstudioの設定&gt; TeXstudioの設定 # コンパイルシステムの変更
       <div class="min-w-0 min-h-0 max-w-prose">
         
 
-        <p>※ Windowsの方はTeXstudioを脳筋でインストールしてコンパイラ設定とビルド設定していただけば使えます。また、後日、通常のコンパイル速度の10倍高速にコンパイルできる方法の記事を上げたいと思います。</p>
-<div id="新しくmaclinuxを用意したのなら" class="anchor">新しくMac/Linuxを用意したのなら></div>
-<h2 class="relative group">新しくMac/Linuxを用意したのなら 
+        <div id="heasoftって何" class="anchor">&ldquo;HEAsoft&quot;って何？></div>
+<h2 class="relative group">&ldquo;HEAsoft&quot;って何？ 
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%e6%96%b0%e3%81%97%e3%81%8fmaclinux%e3%82%92%e7%94%a8%e6%84%8f%e3%81%97%e3%81%9f%e3%81%ae%e3%81%aa%e3%82%89" aria-label="アンカー">#</a></span>        
+            style="text-decoration-line: none !important;" href="#heasoft%e3%81%a3%e3%81%a6%e4%bd%95" aria-label="アンカー">#</a></span>        
     
-</h2><p>MacTeXをインストールします</p>
-<p><a href="https://tug.org/mactex/mactex-download.html"   target="_blank">
-    MacTeX - TeX Users Group</a></p>
-<p>TeXstudioをIDEとしていつも使用しているのですが、残念ながら最新版のv4.3.1はなぜか、<mark>Google日本語入力での入力ができません</mark>（Mac純正のIMEをご利用の方は気にせず最新版をインストールしてください）。</p>
-<img src="/img/genkiwifi_googleime-10.jpg" width="300px">
-<p>そこでv3.1.2をインストールすることにしました（このバージョンに特段理由はありません）。こちらからダウンロードできます。</p>
-<p><a href="https://sourceforge.net/projects/texstudio/files/3.1.2/"   target="_blank">
-    TeXstudio - A LaTeX Editor - Browse /3.1.2 at SourceForge.net</a></p>
-<p>最新版はこちらです。</p>
-<p><a href="https://www.texstudio.org/"   target="_blank">
-    https://www.texstudio.org/</a></p>
-<div id="texstudioの設定" class="anchor">TeXstudioの設定></div>
-<h2 class="relative group">TeXstudioの設定 
+</h2><p>HEAsoftは、高エネルギー天体物理学に関連するデータ解析ソフトウェアのパッケージです。このパッケージには、NASAの多くのX線天文衛星ミッションで使用されるデータ解析ソフトウェアが含まれています。たとえば、Chandra X線天文台、XMM-Newton、Suzakuなどが挙げられます。</p>
+<p>HEAsoftには、X線天文学に関する多くのツールが含まれており、X線スペクトルの分析、背景の推定、画像処理、時系列解析などが可能です。HEAsoftは、主にUNIXベースのシステムで動作することが意図されていますが、WindowsやMac OS Xなどのプラットフォームでも使用することができます。</p>
+<p>HEAsoftは、NASAの高エネルギー天体物理学の研究者や、天文学者、物理学者、コンピューターサイエンティスト、その他の関連分野の研究者によって使用されています。</p>
+<p><a href="http://heasarc.gsfc.nasa.gov/docs/software.html"   target="_blank">
+    http://heasarc.gsfc.nasa.gov/docs/software.html</a></p>
+<div id="ダウンロード" class="anchor">ダウンロード></div>
+<h2 class="relative group">ダウンロード 
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#texstudio%e3%81%ae%e8%a8%ad%e5%ae%9a" aria-label="アンカー">#</a></span>        
+            style="text-decoration-line: none !important;" href="#%e3%83%80%e3%82%a6%e3%83%b3%e3%83%ad%e3%83%bc%e3%83%89" aria-label="アンカー">#</a></span>        
     
-</h2><div id="コンパイルシステムの変更" class="anchor">コンパイルシステムの変更></div>
-<h3 class="relative group">コンパイルシステムの変更 
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%e3%82%b3%e3%83%b3%e3%83%91%e3%82%a4%e3%83%ab%e3%82%b7%e3%82%b9%e3%83%86%e3%83%a0%e3%81%ae%e5%a4%89%e6%9b%b4" aria-label="アンカー">#</a></span>        
-    
-</h3><p>ダウンロードが完了したら、TeXstudio &gt; 環境設定 &gt; コマンド からLaTeXのコンパイルシステムをplatexに変更します。設定は以下のように変更します。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">platex -synctex<span class="o">=</span><span class="m">1</span> -interaction<span class="o">=</span>nonstopmode %.tex
-</span></span></code></pre></div><p>uplatex等でもいいですし、Latexでもいいと思いますが、基本的に日本語を入力する場合は、高速にコンパイルできるplatexをオススメします。</p>
-<div id="ビルドの変更" class="anchor">ビルドの変更></div>
-<h3 class="relative group">ビルドの変更 
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%e3%83%93%e3%83%ab%e3%83%89%e3%81%ae%e5%a4%89%e6%9b%b4" aria-label="アンカー">#</a></span>        
-    
-</h3><p>環境設定の中の「ビルド＆表示」を「DVI-&gt;PDFチェーン」にします。</p>
-<p>「規定のコンパイラ」が「LaTeX」でない場合は、変更します。</p>
-<div id="組み込みpdfビュアーで日本語を見れるようにする" class="anchor">組み込みPDFビュアーで日本語を見れるようにする></div>
-<h2 class="relative group">組み込みPDFビュアーで日本語を見れるようにする 
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%e7%b5%84%e3%81%bf%e8%be%bc%e3%81%bfpdf%e3%83%93%e3%83%a5%e3%82%a2%e3%83%bc%e3%81%a7%e6%97%a5%e6%9c%ac%e8%aa%9e%e3%82%92%e8%a6%8b%e3%82%8c%e3%82%8b%e3%82%88%e3%81%86%e3%81%ab%e3%81%99%e3%82%8b" aria-label="アンカー">#</a></span>        
-    
-</h2><p>次に組み込みPDFビュアーで日本語を表示できるようにします。以下のコマンドでpopplerというPDFドキュメントの閲覧エンジンの場所が分かります。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">strings -a /Applications/texstudio.app/Contents/Frameworks/libpoppler.*.dylib <span class="p">|</span> grep poppler
-</span></span></code></pre></div><p>このコマンドでどこにあるかが表示されます。それに合わせて、poppler-dataをダウンロードしましょう。私は次のように表示されました。</p>
-<pre tabindex="0"><code>/usr/local/Cellar/poppler/21.05.0/share/poppler
-Unknown CID font collection, please report to poppler bugzilla.
-%Produced by poppler pdftops version: {0:s} ([http://poppler.freedesktop.org](http://poppler.freedesktop.org/))
-</code></pre><p><mark>一行目をよく覚えておきましょう！</mark></p>
-<p>poppler-dataは、最新版が0.4.11です(2022年9月現在)。なので、poppler-data-0.4.11.tar.gzをダウンロードしましょう。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl -kO https://poppler.freedesktop.org/poppler-data-0.4.11.tar.gz
-</span></span><span class="line"><span class="cl">tar xvf poppler-data-0.4.11.tar.gz
-</span></span></code></pre></div><p>これで、poppler-dataをダウンロードし、展開することができました。</p>
-<p>次に先程覚えてもらった場所に、以下のコマンドでフォルダを作成して、poppler-dataをコピーします。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo mkdir -p /usr/local/Cellar/poppler/21.05.0/share/poppler
-</span></span><span class="line"><span class="cl">sudo cp -pR ~/poppler-data-0.4.11/* /usr/local/Cellar/poppler/21.05.0/share/poppler
-</span></span></code></pre></div><p>これが完了したら、ダウンロードフォルダーにあるpoppler-dataは削除していただいて結構です。TeXstudioを開くと日本語がPDFビュアーに表示されると思います。</p>
-<div id="スタイルをよくする" class="anchor">スタイルをよくする></div>
-<h2 class="relative group">スタイルをよくする 
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%e3%82%b9%e3%82%bf%e3%82%a4%e3%83%ab%e3%82%92%e3%82%88%e3%81%8f%e3%81%99%e3%82%8b" aria-label="アンカー">#</a></span>        
-    
-</h2><p>ここでは私好みにテーマ等を変更する方法を教えます。</p>
-<p>スタイルはOrion Darkにして行の折り返しを以下のように設定します．</p>
-<p>
-
-
-
-
-  
-  
-  
-    <figure>
-      <img class="my-0 rounded-md" src="/img/texstudio.png" alt="スクリーンショット 2022-09-28 23.11.18.png" />
-      
-    </figure>
-  
-
-</p>
-<p>行の折り返しで「最大文字数」に設定することで，TeXstudioのバグを克服しています．</p>
-<div id="バックスラッシュで自動補完が使えない方へ" class="anchor">バックスラッシュ「\」で自動補完が使えない方へ></div>
-<h2 class="relative group">バックスラッシュ「\」で自動補完が使えない方へ 
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%e3%83%90%e3%83%83%e3%82%af%e3%82%b9%e3%83%a9%e3%83%83%e3%82%b7%e3%83%a5%e3%81%a7%e8%87%aa%e5%8b%95%e8%a3%9c%e5%ae%8c%e3%81%8c%e4%bd%bf%e3%81%88%e3%81%aa%e3%81%84%e6%96%b9%e3%81%b8" aria-label="アンカー">#</a></span>        
-    
-</h2><p>私は今回からUSキーボードにしたのでこの問題は解消されました。しかし、大半の方はJISキーボードでしょうから、もしかしたら、バックスラッシュを押しても自動補完がされないかもしれません。</p>
-<p>そこで「karabiner-elements」をインストールして「￥」と「＼」を置換します。</p>
-<p>ここから最新版をインストールしてください。</p>
-<p><a href="https://karabiner-elements.pqrs.org/"   target="_blank">
-    https://karabiner-elements.pqrs.org/</a></p>
-<div id="設定" class="anchor">設定></div>
-<h3 class="relative group">設定 
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%e8%a8%ad%e5%ae%9a" aria-label="アンカー">#</a></span>        
-    
-</h3><p>Preferences の Complex Modifications のタブを開き、 画面下の &ldquo;Add rule&rdquo; をおすとダイアログが表示されるので、 ダイアログ上部の &ldquo;Import more rules from internet (open a web browser)&rdquo; ボタンを押します。</p>
-<p>そうすると、予め準備されたルール一覧のページがブラウザで表示されるので、&ldquo;Swap ¥ and \ always on JIS Keyboards&rdquo; というルールを探して、そのルールの &ldquo;Import&rdquo; ボタンを押します。</p>
-<p>
-
-
-
-
-  
-  
-  
-    <figure>
-      <img class="my-0 rounded-md" src="/img/68747470733a2f2f71696974612d696d6167652d73746f72652e73332e616d617a6f6e6177732e636f6d2f302f3131313933342f33353432356462312d636231622d333631342d336239322d3031313739666165353233352e706e67.png" alt="" />
-      
-    </figure>
-  
-
-</p>
-<p>Karabiner-Elements.app を開くかどうかのポップアップが表示されるので、 &ldquo;Karabiner-Elements.app を開く&rdquo; ボタンを押します。</p>
-<p>ボタンを押すと、Karabiner-Elements 側で import するか聞かれるので、&ldquo;Import&rdquo; ボタンを押します。</p>
-<p>Importを行うと、もともと例として表示されている3つのルールの下に、 &ldquo;Swap ¥ and \ always on JIS Keyboards&rdquo; ルールの2つのサブルールが表示されるので、 &ldquo;Enable All&rdquo; ボタンを押して、2つともEnableにしてください。</p>
-<p>
-
-
-
-
-  
-  
-  
-    <figure>
-      <img class="my-0 rounded-md" src="/img/68747470733a2f2f71696974612d696d6167652d73746f72652e73332e616d617a6f6e6177732e636f6d2f302f3131313933342f66303436343235382d366238612d303235362d303837662d3239323935643434386532392e706e67.png" alt="" />
-      
-    </figure>
-  
-
-</p>
-<p>これで完了です。</p>
+</h2><ol>
+<li>
+<p>NASAのサイトからHEAsoftのSource Codeをダウンロードする。ダウンロードサイトは <a href="https://heasarc.gsfc.nasa.gov/docs/software/lheasoft/download.html"   target="_blank">
+    https://heasarc.gsfc.nasa.gov/docs/software/lheasoft/download.html</a></p>
+</li>
+<li>
+<p>ダウンロードサイトで</p>
+<ul>
+<li>
+<p>STEP1：適切な自分のPC環境を選ぶ。</p>
+</li>
+<li>
+<p>STEP2：個々のミッションファイルを選ぶ。今後、様々な衛星データを扱う予定ならば「All」でよい。</p>
+</li>
+<li>
+<p>以上が完了したら「Submit」</p>
+</li>
+</ul>
+</li>
+<li>
+<p>「tar.gz」ファイルがダウンロードされる。</p>
+<ul>
+<li>
+<p>tar.gzファイルはtarが非圧縮でファイルをひとまとまりにするもの、gzは圧縮。</p>
+</li>
+<li>
+<p>ダウンロード時間（１〜２時間かかる）は長いのでコーヒーブレイクでも楽しむと良い。</p>
+<ul>
+<li><strong>下に載せたやり方であれば5分足らずで完了する。</strong></li>
+</ul>
+</li>
+<li>
+<p>あまりにも遅い場合、国内サーバーにUbuntuのバージョンのみではあるが、（期間限定で）サーバー上においておくので、そこからダウンロードしてもよい。</p>
+<ul>
+<li>
+<p>やりかた</p>
+<ul>
+<li>ターミナルで以下のコマンド2行を実行する</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">wget --keep-session-cookies --save-cookies<span class="o">=</span><span class="s2">&#34;cookies.txt&#34;</span> <span class="s2">&#34;https://20.gigafile.nu/0621-le3295726dd5b0b45503e5823972cde05&#34;</span>
+</span></span><span class="line"><span class="cl">wget --load-cookies <span class="s2">&#34;cookies.txt&#34;</span> -O <span class="s2">&#34;heasoft-6.31.1src.tar.gz&#34;</span> <span class="s2">&#34;https://20.gigafile.nu/download.php?file=0621-le3295726dd5b0b45503e5823972cde05&#34;</span>
+</span></span></code></pre></div><ul>
+<li>URLの有効期限は2023/6/21です。これ以降ダウンロードされる場合は管理者にご連絡ください。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>以下のコマンドでファイルを展開します。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">tar xzvf <span class="s2">&#34;heasoft-6.31.1src.tar.gz&#34;</span>
+</span></span></code></pre></div><p><code>heasoft-6.31.1</code>というディレクトリができていることを確認しましょう。</p>
+</li>
+<li>
+<p><code>BUILD_DIR</code>に移動して、インストールを開始します。</p>
+<ul>
+<li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="nb">cd</span> heasoft-6.31.1/BUILD_DIR
+</span></span></code></pre></div></li>
+<li>
+<p>TXTファイルにDUMPする人もいますが、別にエラーなんてその場で見てください。なのでDUMPなんかせず、ただ単に実行します。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">./configure
+</span></span></code></pre></div><ul>
+<li>
+<p>私の場合は次のエラーが出ました。</p>
+<pre tabindex="0"><code>configure: error: Required file /usr/include/X11/Xlib.h not found!
+configure: error: Configure failed in /home/daisuke/heasoft-6.31.1/heacore/BUILD_DIR!
+</code></pre><ul>
+<li>
+<p>Ubuntu 22.04 LTS以降ではデフォルトでGUI(X Window System)やデスクトップ環境が入っていません。なぜこういう古いシステムが好きなんですかね。。。</p>
+<p>次のコマンドを実行してインストールします。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">sudo apt install xorg-dev
+</span></span></code></pre></div></li>
+</ul>
+</li>
+<li>
+<p>エラーを解消したら再度、<code>./configure</code>と実行してください。</p>
+</li>
+<li>
+<p>再度、私は次のようなエラーが出ました。</p>
+<pre tabindex="0"><code>configure: error: AstroPy unavailable but required for HEASoftPy
+configure: error: Configure failed in /home/daisuke/heasoft-6.31.1/heacore/BUILD_DIR!
+</code></pre><ul>
+<li>
+<p><code>AstorPy</code>つまりPythonのライブラリが入ってなかったようです。なのでご自分のPython環境に合わせてインストールしてください。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">pip install astropy
+</span></span></code></pre></div></li>
+</ul>
+</li>
+<li>
+<p>エラーを解消すると次<code>Scipy</code>です。。。「自動でインストールシステム作れ」と怒りたくなりますが、根気よくインストールしていきます。こちらもPythonですので、上同様に実行してください。</p>
+<ul>
+<li>
+<p>念の為、やり方は</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">pip install scipy
+</span></span></code></pre></div></li>
+</ul>
+</li>
+<li>
+<p>またこんなエラーがでました。。。</p>
+<pre tabindex="0"><code>configure: error: No curses header-files found
+configure: error: Configure failed for heacore component lynx!
+configure: error: Configure failed in /home/daisuke/heasoft-6.31.1/heacore/BUILD_DIR!
+</code></pre><ul>
+<li>
+<p>たぶんですが一行目にこういったエラーが出たということで予想ですが次のように実行して、エラー祭りを回避します。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">sudo apt install libreadline-dev libcurl4 libcurl4-gnutls-dev libncurses5-dev
+</span></span></code></pre></div></li>
+</ul>
+</li>
+<li>
+<p><code>Finished</code>が出れば完了です。次のステップに行きましょう。</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><code>Make</code>コマンドでコンパイルをします。おそらく、<code>configure</code>を通っているのでエラーは無いと思います。ここでもDUMPせずに進みます。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">make
+</span></span></code></pre></div></li>
+<li>
+<p>インストールをします。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">make install
+</span></span></code></pre></div></li>
+<li>
+<p>Pathの設定をする（daisukeはユーザー名ですので適宜変更してください。）</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">HEADAS</span><span class="o">=</span>/home/daisuke/heasoft-6.31.1/x86_64-pc-linux-gnu-libc2.35
+</span></span><span class="line"><span class="cl">. <span class="nv">$HEADAS</span>/headas-init.sh
+</span></span><span class="line"><span class="cl"><span class="nb">alias</span> <span class="nv">heainit</span><span class="o">=</span><span class="s2">&#34;. </span><span class="nv">$HEADAS</span><span class="s2">/headas-init.sh&#34;</span>
+</span></span><span class="line"><span class="cl">heainit
+</span></span></code></pre></div><p><code>.bashrc</code>等にでも書いておくといい．実際に動くは<code>fv</code>と入力して動けば動くということである．</p>
+</li>
+</ol>
 
         </br></br>
         
 
       </div>
       <script>
-        var oid = "views_posts\/2022-09-13\/index.md"
-        var oid_likes = "likes_posts\/2022-09-13\/index.md"
+        var oid = "views_posts\/2023-03-13\/index.md"
+        var oid_likes = "likes_posts\/2023-03-13\/index.md"
       </script>
       
       
@@ -978,7 +973,7 @@ Unknown CID font collection, please report to poppler bugzilla.
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="https://twitter.com/intent/tweet/?url=/posts/2022-09-13/&amp;text=TeX%e6%89%93%e3%81%a1%e3%81%ae%e6%9c%80%e9%ab%98%e7%92%b0%e5%a2%83%e3%82%92%e6%a7%8b%e7%af%89%e3%81%97%e3%81%9f%e3%81%84"
+      href="https://twitter.com/intent/tweet/?url=/posts/2023-03-13/&amp;text=HEAsoft%e3%82%92%e9%ab%98%e9%80%9f%e3%83%80%e3%82%a6%e3%83%b3%e3%83%ad%e3%83%bc%e3%83%89%e3%81%99%e3%82%8b"
       title="Twitterに投稿する"
       aria-label="Twitterに投稿する"
       >
@@ -997,7 +992,7 @@ Unknown CID font collection, please report to poppler bugzilla.
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="https://www.facebook.com/sharer/sharer.php?u=/posts/2022-09-13/&amp;quote=TeX%e6%89%93%e3%81%a1%e3%81%ae%e6%9c%80%e9%ab%98%e7%92%b0%e5%a2%83%e3%82%92%e6%a7%8b%e7%af%89%e3%81%97%e3%81%9f%e3%81%84"
+      href="https://www.facebook.com/sharer/sharer.php?u=/posts/2023-03-13/&amp;quote=HEAsoft%e3%82%92%e9%ab%98%e9%80%9f%e3%83%80%e3%82%a6%e3%83%b3%e3%83%ad%e3%83%bc%e3%83%89%e3%81%99%e3%82%8b"
       title="Facebookでシェアする"
       aria-label="Facebookでシェアする"
       >
@@ -1016,7 +1011,7 @@ Unknown CID font collection, please report to poppler bugzilla.
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="https://pinterest.com/pin/create/bookmarklet/?url=/posts/2022-09-13/&amp;description=TeX%e6%89%93%e3%81%a1%e3%81%ae%e6%9c%80%e9%ab%98%e7%92%b0%e5%a2%83%e3%82%92%e6%a7%8b%e7%af%89%e3%81%97%e3%81%9f%e3%81%84"
+      href="https://pinterest.com/pin/create/bookmarklet/?url=/posts/2023-03-13/&amp;description=HEAsoft%e3%82%92%e9%ab%98%e9%80%9f%e3%83%80%e3%82%a6%e3%83%b3%e3%83%ad%e3%83%bc%e3%83%89%e3%81%99%e3%82%8b"
       title="Pinterestでピンする"
       aria-label="Pinterestでピンする"
       >
@@ -1035,7 +1030,7 @@ Unknown CID font collection, please report to poppler bugzilla.
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="mailto:?body=/posts/2022-09-13/&amp;subject=TeX%e6%89%93%e3%81%a1%e3%81%ae%e6%9c%80%e9%ab%98%e7%92%b0%e5%a2%83%e3%82%92%e6%a7%8b%e7%af%89%e3%81%97%e3%81%9f%e3%81%84"
+      href="mailto:?body=/posts/2023-03-13/&amp;subject=HEAsoft%e3%82%92%e9%ab%98%e9%80%9f%e3%83%80%e3%82%a6%e3%83%b3%e3%83%ad%e3%83%bc%e3%83%89%e3%81%99%e3%82%8b"
       title=" Eメールを送る"
       aria-label=" Eメールを送る"
       >
@@ -1063,7 +1058,7 @@ Unknown CID font collection, please report to poppler bugzilla.
       <div class="flex justify-between pt-3">
         <span>
           
-            <a class="flex group mr-3" href="/posts/2022-09-12/">
+            <a class="flex group mr-3" href="/posts/2022-09-13/">
               <span
                 class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
                 >&larr;</span
@@ -1075,11 +1070,11 @@ Unknown CID font collection, please report to poppler bugzilla.
               <span class="flex flex-col">
                 <span
                   class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >便利なFish Shellをインストールしよう</span
+                  >TeX打ちの最高環境を構築したい</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2022-09-12 20:50:09 &#43;0900 JST">2022年 9月 12日</time>
+                    <time datetime="2022-09-13 20:50:09 &#43;0900 JST">2022年 9月 13日</time>
                   
                 </span>
               </span>
@@ -1087,28 +1082,6 @@ Unknown CID font collection, please report to poppler bugzilla.
           
         </span>
         <span>
-          
-            <a class="flex text-right group ml-3" href="/posts/2023-03-13/">
-              <span class="flex flex-col">
-                <span
-                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >HEAsoftを高速ダウンロードする</span
-                >
-                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
-                  
-                    <time datetime="2023-03-13 15:00:09 &#43;0900 JST">2023年 3月 13日</time>
-                  
-                </span>
-              </span>
-              <span
-                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
-                >&rarr;</span
-              >
-              <span
-                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
-                >&larr;</span
-              >
-            </a>
           
         </span>
       </div>

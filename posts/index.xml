@@ -9,10 +9,10 @@
     <lastBuildDate>Mon, 13 Mar 2023 15:00:09 +0900</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>HEAsoftを高速ダウンロードする</title>
-      <link>/posts/linux/cosmic_tips/</link>
+      <link>/posts/2023-03-13/</link>
       <pubDate>Mon, 13 Mar 2023 15:00:09 +0900</pubDate>
       
-      <guid>/posts/linux/cosmic_tips/</guid>
+      <guid>/posts/2023-03-13/</guid>
       <description>&amp;ldquo;HEAsoft&amp;quot;って何？&gt; &amp;ldquo;HEAsoft&amp;quot;って何？ # HEAsoftは、高エネルギー天体物理学に関連するデータ解析ソフトウェアのパッケージです。このパッケージには、NASAの多くのX線天文衛星ミッションで使用されるデータ解析ソフトウェアが含まれています。たとえば、Chandra X線天文台、XMM-Newton、Suzakuなどが挙げられます。
 HEAsoftには、X線天文学に関する多くのツールが含まれており、X線スペクトルの分析、背景の推定、画像処理、時系列解析などが可能です。HEAsoftは、主にUNIXベースのシステムで動作することが意図されていますが、WindowsやMac OS Xなどのプラットフォームでも使用することができます。
 HEAsoftは、NASAの高エネルギー天体物理学の研究者や、天文学者、物理学者、コンピューターサイエンティスト、その他の関連分野の研究者によって使用されています。
