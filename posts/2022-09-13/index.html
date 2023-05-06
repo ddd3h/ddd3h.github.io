@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html lang="jp" dir="ltr" class="scroll-smooth" data-default-appearance="dark"
+<html lang="jp" dir="ltr" class="scroll-smooth" data-default-appearance="light"
   data-auto-appearance="true"><head>
   <meta charset="utf-8" />
   
@@ -13,8 +13,8 @@
   <title>TeX打ちの最高環境を構築したい &middot; ddd3hLab</title>
   <meta name="title" content="TeX打ちの最高環境を構築したい &middot; ddd3hLab" />
   
-  <meta name="description" content="その辺にいる物理学徒の戯言を投稿するサイト" />
-  
+  <meta name="description" content="西濱大将のホームページ" />
+  <meta name="keywords" content="日記, " />
   
   
   <link rel="canonical" href="/posts/2022-09-13/" />
@@ -28,15 +28,12 @@
   
   
   
-  <link type="text/css" rel="stylesheet" href="/css/main.bundle.min.21e363418a7854b482803dfcf1d2f5a499b706d500fcd131020c6263980a2db0d26e8f977b71ed7228eb53f46807d51f0d9a26e9ae2724ba123637ad4d1addbf.css"
-    integrity="sha512-IeNjQYp4VLSCgD388dL1pJm3BtUA/NExAgxiY5gKLbDSbo&#43;Xe3HtcijrU/RoB9UfDZom6a4nJLoSNjetTRrdvw==" />
+  <link type="text/css" rel="stylesheet" href="/css/main.bundle.min.50a3b26b61f5aa8d314f50e17001851e7f4104354eb1508604ae85da9aa2502b4e22ff4971d5dce0243311fbdcdfb47d51b343b2dca70eb6eda4258b1858ae39.css"
+    integrity="sha512-UKOya2H1qo0xT1DhcAGFHn9BBDVOsVCGBK6F2pqiUCtOIv9JcdXc4CQzEfvc37R9UbNDstynDrbtpCWLGFiuOQ==" />
   
   
-  <script type="text/javascript" src="/js/main.min.cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e.js" integrity="sha512-z4PhNX7vuL3xVChQ1m2AB9Yg5AULVxXcg/SpIdNs6c5H0NE8XYXysP&#43;DGNKHfuwvY7kxvUdBeoGlODJ6&#43;SfaPg=="></script>
-  
-  
-  <script type="text/javascript" src="/js/appearance.min.f94f4c4636d9e3ec8f5ee53cdc8ffa3d01bf87cd92ac85e6797550b1e2b80dc9118d838f3eb24c55109352455e72ff082dfe560283154e5a8f87fd75107b59c4.js"
-    integrity="sha512-&#43;U9MRjbZ4&#43;yPXuU83I/6PQG/h82SrIXmeXVQseK4DckRjYOPPrJMVRCTUkVecv8ILf5WAoMVTlqPh/11EHtZxA=="></script>
+  <script type="text/javascript" src="/js/appearance.min.a75d508cf75a202afc48fe649516720f8036bda3657897f6cc07dab21f94fa9c3933edbbfc2936f8d3a426f45ac6153237a48aec9115147c5e03db1c5b62b8bc.js"
+    integrity="sha512-p11QjPdaICr8SP5klRZyD4A2vaNleJf2zAfash&#43;U&#43;pw5M&#43;27/Ck2&#43;NOkJvRaxhUyN6SK7JEVFHxeA9scW2K4vA=="></script>
   
   
   
@@ -68,14 +65,14 @@
   
   <meta property="og:title" content="TeX打ちの最高環境を構築したい" />
 <meta property="og:description" content="※ Windowsの方はTeXstudioを脳筋でインストールしてコンパイラ設定とビルド設定していただけば使えます。また、後日、通常のコンパイル速度の10倍高速にコンパイルできる方法の記事を上げたいと思います。
-新しくMac/Linuxを用意したのなら&gt; 新しくMac/Linuxを用意したのなら # MacTeXをインストールします
+新しくMac/Linuxを用意したのなら # MacTeXをインストールします
 MacTeX - TeX Users Group
 TeXstudioをIDEとしていつも使用しているのですが、残念ながら最新版のv4.3.1はなぜか、Google日本語入力での入力ができません（Mac純正のIMEをご利用の方は気にせず最新版をインストールしてください）。
 そこでv3.1.2をインストールすることにしました（このバージョンに特段理由はありません）。こちらからダウンロードできます。
 TeXstudio - A LaTeX Editor - Browse /3.1.2 at SourceForge.net
 最新版はこちらです。
 https://www.texstudio.org/
-TeXstudioの設定&gt; TeXstudioの設定 # コンパイルシステムの変更&gt; コンパイルシステムの変更 # ダウンロードが完了したら、TeXstudio &gt; 環境設定 &gt; コマンド からLaTeXのコンパイルシステムをplatexに変更します。設定は以下のように変更します。" />
+TeXstudioの設定 # コンパイルシステムの変更 # ダウンロードが完了したら、TeXstudio &gt; 環境設定 &gt; コマンド からLaTeXのコンパイルシステムをplatexに変更します。設定は以下のように変更します。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/posts/2022-09-13/" /><meta property="og:image" content="/posts/2022-09-13/feature.png"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-09-13T20:50:09+09:00" />
@@ -85,14 +82,14 @@ TeXstudioの設定&gt; TeXstudioの設定 # コンパイルシステムの変更
 <meta name="twitter:image" content="/posts/2022-09-13/feature.png"/>
 <meta name="twitter:title" content="TeX打ちの最高環境を構築したい"/>
 <meta name="twitter:description" content="※ Windowsの方はTeXstudioを脳筋でインストールしてコンパイラ設定とビルド設定していただけば使えます。また、後日、通常のコンパイル速度の10倍高速にコンパイルできる方法の記事を上げたいと思います。
-新しくMac/Linuxを用意したのなら&gt; 新しくMac/Linuxを用意したのなら # MacTeXをインストールします
+新しくMac/Linuxを用意したのなら # MacTeXをインストールします
 MacTeX - TeX Users Group
 TeXstudioをIDEとしていつも使用しているのですが、残念ながら最新版のv4.3.1はなぜか、Google日本語入力での入力ができません（Mac純正のIMEをご利用の方は気にせず最新版をインストールしてください）。
 そこでv3.1.2をインストールすることにしました（このバージョンに特段理由はありません）。こちらからダウンロードできます。
 TeXstudio - A LaTeX Editor - Browse /3.1.2 at SourceForge.net
 最新版はこちらです。
 https://www.texstudio.org/
-TeXstudioの設定&gt; TeXstudioの設定 # コンパイルシステムの変更&gt; コンパイルシステムの変更 # ダウンロードが完了したら、TeXstudio &gt; 環境設定 &gt; コマンド からLaTeXのコンパイルシステムをplatexに変更します。設定は以下のように変更します。"/>
+TeXstudioの設定 # コンパイルシステムの変更 # ダウンロードが完了したら、TeXstudio &gt; 環境設定 &gt; コマンド からLaTeXのコンパイルシステムをplatexに変更します。設定は以下のように変更します。"/>
 
   
   <script type="application/ld+json">
@@ -103,7 +100,7 @@ TeXstudioの設定&gt; TeXstudioの設定 # コンパイルシステムの変更
     "name": "TeX打ちの最高環境を構築したい",
     "headline": "TeX打ちの最高環境を構築したい",
     
-    "abstract": "※ Windowsの方はTeXstudioを脳筋でインストールしてコンパイラ設定とビルド設定していただけば使えます。また、後日、通常のコンパイル速度の10倍高速にコンパイルできる方法の記事を上げたいと思います。\n新しくMac\/Linuxを用意したのなら\u003e 新しくMac\/Linuxを用意したのなら # MacTeXをインストールします\nMacTeX - TeX Users Group\nTeXstudioをIDEとしていつも使用しているのですが、残念ながら最新版のv4.3.1はなぜか、Google日本語入力での入力ができません（Mac純正のIMEをご利用の方は気にせず最新版をインストールしてください）。\nそこでv3.1.2をインストールすることにしました（このバージョンに特段理由はありません）。こちらからダウンロードできます。\nTeXstudio - A LaTeX Editor - Browse \/3.1.2 at SourceForge.net\n最新版はこちらです。\nhttps:\/\/www.texstudio.org\/\nTeXstudioの設定\u003e TeXstudioの設定 # コンパイルシステムの変更\u003e コンパイルシステムの変更 # ダウンロードが完了したら、TeXstudio \u0026gt; 環境設定 \u0026gt; コマンド からLaTeXのコンパイルシステムをplatexに変更します。設定は以下のように変更します。",
+    "abstract": "※ Windowsの方はTeXstudioを脳筋でインストールしてコンパイラ設定とビルド設定していただけば使えます。また、後日、通常のコンパイル速度の10倍高速にコンパイルできる方法の記事を上げたいと思います。\n新しくMac\/Linuxを用意したのなら # MacTeXをインストールします\nMacTeX - TeX Users Group\nTeXstudioをIDEとしていつも使用しているのですが、残念ながら最新版のv4.3.1はなぜか、Google日本語入力での入力ができません（Mac純正のIMEをご利用の方は気にせず最新版をインストールしてください）。\nそこでv3.1.2をインストールすることにしました（このバージョンに特段理由はありません）。こちらからダウンロードできます。\nTeXstudio - A LaTeX Editor - Browse \/3.1.2 at SourceForge.net\n最新版はこちらです。\nhttps:\/\/www.texstudio.org\/\nTeXstudioの設定 # コンパイルシステムの変更 # ダウンロードが完了したら、TeXstudio \u0026gt; 環境設定 \u0026gt; コマンド からLaTeXのコンパイルシステムをplatexに変更します。設定は以下のように変更します。",
     "inLanguage": "ja",
     "url" : "\/posts\/2022-09-13\/",
     "author" : {
@@ -119,7 +116,7 @@ TeXstudioの設定&gt; TeXstudioの設定 # コンパイルシステムの変更
     "keywords": ["日記"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "167"
+    "wordCount": "159"
   }]
   </script>
 
@@ -154,11 +151,25 @@ TeXstudioの設定&gt; TeXstudioの設定 # コンパイルシステムの変更
   
   
 
+<script src="/lib/jquery/jquery.slim.min.js" integrity=""></script>
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
   
   
   
@@ -167,10 +178,11 @@ TeXstudioの設定&gt; TeXstudioの設定 # コンパイルシステムの変更
 
   
   
+  <meta name="theme-color"/>
   
   
-  
-</head><body
+</head>
+<body
   class="flex flex-col h-screen px-6 m-auto text-lg leading-7 max-w-7xl bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32">
   <div id="the-top" class="absolute flex self-center">
     <a class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
@@ -180,67 +192,145 @@ TeXstudioの設定&gt; TeXstudioの設定 # コンパイルシステムの変更
   
   
   <div style="padding-left:0;padding-right:0;padding-top:2px;padding-bottom:3px"
-    class="flex items-center justify-between px-4 py-6 sm:px-6 md:justify-start space-x-3">
+    class="main-menu flex items-center justify-between px-4 py-6 sm:px-6 md:justify-start space-x-3">
     
     <div class="flex flex-1 items-center justify-between">
         <nav class="flex space-x-3">
 
             <a href="/" class="text-base font-medium text-gray-500 hover:text-gray-900">ddd3hLab</a>
-            
-            
+
+
         </nav>
-        <div class="hidden md:flex items-center space-x-5 md:ml-12">
+        <nav class="hidden md:flex items-center space-x-5 md:ml-12">
 
             
             
-            <a href="/about/"  class="text-base font-medium text-gray-500 hover:text-gray-900" title="About">
-                
-
-
-                
-                About
-            </a>
             
-            <a href="/docs/"  class="text-base font-medium text-gray-500 hover:text-gray-900" title="Docs">
-                
-
-
-                
-                Docs
-            </a>
-            
-            <a href="/posts/"  class="text-base font-medium text-gray-500 hover:text-gray-900" title="Posts">
-                
-
-
-                
-                Blog
-            </a>
-            
-            <a href="/categories/"  class="text-base font-medium text-gray-500 hover:text-gray-900" title="Categories">
-                
-
-
-                
-                Categories
-            </a>
-            
-            <a href="/tags/"  class="text-base font-medium text-gray-500 hover:text-gray-900" title="Tags">
-                
-
-
-                
-                Tags
-            </a>
-            
-            
-
-            
+  <a href="/about/"  class="flex items-center">
+    
+    <p class="text-base font-medium text-gray-500 hover:text-gray-900" title="ddd3hLabへようこそ">
+        概要
+    </p>
+</a>
 
 
             
-            <button id="search-button" class="text-base hover:text-primary-600 dark:hover:text-primary-400"
-                title="検索 (/)">
+             
+  <div>
+  <div class="cursor-pointer flex items-center nested-menu">
+    
+    <a class="text-base font-medium text-gray-500 hover:text-gray-900" title="">
+      著者
+    </a>
+    <span>
+      
+
+  <span class="relative block icon">
+    <svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 20 20"
+  fill="currentColor"
+  aria-hidden="true"
+>
+  <path
+    fill-rule="evenodd"
+    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+    clip-rule="evenodd"
+  />
+</svg>
+
+  </span>
+
+
+    </span>
+  </div>
+  <div class="absolute menuhide">
+    <div class="pt-2 p-5 mt-2 rounded-xl backdrop-blur shadow-2xl">
+      <div class="flex flex-col space-y-3">
+        
+        <a href="/author/"  class="flex items-center">
+          
+          <p class="text-sm font-sm text-gray-500 hover:text-gray-900" title="Authors">
+            プロフィール
+          </p>
+        </a>
+        
+        <a href="/author/cv/"  class="flex items-center">
+          
+          <p class="text-sm font-sm text-gray-500 hover:text-gray-900" title="来歴">
+            来歴
+          </p>
+        </a>
+        
+        <a href="/author/res-dev/"  class="flex items-center">
+          
+          <p class="text-sm font-sm text-gray-500 hover:text-gray-900" title="研究・開発">
+            研究・開発
+          </p>
+        </a>
+        
+        <a href="/author/presentation/"  class="flex items-center">
+          
+          <p class="text-sm font-sm text-gray-500 hover:text-gray-900" title="講演・口頭発表等">
+            講演・口頭発表等
+          </p>
+        </a>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+            
+            
+  <a href="/posts/"  class="flex items-center">
+    
+    <p class="text-base font-medium text-gray-500 hover:text-gray-900" title="Posts">
+        投稿
+    </p>
+</a>
+
+
+            
+            
+  <a href="/categories/"  class="flex items-center">
+    
+    <p class="text-base font-medium text-gray-500 hover:text-gray-900" title="Categories">
+        カテゴリ
+    </p>
+</a>
+
+
+            
+            
+  <a href="/tags/"  class="flex items-center">
+    
+    <p class="text-base font-medium text-gray-500 hover:text-gray-900" title="Tags">
+        タグ
+    </p>
+</a>
+
+
+            
+            
+  <a href="/data/"  class="flex items-center">
+    
+    <p class="text-base font-medium text-gray-500 hover:text-gray-900" title="データ">
+        データ
+    </p>
+</a>
+
+
+            
+            
+
+            
+
+
+            
+            <button id="search-button" aria-label="Search" class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+                title="">
                 
 
   <span class="relative block icon">
@@ -252,12 +342,12 @@ TeXstudioの設定&gt; TeXstudioの設定 # コンパイルシステムの変更
             </button>
             
 
-            
+
             
             
             <div
                 class="ltr:mr-14 rtl:ml-14 cursor-pointer text-sm text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400">
-                <button id="appearance-switcher" type="button">
+                <button id="appearance-switcher" aria-label="Dark mode switcher" type="button">
                     <div class="flex items-center justify-center h-12 dark:hidden">
                         
 
@@ -282,7 +372,7 @@ TeXstudioの設定&gt; TeXstudioの設定 # コンパイルシステムの変更
             </div>
             
 
-        </div>
+        </nav>
         <div class="flex md:hidden items-center space-x-5 md:ml-12">
 
             <span></span>
@@ -291,8 +381,8 @@ TeXstudioの設定&gt; TeXstudioの設定 # コンパイルシステムの変更
 
 
             
-            <button id="search-button-mobile" class="text-base hover:text-primary-600 dark:hover:text-primary-400"
-                title="検索 (/)">
+            <button id="search-button-mobile" aria-label="Search" class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+                title="">
                 
 
   <span class="relative block icon">
@@ -306,7 +396,7 @@ TeXstudioの設定&gt; TeXstudioの設定 # コンパイルシステムの変更
 
             
             
-            <button id="appearance-switcher-mobile" type="button" style="margin-right:5px">
+            <button id="appearance-switcher-mobile" aria-label="Dark mode switcher" type="button" style="margin-right:5px">
                 <div class="flex items-center justify-center h-12 dark:hidden">
                     
 
@@ -349,9 +439,11 @@ TeXstudioの設定&gt; TeXstudioの設定 # コンパイルシステムの変更
             <div id="menu-wrapper" style="padding-top:5px;"
                 class="fixed inset-0 z-30 invisible w-screen h-screen m-auto overflow-auto transition-opacity opacity-0 cursor-default bg-neutral-100/50 backdrop-blur-sm dark:bg-neutral-900/50">
                 <ul
-                    class="flex movedown flex-col w-full px-6 py-6 mx-auto overflow-visible list-none ltr:text-right rtl:text-left max-w-7xl sm:px-14 md:px-24 lg:px-32 sm:py-10 sm:pt-10">
-                    <li class="mb-1">
-                        <span class="cursor-pointer inline-block align-text-bottom hover:text-primary-600 dark:hover:text-primary-400">
+                    class="flex space-y-2 mt-3 flex-col items-end w-full px-6 py-6 mx-auto overflow-visible list-none ltr:text-right rtl:text-left max-w-7xl">
+
+                    <li>
+                        <span
+                            class="cursor-pointer inline-block align-text-bottom hover:text-primary-600 dark:hover:text-primary-400">
 
   <span class="relative block icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
@@ -363,68 +455,162 @@ TeXstudioの設定&gt; TeXstudioの設定 # コンパイルシステムの変更
 
                     
                     
-                    <li class="mb-1">
-                        <a  class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
-                            href="/about/" title="About">
-                            <span class="inline-block align-text-bottom">
 
-</span>
-                            
-                            About
-                        </a>
-                    </li>
                     
-                    <li class="mb-1">
-                        <a  class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
-                            href="/docs/" title="Docs">
-                            <span class="inline-block align-text-bottom">
+  <li class="mt-1">
+    <a href="/about/"  class="flex items-center">
+        
+        <p class="text-bg font-bg text-gray-500 hover:text-gray-900" title="ddd3hLabへようこそ">
+            概要
+        </p>
+    </a>
+</li>
 
-</span>
-                            
-                            Docs
-                        </a>
-                    </li>
+
+
                     
-                    <li class="mb-1">
-                        <a  class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
-                            href="/posts/" title="Posts">
-                            <span class="inline-block align-text-bottom">
 
-</span>
-                            
-                            Blog
-                        </a>
-                    </li>
+                     
+  <li class="mt-1">
+    <a class="flex items-center">
+        
+        <p class="text-bg font-bg text-gray-500 hover:text-gray-900" title="">
+            著者
+        </p>
+        <span>
+            
+
+  <span class="relative block icon">
+    <svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 20 20"
+  fill="currentColor"
+  aria-hidden="true"
+>
+  <path
+    fill-rule="evenodd"
+    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+    clip-rule="evenodd"
+  />
+</svg>
+
+  </span>
+
+
+        </span>
+    </a>
+</li>
+
+<li class="mt-1">
+    <a href="/author/"  class="flex items-center">
+        
+        <p class="text-sm font-small text-gray-500 hover:text-gray-900" title="Authors">
+            プロフィール
+        </p>
+    </a>
+</li>
+
+<li class="mt-1">
+    <a href="/author/cv/"  class="flex items-center">
+        
+        <p class="text-sm font-small text-gray-500 hover:text-gray-900" title="来歴">
+            来歴
+        </p>
+    </a>
+</li>
+
+<li class="mt-1">
+    <a href="/author/res-dev/"  class="flex items-center">
+        
+        <p class="text-sm font-small text-gray-500 hover:text-gray-900" title="研究・開発">
+            研究・開発
+        </p>
+    </a>
+</li>
+
+<li class="mt-1">
+    <a href="/author/presentation/"  class="flex items-center">
+        
+        <p class="text-sm font-small text-gray-500 hover:text-gray-900" title="講演・口頭発表等">
+            講演・口頭発表等
+        </p>
+    </a>
+</li>
+
+<li class="mb-2"></li>
+
+
+
                     
-                    <li class="mb-1">
-                        <a  class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
-                            href="/categories/" title="Categories">
-                            <span class="inline-block align-text-bottom">
 
-</span>
-                            
-                            Categories
-                        </a>
-                    </li>
                     
-                    <li class="mb-1">
-                        <a  class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
-                            href="/tags/" title="Tags">
-                            <span class="inline-block align-text-bottom">
+  <li class="mt-1">
+    <a href="/posts/"  class="flex items-center">
+        
+        <p class="text-bg font-bg text-gray-500 hover:text-gray-900" title="Posts">
+            投稿
+        </p>
+    </a>
+</li>
 
-</span>
-                            
-                            Tags
-                        </a>
-                    </li>
+
+
+                    
+
+                    
+  <li class="mt-1">
+    <a href="/categories/"  class="flex items-center">
+        
+        <p class="text-bg font-bg text-gray-500 hover:text-gray-900" title="Categories">
+            カテゴリ
+        </p>
+    </a>
+</li>
+
+
+
+                    
+
+                    
+  <li class="mt-1">
+    <a href="/tags/"  class="flex items-center">
+        
+        <p class="text-bg font-bg text-gray-500 hover:text-gray-900" title="Tags">
+            タグ
+        </p>
+    </a>
+</li>
+
+
+
+                    
+
+                    
+  <li class="mt-1">
+    <a href="/data/"  class="flex items-center">
+        
+        <p class="text-bg font-bg text-gray-500 hover:text-gray-900" title="データ">
+            データ
+        </p>
+    </a>
+</li>
+
+
+
                     
                     
 
                 </ul>
+                
+
             </div>
         </label>
     </div>
 </div>
+
+
+
+
 
   
   <div class="relative flex flex-col grow">
@@ -434,13 +620,7 @@ TeXstudioの設定&gt; TeXstudioの設定 # コンパイルシステムの変更
 
 <article>
   
-  
-  
-  
-        
-            <div class="w-full h-36 md:h-56 lg:h-72 single_hero_basic nozoom" style="background-image:url(/posts/2022-09-13/feature_hu001b19c307317f5517885fac4a72e01d_138949_1200x0_resize_box_3.png);"></div>
-        
-    
+
   <header id="single_header" class="mt-5 max-w-prose">
     
     <ol class="text-sm text-neutral-500 dark:text-neutral-400 print:hidden">
@@ -526,7 +706,7 @@ TeXstudioの設定&gt; TeXstudioの設定 # コンパイルシステムの変更
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2022-09-13 20:50:09 &#43;0900 JST">2022年 9月 13日</time><span class="px-2 text-primary-500">&middot;</span><span>167 文字</span><span class="px-2 text-primary-500">&middot;</span><span title="読むのに必要な時間">1 分</span><span class="px-2 text-primary-500">&middot;</span>
+  <time datetime="2022-09-13 20:50:09 &#43;0900 JST">2022年 9月 13日</time><span class="px-2 text-primary-500">&middot;</span><span>159 文字</span><span class="px-2 text-primary-500">&middot;</span><span title="読むのに必要な時間">1 分</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -566,18 +746,17 @@ TeXstudioの設定&gt; TeXstudioの設定 # コンパイルシステムの変更
     </div>
   </header>
   <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
-     
-    <div class="order-first sm:max-w-prose lg:ml-auto px-0 lg:order-last lg:max-w-xs ltr:lg:pl-8 rtl:lg:pr-8">
+     <div
+      class="order-first sm:max-w-prose lg:ml-auto px-0 lg:order-last lg:max-w-xs ltr:lg:pl-8 rtl:lg:pr-8">
       <div class="toc ltr:pl-5 rtl:pr-5 print:hidden lg:sticky  lg:top-10 ">
-        <details open class="mt-0 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 hidden lg:block">
+
+         <details open class="mt-0 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 hidden lg:block">
   <summary
-    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden"
-  >
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
     目次
   </summary>
   <div
-    class="min-w-[220px] py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600"
-  >
+    class="min-w-[220px] py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
     <li><a href="#新しくmaclinuxを用意したのなら">新しくMac/Linuxを用意したのなら</a></li>
@@ -600,13 +779,11 @@ TeXstudioの設定&gt; TeXstudioの設定 # コンパイルシステムの変更
 </details>
 <details class="mt-0 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 lg:hidden">
   <summary
-    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden"
-  >
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
     目次
   </summary>
   <div
-    class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600"
-  >
+    class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
     <li><a href="#新しくmaclinuxを用意したのなら">新しくMac/Linuxを用意したのなら</a></li>
@@ -628,21 +805,22 @@ TeXstudioの設定&gt; TeXstudioの設定 # コンパイルシステムの変更
   </div>
 </details>
 
-      </div>
+   </div>
       </div>
       
       <div class="min-w-0 min-h-0 max-w-prose">
         
 
         <p>※ Windowsの方はTeXstudioを脳筋でインストールしてコンパイラ設定とビルド設定していただけば使えます。また、後日、通常のコンパイル速度の10倍高速にコンパイルできる方法の記事を上げたいと思います。</p>
-<div id="新しくmaclinuxを用意したのなら" class="anchor">新しくMac/Linuxを用意したのなら></div>
+<div id="新しくmaclinuxを用意したのなら" class="anchor"></div>
 <h2 class="relative group">新しくMac/Linuxを用意したのなら 
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
             style="text-decoration-line: none !important;" href="#%e6%96%b0%e3%81%97%e3%81%8fmaclinux%e3%82%92%e7%94%a8%e6%84%8f%e3%81%97%e3%81%9f%e3%81%ae%e3%81%aa%e3%82%89" aria-label="アンカー">#</a></span>        
     
-</h2><p>MacTeXをインストールします</p>
+</h2>
+<p>MacTeXをインストールします</p>
 <p><a href="https://tug.org/mactex/mactex-download.html"   target="_blank">
     MacTeX - TeX Users Group</a></p>
 <p>TeXstudioをIDEとしていつも使用しているのですが、残念ながら最新版のv4.3.1はなぜか、<mark>Google日本語入力での入力ができません</mark>（Mac純正のIMEをご利用の方は気にせず最新版をインストールしてください）。</p>
@@ -653,40 +831,44 @@ TeXstudioの設定&gt; TeXstudioの設定 # コンパイルシステムの変更
 <p>最新版はこちらです。</p>
 <p><a href="https://www.texstudio.org/"   target="_blank">
     https://www.texstudio.org/</a></p>
-<div id="texstudioの設定" class="anchor">TeXstudioの設定></div>
+<div id="texstudioの設定" class="anchor"></div>
 <h2 class="relative group">TeXstudioの設定 
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
             style="text-decoration-line: none !important;" href="#texstudio%e3%81%ae%e8%a8%ad%e5%ae%9a" aria-label="アンカー">#</a></span>        
     
-</h2><div id="コンパイルシステムの変更" class="anchor">コンパイルシステムの変更></div>
+</h2>
+<div id="コンパイルシステムの変更" class="anchor"></div>
 <h3 class="relative group">コンパイルシステムの変更 
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
             style="text-decoration-line: none !important;" href="#%e3%82%b3%e3%83%b3%e3%83%91%e3%82%a4%e3%83%ab%e3%82%b7%e3%82%b9%e3%83%86%e3%83%a0%e3%81%ae%e5%a4%89%e6%9b%b4" aria-label="アンカー">#</a></span>        
     
-</h3><p>ダウンロードが完了したら、TeXstudio &gt; 環境設定 &gt; コマンド からLaTeXのコンパイルシステムをplatexに変更します。設定は以下のように変更します。</p>
+</h3>
+<p>ダウンロードが完了したら、TeXstudio &gt; 環境設定 &gt; コマンド からLaTeXのコンパイルシステムをplatexに変更します。設定は以下のように変更します。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">platex -synctex<span class="o">=</span><span class="m">1</span> -interaction<span class="o">=</span>nonstopmode %.tex
 </span></span></code></pre></div><p>uplatex等でもいいですし、Latexでもいいと思いますが、基本的に日本語を入力する場合は、高速にコンパイルできるplatexをオススメします。</p>
-<div id="ビルドの変更" class="anchor">ビルドの変更></div>
+<div id="ビルドの変更" class="anchor"></div>
 <h3 class="relative group">ビルドの変更 
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
             style="text-decoration-line: none !important;" href="#%e3%83%93%e3%83%ab%e3%83%89%e3%81%ae%e5%a4%89%e6%9b%b4" aria-label="アンカー">#</a></span>        
     
-</h3><p>環境設定の中の「ビルド＆表示」を「DVI-&gt;PDFチェーン」にします。</p>
+</h3>
+<p>環境設定の中の「ビルド＆表示」を「DVI-&gt;PDFチェーン」にします。</p>
 <p>「規定のコンパイラ」が「LaTeX」でない場合は、変更します。</p>
-<div id="組み込みpdfビュアーで日本語を見れるようにする" class="anchor">組み込みPDFビュアーで日本語を見れるようにする></div>
+<div id="組み込みpdfビュアーで日本語を見れるようにする" class="anchor"></div>
 <h2 class="relative group">組み込みPDFビュアーで日本語を見れるようにする 
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
             style="text-decoration-line: none !important;" href="#%e7%b5%84%e3%81%bf%e8%be%bc%e3%81%bfpdf%e3%83%93%e3%83%a5%e3%82%a2%e3%83%bc%e3%81%a7%e6%97%a5%e6%9c%ac%e8%aa%9e%e3%82%92%e8%a6%8b%e3%82%8c%e3%82%8b%e3%82%88%e3%81%86%e3%81%ab%e3%81%99%e3%82%8b" aria-label="アンカー">#</a></span>        
     
-</h2><p>次に組み込みPDFビュアーで日本語を表示できるようにします。以下のコマンドでpopplerというPDFドキュメントの閲覧エンジンの場所が分かります。</p>
+</h2>
+<p>次に組み込みPDFビュアーで日本語を表示できるようにします。以下のコマンドでpopplerというPDFドキュメントの閲覧エンジンの場所が分かります。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">strings -a /Applications/texstudio.app/Contents/Frameworks/libpoppler.*.dylib <span class="p">|</span> grep poppler
 </span></span></code></pre></div><p>このコマンドでどこにあるかが表示されます。それに合わせて、poppler-dataをダウンロードしましょう。私は次のように表示されました。</p>
 <pre tabindex="0"><code>/usr/local/Cellar/poppler/21.05.0/share/poppler
@@ -701,14 +883,15 @@ Unknown CID font collection, please report to poppler bugzilla.
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo mkdir -p /usr/local/Cellar/poppler/21.05.0/share/poppler
 </span></span><span class="line"><span class="cl">sudo cp -pR ~/poppler-data-0.4.11/* /usr/local/Cellar/poppler/21.05.0/share/poppler
 </span></span></code></pre></div><p>これが完了したら、ダウンロードフォルダーにあるpoppler-dataは削除していただいて結構です。TeXstudioを開くと日本語がPDFビュアーに表示されると思います。</p>
-<div id="スタイルをよくする" class="anchor">スタイルをよくする></div>
+<div id="スタイルをよくする" class="anchor"></div>
 <h2 class="relative group">スタイルをよくする 
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
             style="text-decoration-line: none !important;" href="#%e3%82%b9%e3%82%bf%e3%82%a4%e3%83%ab%e3%82%92%e3%82%88%e3%81%8f%e3%81%99%e3%82%8b" aria-label="アンカー">#</a></span>        
     
-</h2><p>ここでは私好みにテーマ等を変更する方法を教えます。</p>
+</h2>
+<p>ここでは私好みにテーマ等を変更する方法を教えます。</p>
 <p>スタイルはOrion Darkにして行の折り返しを以下のように設定します．</p>
 <p>
 
@@ -726,26 +909,28 @@ Unknown CID font collection, please report to poppler bugzilla.
 
 </p>
 <p>行の折り返しで「最大文字数」に設定することで，TeXstudioのバグを克服しています．</p>
-<div id="バックスラッシュで自動補完が使えない方へ" class="anchor">バックスラッシュ「\」で自動補完が使えない方へ></div>
+<div id="バックスラッシュで自動補完が使えない方へ" class="anchor"></div>
 <h2 class="relative group">バックスラッシュ「\」で自動補完が使えない方へ 
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
             style="text-decoration-line: none !important;" href="#%e3%83%90%e3%83%83%e3%82%af%e3%82%b9%e3%83%a9%e3%83%83%e3%82%b7%e3%83%a5%e3%81%a7%e8%87%aa%e5%8b%95%e8%a3%9c%e5%ae%8c%e3%81%8c%e4%bd%bf%e3%81%88%e3%81%aa%e3%81%84%e6%96%b9%e3%81%b8" aria-label="アンカー">#</a></span>        
     
-</h2><p>私は今回からUSキーボードにしたのでこの問題は解消されました。しかし、大半の方はJISキーボードでしょうから、もしかしたら、バックスラッシュを押しても自動補完がされないかもしれません。</p>
+</h2>
+<p>私は今回からUSキーボードにしたのでこの問題は解消されました。しかし、大半の方はJISキーボードでしょうから、もしかしたら、バックスラッシュを押しても自動補完がされないかもしれません。</p>
 <p>そこで「karabiner-elements」をインストールして「￥」と「＼」を置換します。</p>
 <p>ここから最新版をインストールしてください。</p>
 <p><a href="https://karabiner-elements.pqrs.org/"   target="_blank">
     https://karabiner-elements.pqrs.org/</a></p>
-<div id="設定" class="anchor">設定></div>
+<div id="設定" class="anchor"></div>
 <h3 class="relative group">設定 
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
             style="text-decoration-line: none !important;" href="#%e8%a8%ad%e5%ae%9a" aria-label="アンカー">#</a></span>        
     
-</h3><p>Preferences の Complex Modifications のタブを開き、 画面下の &ldquo;Add rule&rdquo; をおすとダイアログが表示されるので、 ダイアログ上部の &ldquo;Import more rules from internet (open a web browser)&rdquo; ボタンを押します。</p>
+</h3>
+<p>Preferences の Complex Modifications のタブを開き、 画面下の &ldquo;Add rule&rdquo; をおすとダイアログが表示されるので、 ダイアログ上部の &ldquo;Import more rules from internet (open a web browser)&rdquo; ボタンを押します。</p>
 <p>そうすると、予め準備されたルール一覧のページがブラウザで表示されるので、&ldquo;Swap ¥ and \ always on JIS Keyboards&rdquo; というルールを探して、そのルールの &ldquo;Import&rdquo; ボタンを押します。</p>
 <p>
 
@@ -965,7 +1150,7 @@ Unknown CID font collection, please report to poppler bugzilla.
     
 
     
-      
+    
     
 
     
@@ -1053,6 +1238,9 @@ Unknown CID font collection, please report to poppler bugzilla.
   </section>
 
 
+
+    
+
     
   
     
@@ -1120,15 +1308,13 @@ Unknown CID font collection, please report to poppler bugzilla.
   </footer>
 </article>
 
-      
       <div class="pointer-events-none absolute top-[100vh] bottom-0 w-12 ltr:right-0 rtl:left-0">
-        <a href="#the-top"
-          class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 mb-16 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 backdrop-blur hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
-          aria-label="" title="">
-          &uarr;
-        </a>
-      </div>
-      
+  <a href="#the-top"
+    class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 mb-16 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 backdrop-blur hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="TOPへスクロール" title="TOPへスクロール">
+    &uarr;
+  </a>
+</div>
     </main><footer class="py-10 print:hidden">
   
   

@@ -13,11 +13,11 @@
       <pubDate>Mon, 13 Mar 2023 15:00:09 +0900</pubDate>
       
       <guid>/posts/2023-03-13/</guid>
-      <description>&amp;ldquo;HEAsoft&amp;quot;って何？&gt; &amp;ldquo;HEAsoft&amp;quot;って何？ # HEAsoftは、高エネルギー天体物理学に関連するデータ解析ソフトウェアのパッケージです。このパッケージには、NASAの多くのX線天文衛星ミッションで使用されるデータ解析ソフトウェアが含まれています。たとえば、Chandra X線天文台、XMM-Newton、Suzakuなどが挙げられます。
+      <description>&amp;ldquo;HEAsoft&amp;quot;って何？ # HEAsoftは、高エネルギー天体物理学に関連するデータ解析ソフトウェアのパッケージです。このパッケージには、NASAの多くのX線天文衛星ミッションで使用されるデータ解析ソフトウェアが含まれています。たとえば、Chandra X線天文台、XMM-Newton、Suzakuなどが挙げられます。
 HEAsoftには、X線天文学に関する多くのツールが含まれており、X線スペクトルの分析、背景の推定、画像処理、時系列解析などが可能です。HEAsoftは、主にUNIXベースのシステムで動作することが意図されていますが、WindowsやMac OS Xなどのプラットフォームでも使用することができます。
 HEAsoftは、NASAの高エネルギー天体物理学の研究者や、天文学者、物理学者、コンピューターサイエンティスト、その他の関連分野の研究者によって使用されています。
 http://heasarc.gsfc.nasa.gov/docs/software.html
-ダウンロード&gt; ダウンロード # NASAのサイトからHEAsoftのSource Codeをダウンロードする。ダウンロードサイトは https://heasarc.gsfc.nasa.gov/docs/software/lheasoft/download.html
+ダウンロード # NASAのサイトからHEAsoftのSource Codeをダウンロードする。ダウンロードサイトは https://heasarc.gsfc.nasa.gov/docs/software/lheasoft/download.html
 ダウンロードサイトで
 STEP1：適切な自分のPC環境を選ぶ。
 STEP2：個々のミッションファイルを選ぶ。今後、様々な衛星データを扱う予定ならば「All」でよい。
@@ -27,7 +27,7 @@ tar.gzファイルはtarが非圧縮でファイルをひとまとまりにす�
 ダウンロード時間（１〜２時間かかる）は長いのでコーヒーブレイクでも楽しむと良い。
 下に載せたやり方であれば5分足らずで完了する。 あまりにも遅い場合、国内サーバーにUbuntuのバージョンのみではあるが、（期間限定で）サーバー上においておくので、そこからダウンロードしてもよい。
 やりかた
-ターミナルで以下のコマンド2行を実行する wget --keep-session-cookies --save-cookies=&amp;#34;cookies.txt&amp;#34; &amp;#34;https://20.</description>
+ターミナルで以下のコマンド2行を実行する wget --keep-session-cookies --save-cookies=&amp;#34;cookies.txt&amp;#34; &amp;#34;https://20.gigafile.nu/0621-le3295726dd5b0b45503e5823972cde05&amp;#34; wget --load-cookies &amp;#34;cookies.</description>
     </item>
     
     <item>
@@ -37,14 +37,14 @@ tar.gzファイルはtarが非圧縮でファイルをひとまとまりにす�
       
       <guid>/posts/2022-09-13/</guid>
       <description>※ Windowsの方はTeXstudioを脳筋でインストールしてコンパイラ設定とビルド設定していただけば使えます。また、後日、通常のコンパイル速度の10倍高速にコンパイルできる方法の記事を上げたいと思います。
-新しくMac/Linuxを用意したのなら&gt; 新しくMac/Linuxを用意したのなら # MacTeXをインストールします
+新しくMac/Linuxを用意したのなら # MacTeXをインストールします
 MacTeX - TeX Users Group
 TeXstudioをIDEとしていつも使用しているのですが、残念ながら最新版のv4.3.1はなぜか、Google日本語入力での入力ができません（Mac純正のIMEをご利用の方は気にせず最新版をインストールしてください）。
 そこでv3.1.2をインストールすることにしました（このバージョンに特段理由はありません）。こちらからダウンロードできます。
 TeXstudio - A LaTeX Editor - Browse /3.1.2 at SourceForge.net
 最新版はこちらです。
 https://www.texstudio.org/
-TeXstudioの設定&gt; TeXstudioの設定 # コンパイルシステムの変更&gt; コンパイルシステムの変更 # ダウンロードが完了したら、TeXstudio &amp;gt; 環境設定 &amp;gt; コマンド からLaTeXのコンパイルシステムをplatexに変更します。設定は以下のように変更します。</description>
+TeXstudioの設定 # コンパイルシステムの変更 # ダウンロードが完了したら、TeXstudio &amp;gt; 環境設定 &amp;gt; コマンド からLaTeXのコンパイルシステムをplatexに変更します。設定は以下のように変更します。</description>
     </item>
     
     <item>
@@ -54,7 +54,7 @@ TeXstudioの設定&gt; TeXstudioの設定 # コンパイルシステムの変更
       
       <guid>/posts/2022-09-12/</guid>
       <description>さていつものように brew install fish をしてみるが、残念ながら買ったばっかりのMacにはHomebrewは入っていない。
-Homebrewをインストールする&gt; Homebrewをインストールする # そこでHomebrewのインストールから始めなくてはいけない。
+Homebrewをインストールする # そこでHomebrewのインストールから始めなくてはいけない。
 /bin/bash -c &amp;#34;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)&amp;#34;``` HomebrewはMacユーザーにとっては便利なツールであるからインストールしておいて損はないだろう。
 さて、インストールできたらここからが本番である。
 私のMacはすでにデフォルトでZshが採用されている．以前のMacではBashを使い続け、Appleからの「Zshに変更しましょう」みたいなやつを無視し続けてきた。
@@ -74,8 +74,8 @@ Warning: /opt/homebrew/bin is not in your PATH. Instructions on how to configure
 実際どうなのか検討する記事である．
 まず，結論を先に話すと双子のパラドックスの問題解消のために，一般相対論を出すものもいるが，一般相対論なんかを使わずとも特殊相対論で十分に解消できる．
 さらに，光速で進む物体の時間は静止系よりも時間がゆっくり進むし，慣性系に戻ってきても時間は相対的には遅れている．つまり，同い年だったのに数年後には10歳差ということもありうる．
-相対論の復習&gt; 相対論の復習 # 光速 \(c\) に近い速度で進む物体においてはNewtonの運動方程式は適応できない．このような状況では相対論的効果も考慮し，考えなくてはいけない．
-世界距離&gt; 世界距離 # 今回のタイトルでは「世界距離」という言葉を使わせていただいたが，書籍によっては「世界間隔」と表記するものも多い．どちらも同じことを指しているので本サイトでは前者で統一する．
+相対論の復習 # 光速 \(c\) に近い速度で進む物体においてはNewtonの運動方程式は適応できない．このような状況では相対論的効果も考慮し，考えなくてはいけない．
+世界距離 # 今回のタイトルでは「世界距離」という言葉を使わせていただいたが，書籍によっては「世界間隔」と表記するものも多い．どちらも同じことを指しているので本サイトでは前者で統一する．
 世界距離は四次元座標 \(x^\mu\)，Minkowski計量 \(\eta_{\mu \nu}\)を用いて
 $$ ds^2 = \eta_{\mu \nu} dx^\mu dx^\nu $$
 と表せる．ここで地球に観測者がいる系を静止系と呼び，光速で移動している系を移動系ということにする．静止系において光速で移動している観測者を見るとその移動距離は \(c^2 dt^2\) であるから世界距離</description>

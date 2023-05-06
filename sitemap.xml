@@ -1,118 +1,16 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
-  <url>
-    <loc>https://ddd3h.github.io/</loc>
-    <lastmod>2023-03-13T15:00:09+09:00</lastmod>
-    <priority>0</priority>
-  </url>
+  <sitemap>
+    <loc>ja/sitemap.xml</loc>
+    
+      <lastmod>2023-03-13T15:00:09+09:00</lastmod>
+    
+  </sitemap>
   
-  <url>
-    <loc>https://ddd3h.github.io/categories/</loc>
-    <lastmod>2023-03-13T15:00:09+09:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1</priority>
-  </url>
+  <sitemap>
+    <loc>en/sitemap.xml</loc>
+    
+  </sitemap>
   
-  <url>
-    <loc>https://ddd3h.github.io/posts/2023-03-13/</loc>
-    <lastmod>2023-03-13T15:00:09+09:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1</priority>
-  </url>
-  
-  <url>
-    <loc>https://ddd3h.github.io/tags/linux/</loc>
-    <lastmod>2023-03-13T15:00:09+09:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1</priority>
-  </url>
-  
-  <url>
-    <loc>https://ddd3h.github.io/categories/linux/</loc>
-    <lastmod>2023-03-13T15:00:09+09:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1</priority>
-  </url>
-  
-  <url>
-    <loc>https://ddd3h.github.io/posts/</loc>
-    <lastmod>2023-03-13T15:00:09+09:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1</priority>
-  </url>
-  
-  <url>
-    <loc>https://ddd3h.github.io/tags/</loc>
-    <lastmod>2023-03-13T15:00:09+09:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1</priority>
-  </url>
-  
-  <url>
-    <loc>https://ddd3h.github.io/posts/2022-09-13/</loc>
-    <lastmod>2022-09-13T20:50:09+09:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1</priority>
-  </url>
-  
-  <url>
-    <loc>https://ddd3h.github.io/tags/%E6%97%A5%E8%A8%98/</loc>
-    <lastmod>2022-09-13T20:50:09+09:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1</priority>
-  </url>
-  
-  <url>
-    <loc>https://ddd3h.github.io/categories/%E6%97%A5%E8%A8%98/</loc>
-    <lastmod>2022-09-13T20:50:09+09:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1</priority>
-  </url>
-  
-  <url>
-    <loc>https://ddd3h.github.io/posts/2022-09-12/</loc>
-    <lastmod>2022-09-12T20:50:09+09:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1</priority>
-  </url>
-  
-  <url>
-    <loc>https://ddd3h.github.io/posts/2021-09-30/</loc>
-    <lastmod>2021-09-30T20:50:09+09:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1</priority>
-  </url>
-  
-  <url>
-    <loc>https://ddd3h.github.io/about/</loc>
-    <changefreq>daily</changefreq>
-    <priority>1</priority>
-  </url>
-  
-  <url>
-    <loc>https://ddd3h.github.io/docs/</loc>
-    <changefreq>daily</changefreq>
-    <priority>1</priority>
-  </url>
-  
-  <url>
-    <loc>https://ddd3h.github.io/research/</loc>
-    <changefreq>daily</changefreq>
-    <priority>1</priority>
-  </url>
-  
-  <url>
-    <loc>https://ddd3h.github.io/research/anco/</loc>
-    <changefreq>daily</changefreq>
-    <priority>1</priority>
-  </url>
-  
-  <url>
-    <loc>https://ddd3h.github.io/research/python-saitama-uni/</loc>
-    <changefreq>daily</changefreq>
-    <priority>1</priority>
-  </url>
-  
-</urlset>
+</sitemapindex>

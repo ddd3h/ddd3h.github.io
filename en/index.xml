@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ddd3hLab</title>
+    <link>/en/</link>
+    <description>Recent content on ddd3hLab</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language><atom:link href="/en/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CV</title>
+      <link>/en/author/cv/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/en/author/cv/</guid>
+      <description>Jun 2000: Born in Soka City, Saitama Prefecture, Japan. Aug 2014: Supervised the Japanese language of Bluemail, a mailer application for Android (retired in Jan 2017) Mar 2019: Graduated from Kasukabe Kyoei High School 2020 # Apr 2020: Entered Department of Physics, Faculty of Science, Saitama University May 2020: Joined Akatoki1 and CORE2 Oct 2020: Conducted a combustion test of his own rocket engine &amp;ldquo;LIATRIS.</description>
+      
+    </item>
+    
+    <item>
+      <title>Daisuke Nishihama</title>
+      <link>/en/author/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/en/author/</guid>
+      <description>Name：Daisuke Nishihama (西濱大将)
+Nationality : Japan
+Affiliation：Department of Physics, Faculty of Science, Saitama University
+Field：Computational Astronomy, Astrophysics, Computational Physics, Information and Communication Engineering
+Others：
+CV R&amp;amp;D Presentation Awards Contacts # 📧 Mail: daisukenishihama63@gmail.</description>
+      
+    </item>
+    
+    <item>
+      <title>Data</title>
+      <link>/en/data/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/en/data/</guid>
+      <description> Date Title Key 2022-01-08 Findings gained through computational physics Report Document 2023-02-08 Python講座_slide スライド 資料 </description>
+      
+    </item>
+    
+    <item>
+      <title>Presentation</title>
+      <link>/en/author/presentation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/en/author/presentation/</guid>
+      <description>Unraveling the Relationship between Ozone and Radiation-ANCO-Project (2022.11)
+Institute of Space and Astronautical Science, Japan Aerospace Exploration Agency (JAXA)(ISAS) Balloon Symposium FY 2022 (November 7-8, 2022. Hybrid event （JAXA Sagamihara Campus &amp;amp; online))</description>
+      
+    </item>
+    
+    <item>
+      <title>R&amp;D</title>
+      <link>/en/author/res-dev/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/en/author/res-dev/</guid>
+      <description>Research # Simulation Software FROGS Python ver., CORE – (2020) MATLABで既に開発が進んでいた飛翔シュミレーション「FROGS」をPython版で開発を行った。 Study on relationship between tidal force and atmosphereic pressure, Saitama University – (2021)
+2021年に投稿した潮汐力と気圧の関係に関する研究。 Development of algorithm for 0m goal of CanSat by various sensors, AKTK – (2022)</description>
+      
+    </item>
+    
+    <item>
+      <title>Welcome to ddd3hLab</title>
+      <link>/en/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/en/about/</guid>
+      <description>Purpose of this site # ddd3hLab is a website established to record and summarize my own research and development of what I am interested in on a daily basis, and to occasionally publish my ramblings.</description>
+      
+    </item>
+    
+  </channel>
+</rss>
