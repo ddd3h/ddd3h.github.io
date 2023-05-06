@@ -21,7 +21,7 @@ TeXstudioをIDEとしていつも使用しているのですが、残念なが�
 TeXstudio - A LaTeX Editor - Browse /3.1.2 at SourceForge.net
 最新版はこちらです。
 https://www.texstudio.org/
-TeXstudioの設定 # コンパイルシステムの変更 # ダウンロードが完了したら、TeXstudio &amp;gt; 環境設定 &amp;gt; コマンド からLaTeXのコンパイルシステムをplatexに変更します。設定は以下のように変更します。</description>
+TeXstudioの設定 # コンパイルシステムの変更 # ダウンロードが完了したら、TeXstudio &amp;gt; 環境設定 &amp;gt; コマンド からLaTeXのコンパイルシステムをuplatexに変更します。設定は以下のように変更します。</description>
     </item>
     
     <item>
