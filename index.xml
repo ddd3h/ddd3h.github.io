@@ -113,6 +113,16 @@ $$ ds^2 = \eta_{\mu \nu} dx^\mu dx^\nu $$
     </item>
     
     <item>
+      <title>Data</title>
+      <link>/data/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/data/</guid>
+      <description> Date Title Key 2022-01-08 Findings gained through computational physics Report Document 2023-02-08 Python講座_slide スライド 資料 </description>
+      
+    </item>
+    
+    <item>
       <title>ddd3hLabへようこそ</title>
       <link>/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -128,16 +138,6 @@ $$ ds^2 = \eta_{\mu \nu} dx^\mu dx^\nu $$
 科学の健全な発展のために # 科学者として研究・開発をしていく上で、以下のことを誓う1。
 真実を追求する：真実を追求することを最優先に考え、正確なデータと分析に基づいた研究を行う。 インテグリティを守る：研究において不正行為や偽りを行わない研究を行う。また、他の研究者の成果を尊重し、適切な引用を行う。 社会に貢献する：研究成果を社会に還元し、人々の健康や環境の改善に貢献する。また、社会的な問題を解決するために、自分の専門分野を超えた取り組みにも積極的に参加する。 オープンな研究環境を支持する：知識やデータの共有を積極的に支援し、オープンな研究環境を推進する。また、研究成果の公正な評価と透明性を確保するために、公正な査読プロセスに参加する。 自己研鑽を継続する：自己研鑽を継続し、常に最先端の知識や技術を取り入れる。また、自分の研究成果に対する批判的な態度を持ち、常に改善を意識していく。 科学に対し、誠実で責任ある態度を持ち、社会に貢献し、健全な科学の発展を願う。
 サイトマップ # ホーム 本サイトについて 著者について 来歴 研究・開発 講演・口頭発表等 受賞 [調整中] 投稿一覧 カテゴリ別 Linux Project 日記 公開データ 宣誓する上で日本学術振興会 「科学の健全な発展のために －誠実な科学者の心得－」( PDF)を参考にした。&amp;#160;&amp;#x21a9;&amp;#xfe0e;</description>
-      
-    </item>
-    
-    <item>
-      <title>データ</title>
-      <link>/data/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/data/</guid>
-      <description> Date Title Key 2022-01-08 Findings gained through computational physics Report Document 2023-02-08 Python講座_slide スライド 資料 </description>
       
     </item>
     

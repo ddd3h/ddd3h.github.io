@@ -158,6 +158,22 @@
   </url>
   
   <url>
+    <loc>https://ddd3h.github.io/data/</loc>
+    <changefreq>daily</changefreq>
+    <priority>1</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/data/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="/data/"
+                />
+  </url>
+  
+  <url>
     <loc>https://ddd3h.github.io/about/</loc>
     <changefreq>daily</changefreq>
     <priority>1</priority>
@@ -177,22 +193,6 @@
     <loc>https://ddd3h.github.io/research/</loc>
     <changefreq>daily</changefreq>
     <priority>1</priority>
-  </url>
-  
-  <url>
-    <loc>https://ddd3h.github.io/data/</loc>
-    <changefreq>daily</changefreq>
-    <priority>1</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/en/data/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="/data/"
-                />
   </url>
   
   <url>
