@@ -1,9 +1,8 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
-    <loc>https://ddd3h.github.io/en/</loc>
+    <loc>/en/</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -15,10 +14,8 @@
                 hreflang="en"
                 href="/en/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://ddd3h.github.io/en/author/</loc>
+  </url><url>
+    <loc>/en/author/</loc>
     <changefreq>daily</changefreq>
     <priority>1</priority>
     <xhtml:link
@@ -31,10 +28,8 @@
                 hreflang="en"
                 href="/en/author/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://ddd3h.github.io/en/categories/</loc>
+  </url><url>
+    <loc>/en/categories/</loc>
     <changefreq>daily</changefreq>
     <priority>1</priority>
     <xhtml:link
@@ -47,10 +42,8 @@
                 hreflang="en"
                 href="/en/categories/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://ddd3h.github.io/en/author/cv/</loc>
+  </url><url>
+    <loc>/en/author/cv/</loc>
     <changefreq>daily</changefreq>
     <priority>1</priority>
     <xhtml:link
@@ -63,10 +56,8 @@
                 hreflang="en"
                 href="/en/author/cv/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://ddd3h.github.io/en/author/</loc>
+  </url><url>
+    <loc>/en/author/</loc>
     <changefreq>daily</changefreq>
     <priority>1</priority>
     <xhtml:link
@@ -79,10 +70,8 @@
                 hreflang="en"
                 href="/en/author/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://ddd3h.github.io/en/data/</loc>
+  </url><url>
+    <loc>/en/data/</loc>
     <changefreq>daily</changefreq>
     <priority>1</priority>
     <xhtml:link
@@ -95,10 +84,8 @@
                 hreflang="en"
                 href="/en/data/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://ddd3h.github.io/en/author/presentation/</loc>
+  </url><url>
+    <loc>/en/author/presentation/</loc>
     <changefreq>daily</changefreq>
     <priority>1</priority>
     <xhtml:link
@@ -111,10 +98,8 @@
                 hreflang="en"
                 href="/en/author/presentation/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://ddd3h.github.io/en/author/res-dev/</loc>
+  </url><url>
+    <loc>/en/author/res-dev/</loc>
     <changefreq>daily</changefreq>
     <priority>1</priority>
     <xhtml:link
@@ -127,10 +112,8 @@
                 hreflang="en"
                 href="/en/author/res-dev/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://ddd3h.github.io/en/tags/</loc>
+  </url><url>
+    <loc>/en/tags/</loc>
     <changefreq>daily</changefreq>
     <priority>1</priority>
     <xhtml:link
@@ -143,10 +126,8 @@
                 hreflang="en"
                 href="/en/tags/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://ddd3h.github.io/en/about/</loc>
+  </url><url>
+    <loc>/en/about/</loc>
     <changefreq>daily</changefreq>
     <priority>1</priority>
     <xhtml:link
@@ -160,5 +141,4 @@
                 href="/en/about/"
                 />
   </url>
-  
 </urlset>
