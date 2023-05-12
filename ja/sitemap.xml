@@ -13,7 +13,7 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="/"
+                href="https://ddd3h.github.io/"
                 />
   </url><url>
     <loc>https://ddd3h.github.io/categories/</loc>
@@ -28,7 +28,7 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="/categories/"
+                href="https://ddd3h.github.io/categories/"
                 />
   </url><url>
     <loc>https://ddd3h.github.io/posts/2023-03-13/</loc>
@@ -63,7 +63,7 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="/tags/"
+                href="https://ddd3h.github.io/tags/"
                 />
   </url><url>
     <loc>https://ddd3h.github.io/tags/ubuntu/</loc>
@@ -120,7 +120,7 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="/author/"
+                href="https://ddd3h.github.io/author/"
                 />
   </url><url>
     <loc>https://ddd3h.github.io/data/</loc>
@@ -134,7 +134,7 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="/data/"
+                href="https://ddd3h.github.io/data/"
                 />
   </url><url>
     <loc>https://ddd3h.github.io/about/</loc>
@@ -148,7 +148,7 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="/about/"
+                href="https://ddd3h.github.io/about/"
                 />
   </url><url>
     <loc>https://ddd3h.github.io/research/</loc>
@@ -170,7 +170,7 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="/author/res-dev/"
+                href="https://ddd3h.github.io/author/res-dev/"
                 />
   </url><url>
     <loc>https://ddd3h.github.io/author/presentation/</loc>
@@ -184,7 +184,21 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="/author/presentation/"
+                href="https://ddd3h.github.io/author/presentation/"
+                />
+  </url><url>
+    <loc>https://ddd3h.github.io/author/award/</loc>
+    <changefreq>daily</changefreq>
+    <priority>1</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://ddd3h.github.io/en/author/award/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://ddd3h.github.io/author/award/"
                 />
   </url><url>
     <loc>https://ddd3h.github.io/author/</loc>
@@ -198,7 +212,7 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="/author/"
+                href="https://ddd3h.github.io/author/"
                 />
   </url><url>
     <loc>https://ddd3h.github.io/author/cv/</loc>
@@ -212,7 +226,7 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="/author/cv/"
+                href="https://ddd3h.github.io/author/cv/"
                 />
   </url><url>
     <loc>https://ddd3h.github.io/research/python-saitama-uni/</loc>
