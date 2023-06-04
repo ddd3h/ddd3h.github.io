@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://ddd3h.github.io/</loc>
-    <lastmod>2023-03-13T15:00:09+09:00</lastmod>
+    <lastmod>2023-06-03T15:00:09+09:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -15,6 +15,16 @@
                 hreflang="ja"
                 href="https://ddd3h.github.io/"
                 />
+  </url><url>
+    <loc>https://ddd3h.github.io/posts/</loc>
+    <lastmod>2023-06-03T15:00:09+09:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1</priority>
+  </url><url>
+    <loc>https://ddd3h.github.io/posts/master_et_exam/</loc>
+    <lastmod>2023-06-03T15:00:09+09:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1</priority>
   </url><url>
     <loc>https://ddd3h.github.io/categories/</loc>
     <lastmod>2023-03-13T15:00:09+09:00</lastmod>
@@ -42,11 +52,6 @@
     <priority>1</priority>
   </url><url>
     <loc>https://ddd3h.github.io/categories/linux/</loc>
-    <lastmod>2023-03-13T15:00:09+09:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1</priority>
-  </url><url>
-    <loc>https://ddd3h.github.io/posts/</loc>
     <lastmod>2023-03-13T15:00:09+09:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>1</priority>
