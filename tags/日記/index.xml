@@ -9,10 +9,10 @@
     <lastBuildDate>Tue, 13 Sep 2022 20:50:09 +0900</lastBuildDate><atom:link href="/tags/%E6%97%A5%E8%A8%98/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>TeX打ちの最高環境を構築したい</title>
-      <link>/posts/2022-09-13/</link>
+      <link>/post/2022-09-13/</link>
       <pubDate>Tue, 13 Sep 2022 20:50:09 +0900</pubDate>
       
-      <guid>/posts/2022-09-13/</guid>
+      <guid>/post/2022-09-13/</guid>
       <description>※ Windowsの方はTeXstudioを脳筋でインストールしてコンパイラ設定とビルド設定していただけば使えます。また、後日、通常のコンパイル速度の10倍高速にコンパイルできる方法の記事を上げたいと思います。
 新しくMac/Linuxを用意したのなら # MacTeXをインストールします
 MacTeX - TeX Users Group
@@ -26,10 +26,10 @@ TeXstudioの設定 # コンパイルシステムの変更 # ダウンロード�
     
     <item>
       <title>便利なFish Shellをインストールしよう</title>
-      <link>/posts/2022-09-12/</link>
+      <link>/post/2022-09-12/</link>
       <pubDate>Mon, 12 Sep 2022 20:50:09 +0900</pubDate>
       
-      <guid>/posts/2022-09-12/</guid>
+      <guid>/post/2022-09-12/</guid>
       <description>さていつものように brew install fish をしてみるが、残念ながら買ったばっかりのMacにはHomebrewは入っていない。
 Homebrewをインストールする # そこでHomebrewのインストールから始めなくてはいけない。
 /bin/bash -c &amp;#34;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)&amp;#34;``` HomebrewはMacユーザーにとっては便利なツールであるからインストールしておいて損はないだろう。
@@ -42,10 +42,10 @@ Warning: /opt/homebrew/bin is not in your PATH. Instructions on how to configure
     
     <item>
       <title>相対論を用いてタイムトラベルを語るのは強引か？</title>
-      <link>/posts/2021-09-30/</link>
+      <link>/post/2021-09-30/</link>
       <pubDate>Thu, 30 Sep 2021 20:50:09 +0900</pubDate>
       
-      <guid>/posts/2021-09-30/</guid>
+      <guid>/post/2021-09-30/</guid>
       <description>タイムトラベルという言葉を用いるとき，ときどき半半ば強引に「相対論によると」光速に近ければ時間は遅くなるという話が存在する．確かに光速で進む物体の時間は静止系よりも時間がゆっくり進むことになるし，一種のタイムトラベルとも言えそうである．
 しかし，双子のパラドックスという概念を引き合いにしてその理屈はおかしいと主張する人が少数いる．
 実際どうなのか検討する記事である．
