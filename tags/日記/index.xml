@@ -6,7 +6,21 @@
     <description>Recent content in 日記 on ddd3hLab</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Tue, 13 Sep 2022 20:50:09 +0900</lastBuildDate><atom:link href="/tags/%E6%97%A5%E8%A8%98/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 17 Jun 2023 20:50:09 +0900</lastBuildDate><atom:link href="/tags/%E6%97%A5%E8%A8%98/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TNG_catcher.extract_subhalo_data</title>
+      <link>/posts/tng_catcher.extract_subhalo_data/</link>
+      <pubDate>Sat, 17 Jun 2023 20:50:09 +0900</pubDate>
+      
+      <guid>/posts/tng_catcher.extract_subhalo_data/</guid>
+      <description>TNG_catcher/ TNG_catcher.extract_subhalo_data
+次の一行でモジュールを読み込みます。
+from TNG_catcher import * このモジュールは次のクラスが定義されてあります。
+extract_subhalo_data （順次作成中） はじめに # Illustris-TNGのサイトには、様々な銀河のカタログが公開されています。
+そこでこれらを簡単に取得したい／解析したいと思い、このモジュールを作成しました。
+ファイル構造 # 📦 . ├─ sims.TNG │ ├─ TNG50-1 │ │ ├─ output │ │ │ ├─ groups_000 │ │ │ │ ├─ fof_subhalo_tab_000.</description>
+    </item>
+    
     <item>
       <title>TeX打ちの最高環境を構築したい</title>
       <link>/posts/2022-09-13/</link>

@@ -6,7 +6,52 @@
     <description>Recent content in Posts on ddd3hLab</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sat, 03 Jun 2023 15:00:09 +0900</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 17 Jun 2023 20:50:09 +0900</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TNG_catcher.extract_subhalo_data</title>
+      <link>/posts/tng_catcher.extract_subhalo_data/</link>
+      <pubDate>Sat, 17 Jun 2023 20:50:09 +0900</pubDate>
+      
+      <guid>/posts/tng_catcher.extract_subhalo_data/</guid>
+      <description>TNG_catcher/ TNG_catcher.extract_subhalo_data
+次の一行でモジュールを読み込みます。
+from TNG_catcher import * このモジュールは次のクラスが定義されてあります。
+extract_subhalo_data （順次作成中） はじめに # Illustris-TNGのサイトには、様々な銀河のカタログが公開されています。
+そこでこれらを簡単に取得したい／解析したいと思い、このモジュールを作成しました。
+ファイル構造 # 📦 . ├─ sims.TNG │ ├─ TNG50-1 │ │ ├─ output │ │ │ ├─ groups_000 │ │ │ │ ├─ fof_subhalo_tab_000.</description>
+    </item>
+    
+    <item>
+      <title>TNG_catcher.plot_tools</title>
+      <link>/posts/tng_catcher.plot_tools/</link>
+      <pubDate>Sat, 17 Jun 2023 20:50:09 +0900</pubDate>
+      
+      <guid>/posts/tng_catcher.plot_tools/</guid>
+      <description>TNG_catcher/ TNG_catcher.plot_tools
+次の一行でモジュールを読み込みます。
+from TNG_catcher import * このモジュールは次のクラスが定義されてあります。
+extract_subhalo_data （順次作成中） はじめに # そこでこれらを簡単に取得したい／解析したいと思い、このモジュールを作成しました。
+解析データの挿入（インスタンスの作成） # import numpy as np dd = np.load(&amp;#34;data.npz&amp;#34;) test = plot_tools(dd) インスタンスを作成するにあたり、読み込むのはNpzFileです。extract_subhalo_dataクラスなどで出力したものを使用します。独自に抽出したデータでも構いません。
+簡易描画する # 「しっかり描画したい」とき、「簡易的に描画したい」ときというのがあると思います。</description>
+    </item>
+    
+    <item>
+      <title>宇宙論的sim用の便利ツールTNG_catcherを開発したみた</title>
+      <link>/posts/tng_catcher/</link>
+      <pubDate>Sat, 17 Jun 2023 20:50:09 +0900</pubDate>
+      
+      <guid>/posts/tng_catcher/</guid>
+      <description>TNG_catcher
+宇宙論的シミュレーションIllustrisTNGとは # IllustrisTNGは、銀河形成の大規模な宇宙磁気流体力学的シミュレーションの連続したシリーズです。TNGは、銀河形成を促進する物理過程を明らかにし、天文学者が現在および将来の観測プログラムのための予測をするために、夜空で観測される構造に進化する銀河がいつ、どのように進化するかを理解することを目的としています。シミュレーションには、包括的な物理モデルを含む最新の数値コードが使用され、世界でもっとも大きなスーパーコンピュータの一部で実行されています。TNGは、初代Illustrisシミュレーションの後継であり、多数の人々による数年間の努力に基づいています。プロジェクトには、容積と分解能の範囲をカバーする3つの主要な実行が含まれており、これらはTNG50、TNG100、TNG300と呼ばれています。
+TNGモデルおよびシミュレーションの開発は、2014年に開始され、モデルの完成とともに2年後の2016年に最初の生産シミュレーション（TNG100）が開始されました。元々3つの大容量宇宙箱の計画は、TNG50の完成により2019年に達成されました。コラボレーションと大規模な公開データユーザーのグループは、2017年以降、銀河形成、進化、そして宇宙論の多様なトピックにわたる結果に関する論文を数多く発表しています。
+2020年以降、オリジナルのTNGスイートを超えた、いくつかの派生プロジェクトが開始され、機械学習アプリケーション、宇宙論的パラメータ推定、宇宙再イオン化の放射流体力学、水素の再結合に関する非常に大きなGpcクラスの宇宙的範囲と銀河、そして最大の銀河団などのシミュレーションスイートが含まれています。
+これからの展開にご期待ください！
+-TNGコラボレーション
+開発経緯 # 単純に自分がもっと便利に楽に解析したいと思ったから。
+インストール # ddd3h/TNG_catcher Python 0 0 TNG_catcherはライブラリを読み込んだ段階で次のモジュールを自動で読み込みます。
+import illustris_python as il import numpy as np import pandas as pd import os import matplotlib.</description>
+    </item>
+    
     <item>
       <title>院試関連(過去問解答集)</title>
       <link>/posts/master_et_exam/</link>

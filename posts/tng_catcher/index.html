@@ -10,14 +10,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   
-  <title>院試関連(過去問解答集) &middot; ddd3hLab</title>
-  <meta name="title" content="院試関連(過去問解答集) &middot; ddd3hLab" />
+  <title>宇宙論的sim用の便利ツールTNG_catcherを開発したみた &middot; ddd3hLab</title>
+  <meta name="title" content="宇宙論的sim用の便利ツールTNG_catcherを開発したみた &middot; ddd3hLab" />
   
   <meta name="description" content="西濱大将のホームページ" />
   
   
   
-  <link rel="canonical" href="/posts/master_et_exam/" />
+  <link rel="canonical" href="/posts/tng_catcher/" />
   
   
   
@@ -63,21 +63,33 @@
   
   
   
-  <meta property="og:title" content="院試関連(過去問解答集)" />
-<meta property="og:description" content="過去問解答集 # ある程度、完成したものを公開していく。 間違い等があればご連絡いただけると助かります。
-マークは院試勉強会等にて一定の解答の精査が行われたものです。
-大阪大学大学院/物理学・宇宙地球科学専攻 # 2023年度入学分 2022年度入学分 2021年度入学分 (19.9MB) 大問1 (4.7MB) 大問2 (6.6MB) 大問3 (4.1MB) 大問4 (6.2MB) 2020年度入学分 (17.1MB) 大問1 (4.1MB) 大問2 (完答せず、不明点あり) (2.4MB) 大問3 (7.5MB) 大問4 (4." />
+  <meta property="og:title" content="宇宙論的sim用の便利ツールTNG_catcherを開発したみた" />
+<meta property="og:description" content="TNG_catcher
+宇宙論的シミュレーションIllustrisTNGとは # IllustrisTNGは、銀河形成の大規模な宇宙磁気流体力学的シミュレーションの連続したシリーズです。TNGは、銀河形成を促進する物理過程を明らかにし、天文学者が現在および将来の観測プログラムのための予測をするために、夜空で観測される構造に進化する銀河がいつ、どのように進化するかを理解することを目的としています。シミュレーションには、包括的な物理モデルを含む最新の数値コードが使用され、世界でもっとも大きなスーパーコンピュータの一部で実行されています。TNGは、初代Illustrisシミュレーションの後継であり、多数の人々による数年間の努力に基づいています。プロジェクトには、容積と分解能の範囲をカバーする3つの主要な実行が含まれており、これらはTNG50、TNG100、TNG300と呼ばれています。
+TNGモデルおよびシミュレーションの開発は、2014年に開始され、モデルの完成とともに2年後の2016年に最初の生産シミュレーション（TNG100）が開始されました。元々3つの大容量宇宙箱の計画は、TNG50の完成により2019年に達成されました。コラボレーションと大規模な公開データユーザーのグループは、2017年以降、銀河形成、進化、そして宇宙論の多様なトピックにわたる結果に関する論文を数多く発表しています。
+2020年以降、オリジナルのTNGスイートを超えた、いくつかの派生プロジェクトが開始され、機械学習アプリケーション、宇宙論的パラメータ推定、宇宙再イオン化の放射流体力学、水素の再結合に関する非常に大きなGpcクラスの宇宙的範囲と銀河、そして最大の銀河団などのシミュレーションスイートが含まれています。
+これからの展開にご期待ください！
+-TNGコラボレーション
+開発経緯 # 単純に自分がもっと便利に楽に解析したいと思ったから。
+インストール # ddd3h/TNG_catcher Python 0 0 TNG_catcherはライブラリを読み込んだ段階で次のモジュールを自動で読み込みます。
+import illustris_python as il import numpy as np import pandas as pd import os import matplotlib." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/posts/master_et_exam/" /><meta property="og:image" content="/posts/master_et_exam/feature.jpeg"/><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2023-06-03T15:00:09+09:00" />
-<meta property="article:modified_time" content="2023-06-03T15:00:09+09:00" /><meta property="og:site_name" content="ddd3hLab" />
+<meta property="og:url" content="/posts/tng_catcher/" /><meta property="og:image" content="/posts/tng_catcher/feature.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-06-17T20:50:09+09:00" />
+<meta property="article:modified_time" content="2023-06-17T20:50:09+09:00" /><meta property="og:site_name" content="ddd3hLab" />
 
   <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="/posts/master_et_exam/feature.jpeg"/>
-<meta name="twitter:title" content="院試関連(過去問解答集)"/>
-<meta name="twitter:description" content="過去問解答集 # ある程度、完成したものを公開していく。 間違い等があればご連絡いただけると助かります。
-マークは院試勉強会等にて一定の解答の精査が行われたものです。
-大阪大学大学院/物理学・宇宙地球科学専攻 # 2023年度入学分 2022年度入学分 2021年度入学分 (19.9MB) 大問1 (4.7MB) 大問2 (6.6MB) 大問3 (4.1MB) 大問4 (6.2MB) 2020年度入学分 (17.1MB) 大問1 (4.1MB) 大問2 (完答せず、不明点あり) (2.4MB) 大問3 (7.5MB) 大問4 (4."/>
+<meta name="twitter:image" content="/posts/tng_catcher/feature.png"/>
+<meta name="twitter:title" content="宇宙論的sim用の便利ツールTNG_catcherを開発したみた"/>
+<meta name="twitter:description" content="TNG_catcher
+宇宙論的シミュレーションIllustrisTNGとは # IllustrisTNGは、銀河形成の大規模な宇宙磁気流体力学的シミュレーションの連続したシリーズです。TNGは、銀河形成を促進する物理過程を明らかにし、天文学者が現在および将来の観測プログラムのための予測をするために、夜空で観測される構造に進化する銀河がいつ、どのように進化するかを理解することを目的としています。シミュレーションには、包括的な物理モデルを含む最新の数値コードが使用され、世界でもっとも大きなスーパーコンピュータの一部で実行されています。TNGは、初代Illustrisシミュレーションの後継であり、多数の人々による数年間の努力に基づいています。プロジェクトには、容積と分解能の範囲をカバーする3つの主要な実行が含まれており、これらはTNG50、TNG100、TNG300と呼ばれています。
+TNGモデルおよびシミュレーションの開発は、2014年に開始され、モデルの完成とともに2年後の2016年に最初の生産シミュレーション（TNG100）が開始されました。元々3つの大容量宇宙箱の計画は、TNG50の完成により2019年に達成されました。コラボレーションと大規模な公開データユーザーのグループは、2017年以降、銀河形成、進化、そして宇宙論の多様なトピックにわたる結果に関する論文を数多く発表しています。
+2020年以降、オリジナルのTNGスイートを超えた、いくつかの派生プロジェクトが開始され、機械学習アプリケーション、宇宙論的パラメータ推定、宇宙再イオン化の放射流体力学、水素の再結合に関する非常に大きなGpcクラスの宇宙的範囲と銀河、そして最大の銀河団などのシミュレーションスイートが含まれています。
+これからの展開にご期待ください！
+-TNGコラボレーション
+開発経緯 # 単純に自分がもっと便利に楽に解析したいと思ったから。
+インストール # ddd3h/TNG_catcher Python 0 0 TNG_catcherはライブラリを読み込んだ段階で次のモジュールを自動で読み込みます。
+import illustris_python as il import numpy as np import pandas as pd import os import matplotlib."/>
 
   
   <script type="application/ld+json">
@@ -85,26 +97,26 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Posts",
-    "name": "院試関連(過去問解答集)",
-    "headline": "院試関連(過去問解答集)",
+    "name": "宇宙論的sim用の便利ツールTNG_catcherを開発したみた",
+    "headline": "宇宙論的sim用の便利ツールTNG_catcherを開発したみた",
     
-    "abstract": "過去問解答集 # ある程度、完成したものを公開していく。 間違い等があればご連絡いただけると助かります。\nマークは院試勉強会等にて一定の解答の精査が行われたものです。\n大阪大学大学院\/物理学・宇宙地球科学専攻 # 2023年度入学分 2022年度入学分 2021年度入学分 (19.9MB) 大問1 (4.7MB) 大問2 (6.6MB) 大問3 (4.1MB) 大問4 (6.2MB) 2020年度入学分 (17.1MB) 大問1 (4.1MB) 大問2 (完答せず、不明点あり) (2.4MB) 大問3 (7.5MB) 大問4 (4.",
+    "abstract": "TNG_catcher\n宇宙論的シミュレーションIllustrisTNGとは # IllustrisTNGは、銀河形成の大規模な宇宙磁気流体力学的シミュレーションの連続したシリーズです。TNGは、銀河形成を促進する物理過程を明らかにし、天文学者が現在および将来の観測プログラムのための予測をするために、夜空で観測される構造に進化する銀河がいつ、どのように進化するかを理解することを目的としています。シミュレーションには、包括的な物理モデルを含む最新の数値コードが使用され、世界でもっとも大きなスーパーコンピュータの一部で実行されています。TNGは、初代Illustrisシミュレーションの後継であり、多数の人々による数年間の努力に基づいています。プロジェクトには、容積と分解能の範囲をカバーする3つの主要な実行が含まれており、これらはTNG50、TNG100、TNG300と呼ばれています。\nTNGモデルおよびシミュレーションの開発は、2014年に開始され、モデルの完成とともに2年後の2016年に最初の生産シミュレーション（TNG100）が開始されました。元々3つの大容量宇宙箱の計画は、TNG50の完成により2019年に達成されました。コラボレーションと大規模な公開データユーザーのグループは、2017年以降、銀河形成、進化、そして宇宙論の多様なトピックにわたる結果に関する論文を数多く発表しています。\n2020年以降、オリジナルのTNGスイートを超えた、いくつかの派生プロジェクトが開始され、機械学習アプリケーション、宇宙論的パラメータ推定、宇宙再イオン化の放射流体力学、水素の再結合に関する非常に大きなGpcクラスの宇宙的範囲と銀河、そして最大の銀河団などのシミュレーションスイートが含まれています。\nこれからの展開にご期待ください！\n-TNGコラボレーション\n開発経緯 # 単純に自分がもっと便利に楽に解析したいと思ったから。\nインストール # ddd3h\/TNG_catcher Python 0 0 TNG_catcherはライブラリを読み込んだ段階で次のモジュールを自動で読み込みます。\nimport illustris_python as il import numpy as np import pandas as pd import os import matplotlib.",
     "inLanguage": "ja",
-    "url" : "\/posts\/master_et_exam\/",
+    "url" : "\/posts\/tng_catcher\/",
     "author" : {
       "@type": "Person",
       "name": "ddd3hLab"
     },
     "copyrightYear": "2023",
-    "dateCreated": "2023-06-03T15:00:09\u002b09:00",
-    "datePublished": "2023-06-03T15:00:09\u002b09:00",
+    "dateCreated": "2023-06-17T20:50:09\u002b09:00",
+    "datePublished": "2023-06-17T20:50:09\u002b09:00",
     
-    "dateModified": "2023-06-03T15:00:09\u002b09:00",
+    "dateModified": "2023-06-17T20:50:09\u002b09:00",
     
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "64"
+    "wordCount": "220"
   }]
   </script>
 
@@ -631,8 +643,8 @@
   <li class="inline hidden">
     <a
       class="hover:underline decoration-neutral-300 dark:underline-neutral-600"
-      href="/posts/master_et_exam/"
-      >院試関連(過去問解答集)</a
+      href="/posts/tng_catcher/"
+      >宇宙論的sim用の便利ツールTNG_catcherを開発したみた</a
     ><span class="px-1 text-primary-500">/</span>
   </li>
 
@@ -641,7 +653,7 @@
 
     
     <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-      院試関連(過去問解答集)
+      宇宙論的sim用の便利ツールTNG_catcherを開発したみた
     </h1>
     <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
       
@@ -686,7 +698,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2023-06-03 15:00:09 &#43;0900 JST">2023年 6月 3日</time><span class="px-2 text-primary-500">&middot;</span><span>64 文字</span><span class="px-2 text-primary-500">&middot;</span><span title="読むのに必要な時間">1 分</span><span class="px-2 text-primary-500">&middot;</span>
+  <time datetime="2023-06-17 20:50:09 &#43;0900 JST">2023年 6月 17日</time><span class="px-2 text-primary-500">&middot;</span><span>220 文字</span><span class="px-2 text-primary-500">&middot;</span><span title="読むのに必要な時間">2 分</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -696,7 +708,7 @@
 
 <span class="mb-[2px]">
   <a
-    href="#/posts/master_et_exam/index.md"
+    href="#/posts/tng_catcher/index.md"
     class="text-lg hover:text-primary-500"
     rel="noopener noreferrer"
     target="_blank"
@@ -739,16 +751,11 @@
     class="min-w-[220px] py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#過去問解答集">過去問解答集</a>
-      <ul>
-        <li><a href="#大阪大学大学院物理学宇宙地球科学専攻">大阪大学大学院/物理学・宇宙地球科学専攻</a></li>
-        <li><a href="#神戸大学大学院惑星学専攻">神戸大学大学院/惑星学専攻</a></li>
-        <li><a href="#埼玉大学大学院物理学pg専攻">埼玉大学大学院/物理学PG専攻</a></li>
-        <li><a href="#東京大学大学院天文学専攻">東京大学大学院/天文学専攻</a></li>
-      </ul>
-    </li>
-    <li><a href="#出願書類">出願書類</a></li>
-    <li><a href="#ログ">ログ</a></li>
+    <li><a href="#宇宙論的シミュレーションillustristngとは">宇宙論的シミュレーションIllustrisTNGとは</a></li>
+    <li><a href="#開発経緯">開発経緯</a></li>
+    <li><a href="#インストール">インストール</a></li>
+    <li><a href="#使い方">使い方</a></li>
+    <li><a href="#ライセンス">ライセンス</a></li>
   </ul>
 </nav>
   </div>
@@ -762,16 +769,11 @@
     class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#過去問解答集">過去問解答集</a>
-      <ul>
-        <li><a href="#大阪大学大学院物理学宇宙地球科学専攻">大阪大学大学院/物理学・宇宙地球科学専攻</a></li>
-        <li><a href="#神戸大学大学院惑星学専攻">神戸大学大学院/惑星学専攻</a></li>
-        <li><a href="#埼玉大学大学院物理学pg専攻">埼玉大学大学院/物理学PG専攻</a></li>
-        <li><a href="#東京大学大学院天文学専攻">東京大学大学院/天文学専攻</a></li>
-      </ul>
-    </li>
-    <li><a href="#出願書類">出願書類</a></li>
-    <li><a href="#ログ">ログ</a></li>
+    <li><a href="#宇宙論的シミュレーションillustristngとは">宇宙論的シミュレーションIllustrisTNGとは</a></li>
+    <li><a href="#開発経緯">開発経緯</a></li>
+    <li><a href="#インストール">インストール</a></li>
+    <li><a href="#使い方">使い方</a></li>
+    <li><a href="#ライセンス">ライセンス</a></li>
   </ul>
 </nav>
   </div>
@@ -783,215 +785,192 @@
       <div class="min-w-0 min-h-0 max-w-prose">
         
 
-        <div id="過去問解答集" class="anchor"></div>
-<h2 class="relative group">過去問解答集 
+        <p>
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      
+      <img
+        class="my-0 rounded-md"
+        srcset="
+        /posts/tng_catcher/feature_hud6631f27f33c960425ca27709aa6e8f9_1263103_330x0_resize_box_3.png 330w,
+        /posts/tng_catcher/feature_hud6631f27f33c960425ca27709aa6e8f9_1263103_660x0_resize_box_3.png 660w,
+        /posts/tng_catcher/feature_hud6631f27f33c960425ca27709aa6e8f9_1263103_1024x0_resize_box_3.png 1024w,
+        /posts/tng_catcher/feature_hud6631f27f33c960425ca27709aa6e8f9_1263103_1320x0_resize_box_3.png 2x"
+        src="/posts/tng_catcher/feature_hud6631f27f33c960425ca27709aa6e8f9_1263103_660x0_resize_box_3.png"
+        alt=""
+      />
+      
+      
+    </figure>
+  
+
+</p>
+<p><a href="../tng_catcher"  >
+    TNG_catcher</a></p>
+<hr>
+<div id="宇宙論的シミュレーションillustristngとは" class="anchor"></div>
+<h2 class="relative group">宇宙論的シミュレーションIllustrisTNGとは 
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%e9%81%8e%e5%8e%bb%e5%95%8f%e8%a7%a3%e7%ad%94%e9%9b%86" aria-label="アンカー">#</a></span>        
+            style="text-decoration-line: none !important;" href="#%e5%ae%87%e5%ae%99%e8%ab%96%e7%9a%84%e3%82%b7%e3%83%9f%e3%83%a5%e3%83%ac%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3illustristng%e3%81%a8%e3%81%af" aria-label="アンカー">#</a></span>        
     
 </h2>
-<p>ある程度、完成したものを公開していく。
-<br>間違い等があればご連絡いただけると助かります。</p>
-<p>
-
-  <span class="relative inline-block align-text-bottom icon">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M438.6 105.4C451.1 117.9 451.1 138.1 438.6 150.6L182.6 406.6C170.1 419.1 149.9 419.1 137.4 406.6L9.372 278.6C-3.124 266.1-3.124 245.9 9.372 233.4C21.87 220.9 42.13 220.9 54.63 233.4L159.1 338.7L393.4 105.4C405.9 92.88 426.1 92.88 438.6 105.4H438.6z"/></svg>
-
-  </span>
-
-マークは院試勉強会等にて一定の解答の精査が行われたものです。</p>
-<div id="大阪大学大学院物理学宇宙地球科学専攻" class="anchor"></div>
-<h3 class="relative group">大阪大学大学院/物理学・宇宙地球科学専攻 
+<blockquote>
+<p>IllustrisTNGは、銀河形成の大規模な宇宙磁気流体力学的シミュレーションの連続したシリーズです。TNGは、銀河形成を促進する物理過程を明らかにし、天文学者が現在および将来の観測プログラムのための予測をするために、夜空で観測される構造に進化する銀河がいつ、どのように進化するかを理解することを目的としています。シミュレーションには、包括的な物理モデルを含む最新の数値コードが使用され、世界でもっとも大きなスーパーコンピュータの一部で実行されています。TNGは、初代Illustrisシミュレーションの後継であり、多数の人々による数年間の努力に基づいています。プロジェクトには、容積と分解能の範囲をカバーする3つの主要な実行が含まれており、これらはTNG50、TNG100、TNG300と呼ばれています。</p>
+<p>TNGモデルおよびシミュレーションの開発は、2014年に開始され、モデルの完成とともに2年後の2016年に最初の生産シミュレーション（TNG100）が開始されました。元々3つの大容量宇宙箱の計画は、TNG50の完成により2019年に達成されました。コラボレーションと大規模な公開データユーザーのグループは、2017年以降、銀河形成、進化、そして宇宙論の多様なトピックにわたる結果に関する論文を数多く発表しています。</p>
+<p>2020年以降、オリジナルのTNGスイートを超えた、いくつかの派生プロジェクトが開始され、機械学習アプリケーション、宇宙論的パラメータ推定、宇宙再イオン化の放射流体力学、水素の再結合に関する非常に大きなGpcクラスの宇宙的範囲と銀河、そして最大の銀河団などのシミュレーションスイートが含まれています。</p>
+<p>これからの展開にご期待ください！</p>
+<p>-TNGコラボレーション</p>
+</blockquote>
+<div id="開発経緯" class="anchor"></div>
+<h2 class="relative group">開発経緯 
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%e5%a4%a7%e9%98%aa%e5%a4%a7%e5%ad%a6%e5%a4%a7%e5%ad%a6%e9%99%a2%e7%89%a9%e7%90%86%e5%ad%a6%e5%ae%87%e5%ae%99%e5%9c%b0%e7%90%83%e7%a7%91%e5%ad%a6%e5%b0%82%e6%94%bb" aria-label="アンカー">#</a></span>        
+            style="text-decoration-line: none !important;" href="#%e9%96%8b%e7%99%ba%e7%b5%8c%e7%b7%af" aria-label="アンカー">#</a></span>        
     
-</h3>
-<ul>
-<li>2023年度入学分</li>
-<li>2022年度入学分</li>
-<li><a href="osaka/osaka2021.pdf"  >
-    2021年度入学分 (19.9MB)</a>
-
-  <span class="relative inline-block align-text-bottom icon">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M438.6 105.4C451.1 117.9 451.1 138.1 438.6 150.6L182.6 406.6C170.1 419.1 149.9 419.1 137.4 406.6L9.372 278.6C-3.124 266.1-3.124 245.9 9.372 233.4C21.87 220.9 42.13 220.9 54.63 233.4L159.1 338.7L393.4 105.4C405.9 92.88 426.1 92.88 438.6 105.4H438.6z"/></svg>
-
-  </span>
-
-
-<ul>
-<li><a href="osaka/osaka2021-1.pdf"  >
-    大問1 (4.7MB)</a>
-
-  <span class="relative inline-block align-text-bottom icon">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M438.6 105.4C451.1 117.9 451.1 138.1 438.6 150.6L182.6 406.6C170.1 419.1 149.9 419.1 137.4 406.6L9.372 278.6C-3.124 266.1-3.124 245.9 9.372 233.4C21.87 220.9 42.13 220.9 54.63 233.4L159.1 338.7L393.4 105.4C405.9 92.88 426.1 92.88 438.6 105.4H438.6z"/></svg>
-
-  </span>
-
-</li>
-<li><a href="osaka/osaka2021-2.pdf"  >
-    大問2 (6.6MB)</a>
-
-  <span class="relative inline-block align-text-bottom icon">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M438.6 105.4C451.1 117.9 451.1 138.1 438.6 150.6L182.6 406.6C170.1 419.1 149.9 419.1 137.4 406.6L9.372 278.6C-3.124 266.1-3.124 245.9 9.372 233.4C21.87 220.9 42.13 220.9 54.63 233.4L159.1 338.7L393.4 105.4C405.9 92.88 426.1 92.88 438.6 105.4H438.6z"/></svg>
-
-  </span>
-
-</li>
-<li><a href="osaka/osaka2021-3.pdf"  >
-    大問3 (4.1MB)</a>
-
-  <span class="relative inline-block align-text-bottom icon">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M438.6 105.4C451.1 117.9 451.1 138.1 438.6 150.6L182.6 406.6C170.1 419.1 149.9 419.1 137.4 406.6L9.372 278.6C-3.124 266.1-3.124 245.9 9.372 233.4C21.87 220.9 42.13 220.9 54.63 233.4L159.1 338.7L393.4 105.4C405.9 92.88 426.1 92.88 438.6 105.4H438.6z"/></svg>
-
-  </span>
-
-</li>
-<li><a href="osaka/osaka2021-4.pdf"  >
-    大問4 (6.2MB)</a>
-
-  <span class="relative inline-block align-text-bottom icon">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M438.6 105.4C451.1 117.9 451.1 138.1 438.6 150.6L182.6 406.6C170.1 419.1 149.9 419.1 137.4 406.6L9.372 278.6C-3.124 266.1-3.124 245.9 9.372 233.4C21.87 220.9 42.13 220.9 54.63 233.4L159.1 338.7L393.4 105.4C405.9 92.88 426.1 92.88 438.6 105.4H438.6z"/></svg>
-
-  </span>
-
-</li>
-</ul>
-</li>
-<li><a href="osaka/osaka2020.pdf"  >
-    2020年度入学分 (17.1MB)</a>
-<ul>
-<li><a href="osaka/osaka2020-1.pdf"  >
-    大問1 (4.1MB)</a>
-
-  <span class="relative inline-block align-text-bottom icon">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M438.6 105.4C451.1 117.9 451.1 138.1 438.6 150.6L182.6 406.6C170.1 419.1 149.9 419.1 137.4 406.6L9.372 278.6C-3.124 266.1-3.124 245.9 9.372 233.4C21.87 220.9 42.13 220.9 54.63 233.4L159.1 338.7L393.4 105.4C405.9 92.88 426.1 92.88 438.6 105.4H438.6z"/></svg>
-
-  </span>
-
-</li>
-<li><a href="osaka/osaka2020-2.pdf"  >
-    大問2 (完答せず、不明点あり) (2.4MB)</a></li>
-<li><a href="osaka/osaka2020-3.pdf"  >
-    大問3 (7.5MB)</a>
-
-  <span class="relative inline-block align-text-bottom icon">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M438.6 105.4C451.1 117.9 451.1 138.1 438.6 150.6L182.6 406.6C170.1 419.1 149.9 419.1 137.4 406.6L9.372 278.6C-3.124 266.1-3.124 245.9 9.372 233.4C21.87 220.9 42.13 220.9 54.63 233.4L159.1 338.7L393.4 105.4C405.9 92.88 426.1 92.88 438.6 105.4H438.6z"/></svg>
-
-  </span>
-
-</li>
-<li><a href="osaka/osaka2020-4.pdf"  >
-    大問4 (4.7MB)</a></li>
-</ul>
-</li>
-</ul>
-<p>2019年度入学分</p>
-<ul>
-<li>大問1</li>
-<li>大問2</li>
-<li>大問3</li>
-<li>大問4</li>
-</ul>
-<div id="神戸大学大学院惑星学専攻" class="anchor"></div>
-<h3 class="relative group">神戸大学大学院/惑星学専攻 
+</h2>
+<p>単純に自分がもっと便利に楽に解析したいと思ったから。</p>
+<div id="インストール" class="anchor"></div>
+<h2 class="relative group">インストール 
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%e7%a5%9e%e6%88%b8%e5%a4%a7%e5%ad%a6%e5%a4%a7%e5%ad%a6%e9%99%a2%e6%83%91%e6%98%9f%e5%ad%a6%e5%b0%82%e6%94%bb" aria-label="アンカー">#</a></span>        
+            style="text-decoration-line: none !important;" href="#%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%88%e3%83%bc%e3%83%ab" aria-label="アンカー">#</a></span>        
     
-</h3>
-<ul>
-<li>2023年度入学分</li>
-<li>2022年度入学分</li>
-<li>2021年度入学分</li>
-<li>2020年度入学分</li>
-</ul>
-<div id="埼玉大学大学院物理学pg専攻" class="anchor"></div>
-<h3 class="relative group">埼玉大学大学院/物理学PG専攻 
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%e5%9f%bc%e7%8e%89%e5%a4%a7%e5%ad%a6%e5%a4%a7%e5%ad%a6%e9%99%a2%e7%89%a9%e7%90%86%e5%ad%a6pg%e5%b0%82%e6%94%bb" aria-label="アンカー">#</a></span>        
-    
-</h3>
-<ul>
-<li>
-<p>2023年度入学分</p>
-</li>
-<li>
-<p>2022年度入学分</p>
-<ul>
-<li><a href="kobe/kobe2022-1.pdf"  >
-    大問1(数学A) (3.3MB)</a>
+</h2>
+<a target="_blank" href="https://github.com/ddd3h/TNG_catcher" class="cursor-pointer">
+  <div class="w-full md:w-auto pt-3 p-5 border border-neutral-200 dark:border-neutral-700 border rounded-md backdrop-blur shadow-2xl">
 
-  <span class="relative inline-block align-text-bottom icon">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M438.6 105.4C451.1 117.9 451.1 138.1 438.6 150.6L182.6 406.6C170.1 419.1 149.9 419.1 137.4 406.6L9.372 278.6C-3.124 266.1-3.124 245.9 9.372 233.4C21.87 220.9 42.13 220.9 54.63 233.4L159.1 338.7L393.4 105.4C405.9 92.88 426.1 92.88 438.6 105.4H438.6z"/></svg>
+    <div class="flex items-center">
+      <span class="text-2xl text-neutral-800 dark:text-neutral" style="margin-right:10px;">
+        
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
 
   </span>
 
-</li>
-<li><a href="kobe/kobe2022-2.pdf"  >
-    大問2(数学B) (3.2MB)</a>
 
-  <span class="relative inline-block align-text-bottom icon">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M438.6 105.4C451.1 117.9 451.1 138.1 438.6 150.6L182.6 406.6C170.1 419.1 149.9 419.1 137.4 406.6L9.372 278.6C-3.124 266.1-3.124 245.9 9.372 233.4C21.87 220.9 42.13 220.9 54.63 233.4L159.1 338.7L393.4 105.4C405.9 92.88 426.1 92.88 438.6 105.4H438.6z"/></svg>
+      </span>
+      <div class="m-0 font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral">
+        ddd3h/TNG_catcher
+      </div>
+    </div>
 
+    <p class="m-0 mt-2 text-md text-neutral-800 dark:text-neutral">
+      
+    </p>
+
+    <div class="m-0 mt-2 flex items-center">
+      
+      <span class="mr-1 inline-block h-3 w-3 rounded-full" style="background-color: #3572A5"></span>
+      <div class="m-0 mr-5 text-md text-neutral-800 dark:text-neutral">
+         Python 
+      </div>
+
+      <span class="text-md mr-1 text-neutral-800 dark:text-neutral">
+        
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M287.9 0C297.1 0 305.5 5.25 309.5 13.52L378.1 154.8L531.4 177.5C540.4 178.8 547.8 185.1 550.7 193.7C553.5 202.4 551.2 211.9 544.8 218.2L433.6 328.4L459.9 483.9C461.4 492.9 457.7 502.1 450.2 507.4C442.8 512.7 432.1 513.4 424.9 509.1L287.9 435.9L150.1 509.1C142.9 513.4 133.1 512.7 125.6 507.4C118.2 502.1 114.5 492.9 115.1 483.9L142.2 328.4L31.11 218.2C24.65 211.9 22.36 202.4 25.2 193.7C28.03 185.1 35.5 178.8 44.49 177.5L197.7 154.8L266.3 13.52C270.4 5.249 278.7 0 287.9 0L287.9 0zM287.9 78.95L235.4 187.2C231.9 194.3 225.1 199.3 217.3 200.5L98.98 217.9L184.9 303C190.4 308.5 192.9 316.4 191.6 324.1L171.4 443.7L276.6 387.5C283.7 383.7 292.2 383.7 299.2 387.5L404.4 443.7L384.2 324.1C382.9 316.4 385.5 308.5 391 303L476.9 217.9L358.6 200.5C350.7 199.3 343.9 194.3 340.5 187.2L287.9 78.95z"/></svg>
   </span>
 
-</li>
-<li>大問3(物理A)</li>
-<li>大問4(物理B)</li>
-</ul>
-</li>
-<li>
-<p>2021年度入学分</p>
-</li>
-<li>
-<p>2020年度入学分</p>
-</li>
-</ul>
-<div id="東京大学大学院天文学専攻" class="anchor"></div>
-<h3 class="relative group">東京大学大学院/天文学専攻 
+
+      </span>
+      <div class="m-0 mr-5 text-md text-neutral-800 dark:text-neutral">
+        0
+      </div>
+
+      <span class="text-md mr-1 text-neutral-800 dark:text-neutral">
+        
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M80 104c13.3 0 24-10.7 24-24s-10.7-24-24-24S56 66.7 56 80s10.7 24 24 24zm80-24c0 32.8-19.7 61-48 73.3V192c0 17.7 14.3 32 32 32H304c17.7 0 32-14.3 32-32V153.3C307.7 141 288 112.8 288 80c0-44.2 35.8-80 80-80s80 35.8 80 80c0 32.8-19.7 61-48 73.3V192c0 53-43 96-96 96H256v70.7c28.3 12.3 48 40.5 48 73.3c0 44.2-35.8 80-80 80s-80-35.8-80-80c0-32.8 19.7-61 48-73.3V288H144c-53 0-96-43-96-96V153.3C19.7 141 0 112.8 0 80C0 35.8 35.8 0 80 0s80 35.8 80 80zm208 24c13.3 0 24-10.7 24-24s-10.7-24-24-24s-24 10.7-24 24s10.7 24 24 24zM248 432c0-13.3-10.7-24-24-24s-24 10.7-24 24s10.7 24 24 24s24-10.7 24-24z"/></svg>
+  </span>
+
+
+      </span>
+      <div class="m-0 mr-5 text-md text-neutral-800 dark:text-neutral">
+        0
+      </div>
+
+    </div>
+
+  </div>
+</a>
+<p>TNG_catcherはライブラリを読み込んだ段階で次のモジュールを自動で読み込みます。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">illustris_python</span> <span class="k">as</span> <span class="nn">il</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">os</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">matplotlib.colors</span> <span class="kn">import</span> <span class="n">LogNorm</span>
+</span></span></code></pre></div><div id="使い方" class="anchor"></div>
+<h2 class="relative group">使い方 
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%e6%9d%b1%e4%ba%ac%e5%a4%a7%e5%ad%a6%e5%a4%a7%e5%ad%a6%e9%99%a2%e5%a4%a9%e6%96%87%e5%ad%a6%e5%b0%82%e6%94%bb" aria-label="アンカー">#</a></span>        
-    
-</h3>
-<p>※大阪大学大学院・神戸大学大学院と試験日程が重なったため出願を取りやめました。</p>
-<div id="出願書類" class="anchor"></div>
-<h2 class="relative group">出願書類 
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%e5%87%ba%e9%a1%98%e6%9b%b8%e9%a1%9e" aria-label="アンカー">#</a></span>        
+            style="text-decoration-line: none !important;" href="#%e4%bd%bf%e3%81%84%e6%96%b9" aria-label="アンカー">#</a></span>        
     
 </h2>
 <ul>
-<li><a href="res2023-plan.pdf"  >
-    卒業研究計画 (80KB)</a></li>
+<li><a href="../tng_catcher.extract_subhalo_data"  >
+    extract_subhalo_data</a><br> subhaloデータを抽出したいときに使用します</li>
+<li><a href="../tng_catcher.plot_tools"  >
+    plot_tools</a><br>抽出されたデータを解析するのに使用します</li>
+<li><a href="../tng_catcher.manage_subhalo"  >
+    manage_subhalo</a><br>subhaloデータを管理するのに使用します</li>
 </ul>
-<div id="ログ" class="anchor"></div>
-<h2 class="relative group">ログ 
+<div id="ライセンス" class="anchor"></div>
+<h2 class="relative group">ライセンス 
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%e3%83%ad%e3%82%b0" aria-label="アンカー">#</a></span>        
+            style="text-decoration-line: none !important;" href="#%e3%83%a9%e3%82%a4%e3%82%bb%e3%83%b3%e3%82%b9" aria-label="アンカー">#</a></span>        
     
 </h2>
-<p><a href="log.html"  >
-    LOG 一覧</a></p>
+<pre tabindex="0"><code>MIT License
+
+Copyright (c) 2023 Daisuke NISHIHAMA
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the &#34;Software&#34;), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED &#34;AS IS&#34;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+</code></pre><hr>
+<p><a href="../../categories/tng_catcher"  >
+    TNG_catcherに関連する記事一覧</a></p>
 
         </br></br>
         
 
       </div>
       <script>
-        var oid = "views_posts\/master_et_exam\/index.md"
-        var oid_likes = "likes_posts\/master_et_exam\/index.md"
+        var oid = "views_posts\/tng_catcher\/index.md"
+        var oid_likes = "likes_posts\/tng_catcher\/index.md"
       </script>
       
       
@@ -1181,7 +1160,7 @@
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="https://twitter.com/intent/tweet/?url=/posts/master_et_exam/&amp;text=%e9%99%a2%e8%a9%a6%e9%96%a2%e9%80%a3%28%e9%81%8e%e5%8e%bb%e5%95%8f%e8%a7%a3%e7%ad%94%e9%9b%86%29"
+      href="https://twitter.com/intent/tweet/?url=/posts/tng_catcher/&amp;text=%e5%ae%87%e5%ae%99%e8%ab%96%e7%9a%84sim%e7%94%a8%e3%81%ae%e4%be%bf%e5%88%a9%e3%83%84%e3%83%bc%e3%83%abTNG_catcher%e3%82%92%e9%96%8b%e7%99%ba%e3%81%97%e3%81%9f%e3%81%bf%e3%81%9f"
       title="Twitterに投稿する"
       aria-label="Twitterに投稿する"
       >
@@ -1200,7 +1179,7 @@
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="https://www.facebook.com/sharer/sharer.php?u=/posts/master_et_exam/&amp;quote=%e9%99%a2%e8%a9%a6%e9%96%a2%e9%80%a3%28%e9%81%8e%e5%8e%bb%e5%95%8f%e8%a7%a3%e7%ad%94%e9%9b%86%29"
+      href="https://www.facebook.com/sharer/sharer.php?u=/posts/tng_catcher/&amp;quote=%e5%ae%87%e5%ae%99%e8%ab%96%e7%9a%84sim%e7%94%a8%e3%81%ae%e4%be%bf%e5%88%a9%e3%83%84%e3%83%bc%e3%83%abTNG_catcher%e3%82%92%e9%96%8b%e7%99%ba%e3%81%97%e3%81%9f%e3%81%bf%e3%81%9f"
       title="Facebookでシェアする"
       aria-label="Facebookでシェアする"
       >
@@ -1219,7 +1198,7 @@
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="https://pinterest.com/pin/create/bookmarklet/?url=/posts/master_et_exam/&amp;description=%e9%99%a2%e8%a9%a6%e9%96%a2%e9%80%a3%28%e9%81%8e%e5%8e%bb%e5%95%8f%e8%a7%a3%e7%ad%94%e9%9b%86%29"
+      href="https://pinterest.com/pin/create/bookmarklet/?url=/posts/tng_catcher/&amp;description=%e5%ae%87%e5%ae%99%e8%ab%96%e7%9a%84sim%e7%94%a8%e3%81%ae%e4%be%bf%e5%88%a9%e3%83%84%e3%83%bc%e3%83%abTNG_catcher%e3%82%92%e9%96%8b%e7%99%ba%e3%81%97%e3%81%9f%e3%81%bf%e3%81%9f"
       title="Pinterestでピンする"
       aria-label="Pinterestでピンする"
       >
@@ -1238,7 +1217,7 @@
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="mailto:?body=/posts/master_et_exam/&amp;subject=%e9%99%a2%e8%a9%a6%e9%96%a2%e9%80%a3%28%e9%81%8e%e5%8e%bb%e5%95%8f%e8%a7%a3%e7%ad%94%e9%9b%86%29"
+      href="mailto:?body=/posts/tng_catcher/&amp;subject=%e5%ae%87%e5%ae%99%e8%ab%96%e7%9a%84sim%e7%94%a8%e3%81%ae%e4%be%bf%e5%88%a9%e3%83%84%e3%83%bc%e3%83%abTNG_catcher%e3%82%92%e9%96%8b%e7%99%ba%e3%81%97%e3%81%9f%e3%81%bf%e3%81%9f"
       title=" Eメールを送る"
       aria-label=" Eメールを送る"
       >
@@ -1269,7 +1248,7 @@
       <div class="flex justify-between pt-3">
         <span>
           
-            <a class="flex group mr-3" href="/posts/2023-03-13/">
+            <a class="flex group mr-3" href="/posts/master_et_exam/">
               <span
                 class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
                 >&larr;</span
@@ -1281,11 +1260,11 @@
               <span class="flex flex-col">
                 <span
                   class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >HEAsoftを高速にダウンロードする</span
+                  >院試関連(過去問解答集)</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2023-03-13 15:00:09 &#43;0900 JST">2023年 3月 13日</time>
+                    <time datetime="2023-06-03 15:00:09 &#43;0900 JST">2023年 6月 3日</time>
                   
                 </span>
               </span>
@@ -1294,11 +1273,11 @@
         </span>
         <span>
           
-            <a class="flex text-right group ml-3" href="/posts/tng_catcher/">
+            <a class="flex text-right group ml-3" href="/posts/tng_catcher.plot_tools/">
               <span class="flex flex-col">
                 <span
                   class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >宇宙論的sim用の便利ツールTNG_catcherを開発したみた</span
+                  >TNG_catcher.plot_tools</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
