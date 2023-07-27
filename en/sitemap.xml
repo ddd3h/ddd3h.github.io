@@ -71,18 +71,18 @@
                 href="https://ddd3h.github.io/en/author/cv/"
                 />
   </url><url>
-    <loc>https://ddd3h.github.io/en/author/</loc>
+    <loc>https://ddd3h.github.io/en/profile/</loc>
     <changefreq>daily</changefreq>
     <priority>1</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="https://ddd3h.github.io/author/"
+                href="https://ddd3h.github.io/profile/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://ddd3h.github.io/en/author/"
+                href="https://ddd3h.github.io/en/profile/"
                 />
   </url><url>
     <loc>https://ddd3h.github.io/en/data/</loc>

@@ -6,7 +6,24 @@
     <description>Recent content on ddd3hLab</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sat, 17 Jun 2023 20:50:09 +0900</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 27 Jul 2023 09:00:09 +0900</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>後輩のためのLinux知識</title>
+      <link>/posts/2023-07-27/</link>
+      <pubDate>Thu, 27 Jul 2023 09:00:09 +0900</pubDate>
+      
+      <guid>/posts/2023-07-27/</guid>
+      <description>はじめに # Linuxを使う上で、知っておくと便利な知識をまとめています。
+基本的には、自分の優秀な後輩たちに向けて書いたつもりです。
+サーバーに接続 # サーバ側がsshd(ssh daemon)が起動している場合は、sshコマンドを使って接続できます。
+ssh # 基本形は以下の通りです。
+ssh [user]@[host] [user]にはサーバ側に登録されているユーザー名を入れます。
+[host]にはサーバのホスト名、IPアドレス、ドメインなどを入れます。
+ホスト名は、DNSサーバなどで変換されている必要がありますが、IPアドレスはそのまま使えます。 (ローカル)ネットワーク外から接続するには、グローバルIPアドレスが必要です。 sshコマンドの主なオプションは次の通りです。
+オプション 意味 -p ポート番号 接続に使用するポート番号を指定する -l ユーザー名 接続に使用するユーザー名を指定する -i IDファイル 接続に使用する公開鍵ファイルを指定する -C 全ての通信を圧縮する -c 暗号化方法 通信を暗号化する方法を指定する（「3des」「blowfish」「des」が指定可能） -1 SSHv1（SSHプロトコルバージョン1）だけを使用する -2 SSHv2（SSHプロトコルバージョン2）だけを使用する -4 IPv4だけを使用する -6 IPv6だけを使用する -K GSSAPI（Generic Security Services API）による認証を許可する -k GSSAPIによる認証を許可しない -A 認証エージェントを転送する（1つ目のサーバに接続後、続けて別のサーバに接続する際に、最初に使った秘密鍵をそのまま使用する） -a 認証エージェントを転送しない -X X11のポートフォワーディングを有効にする（リモートマシンのXアプリケーションが実行できるようになる） -x X11のポートフォワーディングを無効にする -Y 信頼されたX11転送（Trusted X11）を有効にする -f コマンドを実行する際にsshをバックグラウンドにする（Xアプリケーションを実行する際に使用） -F 設定ファイル 設定ファイルを指定する -o 設定パラメータ 設定パラメータを指定する（設定ファイルに書かれた内容より優先される） -E ログファイル名 エラーを指定したファイルに記録する -q エラーメッセージや診断メッセージを表示しない（quiet mode） -v デバッグメッセージを表示する（verbose mode） サーバーとクライアント間でファイルを転送する # サーバにあるファイルを、ローカルPCなどに持ってきたい時、逆にローカルPCにあるデータをサーバに転送したいときなどにはscpコマンドが有効です。</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/posts/2023-07-27/feature.png" />
+    </item>
+    
     <item>
       <title>TNG_catcher.extract_subhalo_data</title>
       <link>/posts/tng_catcher.extract_subhalo_data/</link>
@@ -244,10 +261,10 @@ $$ ds^2 = \eta_{\mu \nu} dx^\mu dx^\nu $$
     
     <item>
       <title>西濱大将</title>
-      <link>/author/</link>
+      <link>/profile/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/author/</guid>
+      <guid>/profile/</guid>
       <description>名前：西濱大将 (Daisuke NISHIHAMA)
 国籍：日本
 所属：埼玉大学理学部物理学科、未来医療産業株式会社IT技術顧問
