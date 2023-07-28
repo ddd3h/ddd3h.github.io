@@ -136,20 +136,6 @@
     <changefreq>daily</changefreq>
     <priority>1</priority>
   </url><url>
-    <loc>https://ddd3h.github.io/author/</loc>
-    <changefreq>daily</changefreq>
-    <priority>1</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://ddd3h.github.io/en/author/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://ddd3h.github.io/author/"
-                />
-  </url><url>
     <loc>https://ddd3h.github.io/data/</loc>
     <changefreq>daily</changefreq>
     <priority>1</priority>
@@ -164,18 +150,18 @@
                 href="https://ddd3h.github.io/data/"
                 />
   </url><url>
-    <loc>https://ddd3h.github.io/about/</loc>
+    <loc>https://ddd3h.github.io/philosophy/</loc>
     <changefreq>daily</changefreq>
     <priority>1</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://ddd3h.github.io/en/about/"
+                href="https://ddd3h.github.io/en/philosophy/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="https://ddd3h.github.io/about/"
+                href="https://ddd3h.github.io/philosophy/"
                 />
   </url><url>
     <loc>https://ddd3h.github.io/research/</loc>
@@ -186,50 +172,50 @@
     <changefreq>daily</changefreq>
     <priority>1</priority>
   </url><url>
-    <loc>https://ddd3h.github.io/author/schedule/</loc>
+    <loc>https://ddd3h.github.io/schedule/</loc>
     <changefreq>daily</changefreq>
     <priority>1</priority>
   </url><url>
-    <loc>https://ddd3h.github.io/author/res-dev/</loc>
+    <loc>https://ddd3h.github.io/res-dev/</loc>
     <changefreq>daily</changefreq>
     <priority>1</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://ddd3h.github.io/en/author/res-dev/"
+                href="https://ddd3h.github.io/en/res-dev/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="https://ddd3h.github.io/author/res-dev/"
+                href="https://ddd3h.github.io/res-dev/"
                 />
   </url><url>
-    <loc>https://ddd3h.github.io/author/presentation/</loc>
+    <loc>https://ddd3h.github.io/presentation/</loc>
     <changefreq>daily</changefreq>
     <priority>1</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://ddd3h.github.io/en/author/presentation/"
+                href="https://ddd3h.github.io/en/presentation/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="https://ddd3h.github.io/author/presentation/"
+                href="https://ddd3h.github.io/presentation/"
                 />
   </url><url>
-    <loc>https://ddd3h.github.io/author/award/</loc>
+    <loc>https://ddd3h.github.io/award/</loc>
     <changefreq>daily</changefreq>
     <priority>1</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://ddd3h.github.io/en/author/award/"
+                href="https://ddd3h.github.io/en/award/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="https://ddd3h.github.io/author/award/"
+                href="https://ddd3h.github.io/award/"
                 />
   </url><url>
     <loc>https://ddd3h.github.io/profile/</loc>
@@ -246,18 +232,18 @@
                 href="https://ddd3h.github.io/profile/"
                 />
   </url><url>
-    <loc>https://ddd3h.github.io/author/cv/</loc>
+    <loc>https://ddd3h.github.io/cv/</loc>
     <changefreq>daily</changefreq>
     <priority>1</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://ddd3h.github.io/en/author/cv/"
+                href="https://ddd3h.github.io/en/cv/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="https://ddd3h.github.io/author/cv/"
+                href="https://ddd3h.github.io/cv/"
                 />
   </url><url>
     <loc>https://ddd3h.github.io/research/python-saitama-uni/</loc>

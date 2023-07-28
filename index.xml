@@ -190,10 +190,10 @@ $$ ds^2 = \eta_{\mu \nu} dx^\mu dx^\nu $$
     
     <item>
       <title>ddd3hLabへようこそ</title>
-      <link>/about/</link>
+      <link>/philosophy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/about/</guid>
+      <guid>/philosophy/</guid>
       <description>このサイトの目的 # ddd3hLabは、 西濱大将が日々気になったことを独自に研究したり、開発を行ったことを記録しまとめ、ときには戯言を公開するために開設したサイトです。
 知識は社会全体の財産であり、個人の利益や自己顕示欲のためにのみ利用されるべきではありません。知識や技術は、共有され、第三者によって再検証され、二次利用が可能な、オープンソースの形式が理想的であると私は考えています。
 オープンソースの形式が持つ利点としては、知識や技術を広く共有することができることが挙げられます。オープンソースのソフトウェアは、誰でも自由に使用でき、改変や再配布が可能です。このような形式によって、知識や技術が一部の人々だけが独占することがなくなり、より多くの人々がそれを利用することができるようになります。
@@ -219,30 +219,30 @@ $$ ds^2 = \eta_{\mu \nu} dx^\mu dx^\nu $$
     
     <item>
       <title>スケジュール</title>
-      <link>/author/schedule/</link>
+      <link>/schedule/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/author/schedule/</guid>
+      <guid>/schedule/</guid>
       <description> 月：研究室MTG／時々、会社 火：2週間に1回院試勉強会／ANCO全体MTG 水：IllustrisMTG 木：会社／バイト 金：授業／時々、出張 土： 日： </description>
       
     </item>
     
     <item>
       <title>研究・開発</title>
-      <link>/author/res-dev/</link>
+      <link>/res-dev/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/author/res-dev/</guid>
+      <guid>/res-dev/</guid>
       <description>研究 # 潮汐力と気圧の関係に関する研究, Saitama University - (2022.03), PDF (2MB) スペースバルーンを用いた成層圏の高エネルギー現象の解明研究, Saitama University - (2023.03), PDF (1.2MB) 開発 # ハイブリットロケットのノーズ部分にピトー管を付け対気速度を測定するシステムの開発 CORE - (2021.03) PDF (35.4MB) MATLABで既に開発が進んでいた飛翔シュミレーション「FROGS」のPython版「FOPY」の開発 CORE – (2021.06) 機械学習等を用いずセンサーによる0mゴールのアルゴリズムの開発を行い、2022年4月にその有効性を示す, AKTK - (2022.</description>
       
     </item>
     
     <item>
       <title>講演・口頭発表等</title>
-      <link>/author/presentation/</link>
+      <link>/presentation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/author/presentation/</guid>
+      <guid>/presentation/</guid>
       <description> オゾンと放射線の関わりを解き明かす—ANCO-Project (2022.11)
 宇宙航空研究開発機構宇宙科学研究所(JAXA)(ISAS) 大気球シンポジウム 2022年度（2022年11月7-8日. ハイブリッド開催（JAXA相模原キャンパス&amp;amp; オンライン)) (外部リンク/JAXA ) 理学部学生にとても役立つ『Python講座』- 埼玉大学 (2023.02)
 埼玉大学理工研・理学部／HiSEP・HiSEP-6 招待 </description>
@@ -251,10 +251,10 @@ $$ ds^2 = \eta_{\mu \nu} dx^\mu dx^\nu $$
     
     <item>
       <title>受賞</title>
-      <link>/author/award/</link>
+      <link>/award/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/author/award/</guid>
+      <guid>/award/</guid>
       <description> 2021年10月 埼玉大学学生表彰受賞 </description>
       
     </item>
@@ -283,10 +283,10 @@ $$ ds^2 = \eta_{\mu \nu} dx^\mu dx^\nu $$
     
     <item>
       <title>来歴</title>
-      <link>/author/cv/</link>
+      <link>/cv/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/author/cv/</guid>
+      <guid>/cv/</guid>
       <description>2000年06月 埼玉県草加市にて誕生する。 2014年08月 Android向けに提供していたメーラーアプリ「Bluemail」の日本語監修を担当（2017年01月引退） 2019年03月 春日部共栄高等学校卒業 2020 # 2020年04月 埼玉大学理学部物理学科入学 2020年05月 あかとき1・CORE2に入会 （それぞれ2024年03月、2023年03月退会） 2020年10月 自作ロケットエンジン「LIATRIS.musica」燃焼試験を実施、Ground Support Equipment (GSE) を運用。 2020年11月 COREのハイブリットロケット開発チーム「ミソラ工房」に所属し、第16回能代宇宙イベントにて「HIBARI1」のシミュレーションを担当。 2020年12月 CanSat機体「SC-5」の電装班長 2020年02月 自作ロケットエンジン「LIATRIS.musica」燃焼試験、Ground Support Equipment (GSE) を運用。 2021 # 2021年03月 ハイブリットロケット開発チーム「Duo」にてノーズ電装を担当し、御宿共同打上実験にて４年ぶりのデータ回収を実現する。独自開発した放射線検出器を搭載したCanSat機体「SC-4」の回収。 CORE 2021年3月御宿共同打上実験PV（フルバージョン） - YouTube　3 2021年04月 CORE埼玉大学支部を創設 初代代表（2022年3月退任） CORE本部会計監査（2022年3月退任） 2021年10月 エムラボ株式会社にプログラミング講師として入社（2022年07月退社） 2021年10月 埼玉大学学生表彰受賞 2021年12月 CanSat機体「SC-2.</description>
       
     </item>
