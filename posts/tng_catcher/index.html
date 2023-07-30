@@ -65,14 +65,10 @@
   
   <meta property="og:title" content="宇宙論的sim用の便利ツールTNG_catcherを開発したみた" />
 <meta property="og:description" content="TNG_catcher
-宇宙論的シミュレーションIllustrisTNGとは # IllustrisTNGは、銀河形成の大規模な宇宙磁気流体力学的シミュレーションの連続したシリーズです。TNGは、銀河形成を促進する物理過程を明らかにし、天文学者が現在および将来の観測プログラムのための予測をするために、夜空で観測される構造に進化する銀河がいつ、どのように進化するかを理解することを目的としています。シミュレーションには、包括的な物理モデルを含む最新の数値コードが使用され、世界でもっとも大きなスーパーコンピュータの一部で実行されています。TNGは、初代Illustrisシミュレーションの後継であり、多数の人々による数年間の努力に基づいています。プロジェクトには、容積と分解能の範囲をカバーする3つの主要な実行が含まれており、これらはTNG50、TNG100、TNG300と呼ばれています。
-TNGモデルおよびシミュレーションの開発は、2014年に開始され、モデルの完成とともに2年後の2016年に最初の生産シミュレーション（TNG100）が開始されました。元々3つの大容量宇宙箱の計画は、TNG50の完成により2019年に達成されました。コラボレーションと大規模な公開データユーザーのグループは、2017年以降、銀河形成、進化、そして宇宙論の多様なトピックにわたる結果に関する論文を数多く発表しています。
-2020年以降、オリジナルのTNGスイートを超えた、いくつかの派生プロジェクトが開始され、機械学習アプリケーション、宇宙論的パラメータ推定、宇宙再イオン化の放射流体力学、水素の再結合に関する非常に大きなGpcクラスの宇宙的範囲と銀河、そして最大の銀河団などのシミュレーションスイートが含まれています。
-これからの展開にご期待ください！
--TNGコラボレーション
-開発経緯 # 単純に自分がもっと便利に楽に解析したいと思ったから。
+開発経緯 # Illustris-TNGを用いたシミュレーションデータを単純に自分がもっと便利に楽に解析したいと思ったから。
+Illustris-TNGのホームページ
 インストール # ddd3h/TNG_catcher Python 0 0 TNG_catcherはライブラリを読み込んだ段階で次のモジュールを自動で読み込みます。
-import illustris_python as il import numpy as np import pandas as pd import os import matplotlib." />
+import illustris_python as il import numpy as np import pandas as pd import os import matplotlib.pyplot as plt from matplotlib." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/posts/tng_catcher/" /><meta property="og:image" content="/posts/tng_catcher/feature.png"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2023-06-17T20:50:09+09:00" />
@@ -82,14 +78,10 @@ import illustris_python as il import numpy as np import pandas as pd import os i
 <meta name="twitter:image" content="/posts/tng_catcher/feature.png"/>
 <meta name="twitter:title" content="宇宙論的sim用の便利ツールTNG_catcherを開発したみた"/>
 <meta name="twitter:description" content="TNG_catcher
-宇宙論的シミュレーションIllustrisTNGとは # IllustrisTNGは、銀河形成の大規模な宇宙磁気流体力学的シミュレーションの連続したシリーズです。TNGは、銀河形成を促進する物理過程を明らかにし、天文学者が現在および将来の観測プログラムのための予測をするために、夜空で観測される構造に進化する銀河がいつ、どのように進化するかを理解することを目的としています。シミュレーションには、包括的な物理モデルを含む最新の数値コードが使用され、世界でもっとも大きなスーパーコンピュータの一部で実行されています。TNGは、初代Illustrisシミュレーションの後継であり、多数の人々による数年間の努力に基づいています。プロジェクトには、容積と分解能の範囲をカバーする3つの主要な実行が含まれており、これらはTNG50、TNG100、TNG300と呼ばれています。
-TNGモデルおよびシミュレーションの開発は、2014年に開始され、モデルの完成とともに2年後の2016年に最初の生産シミュレーション（TNG100）が開始されました。元々3つの大容量宇宙箱の計画は、TNG50の完成により2019年に達成されました。コラボレーションと大規模な公開データユーザーのグループは、2017年以降、銀河形成、進化、そして宇宙論の多様なトピックにわたる結果に関する論文を数多く発表しています。
-2020年以降、オリジナルのTNGスイートを超えた、いくつかの派生プロジェクトが開始され、機械学習アプリケーション、宇宙論的パラメータ推定、宇宙再イオン化の放射流体力学、水素の再結合に関する非常に大きなGpcクラスの宇宙的範囲と銀河、そして最大の銀河団などのシミュレーションスイートが含まれています。
-これからの展開にご期待ください！
--TNGコラボレーション
-開発経緯 # 単純に自分がもっと便利に楽に解析したいと思ったから。
+開発経緯 # Illustris-TNGを用いたシミュレーションデータを単純に自分がもっと便利に楽に解析したいと思ったから。
+Illustris-TNGのホームページ
 インストール # ddd3h/TNG_catcher Python 0 0 TNG_catcherはライブラリを読み込んだ段階で次のモジュールを自動で読み込みます。
-import illustris_python as il import numpy as np import pandas as pd import os import matplotlib."/>
+import illustris_python as il import numpy as np import pandas as pd import os import matplotlib.pyplot as plt from matplotlib."/>
 
   
   <script type="application/ld+json">
@@ -100,7 +92,7 @@ import illustris_python as il import numpy as np import pandas as pd import os i
     "name": "宇宙論的sim用の便利ツールTNG_catcherを開発したみた",
     "headline": "宇宙論的sim用の便利ツールTNG_catcherを開発したみた",
     
-    "abstract": "TNG_catcher\n宇宙論的シミュレーションIllustrisTNGとは # IllustrisTNGは、銀河形成の大規模な宇宙磁気流体力学的シミュレーションの連続したシリーズです。TNGは、銀河形成を促進する物理過程を明らかにし、天文学者が現在および将来の観測プログラムのための予測をするために、夜空で観測される構造に進化する銀河がいつ、どのように進化するかを理解することを目的としています。シミュレーションには、包括的な物理モデルを含む最新の数値コードが使用され、世界でもっとも大きなスーパーコンピュータの一部で実行されています。TNGは、初代Illustrisシミュレーションの後継であり、多数の人々による数年間の努力に基づいています。プロジェクトには、容積と分解能の範囲をカバーする3つの主要な実行が含まれており、これらはTNG50、TNG100、TNG300と呼ばれています。\nTNGモデルおよびシミュレーションの開発は、2014年に開始され、モデルの完成とともに2年後の2016年に最初の生産シミュレーション（TNG100）が開始されました。元々3つの大容量宇宙箱の計画は、TNG50の完成により2019年に達成されました。コラボレーションと大規模な公開データユーザーのグループは、2017年以降、銀河形成、進化、そして宇宙論の多様なトピックにわたる結果に関する論文を数多く発表しています。\n2020年以降、オリジナルのTNGスイートを超えた、いくつかの派生プロジェクトが開始され、機械学習アプリケーション、宇宙論的パラメータ推定、宇宙再イオン化の放射流体力学、水素の再結合に関する非常に大きなGpcクラスの宇宙的範囲と銀河、そして最大の銀河団などのシミュレーションスイートが含まれています。\nこれからの展開にご期待ください！\n-TNGコラボレーション\n開発経緯 # 単純に自分がもっと便利に楽に解析したいと思ったから。\nインストール # ddd3h\/TNG_catcher Python 0 0 TNG_catcherはライブラリを読み込んだ段階で次のモジュールを自動で読み込みます。\nimport illustris_python as il import numpy as np import pandas as pd import os import matplotlib.",
+    "abstract": "TNG_catcher\n開発経緯 # Illustris-TNGを用いたシミュレーションデータを単純に自分がもっと便利に楽に解析したいと思ったから。\nIllustris-TNGのホームページ\nインストール # ddd3h\/TNG_catcher Python 0 0 TNG_catcherはライブラリを読み込んだ段階で次のモジュールを自動で読み込みます。\nimport illustris_python as il import numpy as np import pandas as pd import os import matplotlib.pyplot as plt from matplotlib.",
     "inLanguage": "ja",
     "url" : "\/posts\/tng_catcher\/",
     "author" : {
@@ -116,7 +108,7 @@ import illustris_python as il import numpy as np import pandas as pd import os i
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "220"
+    "wordCount": "214"
   }]
   </script>
 
@@ -698,7 +690,7 @@ import illustris_python as il import numpy as np import pandas as pd import os i
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2023-06-17 20:50:09 &#43;0900 JST">2023年 6月 17日</time><span class="px-2 text-primary-500">&middot;</span><span>220 文字</span><span class="px-2 text-primary-500">&middot;</span><span title="読むのに必要な時間">2 分</span><span class="px-2 text-primary-500">&middot;</span>
+  <time datetime="2023-06-17 20:50:09 &#43;0900 JST">2023年 6月 17日</time><span class="px-2 text-primary-500">&middot;</span><span>214 文字</span><span class="px-2 text-primary-500">&middot;</span><span title="読むのに必要な時間">2 分</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -751,7 +743,6 @@ import illustris_python as il import numpy as np import pandas as pd import os i
     class="min-w-[220px] py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#宇宙論的シミュレーションillustristngとは">宇宙論的シミュレーションIllustrisTNGとは</a></li>
     <li><a href="#開発経緯">開発経緯</a></li>
     <li><a href="#インストール">インストール</a></li>
     <li><a href="#使い方">使い方</a></li>
@@ -769,7 +760,6 @@ import illustris_python as il import numpy as np import pandas as pd import os i
     class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#宇宙論的シミュレーションillustristngとは">宇宙論的シミュレーションIllustrisTNGとは</a></li>
     <li><a href="#開発経緯">開発経緯</a></li>
     <li><a href="#インストール">インストール</a></li>
     <li><a href="#使い方">使い方</a></li>
@@ -816,21 +806,6 @@ import illustris_python as il import numpy as np import pandas as pd import os i
 <p><a href="../tng_catcher"  >
     TNG_catcher</a></p>
 <hr>
-<div id="宇宙論的シミュレーションillustristngとは" class="anchor"></div>
-<h2 class="relative group">宇宙論的シミュレーションIllustrisTNGとは 
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%e5%ae%87%e5%ae%99%e8%ab%96%e7%9a%84%e3%82%b7%e3%83%9f%e3%83%a5%e3%83%ac%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3illustristng%e3%81%a8%e3%81%af" aria-label="アンカー">#</a></span>        
-    
-</h2>
-<blockquote>
-<p>IllustrisTNGは、銀河形成の大規模な宇宙磁気流体力学的シミュレーションの連続したシリーズです。TNGは、銀河形成を促進する物理過程を明らかにし、天文学者が現在および将来の観測プログラムのための予測をするために、夜空で観測される構造に進化する銀河がいつ、どのように進化するかを理解することを目的としています。シミュレーションには、包括的な物理モデルを含む最新の数値コードが使用され、世界でもっとも大きなスーパーコンピュータの一部で実行されています。TNGは、初代Illustrisシミュレーションの後継であり、多数の人々による数年間の努力に基づいています。プロジェクトには、容積と分解能の範囲をカバーする3つの主要な実行が含まれており、これらはTNG50、TNG100、TNG300と呼ばれています。</p>
-<p>TNGモデルおよびシミュレーションの開発は、2014年に開始され、モデルの完成とともに2年後の2016年に最初の生産シミュレーション（TNG100）が開始されました。元々3つの大容量宇宙箱の計画は、TNG50の完成により2019年に達成されました。コラボレーションと大規模な公開データユーザーのグループは、2017年以降、銀河形成、進化、そして宇宙論の多様なトピックにわたる結果に関する論文を数多く発表しています。</p>
-<p>2020年以降、オリジナルのTNGスイートを超えた、いくつかの派生プロジェクトが開始され、機械学習アプリケーション、宇宙論的パラメータ推定、宇宙再イオン化の放射流体力学、水素の再結合に関する非常に大きなGpcクラスの宇宙的範囲と銀河、そして最大の銀河団などのシミュレーションスイートが含まれています。</p>
-<p>これからの展開にご期待ください！</p>
-<p>-TNGコラボレーション</p>
-</blockquote>
 <div id="開発経緯" class="anchor"></div>
 <h2 class="relative group">開発経緯 
     <span
@@ -839,7 +814,9 @@ import illustris_python as il import numpy as np import pandas as pd import os i
             style="text-decoration-line: none !important;" href="#%e9%96%8b%e7%99%ba%e7%b5%8c%e7%b7%af" aria-label="アンカー">#</a></span>        
     
 </h2>
-<p>単純に自分がもっと便利に楽に解析したいと思ったから。</p>
+<p>Illustris-TNGを用いたシミュレーションデータを単純に自分がもっと便利に楽に解析したいと思ったから。</p>
+<p><a href="https://www.tng-project.org/"   target="_blank">
+    Illustris-TNGのホームページ</a></p>
 <div id="インストール" class="anchor"></div>
 <h2 class="relative group">インストール 
     <span
