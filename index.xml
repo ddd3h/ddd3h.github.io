@@ -6,7 +6,28 @@
     <description>Recent content on ddd3hLab</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Thu, 27 Jul 2023 09:00:09 +0900</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 06 Aug 2023 22:00:09 +0900</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2023年08月06日 気まぐれ日記</title>
+      <link>/posts/2023-08-06/</link>
+      <pubDate>Sun, 06 Aug 2023 22:00:09 +0900</pubDate>
+      
+      <guid>/posts/2023-08-06/</guid>
+      <description>日記一日目
+８月６日
+目が覚めると10:00、うーん眠い。
+おもろい夢＋疲れてるのでもう一回寝る。
+11:00起きた。飯食って、歌いながら大学に向かいたかったので、車でいく。
+だちゃんから「すみません」ラインが来てニヤけるｗ
+大学ついた。誰もいない。
+冷蔵庫からZoneを取り出して、頑張るかと意気込んこんで、ウミユリ海底譚をリピートしながら電磁気を解く。やっぱ電磁気はおもろい。
+あ、ドクターの人が18:00ぐらいにやってきた。冷房を上げてる、草。
+（自分も寒かったので、あざます）
+あっ！！もう21:00か。帰るか。
+宮内が日記がいいというので、ここに毎日あげてみようかな。笑</description>
+      
+    </item>
+    
     <item>
       <title>後輩のためのLinux知識</title>
       <link>/posts/2023-07-27/</link>
@@ -210,16 +231,6 @@ $$ ds^2 = \eta_{\mu \nu} dx^\mu dx^\nu $$
       
       <guid>/research/anco/</guid>
       <description>オゾンと放射線の関わりを解き明かす—ANCO-Project # Uncovering the relationship between ozone and radiation―ANCO-Project # 会議発表論文足立 恭果 , 石﨑 大貴 , 佐藤 正騎 , 須田 亮介 , 清本 拓人 , 西濱 大将 , 宮崎 剛 , 蛯澤 悠 , 宇井 瞭介 , 飯田 和大 , 金子 尚広 , 徳光 和哉 , 大塲 翔悟 , 勝野 太智 , 山本 大凱 , 川瀬 幹己</description>
-      
-    </item>
-    
-    <item>
-      <title>スケジュール</title>
-      <link>/schedule/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/schedule/</guid>
-      <description> 月：研究室MTG／時々、会社 火：2週間に1回院試勉強会／ANCO全体MTG 水：IllustrisMTG 木：会社／バイト 金：授業／時々、出張 土： 日： </description>
       
     </item>
     
