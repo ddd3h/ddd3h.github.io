@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Linux on ddd3hLab</title>
+    <title>Linux on Daisuke Nishihama</title>
     <link>/categories/linux/</link>
-    <description>Recent content in Linux on ddd3hLab</description>
+    <description>Recent content in Linux on Daisuke Nishihama</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <lastBuildDate>Thu, 27 Jul 2023 09:00:09 +0900</lastBuildDate><atom:link href="/categories/linux/index.xml" rel="self" type="application/rss+xml" />
