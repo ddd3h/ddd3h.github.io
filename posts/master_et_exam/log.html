@@ -3,9 +3,10 @@
 <head>
 <meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
 
-<link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
 .mac-os-11 { --title-bar-height: 28px; }
 html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5 { white-space: pre-wrap; }
 body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.428571; overflow-x: hidden; background: inherit; tab-size: 4; }
 iframe { margin: auto; }
 a.url { word-break: break-all; }
@@ -22,8 +23,6 @@ body.typora-export { padding-left: 30px; padding-right: 30px; }
 @media screen and (max-width: 500px) {
   body.typora-export { padding-left: 0px; padding-right: 0px; }
   #write { padding-left: 20px; padding-right: 20px; }
-  .CodeMirror-sizer { margin-left: 0px !important; }
-  .CodeMirror-gutters { display: none !important; }
 }
 #write li > figure:last-child { margin-bottom: 0.5rem; }
 #write ol, #write ul { position: relative; }
@@ -51,12 +50,12 @@ sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inh
 #write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
 figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
 figure > table { margin: 0px; }
-tr { break-inside: avoid; break-after: auto; }
+thead, tr { break-inside: avoid; break-after: auto; }
 thead { display: table-header-group; }
 table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
 table.md-table td { min-width: 32px; }
 .CodeMirror-gutters { border-right-width: 0px; border-right-style: none; border-right-color: currentcolor; background-color: inherit; }
-.CodeMirror-linenumber { }
+.CodeMirror-linenumber { -webkit-user-select: none; }
 .CodeMirror { text-align: left; }
 .CodeMirror-placeholder { opacity: 0.3; }
 .CodeMirror pre { padding: 0px 4px; }
@@ -73,6 +72,7 @@ div.hr:focus { cursor: none; }
 #write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
 .md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
 .CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
 .footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
 .footnotes + .footnotes { margin-top: 0px; }
 .md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
@@ -87,12 +87,14 @@ blockquote > :first-child, li > :first-child { margin-top: 0px; }
 #write .footnote-line { white-space: pre-wrap; }
 @media print {
   body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
-  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
   .typora-export * { print-color-adjust: exact; }
   .typora-export #write { break-after: avoid; }
   .typora-export #write::after { height: 0px; }
   .is-mac table { break-inside: avoid; }
+  #write > p:nth-child(1) { margin-top: 0px; }
   .typora-export-show-outline .typora-export-sidebar { display: none; }
+  figure { overflow-x: visible; }
 }
 .footnote-line { margin-top: 0.714em; font-size: 0.7em; }
 a img, img a { cursor: pointer; }
@@ -130,6 +132,7 @@ p > .md-image:only-child { display: inline-block; width: 100%; }
 }
 a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
 .footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
 .md-attr { display: none; }
 .md-fn-count::after { content: "."; }
 code, pre, samp, tt { font-family: var(--monospace); }
@@ -168,7 +171,7 @@ mark .md-meta { color: rgb(0, 0, 0); }
 @media screen and (max-width: 800px) {
   .typora-export-sidebar { display: none; }
 }
-.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; }
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
 .outline-content ul { margin-top: 0px; margin-bottom: 0px; }
 .outline-content strong { font-weight: 400; }
 .outline-expander { width: 1rem; height: 1.428571rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
@@ -199,6 +202,7 @@ mark .md-meta { color: rgb(0, 0, 0); }
 .typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
 .typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
 .md-inline-math-container mjx-container { zoom: 0.95; }
+mjx-container { break-inside: avoid; }
 
 
 :root {
@@ -206,7 +210,7 @@ mark .md-meta { color: rgb(0, 0, 0); }
     --control-text-color: #777;
 }
 
-@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+@include-when-export url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
 
 /* open-sans-regular - latin-ext_latin */
   /* open-sans-italic - latin-ext_latin */
@@ -457,11 +461,8 @@ code {
     html {
         font-size: 13px;
     }
-    table,
     pre {
         page-break-inside: avoid;
-    }
-    pre {
         word-wrap: break-word;
     }
 }
@@ -593,6 +594,6 @@ header, .context-menu, .megamenu-content, footer{
 </style><title>log</title>
 </head>
 <body class='typora-export'><div class='typora-export-content'>
-<div id='write'  class=''><p><a href='./'><span>BACK</span></a></p><h1 id='院試関連過去問解答集--ログ'><span>院試関連(過去問解答集) | ログ</span></h1><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n2"><a class="md-toc-inner" style="" href="#院試関連過去問解答集--ログ">院試関連(過去問解答集) | ログ</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n4"><a class="md-toc-inner" style="" href="#log">LOG</a></span></p></div><h2 id='log'><span>LOG</span></h2><ul><li class='md-task-list-item task-list-item task-list-done' ><input type='checkbox' checked/><p><span>2022/10/26, 大阪大学長峯研究室へ訪問</span></p></li><li class='md-task-list-item task-list-item task-list-done' ><input type='checkbox' checked/><p><span>2023/02/26, 09:00 - TOEIC(1回目)</span></p></li><li class='md-task-list-item task-list-item task-list-done' ><input type='checkbox' checked/><p><span>2023/03/20, 10:30 - オンライン研究室見学会（東京大学、国立天文台、JAXA(ISAS)）</span></p></li><li class='md-task-list-item task-list-item task-list-done' ><input type='checkbox' checked/><p><span>2023/03/22, 10:00 - 東京大学藤井研究室へ訪問</span></p></li><li class='md-task-list-item task-list-item task-list-done' ><input type='checkbox' checked/><p><span>2023/04/22, 13:00 - 大阪大学院試説明会・長峯(研究室)とZoom</span></p></li><li class='md-task-list-item task-list-item task-list-done' ><input type='checkbox' checked/><p><span>2023/04/23, 09:00 - TOEIC(2回目)</span></p></li><li class='md-task-list-item task-list-item task-list-done' ><input type='checkbox' checked/><p><span>2023/05/08, 神戸大学牧野研究室へ訪問</span></p></li><li class='md-task-list-item task-list-item task-list-done' ><input type='checkbox' checked/><p><span>2023/05/15, 東京大学藤井(研究室)とZoom</span></p></li><li class='md-task-list-item task-list-item task-list-done' ><input type='checkbox' checked/><p><span>2023/05/21, 14:00 - TOEIC(3回目)</span></p></li><li class='md-task-list-item task-list-item task-list-done' ><input type='checkbox' checked/><p><span>2023/06/03, 13:00 - 院試勉強会</span></p></li><li class='md-task-list-item task-list-item task-list-done' ><input type='checkbox' checked/><p><span>2023/06/04, 13:00 - 院試勉強会</span></p></li><li class='md-task-list-item task-list-item task-list-not-done' ><input type='checkbox' /><p><del><span>2023/06/06, 神戸大学大学院惑星学専攻博士前期課程自己推薦 出願開始</span></del></p></li><li class='md-task-list-item task-list-item task-list-done' ><input type='checkbox' checked/><p><span>2023/06/10, 09:00 - TOEIC(ラスト、4回目)</span></p></li><li class='md-task-list-item task-list-item task-list-done' ><input type='checkbox' checked/><p><span>2023/06/13, 18:00 - 院試勉強会</span></p></li><li class='md-task-list-item task-list-item task-list-done' ><input type='checkbox' checked/><p><span>2023/06/16, 14:30 - 院試勉強会</span></p></li><li class='md-task-list-item task-list-item task-list-not-done' ><input type='checkbox' /><p><del><span>2023/06/23, 東京大学大学院天文学専攻修士課程 出願開始</span></del></p></li><li class='md-task-list-item task-list-item task-list-done' ><input type='checkbox' checked/><p><span>2023/06/24, 13:00 - 院試勉強会</span></p></li><li class='md-task-list-item task-list-item task-list-done' ><input type='checkbox' checked/><p><span>2023/06/25, 15:00 - 院試勉強会</span></p></li><li class='md-task-list-item task-list-item task-list-done' ><input type='checkbox' checked/><p><span>2023/07/06, 大阪大学大学院宇宙地球科学専攻博士前期課程 出願開始</span></p></li><li class='md-task-list-item task-list-item task-list-done' ><input type='checkbox' checked/><p><span>2023/07/08, 大阪大学大学院宇宙地球科学専攻博士前期課程 願書消印有効</span></p></li><li class='md-task-list-item task-list-item task-list-done' ><input type='checkbox' checked/><p><span>2023/07/10, 大阪大学大学院宇宙地球科学専攻博士前期課程 願書必着・埼玉大学大学院物理学PG専攻博士前期課程Form登録開始</span></p></li><li class='md-task-list-item task-list-item task-list-done' ><input type='checkbox' checked/><p><span>2023/07/14, 埼玉大学大学院物理学PG博士前期課程Form 15:00〆切</span></p></li><li class='md-task-list-item task-list-item task-list-done' ><input type='checkbox' checked/><p><span>2023/07/25, 神戸大学大学院惑星学専攻博士前期課程 出願開始</span></p></li><li class='md-task-list-item task-list-item task-list-done' ><input type='checkbox' checked/><p><span>2023/07/28, 神戸大学大学院惑星学専攻博士前期課程 願書必着</span></p></li><li class='md-task-list-item task-list-item task-list-not-done' ><input type='checkbox' /><p><span>2023/08/22, 神戸大学大学院惑星学専攻博士前期課程 筆記試験</span></p></li><li class='md-task-list-item task-list-item task-list-not-done' ><input type='checkbox' /><p><span>2023/08/23, 神戸大学大学院惑星学専攻博士前期課程 口述試験</span></p></li><li class='md-task-list-item task-list-item task-list-not-done' ><input type='checkbox' /><p><span>2023/08/29, 大阪大学大学院宇宙地球科学専攻博士前期課程 筆記試験</span></p></li><li class='md-task-list-item task-list-item task-list-not-done' ><input type='checkbox' /><p><span>2023/08/31, 大阪大学大学院宇宙地球科学専攻博士前期課程 口述試験１</span></p></li><li class='md-task-list-item task-list-item task-list-not-done' ><input type='checkbox' /><p><span>2023/09/01, 大阪大学大学院宇宙地球科学専攻博士前期課程 口述試験２</span></p></li><li class='md-task-list-item task-list-item task-list-not-done' ><input type='checkbox' /><p><span>2023/09/05, 埼玉大学大学院物理学PG専攻博士前期課程 筆記試験</span></p></li><li class='md-task-list-item task-list-item task-list-not-done' ><input type='checkbox' /><p><span>2023/09/06, 埼玉大学大学院物理学PG専攻博士前期課程 口述試験</span></p></li></ul></div></div>
+<div id='write'  class=''><p><a href='./'><span>BACK</span></a></p><h1 id='院試関連過去問解答集--ログ'><span>院試関連(過去問解答集) | ログ</span></h1><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n2"><a class="md-toc-inner" style="" href="#院試関連過去問解答集--ログ">院試関連(過去問解答集) | ログ</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n4"><a class="md-toc-inner" style="" href="#log">LOG</a></span></p></div><h2 id='log'><span>LOG</span></h2><ul><li class='md-task-list-item task-list-item task-list-done' ><input type='checkbox' checked/><p><span>2022/10/26, 大阪大学長峯研究室へ訪問</span></p></li><li class='md-task-list-item task-list-item task-list-done' ><input type='checkbox' checked/><p><span>2023/02/26, 09:00 - TOEIC(1回目)</span></p></li><li class='md-task-list-item task-list-item task-list-done' ><input type='checkbox' checked/><p><span>2023/03/20, 10:30 - オンライン研究室見学会（東京大学、国立天文台、JAXA(ISAS)）</span></p></li><li class='md-task-list-item task-list-item task-list-done' ><input type='checkbox' checked/><p><span>2023/03/22, 10:00 - 東京大学藤井研究室へ訪問</span></p></li><li class='md-task-list-item task-list-item task-list-done' ><input type='checkbox' checked/><p><span>2023/04/22, 13:00 - 大阪大学院試説明会・長峯(研究室)とZoom</span></p></li><li class='md-task-list-item task-list-item task-list-done' ><input type='checkbox' checked/><p><span>2023/04/23, 09:00 - TOEIC(2回目)</span></p></li><li class='md-task-list-item task-list-item task-list-done' ><input type='checkbox' checked/><p><span>2023/05/08, 神戸大学牧野研究室へ訪問</span></p></li><li class='md-task-list-item task-list-item task-list-done' ><input type='checkbox' checked/><p><span>2023/05/15, 東京大学藤井(研究室)とZoom</span></p></li><li class='md-task-list-item task-list-item task-list-done' ><input type='checkbox' checked/><p><span>2023/05/21, 14:00 - TOEIC(3回目)</span></p></li><li class='md-task-list-item task-list-item task-list-done' ><input type='checkbox' checked/><p><span>2023/06/03, 13:00 - 院試勉強会</span></p></li><li class='md-task-list-item task-list-item task-list-done' ><input type='checkbox' checked/><p><span>2023/06/04, 13:00 - 院試勉強会</span></p></li><li class='md-task-list-item task-list-item task-list-not-done' ><input type='checkbox' /><p><del><span>2023/06/06, 神戸大学大学院惑星学専攻博士前期課程自己推薦 出願開始</span></del></p></li><li class='md-task-list-item task-list-item task-list-done' ><input type='checkbox' checked/><p><span>2023/06/10, 09:00 - TOEIC(ラスト、4回目)</span></p></li><li class='md-task-list-item task-list-item task-list-done' ><input type='checkbox' checked/><p><span>2023/06/13, 18:00 - 院試勉強会</span></p></li><li class='md-task-list-item task-list-item task-list-done' ><input type='checkbox' checked/><p><span>2023/06/16, 14:30 - 院試勉強会</span></p></li><li class='md-task-list-item task-list-item task-list-not-done' ><input type='checkbox' /><p><del><span>2023/06/23, 東京大学大学院天文学専攻修士課程 出願開始</span></del></p></li><li class='md-task-list-item task-list-item task-list-done' ><input type='checkbox' checked/><p><span>2023/06/24, 13:00 - 院試勉強会</span></p></li><li class='md-task-list-item task-list-item task-list-done' ><input type='checkbox' checked/><p><span>2023/06/25, 15:00 - 院試勉強会</span></p></li><li class='md-task-list-item task-list-item task-list-done' ><input type='checkbox' checked/><p><span>2023/07/06, 大阪大学大学院宇宙地球科学専攻博士前期課程 出願開始</span></p></li><li class='md-task-list-item task-list-item task-list-done' ><input type='checkbox' checked/><p><span>2023/07/08, 大阪大学大学院宇宙地球科学専攻博士前期課程 願書消印有効</span></p></li><li class='md-task-list-item task-list-item task-list-done' ><input type='checkbox' checked/><p><span>2023/07/10, 大阪大学大学院宇宙地球科学専攻博士前期課程 願書必着・埼玉大学大学院物理学PG専攻博士前期課程Form登録開始</span></p></li><li class='md-task-list-item task-list-item task-list-done' ><input type='checkbox' checked/><p><span>2023/07/14, 埼玉大学大学院物理学PG博士前期課程Form 15:00〆切</span></p></li><li class='md-task-list-item task-list-item task-list-done' ><input type='checkbox' checked/><p><span>2023/07/25, 神戸大学大学院惑星学専攻博士前期課程 出願開始</span></p></li><li class='md-task-list-item task-list-item task-list-done' ><input type='checkbox' checked/><p><span>2023/07/28, 神戸大学大学院惑星学専攻博士前期課程 願書必着</span></p></li><li class='md-task-list-item task-list-item task-list-done' ><input type='checkbox' checked/><p><span>2023/08/22, 神戸大学大学院惑星学専攻博士前期課程 筆記試験</span></p></li><li class='md-task-list-item task-list-item task-list-done' ><input type='checkbox' checked/><p><span>2023/08/23, 神戸大学大学院惑星学専攻博士前期課程 口述試験</span></p></li><li class='md-task-list-item task-list-item task-list-done' ><input type='checkbox' checked/><p><span>2023/08/29, 大阪大学大学院宇宙地球科学専攻博士前期課程 筆記試験</span></p></li><li class='md-task-list-item task-list-item task-list-done' ><input type='checkbox' checked/><p><span>2023/08/31, 大阪大学大学院宇宙地球科学専攻博士前期課程 口述試験１</span></p></li><li class='md-task-list-item task-list-item task-list-done' ><input type='checkbox' checked/><p><span>2023/09/01, 大阪大学大学院宇宙地球科学専攻博士前期課程 口述試験２</span></p></li><li class='md-task-list-item task-list-item task-list-not-done' ><input type='checkbox' /><p><span>2023/09/05, 埼玉大学大学院物理学PG専攻博士前期課程 筆記試験</span></p></li><li class='md-task-list-item task-list-item task-list-not-done' ><input type='checkbox' /><p><span>2023/09/06, 埼玉大学大学院物理学PG専攻博士前期課程 口述試験</span></p></li></ul></div></div>
 </body>
 </html>
