@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>linux on Daisuke Nishihama</title>
+    <title>linux on 西濱大将 (Daisuke Nishihama)</title>
     <link>/tags/linux/</link>
-    <description>Recent content in linux on Daisuke Nishihama</description>
+    <description>Recent content in linux on 西濱大将 (Daisuke Nishihama)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
+    <copyright>© 2023 西濱大将</copyright>
     <lastBuildDate>Mon, 13 Mar 2023 15:00:09 +0900</lastBuildDate><atom:link href="/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>HEAsoftを高速にダウンロードする</title>
@@ -28,6 +29,7 @@ tar.gzファイルはtarが非圧縮でファイルをひとまとまりにす�
 下に載せたやり方であれば5分足らずで完了する。 あまりにも遅い場合、国内サーバーにUbuntuのバージョンのみではあるが、（期間限定で）サーバー上においておくので、そこからダウンロードしてもよい。
 やりかた
 ターミナルで以下のコマンド2行を実行する wget --keep-session-cookies --save-cookies=&amp;#34;cookies.txt&amp;#34; &amp;#34;https://20.gigafile.nu/0621-le3295726dd5b0b45503e5823972cde05&amp;#34; wget --load-cookies &amp;#34;cookies.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/posts/2023-03-13/feature.png" />
     </item>
     
     <item>
@@ -43,6 +45,7 @@ Ubuntu（ウブントゥ[6]、[ʊˈbʊntuː] ( 音声ファイル); oo-BOON-too[
 — Ubuntu - Wikipedia
 Zorin OS # Zorin OSはUbuntuよりもよりデスクトップ環境に重きを置いている。
 Zorin OS 16のデスクトップの写真であるが、非常に綺麗であろう。中身というかベースはUbuntuなのでLinuxでやりたいことは全てできる。</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/posts/2023-01-11/feature.jpg" />
     </item>
     
   </channel>

@@ -1,12 +1,29 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Linux on Daisuke Nishihama</title>
+    <title>Linux on 西濱大将 (Daisuke Nishihama)</title>
     <link>/categories/linux/</link>
-    <description>Recent content in Linux on Daisuke Nishihama</description>
+    <description>Recent content in Linux on 西濱大将 (Daisuke Nishihama)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Thu, 27 Jul 2023 09:00:09 +0900</lastBuildDate><atom:link href="/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>© 2023 西濱大将</copyright>
+    <lastBuildDate>Wed, 13 Dec 2023 09:00:09 +0900</lastBuildDate><atom:link href="/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>M1 MacでAndroidのUSBテザリングを有効にする方法</title>
+      <link>/posts/2023-12-13/</link>
+      <pubDate>Wed, 13 Dec 2023 09:00:09 +0900</pubDate>
+      
+      <guid>/posts/2023-12-13/</guid>
+      <description>はじめに # MacはあるときをきっかけにUSBテザリングのサポートを辞めました。
+WiFiテザリングはBluetoothテザリングに比べて高速ではあるのですが、電池を消耗します。これはかなりのネックでした。やはりUSBテザリングを使いたいと思い、Macのセキュリティレベルを下げ、自分の環境用に自力でビルドしてUSBテザリングに対応させようという試みです。
+私の環境 # Macbook Air 2020 (M1 Chip, Ventura 13.3.1) Androidスマホ: Galaxy S20 手順 # 1. セキュリティレベルを下げる # Macをリカバリーモードで起動してTerminalを開きます。
+Touch ID (電源ボタン) を数秒間押し続けて、「起動オプションを読み込んでいます」と表示されるまで待つと、起動ディスクの選択画面が現れます。
+「Macintosh HD」の横にある「オプション」を選択します。
+Terminalを選択して以下のコマンドを入力します。
+csrutil enable --without kext そしたら、yを押して許可を押してパスワードを入力してください。</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/posts/2023-12-13/feature.png" />
+    </item>
+    
     <item>
       <title>後輩のためのLinux知識</title>
       <link>/posts/2023-07-27/</link>
@@ -21,6 +38,7 @@ ssh [user]@[host] [user]にはサーバ側に登録されているユーザー�
 [host]にはサーバのホスト名、IPアドレス、ドメインなどを入れます。
 ホスト名は、DNSサーバなどで変換されている必要がありますが、IPアドレスはそのまま使えます。 (ローカル)ネットワーク外から接続するには、グローバルIPアドレスが必要です。 sshコマンドの主なオプションは次の通りです。
 オプション 意味 -p ポート番号 接続に使用するポート番号を指定する -l ユーザー名 接続に使用するユーザー名を指定する -i IDファイル 接続に使用する公開鍵ファイルを指定する -C 全ての通信を圧縮する -c 暗号化方法 通信を暗号化する方法を指定する（「3des」「blowfish」「des」が指定可能） -1 SSHv1（SSHプロトコルバージョン1）だけを使用する -2 SSHv2（SSHプロトコルバージョン2）だけを使用する -4 IPv4だけを使用する -6 IPv6だけを使用する -K GSSAPI（Generic Security Services API）による認証を許可する -k GSSAPIによる認証を許可しない -A 認証エージェントを転送する（1つ目のサーバに接続後、続けて別のサーバに接続する際に、最初に使った秘密鍵をそのまま使用する） -a 認証エージェントを転送しない -X X11のポートフォワーディングを有効にする（リモートマシンのXアプリケーションが実行できるようになる） -x X11のポートフォワーディングを無効にする -Y 信頼されたX11転送（Trusted X11）を有効にする -f コマンドを実行する際にsshをバックグラウンドにする（Xアプリケーションを実行する際に使用） -F 設定ファイル 設定ファイルを指定する -o 設定パラメータ 設定パラメータを指定する（設定ファイルに書かれた内容より優先される） -E ログファイル名 エラーを指定したファイルに記録する -q エラーメッセージや診断メッセージを表示しない（quiet mode） -v デバッグメッセージを表示する（verbose mode） サーバーとクライアント間でファイルを転送する # サーバにあるファイルを、ローカルPCなどに持ってきたい時、逆にローカルPCにあるデータをサーバに転送したいときなどにはscpコマンドが有効です。</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/posts/2023-07-27/feature.png" />
     </item>
     
     <item>
@@ -44,6 +62,7 @@ tar.gzファイルはtarが非圧縮でファイルをひとまとまりにす�
 下に載せたやり方であれば5分足らずで完了する。 あまりにも遅い場合、国内サーバーにUbuntuのバージョンのみではあるが、（期間限定で）サーバー上においておくので、そこからダウンロードしてもよい。
 やりかた
 ターミナルで以下のコマンド2行を実行する wget --keep-session-cookies --save-cookies=&amp;#34;cookies.txt&amp;#34; &amp;#34;https://20.gigafile.nu/0621-le3295726dd5b0b45503e5823972cde05&amp;#34; wget --load-cookies &amp;#34;cookies.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/posts/2023-03-13/feature.png" />
     </item>
     
     <item>
@@ -59,6 +78,7 @@ Ubuntu（ウブントゥ[6]、[ʊˈbʊntuː] ( 音声ファイル); oo-BOON-too[
 — Ubuntu - Wikipedia
 Zorin OS # Zorin OSはUbuntuよりもよりデスクトップ環境に重きを置いている。
 Zorin OS 16のデスクトップの写真であるが、非常に綺麗であろう。中身というかベースはUbuntuなのでLinuxでやりたいことは全てできる。</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/posts/2023-01-11/feature.jpg" />
     </item>
     
   </channel>

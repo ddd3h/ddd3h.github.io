@@ -1,12 +1,29 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Daisuke Nishihama</title>
+    <title>西濱大将 (Daisuke Nishihama)</title>
     <link>/</link>
-    <description>Recent content on Daisuke Nishihama</description>
+    <description>Recent content on 西濱大将 (Daisuke Nishihama)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 09 Aug 2023 20:00:09 +0900</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>© 2023 西濱大将</copyright>
+    <lastBuildDate>Wed, 13 Dec 2023 09:00:09 +0900</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>M1 MacでAndroidのUSBテザリングを有効にする方法</title>
+      <link>/posts/2023-12-13/</link>
+      <pubDate>Wed, 13 Dec 2023 09:00:09 +0900</pubDate>
+      
+      <guid>/posts/2023-12-13/</guid>
+      <description>はじめに # MacはあるときをきっかけにUSBテザリングのサポートを辞めました。
+WiFiテザリングはBluetoothテザリングに比べて高速ではあるのですが、電池を消耗します。これはかなりのネックでした。やはりUSBテザリングを使いたいと思い、Macのセキュリティレベルを下げ、自分の環境用に自力でビルドしてUSBテザリングに対応させようという試みです。
+私の環境 # Macbook Air 2020 (M1 Chip, Ventura 13.3.1) Androidスマホ: Galaxy S20 手順 # 1. セキュリティレベルを下げる # Macをリカバリーモードで起動してTerminalを開きます。
+Touch ID (電源ボタン) を数秒間押し続けて、「起動オプションを読み込んでいます」と表示されるまで待つと、起動ディスクの選択画面が現れます。
+「Macintosh HD」の横にある「オプション」を選択します。
+Terminalを選択して以下のコマンドを入力します。
+csrutil enable --without kext そしたら、yを押して許可を押してパスワードを入力してください。</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/posts/2023-12-13/feature.png" />
+    </item>
+    
     <item>
       <title>2023年08月09日 気まぐれ日記</title>
       <link>/posts/2023-08-09/</link>

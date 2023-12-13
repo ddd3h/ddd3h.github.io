@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Researches on Daisuke Nishihama</title>
+    <title>Researches on 西濱大将 (Daisuke Nishihama)</title>
     <link>/research/</link>
-    <description>Recent content in Researches on Daisuke Nishihama</description>
+    <description>Recent content in Researches on 西濱大将 (Daisuke Nishihama)</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language><atom:link href="/research/index.xml" rel="self" type="application/rss+xml" />
+    <language>ja</language>
+    <copyright>© 2023 西濱大将</copyright>
+    <atom:link href="/research/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>オゾンと放射線の関わりを解き明かす—ANCO-Project</title>
       <link>/research/anco/</link>
@@ -13,6 +15,7 @@
       
       <guid>/research/anco/</guid>
       <description>オゾンと放射線の関わりを解き明かす—ANCO-Project # Uncovering the relationship between ozone and radiation―ANCO-Project # 会議発表論文足立 恭果 , 石﨑 大貴 , 佐藤 正騎 , 須田 亮介 , 清本 拓人 , 西濱 大将 , 宮崎 剛 , 蛯澤 悠 , 宇井 瞭介 , 飯田 和大 , 金子 尚広 , 徳光 和哉 , 大塲 翔悟 , 勝野 太智 , 山本 大凱 , 川瀬 幹己</description>
+      
     </item>
     
     <item>
@@ -28,6 +31,7 @@ https://forms.gle/oFbTUXCGUGiG29tt8
 参加に当たっては各自ＰＣを持参ください。なお、この講座が効果的であれば、引き続き、別日程で第2回応用編講座を開催する予定です。
 主催： 埼玉大学理工研・理学部／HiSEP・HiSEP-6
 問い合わせ：HiSEP支援室　hisep.saitama@gmail.com</description>
+      
     </item>
     
   </channel>

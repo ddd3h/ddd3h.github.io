@@ -3,6 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://ddd3h.github.io/en/</loc>
+    <lastmod>2023-12-13T09:00:09+09:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>1</priority>
     <xhtml:link
@@ -14,6 +15,66 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://ddd3h.github.io/en/"
+                />
+  </url><url>
+    <loc>https://ddd3h.github.io/en/categories/</loc>
+    <lastmod>2023-12-13T09:00:09+09:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://ddd3h.github.io/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://ddd3h.github.io/en/categories/"
+                />
+  </url><url>
+    <loc>https://ddd3h.github.io/en/posts/2023-12-13/</loc>
+    <lastmod>2023-12-13T09:00:09+09:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://ddd3h.github.io/posts/2023-12-13/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://ddd3h.github.io/en/posts/2023-12-13/"
+                />
+  </url><url>
+    <loc>https://ddd3h.github.io/en/categories/linux/</loc>
+    <lastmod>2023-12-13T09:00:09+09:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://ddd3h.github.io/categories/linux/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://ddd3h.github.io/en/categories/linux/"
+                />
+  </url><url>
+    <loc>https://ddd3h.github.io/en/posts/</loc>
+    <lastmod>2023-12-13T09:00:09+09:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://ddd3h.github.io/posts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://ddd3h.github.io/en/posts/"
                 />
   </url><url>
     <loc>https://ddd3h.github.io/en/award/</loc>
@@ -28,20 +89,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://ddd3h.github.io/en/award/"
-                />
-  </url><url>
-    <loc>https://ddd3h.github.io/en/categories/</loc>
-    <changefreq>daily</changefreq>
-    <priority>1</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://ddd3h.github.io/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://ddd3h.github.io/en/categories/"
                 />
   </url><url>
     <loc>https://ddd3h.github.io/en/cv/</loc>

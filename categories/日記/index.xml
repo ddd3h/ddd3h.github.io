@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>日記 on Daisuke Nishihama</title>
+    <title>日記 on 西濱大将 (Daisuke Nishihama)</title>
     <link>/categories/%E6%97%A5%E8%A8%98/</link>
-    <description>Recent content in 日記 on Daisuke Nishihama</description>
+    <description>Recent content in 日記 on 西濱大将 (Daisuke Nishihama)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
+    <copyright>© 2023 西濱大将</copyright>
     <lastBuildDate>Tue, 13 Sep 2022 20:50:09 +0900</lastBuildDate><atom:link href="/categories/%E6%97%A5%E8%A8%98/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>TeX打ちの最高環境を構築したい</title>
@@ -22,6 +23,7 @@ TeXstudio - A LaTeX Editor - Browse /3.1.2 at SourceForge.net
 最新版はこちらです。
 https://www.texstudio.org/
 TeXstudioの設定 # コンパイルシステムの変更 # ダウンロードが完了したら、TeXstudio &amp;gt; 環境設定 &amp;gt; コマンド からLaTeXのコンパイルシステムをuplatexに変更します。設定は以下のように変更します。</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/posts/2022-09-13/feature.png" />
     </item>
     
     <item>
@@ -38,6 +40,7 @@ Homebrewをインストールする # そこでHomebrewのインストールか�
 （こういうところで「新しい」Macというのを感じることになるとは……）
 さてインストールが完了するとこんなエラーが出た。
 Warning: /opt/homebrew/bin is not in your PATH. Instructions on how to configure your shell for Homebrew can be found in the &amp;#39;Next steps&amp;#39; section below.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/posts/2022-09-12/feature.png" />
     </item>
     
     <item>
@@ -56,6 +59,7 @@ Warning: /opt/homebrew/bin is not in your PATH. Instructions on how to configure
 世界距離は四次元座標 \(x^\mu\)，Minkowski計量 \(\eta_{\mu \nu}\)を用いて
 $$ ds^2 = \eta_{\mu \nu} dx^\mu dx^\nu $$
 と表せる．ここで地球に観測者がいる系を静止系と呼び，光速で移動している系を移動系ということにする．静止系において光速で移動している観測者を見るとその移動距離は \(c^2 dt^2\) であるから世界距離</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/posts/2021-09-30/feature.jpg" />
     </item>
     
   </channel>
