@@ -6,7 +6,7 @@
     <description>Recent content on 西濱大将 (Daisuke Nishihama)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <copyright>© 2023 西濱大将</copyright>
+    <copyright>© 2024 西濱大将</copyright>
     <lastBuildDate>Wed, 13 Dec 2023 09:00:09 +0900</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>M1 MacでAndroidのUSBテザリングを有効にする方法</title>
@@ -22,59 +22,6 @@ Touch ID (電源ボタン) を数秒間押し続けて、「起動オプショ�
 Terminalを選択して以下のコマンドを入力します。
 csrutil enable --without kext そしたら、yを押して許可を押してパスワードを入力してください。</description>
       <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/posts/2023-12-13/feature.png" />
-    </item>
-    
-    <item>
-      <title>2023年08月09日 気まぐれ日記</title>
-      <link>/posts/2023-08-09/</link>
-      <pubDate>Wed, 09 Aug 2023 20:00:09 +0900</pubDate>
-      
-      <guid>/posts/2023-08-09/</guid>
-      <description>日記２日目
-８月９日
-７時頃に目を覚ます。あー寝落ちたのか。
-昨日は研究室で飲み会で、二次会まで行ったため、頭がいたい。
-いわゆる二日酔い。
-やらねばならないことがあるので、とりあえず大量に水を飲む。
-9時には家を出て、取引先に引き継ぎの人を紹介し挨拶をする。
-あー二日酔い。
-眠いので冷蔵庫のZoneを取り出し、頑張る。
-量子力学もちゃんと理解すれば面白いんだよな。
-後輩にこれってどうやって解いたか聞いたら、
-あー自分が第1励起状態を求めるのに、\( \ket{1,1} \) を計算していた。。。
-ナイス後輩。</description>
-      
-    </item>
-    
-    <item>
-      <title>2023年09月-2023年12月の予定 [Updated: 2023-08-09]</title>
-      <link>/posts/schedule202308/</link>
-      <pubDate>Wed, 09 Aug 2023 09:00:09 +0900</pubDate>
-      
-      <guid>/posts/schedule202308/</guid>
-      <description> </description>
-      
-    </item>
-    
-    <item>
-      <title>2023年08月06日 気まぐれ日記</title>
-      <link>/posts/2023-08-06/</link>
-      <pubDate>Sun, 06 Aug 2023 22:00:09 +0900</pubDate>
-      
-      <guid>/posts/2023-08-06/</guid>
-      <description>日記一日目
-８月６日
-目が覚めると10:00、うーん眠い。
-おもろい夢＋疲れてるのでもう一回寝る。
-11:00起きた。飯食って、歌いながら大学に向かいたかったので、車でいく。
-だちゃんから「すみません」ラインが来てニヤけるｗ
-大学ついた。誰もいない。
-冷蔵庫からZoneを取り出して、頑張るかと意気込んこんで、ウミユリ海底譚をリピートしながら電磁気を解く。やっぱ電磁気はおもろい。
-あ、ドクターの人が18:00ぐらいにやってきた。冷房を上げてる、草。
-（自分も寒かったので、あざます）
-あっ！！もう21:00か。帰るか。
-宮内が日記がいいというので、ここに毎日あげてみようかな。笑</description>
-      
     </item>
     
     <item>
@@ -292,7 +239,7 @@ Date Title Key 2022-01-08 Findings gained through computational physics Report D
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/res-dev/</guid>
-      <description>研究 # 潮汐力と気圧の関係に関する研究, Saitama University - (2022.03), PDF (2MB) スペースバルーンを用いた成層圏の高エネルギー現象の解明研究, Saitama University - (2023.03), PDF (1.2MB) 開発 # ハイブリットロケットのノーズ部分にピトー管を付け対気速度を測定するシステムの開発 CORE - (2021.03) PDF (35.4MB) MATLABで既に開発が進んでいた飛翔シュミレーション「FROGS」のPython版「FOPY」の開発 CORE – (2021.06) 機械学習等を用いずセンサーによる0mゴールのアルゴリズムの開発を行い、2022年4月にその有効性を示す, AKTK - (2022.</description>
+      <description>研究 # 潮汐力と気圧の関係に関する研究, Saitama University - (2022.03), PDF (2MB) スペースバルーンを用いた成層圏の高エネルギー現象の解明研究, Saitama University - (2023.03), PDF (1.2MB) 宇宙論的シミュレーションデータベースIllustris-TNGを用いた銀河周辺物質の速度と元素分布構造の解明, Saitama University - (2024.04), WEB: res2023 開発 # ハイブリットロケットのノーズ部分にピトー管を付け対気速度を測定するシステムの開発 CORE - (2021.03) PDF (35.</description>
       
     </item>
     
