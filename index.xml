@@ -6,7 +6,7 @@
     <description>Recent content on 西濱大将 (Daisuke Nishihama)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <copyright>© 2024 西濱大将</copyright>
+    <copyright>© 2024 Daisuke NISHIHAMA</copyright>
     <lastBuildDate>Wed, 13 Dec 2023 09:00:09 +0900</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>M1 MacでAndroidのUSBテザリングを有効にする方法</title>
@@ -224,6 +224,16 @@ Date Title Key 2022-01-08 Findings gained through computational physics Report D
     </item>
     
     <item>
+      <title>Token</title>
+      <link>/token/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/token/</guid>
+      <description>PGP Public Key # Key Name ddd3h Key Type RSA 4096bit Fingerprint 3C92 5E43 8FF2 C1C3 CAEE 9345 9F34 9343 8A1E 71BA Public Key ddd3h.pub date of expiry Indefinite period Crypto addresses # Bitcoin # bc1qujz56us7dlvmdrqkpha5sf87e4wwy4j0qry3d6 Ethereum # 0x80821a0e2f8946C3aE3C9001EE3986C5e1fa11BD </description>
+      
+    </item>
+    
+    <item>
       <title>オゾンと放射線の関わりを解き明かす—ANCO-Project</title>
       <link>/research/anco/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -272,7 +282,7 @@ Date Title Key 2022-01-08 Findings gained through computational physics Report D
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/cv/</guid>
-      <description>2000年06月 埼玉県草加市にて誕生 2014年08月 メーラーアプリ「Bluemail」日本語監修担当（2017年01月引退） 2019年03月 春日部共栄高等学校卒業 2020 # 2020年04月 埼玉大学理学部物理学科入学（2024年03月卒業） 2020年05月 あかとき1・CORE2に入会 （それぞれ2024年03月、2023年03月退会） 2020年11月 ハイブリッドロケットHIBARI1 開発チームミソラ工房 シミュレーション担当 2020年12月 CanSat機体SC-5 電装班長 2021 # 2021年03月 ハイブリットロケットHIBARI2 開発チームDuo ノーズ電装 3 2021年10月 エムラボ株式会社にプログラミング講師として入社（2022年07月退社） 2021年10月 埼玉大学学生表彰受賞 2021年12月 CanSat機体SC-2.</description>
+      <description>2000年06月 埼玉県草加市にて誕生 2014年08月 メーラーアプリ「Bluemail」日本語監修を担当（2017年01月引退） 2019年03月 春日部共栄高等学校を卒業 2020 # 2020年04月 埼玉大学理学部物理学科に入学（2024年03月卒業） 2020年05月 あかとき1・CORE2に入会 （それぞれ2024年03月、2023年03月退会） 2020年11月 ハイブリッドロケットHIBARI1 開発チームミソラ工房 シミュレーション担当 2020年12月 CanSat機体SC-5 電装班長 2021 # 2021年03月 ハイブリットロケットHIBARI2 開発チームDuo ノーズ電装 3 2021年10月 エムラボ株式会社にプログラミング講師として入社（2022年07月退社） 2021年10月 埼玉大学学生表彰を受賞 2021年12月 CanSat機体SC-2.</description>
       
     </item>
     

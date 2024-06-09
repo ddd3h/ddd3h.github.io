@@ -77,6 +77,20 @@
                 href="https://ddd3h.github.io/en/posts/"
                 />
   </url><url>
+    <loc>https://ddd3h.github.io/en/data/</loc>
+    <changefreq>daily</changefreq>
+    <priority>1</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://ddd3h.github.io/data/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://ddd3h.github.io/en/data/"
+                />
+  </url><url>
     <loc>https://ddd3h.github.io/en/award/</loc>
     <changefreq>daily</changefreq>
     <priority>1</priority>
@@ -103,20 +117,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://ddd3h.github.io/en/cv/"
-                />
-  </url><url>
-    <loc>https://ddd3h.github.io/en/data/</loc>
-    <changefreq>daily</changefreq>
-    <priority>1</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://ddd3h.github.io/data/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://ddd3h.github.io/en/data/"
                 />
   </url><url>
     <loc>https://ddd3h.github.io/en/presentation/</loc>
@@ -159,6 +159,20 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://ddd3h.github.io/en/tags/"
+                />
+  </url><url>
+    <loc>https://ddd3h.github.io/en/token/</loc>
+    <changefreq>daily</changefreq>
+    <priority>1</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://ddd3h.github.io/token/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://ddd3h.github.io/en/token/"
                 />
   </url><url>
     <loc>https://ddd3h.github.io/en/philosophy/</loc>
