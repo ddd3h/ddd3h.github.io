@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Daisuke Nishihama (西濱大将)</title>
+    <link>//localhost:1313/en/</link>
+    <description>Recent content on Daisuke Nishihama (西濱大将)</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2024 </copyright>
+    <lastBuildDate>Wed, 13 Dec 2023 09:00:09 +0900</lastBuildDate><atom:link href="//localhost:1313/en/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How To Enable Android USB Tethering On M1 Mac</title>
+      <link>//localhost:1313/en/posts/2023-12-13/</link>
+      <pubDate>Wed, 13 Dec 2023 09:00:09 +0900</pubDate>
+      
+      <guid>//localhost:1313/en/posts/2023-12-13/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Introduction 
+    &lt;div id=&#34;introduction&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#introduction&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;At some point, Macs quit supporting USB tethering.&lt;/p&gt;
+&lt;p&gt;WiFi tethering is faster than Bluetooth tethering, but it drains the battery. This was a significant bottleneck. I still wanted to use USB tethering, so I lowered the security level of my Mac and attempted to build my own build for my environment to support USB tethering.&lt;/p&gt;</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="//localhost:1313/posts/2023-12-13/feature.png" />
+    </item>
+    
+    <item>
+      <title></title>
+      <link>//localhost:1313/en/data/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/en/data/</guid>
+      <description>&lt;p&gt;data.md&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Award</title>
+      <link>//localhost:1313/en/award/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/en/award/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;Aug 2021 Saitama University Student Commendation Award&lt;/li&gt;
+&lt;/ul&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>CV</title>
+      <link>//localhost:1313/en/cv/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/en/cv/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;Jun 2000: Born in Soka City, Saitama Prefecture, Japan.&lt;/li&gt;
+&lt;li&gt;Aug 2014: Supervised the Japanese language of Bluemail, a mailer application for Android (Retired in Jan 2017)&lt;/li&gt;
+&lt;li&gt;Mar 2019: Graduated from Kasukabe Kyoei High School&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h2 class=&#34;relative group&#34;&gt;2020 
+    &lt;div id=&#34;2020&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#2020&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Apr 2020: Entered Department of Physics, Faculty of Science, Saitama University&lt;/li&gt;
+&lt;li&gt;May 2020: Joined Akatoki&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; and CORE&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+&lt;li&gt;Oct 2020: Conducted a combustion test of his own rocket engine &amp;ldquo;LIATRIS.musica&amp;rdquo; and operated Ground Support Equipment (GSE)&lt;/li&gt;
+&lt;li&gt;Nov 2020: Joined CORE&amp;rsquo;s hybrid rocket development team &amp;ldquo;Misora Kobo&amp;rdquo; and was in charge of &amp;ldquo;HIBARI1&amp;rdquo; simulation at the 16th Noshiro Space Event.&lt;/li&gt;
+&lt;li&gt;Dec 2020: Head of the electrical team for the CanSat airframe &amp;ldquo;SC-5&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;Feb 2020: Self-made rocket engine &amp;ldquo;LIATRIS.musica&amp;rdquo; combustion test, GSE operation&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h2 class=&#34;relative group&#34;&gt;2021 
+    &lt;div id=&#34;2021&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#2021&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Mar 2021: In charge of nose electric equipment in the hybrid rocket development team &amp;ldquo;Duo&amp;rdquo;, achieved data recovery for the first time in four years at the Oyado joint launch experiment. Recovery of CanSat airframe &amp;ldquo;SC-4&amp;rdquo; equipped with originally developed radiation detector.
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=CmlcOCtneyg&#34; target=&#34;_blank&#34;&gt;CORE March 2021 Oyado Joint Launch Experiment PV (full version) - YouTube&lt;/a&gt; &lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Apr 2021: CORE Saitama University Chapter founded.
+&lt;ul&gt;
+&lt;li&gt;First representative (retired in Mar 2022)&lt;/li&gt;
+&lt;li&gt;Auditor of CORE Headquarters (retired in Mar 2022)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Oct 2021: Joined M-Lab Inc. as a programming instructor (retired in Jul 2022)&lt;/li&gt;
+&lt;li&gt;Oct 2021: Received Saitama University Student Award&lt;/li&gt;
+&lt;li&gt;Dec 2021: PM of CanSat aircraft &amp;ldquo;SC-2.1&amp;rdquo;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h2 class=&#34;relative group&#34;&gt;2022 
+    &lt;div id=&#34;2022&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#2022&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Mar 2022: Appointed IT Advisor, MediHub Inc.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Presentation</title>
+      <link>//localhost:1313/en/presentation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/en/presentation/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;//localhost:1313/research/anco&#34;&gt;Uncovering the relationship between ozone and radiation―ANCO-Project&lt;/a&gt; (2022.11)&lt;br&gt;
+Institute of Space and Astronautical Science, Japan Aerospace Exploration Agency (JAXA)(ISAS)
+Balloon Symposium FY 2022 (November 7-8, 2022. Hybrid event (JAXA Sagamihara Campus &amp;amp; online)) &lt;a href=&#34;https://jaxa.repo.nii.ac.jp/?action=repository_uri&amp;amp;item_id=49009&#34; target=&#34;_blank&#34;&gt;(external link/JAXA 
+
+  &lt;span class=&#34;relative inline-block align-text-bottom icon&#34;&gt;
+    &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 640 512&#34;&gt;&lt;path fill=&#34;currentColor&#34; d=&#34;M172.5 131.1C228.1 75.51 320.5 75.51 376.1 131.1C426.1 181.1 433.5 260.8 392.4 318.3L391.3 319.9C381 334.2 361 337.6 346.7 327.3C332.3 317 328.9 297 339.2 282.7L340.3 281.1C363.2 249 359.6 205.1 331.7 177.2C300.3 145.8 249.2 145.8 217.7 177.2L105.5 289.5C73.99 320.1 73.99 372 105.5 403.5C133.3 431.4 177.3 435 209.3 412.1L210.9 410.1C225.3 400.7 245.3 404 255.5 418.4C265.8 432.8 262.5 452.8 248.1 463.1L246.5 464.2C188.1 505.3 110.2 498.7 60.21 448.8C3.741 392.3 3.741 300.7 60.21 244.3L172.5 131.1zM467.5 380C411 436.5 319.5 436.5 263 380C213 330 206.5 251.2 247.6 193.7L248.7 192.1C258.1 177.8 278.1 174.4 293.3 184.7C307.7 194.1 311.1 214.1 300.8 229.3L299.7 230.9C276.8 262.1 280.4 306.9 308.3 334.8C339.7 366.2 390.8 366.2 422.3 334.8L534.5 222.5C566 191 566 139.1 534.5 108.5C506.7 80.63 462.7 76.99 430.7 99.9L429.1 101C414.7 111.3 394.7 107.1 384.5 93.58C374.2 79.2 377.5 59.21 391.9 48.94L393.5 47.82C451 6.731 529.8 13.25 579.8 63.24C636.3 119.7 636.3 211.3 579.8 267.7L467.5 380z&#34;/&gt;&lt;/svg&gt;
+
+  &lt;/span&gt;
+
+)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;//localhost:1313/research/python-saitama-uni&#34;&gt;Very useful &amp;ldquo;Python course&amp;rdquo; for science students - Saitama University&lt;/a&gt; (2023.02)&lt;br&gt;
+Saitama University, Institute of Science and Engineering, Faculty of Science/HiSEP, HiSEP-6 &lt;span class=&#34;flex&#34; style=&#34;cursor: pointer;&#34;&gt;
+  &lt;span class=&#34;rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400&#34;&gt;
+     invited 
+  &lt;/span&gt;
+&lt;/span&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>R&amp;D</title>
+      <link>//localhost:1313/en/res-dev/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/en/res-dev/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Research 
+    &lt;div id=&#34;research&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#research&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Study on the Relationship between Tidal Forces and Atmospheric Pressure, &lt;em&gt;Saitama University - (2022.03)&lt;/em&gt;,&lt;a href=&#34;//localhost:1313/pdf/%e7%89%b9%e5%88%a5%e7%a0%94%e7%a9%b6I_%e6%bd%ae%e6%b1%90%e5%8a%9b%e3%81%a8%e6%b0%97%e5%9c%a7%e3%81%ae%e9%96%a2%e4%bf%82%e3%81%ab%e9%96%a2%e3%81%99%e3%82%8b%e7%a0%94%e7%a9%b6.pdf&#34;&gt;PDF (2MB)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Study on Stratospheric High Energy Phenomena Using Space Balloons, &lt;em&gt;Saitama University - (2023.03)&lt;/em&gt;, &lt;a href=&#34;//localhost:1313/pdf/anco2022.pdf&#34;&gt;PDF (1.2MB)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h2 class=&#34;relative group&#34;&gt;Development 
+    &lt;div id=&#34;development&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#development&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Development of a system to measure airspeed by attaching a pitot tube to the nose of a hybrid rocket &lt;em&gt;CORE - (2021.03)&lt;/em&gt; &lt;a href=&#34;//localhost:1313/pdf/duo_report.pdf&#34;&gt;PDF (35.4MB)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Development of &amp;ldquo;FOPY&amp;rdquo;, a Python version of &amp;ldquo;FROGS&amp;rdquo;, a flight simulation that was already under development in MATLAB &lt;em&gt;&lt;a href=&#34;https://www.corerocket.net/&#34; target=&#34;_blank&#34;&gt;CORE&lt;/a&gt; - (2021.06)&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Development of an algorithm for sensor-based 0-m goal without using machine learning, etc., and demonstration of its effectiveness in April 2022, &lt;em&gt;&lt;a href=&#34;https://akatoki-saidai.github.io/&#34; target=&#34;_blank&#34;&gt;AKTK&lt;/a&gt; - (2022.04)&lt;/em&gt;, &lt;a href=&#34;//localhost:1313/pdf/sc2_1_report.pdf&#34;&gt;PDF (3.9MB)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Development of a program for GUI display of received data used in the ANCO-project space balloon project, &lt;em&gt;&lt;a href=&#34;https://akatoki-saidai.github.io/&#34; target=&#34;_blank&#34;&gt;AKTK&lt;/a&gt; - (2022.09)&lt;/em&gt;, &lt;a href=&#34;https://github.com/Akatoki-Saidai/GroundSystem_GUI_Project&#34; target=&#34;_blank&#34;&gt;GitHub
+
+  &lt;span class=&#34;relative inline-block align-text-bottom icon&#34;&gt;
+    &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 496 512&#34;&gt;&lt;path fill=&#34;currentColor&#34; d=&#34;M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z&#34;/&gt;&lt;/svg&gt;
+
+  &lt;/span&gt;
+
+&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Token</title>
+      <link>//localhost:1313/en/token/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/en/token/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;PGP Public Key 
+    &lt;div id=&#34;pgp-public-key&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#pgp-public-key&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;Key Name&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;ddd3h&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Key Type&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;RSA 4096bit&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Fingerprint&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;3C92 5E43 8FF2 C1C3 CAEE 9345 9F34 9343 8A1E 71BA&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Public Key&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;//localhost:1313/data/ddd3h.pub&#34;&gt;ddd3h.pub&lt;/a&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;date of expiry&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Indefinite period&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+
+&lt;h2 class=&#34;relative group&#34;&gt;Crypto addresses 
+    &lt;div id=&#34;crypto-addresses&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#crypto-addresses&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+
+
+&lt;h3 class=&#34;relative group&#34;&gt;Bitcoin 
+    &lt;div id=&#34;bitcoin&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#bitcoin&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;bc1qujz56us7dlvmdrqkpha5sf87e4wwy4j0qry3d6
+&lt;/code&gt;&lt;/pre&gt;&lt;img src=&#34;//localhost:1313/img/bitcoin.png&#34; width=&#34;180px&#34;&gt;
+
+
+&lt;h3 class=&#34;relative group&#34;&gt;Ethereum 
+    &lt;div id=&#34;ethereum&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#ethereum&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;0x80821a0e2f8946C3aE3C9001EE3986C5e1fa11BD
+&lt;/code&gt;&lt;/pre&gt;&lt;img src=&#34;//localhost:1313/img/ethereum.png&#34; width=&#34;180px&#34;&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Welcome to ddd3hLab</title>
+      <link>//localhost:1313/en/philosophy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/en/philosophy/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Purpose of this site 
+    &lt;div id=&#34;purpose-of-this-site&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#purpose-of-this-site&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;ddd3hLab is a website established to record and summarize my own research and development of what I, &lt;a href=&#34;//localhost:1313/en/author&#34;&gt;Daisuke Nishihama&lt;/a&gt;, am interested in on a daily basis, and to occasionally publish my ramblings.&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

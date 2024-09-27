@@ -1,0 +1,997 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>西濱大将 (Daisuke Nishihama)</title>
+    <link>//localhost:1313/</link>
+    <description>Recent content on 西濱大将 (Daisuke Nishihama)</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>© 2024 </copyright>
+    <lastBuildDate>Mon, 18 Dec 2023 09:00:09 +0900</lastBuildDate><atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>M1 MacでAndroidのUSBテザリングを有効にする方法</title>
+      <link>//localhost:1313/posts/2023-12-13/</link>
+      <pubDate>Wed, 13 Dec 2023 09:00:09 +0900</pubDate>
+      
+      <guid>//localhost:1313/posts/2023-12-13/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;はじめに 
+    &lt;div id=&#34;%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB&#34; aria-label=&#34;アンカー&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;MacはあるときをきっかけにUSBテザリングのサポートを辞めました。&lt;/p&gt;
+&lt;p&gt;WiFiテザリングはBluetoothテザリングに比べて高速ではあるのですが、電池を消耗します。これはかなりのネックでした。やはりUSBテザリングを使いたいと思い、Macのセキュリティレベルを下げ、自分の環境用に自力でビルドしてUSBテザリングに対応させようという試みです。&lt;/p&gt;
+
+
+&lt;h3 class=&#34;relative group&#34;&gt;私の環境 
+    &lt;div id=&#34;%E7%A7%81%E3%81%AE%E7%92%B0%E5%A2%83&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%E7%A7%81%E3%81%AE%E7%92%B0%E5%A2%83&#34; aria-label=&#34;アンカー&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Macbook Air 2020 (M1 Chip, Ventura 13.3.1)&lt;/li&gt;
+&lt;li&gt;Androidスマホ: Galaxy S21&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+
+
+&lt;h2 class=&#34;relative group&#34;&gt;手順 
+    &lt;div id=&#34;%E6%89%8B%E9%A0%86&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%E6%89%8B%E9%A0%86&#34; aria-label=&#34;アンカー&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+
+
+&lt;h3 class=&#34;relative group&#34;&gt;1. セキュリティレベルを下げる 
+    &lt;div id=&#34;1-%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3%E3%83%AC%E3%83%99%E3%83%AB%E3%82%92%E4%B8%8B%E3%81%92%E3%82%8B&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#1-%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3%E3%83%AC%E3%83%99%E3%83%AB%E3%82%92%E4%B8%8B%E3%81%92%E3%82%8B&#34; aria-label=&#34;アンカー&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;Macをリカバリーモードで起動してTerminalを開きます。&lt;/p&gt;</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="//localhost:1313/posts/2023-12-13/feature.png" />
+    </item>
+    
+    <item>
+      <title>後輩のためのLinux知識</title>
+      <link>//localhost:1313/posts/2023-07-27/</link>
+      <pubDate>Thu, 27 Jul 2023 09:00:09 +0900</pubDate>
+      
+      <guid>//localhost:1313/posts/2023-07-27/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;はじめに 
+    &lt;div id=&#34;%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB&#34; aria-label=&#34;アンカー&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;Linuxを使う上で、知っておくと便利な知識をまとめています。&lt;/p&gt;
+&lt;p&gt;基本的には、自分の優秀な後輩たちに向けて書いたつもりです。&lt;/p&gt;
+
+
+&lt;h2 class=&#34;relative group&#34;&gt;サーバーに接続 
+    &lt;div id=&#34;%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%81%AB%E6%8E%A5%E7%B6%9A&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%81%AB%E6%8E%A5%E7%B6%9A&#34; aria-label=&#34;アンカー&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;サーバ側がsshd(ssh daemon)が起動している場合は、sshコマンドを使って接続できます。&lt;/p&gt;</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="//localhost:1313/posts/2023-07-27/feature.png" />
+    </item>
+    
+    <item>
+      <title>TNG_catcher.extract_subhalo_data</title>
+      <link>//localhost:1313/posts/tng_catcher.extract_subhalo_data/</link>
+      <pubDate>Sat, 17 Jun 2023 20:50:09 +0900</pubDate>
+      
+      <guid>//localhost:1313/posts/tng_catcher.extract_subhalo_data/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;../tng_catcher&#34;&gt;TNG_catcher&lt;/a&gt;/&lt;a href=&#34;../tng_catcher.extract_subhalo_data/&#34;&gt;TNG_catcher.extract_subhalo_data&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;次の一行でモジュールを読み込みます。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;TNG_catcher&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;このモジュールは次のクラスが定義されてあります。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;extract_subhalo_data&lt;/li&gt;
+&lt;li&gt;（順次作成中）&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h2 class=&#34;relative group&#34;&gt;はじめに 
+    &lt;div id=&#34;%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB&#34; aria-label=&#34;アンカー&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;Illustris-TNGのサイトには、様々な銀河のカタログが公開されています。&lt;/p&gt;
+&lt;p&gt;
+    &lt;figure&gt;
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        loading=&#34;lazy&#34;
+        srcset=&#34;
+        /posts/tng_catcher.extract_subhalo_data/2023-07-05-15-35-35_hu8622684873758012840.png 330w,
+        /posts/tng_catcher.extract_subhalo_data/2023-07-05-15-35-35_hu5585606695375222884.png 660w,
+        /posts/tng_catcher.extract_subhalo_data/2023-07-05-15-35-35_hu11709076543364160548.png 1024w,
+        /posts/tng_catcher.extract_subhalo_data/2023-07-05-15-35-35_hu4138673689906538280.png 2x&#34;
+        src=&#34;//localhost:1313/posts/tng_catcher.extract_subhalo_data/2023-07-05-15-35-35_hu5585606695375222884.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+    &lt;/figure&gt;
+&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>TNG_catcher.plot_tools</title>
+      <link>//localhost:1313/posts/tng_catcher.plot_tools/</link>
+      <pubDate>Sat, 17 Jun 2023 20:50:09 +0900</pubDate>
+      
+      <guid>//localhost:1313/posts/tng_catcher.plot_tools/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;../tng_catcher&#34;&gt;TNG_catcher&lt;/a&gt;/&lt;a href=&#34;../tng_catcher.plot_tools/&#34;&gt;TNG_catcher.plot_tools&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;次の一行でモジュールを読み込みます。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;TNG_catcher&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;このモジュールは次のクラスが定義されてあります。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;extract_subhalo_data&lt;/li&gt;
+&lt;li&gt;（順次作成中）&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h2 class=&#34;relative group&#34;&gt;はじめに 
+    &lt;div id=&#34;%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB&#34; aria-label=&#34;アンカー&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;そこでこれらを簡単に取得したい／解析したいと思い、このモジュールを作成しました。&lt;/p&gt;
+
+
+&lt;h3 class=&#34;relative group&#34;&gt;解析データの挿入（インスタンスの作成） 
+    &lt;div id=&#34;%E8%A7%A3%E6%9E%90%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E6%8C%BF%E5%85%A5%E3%82%A4%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%B3%E3%82%B9%E3%81%AE%E4%BD%9C%E6%88%90&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%E8%A7%A3%E6%9E%90%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E6%8C%BF%E5%85%A5%E3%82%A4%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%B3%E3%82%B9%E3%81%AE%E4%BD%9C%E6%88%90&#34; aria-label=&#34;アンカー&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;numpy&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;np&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;dd&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;np&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;load&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;data.npz&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;test&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;plot_tools&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dd&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;インスタンスを作成するにあたり、読み込むのはNpzFileです。&lt;code&gt;extract_subhalo_data&lt;/code&gt;クラスなどで出力したものを使用します。独自に抽出したデータでも構いません。&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>宇宙論的sim用の便利ツールTNG_catcherを開発したみた</title>
+      <link>//localhost:1313/posts/tng_catcher/</link>
+      <pubDate>Sat, 17 Jun 2023 20:50:09 +0900</pubDate>
+      
+      <guid>//localhost:1313/posts/tng_catcher/</guid>
+      <description>&lt;p&gt;
+    &lt;figure&gt;
+      &lt;img
+        class=&#34;my-0 rounded-md&#34;
+        loading=&#34;lazy&#34;
+        srcset=&#34;
+        /posts/tng_catcher/feature_hu11220885823776263596.png 330w,
+        /posts/tng_catcher/feature_hu4211239867561495784.png 660w,
+        /posts/tng_catcher/feature_hu1875891602794942580.png 1024w,
+        /posts/tng_catcher/feature_hu11340992175895270733.png 2x&#34;
+        src=&#34;//localhost:1313/posts/tng_catcher/feature_hu4211239867561495784.png&#34;
+        alt=&#34;&#34;
+      /&gt;
+      
+    &lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;../tng_catcher&#34;&gt;TNG_catcher&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+
+
+&lt;h2 class=&#34;relative group&#34;&gt;開発経緯 
+    &lt;div id=&#34;%E9%96%8B%E7%99%BA%E7%B5%8C%E7%B7%AF&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%E9%96%8B%E7%99%BA%E7%B5%8C%E7%B7%AF&#34; aria-label=&#34;アンカー&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;Illustris-TNGを用いたシミュレーションデータを単純に自分がもっと便利に楽に解析したいと思ったから。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.tng-project.org/&#34; target=&#34;_blank&#34;&gt;Illustris-TNGのホームページ&lt;/a&gt;&lt;/p&gt;
+
+
+&lt;h2 class=&#34;relative group&#34;&gt;インストール 
+    &lt;div id=&#34;%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB&#34; aria-label=&#34;アンカー&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;a id=&#34;github-6e1ffa281e6f28c50428bf4a203e6ef5&#34; target=&#34;_blank&#34; href=&#34;https://github.com/ddd3h/TNG_catcher&#34; class=&#34;cursor-pointer&#34;&gt;
+  &lt;div
+    class=&#34;w-full md:w-auto pt-3 p-5 border border-neutral-200 dark:border-neutral-700 border rounded-md shadow-2xl&#34;&gt;
+
+    &lt;div class=&#34;flex items-center&#34;&gt;
+      &lt;span class=&#34;text-2xl text-neutral-800 dark:text-neutral&#34; style=&#34;margin-right:10px;&#34;&gt;
+        
+
+  &lt;span class=&#34;relative block icon&#34;&gt;
+    &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 496 512&#34;&gt;&lt;path fill=&#34;currentColor&#34; d=&#34;M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z&#34;/&gt;&lt;/svg&gt;
+
+  &lt;/span&gt;
+
+
+      &lt;/span&gt;
+      &lt;div
+        id=&#34;github-6e1ffa281e6f28c50428bf4a203e6ef5-full_name&#34;
+        class=&#34;m-0 font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral&#34;&gt;
+        ddd3h/TNG_catcher
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;p id=&#34;github-6e1ffa281e6f28c50428bf4a203e6ef5-description&#34; class=&#34;m-0 mt-2 text-md text-neutral-800 dark:text-neutral&#34;&gt;
+      
+    &lt;/p&gt;</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="//localhost:1313/posts/tng_catcher/feature.png" />
+    </item>
+    
+    <item>
+      <title>院試関連(過去問解答集)</title>
+      <link>//localhost:1313/posts/master_et_exam/</link>
+      <pubDate>Sat, 03 Jun 2023 15:00:09 +0900</pubDate>
+      
+      <guid>//localhost:1313/posts/master_et_exam/</guid>
+      <description>&lt;p&gt;このサイトは、自分が外部院試を受験するにあたり、こういう情報あったらよかったなぁと思い、記録して誰かの役に立てばと思って残している。&lt;/p&gt;
+&lt;p&gt;基本的には、その研究室の先輩方から色々と聞くのがベストだが、何か役に立てるものがあればと思う。&lt;/p&gt;
+
+
+&lt;h2 class=&#34;relative group&#34;&gt;過去問解答集 
+    &lt;div id=&#34;%E9%81%8E%E5%8E%BB%E5%95%8F%E8%A7%A3%E7%AD%94%E9%9B%86&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%E9%81%8E%E5%8E%BB%E5%95%8F%E8%A7%A3%E7%AD%94%E9%9B%86&#34; aria-label=&#34;アンカー&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;ある程度、完成したものを公開していく。
+&lt;br&gt;間違い等があればご連絡いただけると助かります。&lt;/p&gt;
+&lt;p&gt;
+
+  &lt;span class=&#34;relative inline-block align-text-bottom icon&#34;&gt;
+    &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 448 512&#34;&gt;&lt;path fill=&#34;currentColor&#34; d=&#34;M438.6 105.4C451.1 117.9 451.1 138.1 438.6 150.6L182.6 406.6C170.1 419.1 149.9 419.1 137.4 406.6L9.372 278.6C-3.124 266.1-3.124 245.9 9.372 233.4C21.87 220.9 42.13 220.9 54.63 233.4L159.1 338.7L393.4 105.4C405.9 92.88 426.1 92.88 438.6 105.4H438.6z&#34;/&gt;&lt;/svg&gt;
+
+  &lt;/span&gt;
+
+マークは院試勉強会等にて一定の解答の精査が行われたものです。&lt;/p&gt;</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="//localhost:1313/posts/master_et_exam/feature.jpeg" />
+    </item>
+    
+    <item>
+      <title>HEAsoftを高速にダウンロードする</title>
+      <link>//localhost:1313/posts/2023-03-13/</link>
+      <pubDate>Mon, 13 Mar 2023 15:00:09 +0900</pubDate>
+      
+      <guid>//localhost:1313/posts/2023-03-13/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;&amp;ldquo;HEAsoft&amp;quot;って何？ 
+    &lt;div id=&#34;heasoft%E3%81%A3%E3%81%A6%E4%BD%95&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#heasoft%E3%81%A3%E3%81%A6%E4%BD%95&#34; aria-label=&#34;アンカー&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;HEAsoftは、高エネルギー天体物理学に関連するデータ解析ソフトウェアのパッケージです。このパッケージには、NASAの多くのX線天文衛星ミッションで使用されるデータ解析ソフトウェアが含まれています。たとえば、Chandra X線天文台、XMM-Newton、Suzakuなどが挙げられます。&lt;/p&gt;
+&lt;p&gt;HEAsoftには、X線天文学に関する多くのツールが含まれており、X線スペクトルの分析、背景の推定、画像処理、時系列解析などが可能です。HEAsoftは、主にUNIXベースのシステムで動作することが意図されていますが、WindowsやMac OS Xなどのプラットフォームでも使用することができます。&lt;/p&gt;
+&lt;p&gt;HEAsoftは、NASAの高エネルギー天体物理学の研究者や、天文学者、物理学者、コンピューターサイエンティスト、その他の関連分野の研究者によって使用されています。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://heasarc.gsfc.nasa.gov/docs/software.html&#34; target=&#34;_blank&#34;&gt;http://heasarc.gsfc.nasa.gov/docs/software.html&lt;/a&gt;&lt;/p&gt;
+
+
+&lt;h2 class=&#34;relative group&#34;&gt;ダウンロード 
+    &lt;div id=&#34;%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89&#34; aria-label=&#34;アンカー&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;NASAのサイトからHEAsoftのSource Codeをダウンロードする。ダウンロードサイトは &lt;a href=&#34;https://heasarc.gsfc.nasa.gov/docs/software/lheasoft/download.html&#34; target=&#34;_blank&#34;&gt;https://heasarc.gsfc.nasa.gov/docs/software/lheasoft/download.html&lt;/a&gt;&lt;/p&gt;</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="//localhost:1313/posts/2023-03-13/feature.png" />
+    </item>
+    
+    <item>
+      <title>Ubuntu / Zorin OSはやっぱりいい</title>
+      <link>//localhost:1313/posts/2023-01-11/</link>
+      <pubDate>Wed, 11 Jan 2023 20:50:09 +0900</pubDate>
+      
+      <guid>//localhost:1313/posts/2023-01-11/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;#ubuntu&#34;&gt;Ubuntu&lt;/a&gt;も&lt;a href=&#34;#zorinos&#34;&gt;Zorin OS&lt;/a&gt;もLinuxと呼ばれるディストリビューションなわけなのだが、そんなLinuxを私が好む理由はいくつかある。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;オープンソース&lt;/strong&gt;：Linuxはオープンソースのオペレーティングシステムであり、誰でも自由にアクセスでき、改良することができます。これは、ソフトウェアの自由な利用を可能にし、コミュニティが共同でソフトウェアを開発することができるため、透明性とセキュリティの向上につながります。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;カスタマイズ性&lt;/strong&gt;：Linuxは、ユーザーがカスタマイズすることができる幅広いオプションを提供します。ユーザーは、自分の好みに合わせてデスクトップ環境、ウィンドウマネージャ、ターミナルエミュレータ、パッケージマネージャなどを選択することができます。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;安定性&lt;/strong&gt;：Linuxは、多くの場合、非常に安定して動作します。これは、コードがオープンソースであるため、多数の開発者が常にバグ修正やパフォーマンス向上に取り組んでいるためです。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;セキュリティ&lt;/strong&gt;：Linuxは、セキュリティに非常に優れています。これは、オープンソースであるため、多数の開発者がコードをレビューし、問題を修正することができるためです。また、Linuxは、標準的にセキュリティ機能が組み込まれているため、セキュリティの強化が容易です。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;コマンドラインツール&lt;/strong&gt;：Linuxは、強力なコマンドラインツールを提供します。これにより、複雑なタスクを効率的に実行することができます。また、これらのツールは、自動化やスクリプト化に適しているため、開発者やシステム管理者にとって非常に便利です。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;こういった理由から多くのプログラムはLinuxベースで作成されることが多い。逆に&lt;mark&gt;Linuxに対応しないプログラムはこの世から消え去る運命にさえある&lt;/mark&gt;といいと思う。&lt;/p&gt;
+
+  
+
+
+
+&lt;div
+  
+    class=&#34;flex px-4 py-3 rounded-md bg-primary-100 dark:bg-primary-900&#34;
+  &gt;
+
+  &lt;span
+    
+      class=&#34;text-primary-400 ltr:pr-3 rtl:pl-3 flex items-center&#34;
+    &gt;
+
+    
+
+  &lt;span class=&#34;relative block icon&#34;&gt;
+    &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 512 512&#34;&gt;&lt;path fill=&#34;currentColor&#34; d=&#34;M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z&#34;/&gt;&lt;/svg&gt;
+
+  &lt;/span&gt;
+
+
+  &lt;/span&gt;
+
+  &lt;span
+    
+      class=&#34;dark:text-neutral-300&#34;
+    &gt;ただし、Linuxには学習コストがかかる場合があるため、WindowsやmacOSと比較して、初心者にとっては使いにくい場合もある。&lt;/span&gt;
+&lt;/div&gt;
+
+
+
+&lt;h2 class=&#34;relative group&#34;&gt;Ubuntu 
+    &lt;div id=&#34;ubuntu&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#ubuntu&#34; aria-label=&#34;アンカー&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;まず、Linuxディストリビューションの中で最も人気のあるOSであろう。特にデスクトップ環境(GUI環境)も非常に洗練されていて初めて使うのであればこれが良い。そして何より情報が豊富である。&lt;/p&gt;</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="//localhost:1313/posts/2023-01-11/feature.jpg" />
+    </item>
+    
+    <item>
+      <title>TeX打ちの最高環境を構築したい</title>
+      <link>//localhost:1313/posts/2022-09-13/</link>
+      <pubDate>Tue, 13 Sep 2022 20:50:09 +0900</pubDate>
+      
+      <guid>//localhost:1313/posts/2022-09-13/</guid>
+      <description>&lt;p&gt;※ Windowsの方はTeXstudioを脳筋でインストールしてコンパイラ設定とビルド設定していただけば使えます。また、後日、通常のコンパイル速度の10倍高速にコンパイルできる方法の記事を上げたいと思います。&lt;/p&gt;
+
+
+&lt;h2 class=&#34;relative group&#34;&gt;新しくMac/Linuxを用意したのなら 
+    &lt;div id=&#34;%E6%96%B0%E3%81%97%E3%81%8Fmaclinux%E3%82%92%E7%94%A8%E6%84%8F%E3%81%97%E3%81%9F%E3%81%AE%E3%81%AA%E3%82%89&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%E6%96%B0%E3%81%97%E3%81%8Fmaclinux%E3%82%92%E7%94%A8%E6%84%8F%E3%81%97%E3%81%9F%E3%81%AE%E3%81%AA%E3%82%89&#34; aria-label=&#34;アンカー&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;MacTeXをインストールします&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://tug.org/mactex/mactex-download.html&#34; target=&#34;_blank&#34;&gt;MacTeX - TeX Users Group&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;TeXstudioをIDEとしていつも使用しているのですが、残念ながら最新版のv4.3.1はなぜか、&lt;mark&gt;Google日本語入力での入力ができません&lt;/mark&gt;（Mac純正のIMEをご利用の方は気にせず最新版をインストールしてください）。&lt;/p&gt;
+&lt;img src=&#34;//localhost:1313/img/genkiwifi_googleime-10.jpg&#34; width=&#34;300px&#34;&gt;
+&lt;p&gt;そこでv3.1.2をインストールすることにしました（このバージョンに特段理由はありません）。こちらからダウンロードできます。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sourceforge.net/projects/texstudio/files/3.1.2/&#34; target=&#34;_blank&#34;&gt;TeXstudio - A LaTeX Editor - Browse /3.1.2 at SourceForge.net&lt;/a&gt;&lt;/p&gt;</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="//localhost:1313/posts/2022-09-13/feature.png" />
+    </item>
+    
+    <item>
+      <title>便利なFish Shellをインストールしよう</title>
+      <link>//localhost:1313/posts/2022-09-12/</link>
+      <pubDate>Mon, 12 Sep 2022 20:50:09 +0900</pubDate>
+      
+      <guid>//localhost:1313/posts/2022-09-12/</guid>
+      <description>&lt;p&gt;さていつものように &lt;code&gt;brew install fish&lt;/code&gt; をしてみるが、残念ながら買ったばっかりのMacにはHomebrewは入っていない。&lt;/p&gt;
+
+
+&lt;h2 class=&#34;relative group&#34;&gt;Homebrewをインストールする 
+    &lt;div id=&#34;homebrew%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%99%E3%82%8B&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#homebrew%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%99%E3%82%8B&#34; aria-label=&#34;アンカー&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;そこでHomebrewのインストールから始めなくてはいけない。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/bin/bash -c &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;```&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;HomebrewはMacユーザーにとっては便利なツールであるからインストールしておいて損はないだろう。&lt;/p&gt;
+&lt;p&gt;さて、インストールできたらここからが本番である。&lt;/p&gt;
+&lt;p&gt;私のMacはすでにデフォルトでZshが採用されている．以前のMacではBashを使い続け、Appleからの「Zshに変更しましょう」みたいなやつを無視し続けてきた。&lt;/p&gt;
+&lt;p&gt;（こういうところで「新しい」Macというのを感じることになるとは……）&lt;/p&gt;
+&lt;p&gt;さてインストールが完了するとこんなエラーが出た。&lt;/p&gt;</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="//localhost:1313/posts/2022-09-12/feature.png" />
+    </item>
+    
+    <item>
+      <title>相対論を用いてタイムトラベルを語るのは強引か？</title>
+      <link>//localhost:1313/posts/2021-09-30/</link>
+      <pubDate>Thu, 30 Sep 2021 20:50:09 +0900</pubDate>
+      
+      <guid>//localhost:1313/posts/2021-09-30/</guid>
+      <description>&lt;p&gt;タイムトラベルという言葉を用いるとき，ときどき半半ば強引に「相対論によると」光速に近ければ時間は遅くなるという話が存在する．確かに光速で進む物体の時間は静止系よりも時間がゆっくり進むことになるし，一種のタイムトラベルとも言えそうである．&lt;/p&gt;
+&lt;p&gt;しかし，双子のパラドックスという概念を引き合いにしてその理屈はおかしいと主張する人が少数いる．&lt;/p&gt;
+&lt;p&gt;実際どうなのか検討する記事である．&lt;/p&gt;
+&lt;p&gt;まず，結論を先に話すと双子のパラドックスの問題解消のために，一般相対論を出すものもいるが，&lt;strong&gt;一般相対論なんかを使わずとも特殊相対論で十分に解消できる&lt;/strong&gt;．&lt;/p&gt;
+&lt;p&gt;さらに，光速で進む物体の時間は静止系よりも時間がゆっくり進むし，慣性系に戻ってきても時間は相対的には遅れている．つまり，同い年だったのに数年後には10歳差ということもありうる．&lt;/p&gt;
+
+
+&lt;h2 class=&#34;relative group&#34;&gt;相対論の復習 
+    &lt;div id=&#34;%E7%9B%B8%E5%AF%BE%E8%AB%96%E3%81%AE%E5%BE%A9%E7%BF%92&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%E7%9B%B8%E5%AF%BE%E8%AB%96%E3%81%AE%E5%BE%A9%E7%BF%92&#34; aria-label=&#34;アンカー&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;光速 \(c\) に近い速度で進む物体においてはNewtonの運動方程式は適応できない．このような状況では相対論的効果も考慮し，考えなくてはいけない．&lt;/p&gt;
+
+
+&lt;h3 class=&#34;relative group&#34;&gt;世界距離 
+    &lt;div id=&#34;%E4%B8%96%E7%95%8C%E8%B7%9D%E9%9B%A2&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%E4%B8%96%E7%95%8C%E8%B7%9D%E9%9B%A2&#34; aria-label=&#34;アンカー&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;今回のタイトルでは「世界距離」という言葉を使わせていただいたが，書籍によっては「世界間隔」と表記するものも多い．どちらも同じことを指しているので本サイトでは前者で統一する．&lt;/p&gt;</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="//localhost:1313/posts/2021-09-30/feature.jpg" />
+    </item>
+    
+    <item>
+      <title>Data</title>
+      <link>//localhost:1313/data/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/data/</guid>
+      <description>&lt;p&gt;You can download it using wget command etc.&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;Date&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;Title&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;Key&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;2022-01-08&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;//localhost:1313/pdf/aipsamp.pdf&#34;&gt;Findings gained through computational physics&lt;/a&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;span class=&#34;flex&#34; style=&#34;cursor: pointer;&#34;&gt;
+  &lt;span class=&#34;rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400&#34;&gt;
+    Report
+  &lt;/span&gt;
+&lt;/span&gt;
+&lt;span class=&#34;flex&#34; style=&#34;cursor: pointer;&#34;&gt;
+  &lt;span class=&#34;rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400&#34;&gt;
+    Document
+  &lt;/span&gt;
+&lt;/span&gt;
+&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;2023-02-08&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;//localhost:1313/pdf/Python%e8%ac%9b%e5%ba%a7_slide.pdf&#34;&gt;Python講座_slide&lt;/a&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;span class=&#34;flex&#34; style=&#34;cursor: pointer;&#34;&gt;
+  &lt;span class=&#34;rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400&#34;&gt;
+    スライド
+  &lt;/span&gt;
+&lt;/span&gt;
+&lt;span class=&#34;flex&#34; style=&#34;cursor: pointer;&#34;&gt;
+  &lt;span class=&#34;rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400&#34;&gt;
+    資料
+  &lt;/span&gt;
+&lt;/span&gt;
+&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>ddd3hLabへようこそ</title>
+      <link>//localhost:1313/philosophy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/philosophy/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;このサイトの目的 
+    &lt;div id=&#34;%E3%81%93%E3%81%AE%E3%82%B5%E3%82%A4%E3%83%88%E3%81%AE%E7%9B%AE%E7%9A%84&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%E3%81%93%E3%81%AE%E3%82%B5%E3%82%A4%E3%83%88%E3%81%AE%E7%9B%AE%E7%9A%84&#34; aria-label=&#34;アンカー&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;ddd3hLabは、&lt;a href=&#34;//localhost:1313/author&#34;&gt;西濱大将&lt;/a&gt;が日々気になったことを独自に研究したり、開発を行ったことを記録しまとめ、ときには戯言を公開するために開設したサイトです。&lt;/p&gt;
+&lt;p&gt;知識は社会全体の財産であり、個人の利益や自己顕示欲のためにのみ利用されるべきではありません。知識や技術は、共有され、第三者によって再検証され、二次利用が可能な、オープンソースの形式が理想的であると私は考えています。&lt;/p&gt;
+&lt;p&gt;オープンソースの形式が持つ利点としては、知識や技術を広く共有することができることが挙げられます。オープンソースのソフトウェアは、誰でも自由に使用でき、改変や再配布が可能です。このような形式によって、知識や技術が一部の人々だけが独占することがなくなり、より多くの人々がそれを利用することができるようになります。&lt;/p&gt;
+&lt;p&gt;また、オープンソースの形式は、多数の人々が協力して開発することが可能であるため、より高品質なソフトウェアを開発することができます。オープンソースのプロジェクトに参加することで、多くの人々が新しい知識や技術を習得し、アイデアを出し合い、新しい知識や技術を生み出すことができます。&lt;/p&gt;
+&lt;p&gt;さらに、オープンソースの形式は、知識や技術の進展を促進するための環境を提供することができます。オープンソースのプロジェクトに参加することで、多くの人々が新しい知識や技術を習得し、それを活用して新しい製品やサービスを開発することができます。また、オープンソースの技術を利用することで、より効率的な社会システムを構築することも可能です。&lt;/p&gt;
+&lt;p&gt;以上のように、オープンソースの形式は、知識や技術を共有し、社会全体の発展を促進するための重要な手段となります。私たちは、オープンソースの形式を利用して、よりよい社会を実現するための取り組みを続けるべきです。&lt;/p&gt;
+&lt;p&gt;このような理想のために本サイトを運営し、人類の科学発展に寄与することを目的としています。&lt;/p&gt;
+
+
+&lt;h2 class=&#34;relative group&#34;&gt;科学の健全な発展のために 
+    &lt;div id=&#34;%E7%A7%91%E5%AD%A6%E3%81%AE%E5%81%A5%E5%85%A8%E3%81%AA%E7%99%BA%E5%B1%95%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AB&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%E7%A7%91%E5%AD%A6%E3%81%AE%E5%81%A5%E5%85%A8%E3%81%AA%E7%99%BA%E5%B1%95%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AB&#34; aria-label=&#34;アンカー&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;科学者として研究・開発をしていく上で、以下のことを誓う&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;。&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Token</title>
+      <link>//localhost:1313/token/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/token/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;PGP Public Key 
+    &lt;div id=&#34;pgp-public-key&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#pgp-public-key&#34; aria-label=&#34;アンカー&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;Key Name&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;ddd3h&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Key Type&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;RSA 4096bit&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Fingerprint&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;3C92 5E43 8FF2 C1C3 CAEE 9345 9F34 9343 8A1E 71BA&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Public Key&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;//localhost:1313/data/ddd3h.pub&#34;&gt;ddd3h.pub&lt;/a&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;date of expiry&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Indefinite period&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+
+&lt;h2 class=&#34;relative group&#34;&gt;Crypto addresses 
+    &lt;div id=&#34;crypto-addresses&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#crypto-addresses&#34; aria-label=&#34;アンカー&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+
+
+&lt;h3 class=&#34;relative group&#34;&gt;Bitcoin 
+    &lt;div id=&#34;bitcoin&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#bitcoin&#34; aria-label=&#34;アンカー&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;bc1qujz56us7dlvmdrqkpha5sf87e4wwy4j0qry3d6
+&lt;/code&gt;&lt;/pre&gt;&lt;img src=&#34;//localhost:1313/img/bitcoin.png&#34; width=&#34;180px&#34;&gt;
+
+
+&lt;h3 class=&#34;relative group&#34;&gt;Ethereum 
+    &lt;div id=&#34;ethereum&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#ethereum&#34; aria-label=&#34;アンカー&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;0x80821a0e2f8946C3aE3C9001EE3986C5e1fa11BD
+&lt;/code&gt;&lt;/pre&gt;&lt;img src=&#34;//localhost:1313/img/ethereum.png&#34; width=&#34;180px&#34;&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>オゾンと放射線の関わりを解き明かす—ANCO-Project</title>
+      <link>//localhost:1313/research/anco/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/research/anco/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;&lt;a href=&#34;https://jaxa.repo.nii.ac.jp/?action=repository_uri&amp;amp;item_id=49009&#34; target=&#34;_blank&#34;&gt;オゾンと放射線の関わりを解き明かす—ANCO-Project&lt;/a&gt; 
+    &lt;div id=&#34;%E3%82%AA%E3%82%BE%E3%83%B3%E3%81%A8%E6%94%BE%E5%B0%84%E7%B7%9A%E3%81%AE%E9%96%A2%E3%82%8F%E3%82%8A%E3%82%92%E8%A7%A3%E3%81%8D%E6%98%8E%E3%81%8B%E3%81%99anco-projecthttpsjaxareponiiacjpactionrepository_uriitem_id49009&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%E3%82%AA%E3%82%BE%E3%83%B3%E3%81%A8%E6%94%BE%E5%B0%84%E7%B7%9A%E3%81%AE%E9%96%A2%E3%82%8F%E3%82%8A%E3%82%92%E8%A7%A3%E3%81%8D%E6%98%8E%E3%81%8B%E3%81%99anco-projecthttpsjaxareponiiacjpactionrepository_uriitem_id49009&#34; aria-label=&#34;アンカー&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+
+
+&lt;h3 class=&#34;relative group&#34;&gt;Uncovering the relationship between ozone and radiation―ANCO-Project 
+    &lt;div id=&#34;uncovering-the-relationship-between-ozone-and-radiationanco-project&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#uncovering-the-relationship-between-ozone-and-radiationanco-project&#34; aria-label=&#34;アンカー&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;a
+  class=&#34;!rounded-md bg-primary-600 px-4 py-2 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700&#34;
+  href=&#34;//localhost:1313/pdf/SA6000177041.pdf&#34;
+  
+  
+  role=&#34;button&#34;
+&gt;
+  
+
+
+  &lt;span class=&#34;relative inline-block align-text-bottom icon&#34;&gt;
+    &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 512 512&#34;&gt;
+&lt;path fill=&#34;currentColor&#34; d=&#34;M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V274.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V416c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zM432 456c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z&#34;/&gt;&lt;/svg&gt;
+  &lt;/span&gt;
+
+ 会議発表論文
+
+&lt;/a&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://jaxa.repo.nii.ac.jp/?action=repository_opensearch&amp;amp;creator=%E8%B6%B3%E7%AB%8B&amp;#43;%E6%81%AD%E6%9E%9C&#34; target=&#34;_blank&#34;&gt;足立 恭果&lt;/a&gt; , &lt;a href=&#34;https://jaxa.repo.nii.ac.jp/?action=repository_opensearch&amp;amp;creator=%E7%9F%B3%EF%A8%91&amp;#43;%E5%A4%A7%E8%B2%B4&#34; target=&#34;_blank&#34;&gt;石﨑 大貴&lt;/a&gt; , &lt;a href=&#34;https://jaxa.repo.nii.ac.jp/?action=repository_opensearch&amp;amp;creator=%E4%BD%90%E8%97%A4&amp;#43;%E6%AD%A3%E9%A8%8E&#34; target=&#34;_blank&#34;&gt;佐藤 正騎&lt;/a&gt; , &lt;a href=&#34;https://jaxa.repo.nii.ac.jp/?action=repository_opensearch&amp;amp;creator=%E9%A0%88%E7%94%B0&amp;#43;%E4%BA%AE%E4%BB%8B&#34; target=&#34;_blank&#34;&gt;須田 亮介&lt;/a&gt; , &lt;a href=&#34;https://jaxa.repo.nii.ac.jp/?action=repository_opensearch&amp;amp;creator=%E6%B8%85%E6%9C%AC&amp;#43;%E6%8B%93%E4%BA%BA&#34; target=&#34;_blank&#34;&gt;清本 拓人&lt;/a&gt; , &lt;a href=&#34;https://jaxa.repo.nii.ac.jp/?action=repository_opensearch&amp;amp;creator=%E8%A5%BF%E6%BF%B1&amp;#43;%E5%A4%A7%E5%B0%86&#34; target=&#34;_blank&#34;&gt;西濱 大将&lt;/a&gt; , &lt;a href=&#34;https://jaxa.repo.nii.ac.jp/?action=repository_opensearch&amp;amp;creator=%E5%AE%AE%E5%B4%8E&amp;#43;%E5%89%9B&#34; target=&#34;_blank&#34;&gt;宮崎 剛&lt;/a&gt; , &lt;a href=&#34;https://jaxa.repo.nii.ac.jp/?action=repository_opensearch&amp;amp;creator=%E8%9B%AF%E6%BE%A4&amp;#43;%E6%82%A0&#34; target=&#34;_blank&#34;&gt;蛯澤 悠&lt;/a&gt; , &lt;a href=&#34;https://jaxa.repo.nii.ac.jp/?action=repository_opensearch&amp;amp;creator=%E5%AE%87%E4%BA%95&amp;#43;%E7%9E%AD%E4%BB%8B&#34; target=&#34;_blank&#34;&gt;宇井 瞭介&lt;/a&gt; , &lt;a href=&#34;https://jaxa.repo.nii.ac.jp/?action=repository_opensearch&amp;amp;creator=%E9%A3%AF%E7%94%B0&amp;#43;%E5%92%8C%E5%A4%A7&#34; target=&#34;_blank&#34;&gt;飯田 和大&lt;/a&gt; , &lt;a href=&#34;https://jaxa.repo.nii.ac.jp/?action=repository_opensearch&amp;amp;creator=%E9%87%91%E5%AD%90&amp;#43;%E5%B0%9A%E5%BA%83&#34; target=&#34;_blank&#34;&gt;金子 尚広&lt;/a&gt; , &lt;a href=&#34;https://jaxa.repo.nii.ac.jp/?action=repository_opensearch&amp;amp;creator=%E5%BE%B3%E5%85%89&amp;#43;%E5%92%8C%E5%93%89&#34; target=&#34;_blank&#34;&gt;徳光 和哉&lt;/a&gt; , &lt;a href=&#34;https://jaxa.repo.nii.ac.jp/?action=repository_opensearch&amp;amp;creator=%E5%A4%A7%E5%A1%B2&amp;#43;%E7%BF%94%E6%82%9F&#34; target=&#34;_blank&#34;&gt;大塲 翔悟&lt;/a&gt; , &lt;a href=&#34;https://jaxa.repo.nii.ac.jp/?action=repository_opensearch&amp;amp;creator=%E5%8B%9D%E9%87%8E&amp;#43;%E5%A4%AA%E6%99%BA&#34; target=&#34;_blank&#34;&gt;勝野 太智&lt;/a&gt; , &lt;a href=&#34;https://jaxa.repo.nii.ac.jp/?action=repository_opensearch&amp;amp;creator=%E5%B1%B1%E6%9C%AC&amp;#43;%E5%A4%A7%E5%87%B1&#34; target=&#34;_blank&#34;&gt;山本 大凱&lt;/a&gt; , &lt;a href=&#34;https://jaxa.repo.nii.ac.jp/?action=repository_opensearch&amp;amp;creator=%E5%B7%9D%E7%80%AC&amp;#43;%E5%B9%B9%E5%B7%B1&#34; target=&#34;_blank&#34;&gt;川瀬 幹己&lt;/a&gt;&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>研究・開発</title>
+      <link>//localhost:1313/res-dev/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/res-dev/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;研究 
+    &lt;div id=&#34;%E7%A0%94%E7%A9%B6&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%E7%A0%94%E7%A9%B6&#34; aria-label=&#34;アンカー&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;潮汐力と気圧の関係に関する研究, &lt;em&gt;Saitama University - (2022.03)&lt;/em&gt;, &lt;a href=&#34;//localhost:1313/pdf/%e7%89%b9%e5%88%a5%e7%a0%94%e7%a9%b6I_%e6%bd%ae%e6%b1%90%e5%8a%9b%e3%81%a8%e6%b0%97%e5%9c%a7%e3%81%ae%e9%96%a2%e4%bf%82%e3%81%ab%e9%96%a2%e3%81%99%e3%82%8b%e7%a0%94%e7%a9%b6.pdf&#34;&gt;PDF (2MB)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;スペースバルーンを用いた成層圏の高エネルギー現象の解明研究, &lt;em&gt;Saitama University - (2023.03)&lt;/em&gt;, &lt;a href=&#34;//localhost:1313/pdf/anco2022.pdf&#34;&gt;PDF (1.2MB)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;宇宙論的シミュレーションデータベースIllustris-TNGを用いた銀河周辺物質の速度と元素分布構造の解明, &lt;em&gt;Saitama University - (2024.04)&lt;/em&gt;, &lt;a href=&#34;https://res2023.ddd3h.net/&#34; target=&#34;_blank&#34;&gt;WEB: res2023&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h2 class=&#34;relative group&#34;&gt;開発 
+    &lt;div id=&#34;%E9%96%8B%E7%99%BA&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%E9%96%8B%E7%99%BA&#34; aria-label=&#34;アンカー&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;ハイブリットロケットのノーズ部分にピトー管を付け対気速度を測定するシステムの開発 &lt;em&gt;CORE - (2021.03)&lt;/em&gt; &lt;a href=&#34;//localhost:1313/pdf/duo_report.pdf&#34;&gt;PDF (35.4MB)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;MATLABで既に開発が進んでいた飛翔シュミレーション「FROGS」のPython版「FOPY」の開発 &lt;em&gt;&lt;a href=&#34;https://www.corerocket.net/&#34; target=&#34;_blank&#34;&gt;CORE&lt;/a&gt; – (2021.06)&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;機械学習等を用いずセンサーによる0mゴールのアルゴリズムの開発を行い、2022年4月にその有効性を示す, &lt;em&gt;&lt;a href=&#34;https://akatoki-saidai.github.io/&#34; target=&#34;_blank&#34;&gt;AKTK&lt;/a&gt; - (2022.04)&lt;/em&gt;, &lt;a href=&#34;//localhost:1313/pdf/sc2_1_report.pdf&#34;&gt;PDF (3.9MB)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;スペースバルーンプロジェクト「ANCO-project」にて使用する受信データをGUI表示するプログラムの開発, &lt;em&gt;&lt;a href=&#34;https://akatoki-saidai.github.io/&#34; target=&#34;_blank&#34;&gt;AKTK&lt;/a&gt; - (2022.09)&lt;/em&gt;, &lt;a href=&#34;https://github.com/Akatoki-Saidai/GroundSystem_GUI_Project&#34; target=&#34;_blank&#34;&gt;GitHub
+
+  &lt;span class=&#34;relative inline-block align-text-bottom icon&#34;&gt;
+    &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 496 512&#34;&gt;&lt;path fill=&#34;currentColor&#34; d=&#34;M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z&#34;/&gt;&lt;/svg&gt;
+
+  &lt;/span&gt;
+
+&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>講演・口頭発表等</title>
+      <link>//localhost:1313/presentation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/presentation/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;//localhost:1313/research/anco&#34;&gt;オゾンと放射線の関わりを解き明かす—ANCO-Project&lt;/a&gt; (2022.11)&lt;br&gt;
+宇宙航空研究開発機構宇宙科学研究所(JAXA)(ISAS)
+大気球シンポジウム 2022年度（2022年11月7-8日. ハイブリッド開催（JAXA相模原キャンパス&amp;amp; オンライン))  &lt;a href=&#34;https://jaxa.repo.nii.ac.jp/?action=repository_uri&amp;amp;item_id=49009&#34; target=&#34;_blank&#34;&gt;(外部リンク/JAXA 
+
+  &lt;span class=&#34;relative inline-block align-text-bottom icon&#34;&gt;
+    &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 640 512&#34;&gt;&lt;path fill=&#34;currentColor&#34; d=&#34;M172.5 131.1C228.1 75.51 320.5 75.51 376.1 131.1C426.1 181.1 433.5 260.8 392.4 318.3L391.3 319.9C381 334.2 361 337.6 346.7 327.3C332.3 317 328.9 297 339.2 282.7L340.3 281.1C363.2 249 359.6 205.1 331.7 177.2C300.3 145.8 249.2 145.8 217.7 177.2L105.5 289.5C73.99 320.1 73.99 372 105.5 403.5C133.3 431.4 177.3 435 209.3 412.1L210.9 410.1C225.3 400.7 245.3 404 255.5 418.4C265.8 432.8 262.5 452.8 248.1 463.1L246.5 464.2C188.1 505.3 110.2 498.7 60.21 448.8C3.741 392.3 3.741 300.7 60.21 244.3L172.5 131.1zM467.5 380C411 436.5 319.5 436.5 263 380C213 330 206.5 251.2 247.6 193.7L248.7 192.1C258.1 177.8 278.1 174.4 293.3 184.7C307.7 194.1 311.1 214.1 300.8 229.3L299.7 230.9C276.8 262.1 280.4 306.9 308.3 334.8C339.7 366.2 390.8 366.2 422.3 334.8L534.5 222.5C566 191 566 139.1 534.5 108.5C506.7 80.63 462.7 76.99 430.7 99.9L429.1 101C414.7 111.3 394.7 107.1 384.5 93.58C374.2 79.2 377.5 59.21 391.9 48.94L393.5 47.82C451 6.731 529.8 13.25 579.8 63.24C636.3 119.7 636.3 211.3 579.8 267.7L467.5 380z&#34;/&gt;&lt;/svg&gt;
+
+  &lt;/span&gt;
+
+)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;//localhost:1313/research/python-saitama-uni&#34;&gt;理学部学生にとても役立つ『Python講座』- 埼玉大学&lt;/a&gt; (2023.02)&lt;br&gt;
+埼玉大学理工研・理学部／HiSEP・HiSEP-6 &lt;span class=&#34;flex&#34; style=&#34;cursor: pointer;&#34;&gt;
+  &lt;span class=&#34;rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400&#34;&gt;
+    招待
+  &lt;/span&gt;
+&lt;/span&gt;
+&lt;/li&gt;
+&lt;li&gt;放送大学・さいたま市宇宙劇場コラボ講演会 (2023.08) &lt;br&gt;
+さいたま市宇宙劇場（プラネタリウム）&lt;br&gt;
+「空」からその先の「宙」へその謎と探求に向けた飛翔体実験 &lt;br&gt;
+&lt;span class=&#34;flex&#34; style=&#34;cursor: pointer;&#34;&gt;
+  &lt;span class=&#34;rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400&#34;&gt;
+    招待
+  &lt;/span&gt;
+&lt;/span&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>受賞</title>
+      <link>//localhost:1313/award/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/award/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;2021年10月 埼玉大学学生表彰受賞&lt;/li&gt;
+&lt;/ul&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>来歴</title>
+      <link>//localhost:1313/cv/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/cv/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;2000年06月 埼玉県草加市にて誕生&lt;/li&gt;
+&lt;li&gt;2014年08月 メーラーアプリ「Bluemail」日本語監修を担当（2017年01月引退）&lt;/li&gt;
+&lt;li&gt;2019年03月 春日部共栄高等学校を卒業&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h2 class=&#34;relative group&#34;&gt;2020 
+    &lt;div id=&#34;2020&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#2020&#34; aria-label=&#34;アンカー&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;2020年04月 埼玉大学理学部物理学科に入学（2024年03月卒業）&lt;/li&gt;
+&lt;li&gt;2020年05月 あかとき&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;・CORE&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;に入会 （それぞれ2024年03月、2023年03月退会）&lt;/li&gt;
+&lt;li&gt;2020年11月 ハイブリッドロケットHIBARI1 開発チームミソラ工房 シミュレーション担当&lt;/li&gt;
+&lt;li&gt;2020年12月 CanSat機体SC-5 電装班長&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h2 class=&#34;relative group&#34;&gt;2021 
+    &lt;div id=&#34;2021&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#2021&#34; aria-label=&#34;アンカー&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;2021年03月 ハイブリットロケットHIBARI2 開発チームDuo ノーズ電装 &lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+&lt;li&gt;2021年10月 エムラボ株式会社にプログラミング講師として入社（2022年07月退社）&lt;/li&gt;
+&lt;li&gt;2021年10月 埼玉大学学生表彰を受賞&lt;/li&gt;
+&lt;li&gt;2021年12月 CanSat機体SC-2.1 プロジェクトマネージャー (PM)&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h2 class=&#34;relative group&#34;&gt;2022 
+    &lt;div id=&#34;2022&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#2022&#34; aria-label=&#34;アンカー&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;2022年04月 あかとき第3代代表に就任（2023年03月退任）&lt;/li&gt;
+&lt;li&gt;2022年04月 CanSat機体SC-11 開発チーム「翔ぶよ埼玉」電装班長 &lt;sup id=&#34;fnref:4&#34;&gt;&lt;a href=&#34;#fn:4&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+&lt;li&gt;2022年05月 ANCO-project 電装班、GUI化プロジェクトプロジェクトマネージャー (PM)&lt;/li&gt;
+&lt;li&gt;2022年12月 伊豆大島共同打上実験運営 CanSat担当&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h2 class=&#34;relative group&#34;&gt;2023 
+    &lt;div id=&#34;2023&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#2023&#34; aria-label=&#34;アンカー&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;2023年03月 ANCO-project 通信班 開発執行責任&lt;/li&gt;
+&lt;li&gt;2023年03月 Mach50に入会&lt;/li&gt;
+&lt;li&gt;2023年04月 宇宙物理学実験研究室 &lt;a href=&#34;https://www.heal.phy.saitama-u.ac.jp/&#34; target=&#34;_blank&#34;&gt;
+
+  &lt;span class=&#34;relative inline-block align-text-bottom icon&#34;&gt;
+    &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 512 512&#34;&gt;&lt;!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--&gt;&lt;path d=&#34;M432 320H400a16 16 0 0 0 -16 16V448H64V128H208a16 16 0 0 0 16-16V80a16 16 0 0 0 -16-16H48A48 48 0 0 0 0 112V464a48 48 0 0 0 48 48H400a48 48 0 0 0 48-48V336A16 16 0 0 0 432 320zM488 0h-128c-21.4 0-32.1 25.9-17 41l35.7 35.7L135 320.4a24 24 0 0 0 0 34L157.7 377a24 24 0 0 0 34 0L435.3 133.3 471 169c15 15 41 4.5 41-17V24A24 24 0 0 0 488 0z&#34;/&gt;&lt;/svg&gt;
+  &lt;/span&gt;
+
+&lt;/a&gt; に配属 (指導教員：佐藤浩介)&lt;/li&gt;
+&lt;li&gt;2023年05月 Medi Hub株式会社に入社（同年12月退社）&lt;/li&gt;
+&lt;li&gt;2023年05月 ZO MOTORS株式会社に入社（同年12月退社）&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h2 class=&#34;relative group&#34;&gt;2024 
+    &lt;div id=&#34;2024&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#2024&#34; aria-label=&#34;アンカー&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;2024年03月 Mach50 飛翔体シミュレーション開発責任者&lt;/li&gt;
+&lt;li&gt;2024年03月 埼玉大学理学部物理学科を卒業&lt;/li&gt;
+&lt;li&gt;2024年04月 大阪大学大学院理学研究科に入学
+&lt;ul&gt;
+&lt;li&gt;宇宙進化グループ &lt;a href=&#34;https://astro-osaka.jp/OUTAP/index.html&#34; target=&#34;_blank&#34;&gt;
+
+  &lt;span class=&#34;relative inline-block align-text-bottom icon&#34;&gt;
+    &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 512 512&#34;&gt;&lt;!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--&gt;&lt;path d=&#34;M432 320H400a16 16 0 0 0 -16 16V448H64V128H208a16 16 0 0 0 16-16V80a16 16 0 0 0 -16-16H48A48 48 0 0 0 0 112V464a48 48 0 0 0 48 48H400a48 48 0 0 0 48-48V336A16 16 0 0 0 432 320zM488 0h-128c-21.4 0-32.1 25.9-17 41l35.7 35.7L135 320.4a24 24 0 0 0 0 34L157.7 377a24 24 0 0 0 34 0L435.3 133.3 471 169c15 15 41 4.5 41-17V24A24 24 0 0 0 488 0z&#34;/&gt;&lt;/svg&gt;
+  &lt;/span&gt;
+
+&lt;/a&gt; に配属&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;2024年05月 えひめ南予成層圏気球共同実験運営&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
+&lt;p&gt;正式名称は「埼玉大学宇宙工学サークルあかとき」。&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>理学部学生にとても役立つ『Python講座』- 埼玉大学</title>
+      <link>//localhost:1313/research/python-saitama-uni/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/research/python-saitama-uni/</guid>
+      <description>&lt;a
+  class=&#34;!rounded-md bg-primary-600 px-4 py-2 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700&#34;
+  href=&#34;//localhost:1313/pdf/Python%e8%ac%9b%e5%ba%a7_slide.pdf&#34;
+  
+  
+  role=&#34;button&#34;
+&gt;
+  
+
+
+  &lt;span class=&#34;relative inline-block align-text-bottom icon&#34;&gt;
+    &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 512 512&#34;&gt;
+&lt;path fill=&#34;currentColor&#34; d=&#34;M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V274.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V416c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zM432 456c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z&#34;/&gt;&lt;/svg&gt;
+  &lt;/span&gt;
+
+ 講義資料
+
+&lt;/a&gt;
+
+&lt;p&gt;日時：2023年2月８日（水）６限　18:00-19:30PM　&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

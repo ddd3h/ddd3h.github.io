@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on 西濱大将 (Daisuke Nishihama)</title>
+    <link>//localhost:1313/tags/linux/</link>
+    <description>Recent content in Linux on 西濱大将 (Daisuke Nishihama)</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>© 2024 </copyright>
+    <lastBuildDate>Mon, 13 Mar 2023 15:00:09 +0900</lastBuildDate><atom:link href="//localhost:1313/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HEAsoftを高速にダウンロードする</title>
+      <link>//localhost:1313/posts/2023-03-13/</link>
+      <pubDate>Mon, 13 Mar 2023 15:00:09 +0900</pubDate>
+      
+      <guid>//localhost:1313/posts/2023-03-13/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;&amp;ldquo;HEAsoft&amp;quot;って何？ 
+    &lt;div id=&#34;heasoft%E3%81%A3%E3%81%A6%E4%BD%95&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#heasoft%E3%81%A3%E3%81%A6%E4%BD%95&#34; aria-label=&#34;アンカー&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;HEAsoftは、高エネルギー天体物理学に関連するデータ解析ソフトウェアのパッケージです。このパッケージには、NASAの多くのX線天文衛星ミッションで使用されるデータ解析ソフトウェアが含まれています。たとえば、Chandra X線天文台、XMM-Newton、Suzakuなどが挙げられます。&lt;/p&gt;
+&lt;p&gt;HEAsoftには、X線天文学に関する多くのツールが含まれており、X線スペクトルの分析、背景の推定、画像処理、時系列解析などが可能です。HEAsoftは、主にUNIXベースのシステムで動作することが意図されていますが、WindowsやMac OS Xなどのプラットフォームでも使用することができます。&lt;/p&gt;
+&lt;p&gt;HEAsoftは、NASAの高エネルギー天体物理学の研究者や、天文学者、物理学者、コンピューターサイエンティスト、その他の関連分野の研究者によって使用されています。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://heasarc.gsfc.nasa.gov/docs/software.html&#34; target=&#34;_blank&#34;&gt;http://heasarc.gsfc.nasa.gov/docs/software.html&lt;/a&gt;&lt;/p&gt;
+
+
+&lt;h2 class=&#34;relative group&#34;&gt;ダウンロード 
+    &lt;div id=&#34;%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89&#34; aria-label=&#34;アンカー&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;NASAのサイトからHEAsoftのSource Codeをダウンロードする。ダウンロードサイトは &lt;a href=&#34;https://heasarc.gsfc.nasa.gov/docs/software/lheasoft/download.html&#34; target=&#34;_blank&#34;&gt;https://heasarc.gsfc.nasa.gov/docs/software/lheasoft/download.html&lt;/a&gt;&lt;/p&gt;</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="//localhost:1313/posts/2023-03-13/feature.png" />
+    </item>
+    
+    <item>
+      <title>Ubuntu / Zorin OSはやっぱりいい</title>
+      <link>//localhost:1313/posts/2023-01-11/</link>
+      <pubDate>Wed, 11 Jan 2023 20:50:09 +0900</pubDate>
+      
+      <guid>//localhost:1313/posts/2023-01-11/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;#ubuntu&#34;&gt;Ubuntu&lt;/a&gt;も&lt;a href=&#34;#zorinos&#34;&gt;Zorin OS&lt;/a&gt;もLinuxと呼ばれるディストリビューションなわけなのだが、そんなLinuxを私が好む理由はいくつかある。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;オープンソース&lt;/strong&gt;：Linuxはオープンソースのオペレーティングシステムであり、誰でも自由にアクセスでき、改良することができます。これは、ソフトウェアの自由な利用を可能にし、コミュニティが共同でソフトウェアを開発することができるため、透明性とセキュリティの向上につながります。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;カスタマイズ性&lt;/strong&gt;：Linuxは、ユーザーがカスタマイズすることができる幅広いオプションを提供します。ユーザーは、自分の好みに合わせてデスクトップ環境、ウィンドウマネージャ、ターミナルエミュレータ、パッケージマネージャなどを選択することができます。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;安定性&lt;/strong&gt;：Linuxは、多くの場合、非常に安定して動作します。これは、コードがオープンソースであるため、多数の開発者が常にバグ修正やパフォーマンス向上に取り組んでいるためです。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;セキュリティ&lt;/strong&gt;：Linuxは、セキュリティに非常に優れています。これは、オープンソースであるため、多数の開発者がコードをレビューし、問題を修正することができるためです。また、Linuxは、標準的にセキュリティ機能が組み込まれているため、セキュリティの強化が容易です。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;コマンドラインツール&lt;/strong&gt;：Linuxは、強力なコマンドラインツールを提供します。これにより、複雑なタスクを効率的に実行することができます。また、これらのツールは、自動化やスクリプト化に適しているため、開発者やシステム管理者にとって非常に便利です。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;こういった理由から多くのプログラムはLinuxベースで作成されることが多い。逆に&lt;mark&gt;Linuxに対応しないプログラムはこの世から消え去る運命にさえある&lt;/mark&gt;といいと思う。&lt;/p&gt;
+
+  
+
+
+
+&lt;div
+  
+    class=&#34;flex px-4 py-3 rounded-md bg-primary-100 dark:bg-primary-900&#34;
+  &gt;
+
+  &lt;span
+    
+      class=&#34;text-primary-400 ltr:pr-3 rtl:pl-3 flex items-center&#34;
+    &gt;
+
+    
+
+  &lt;span class=&#34;relative block icon&#34;&gt;
+    &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 512 512&#34;&gt;&lt;path fill=&#34;currentColor&#34; d=&#34;M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z&#34;/&gt;&lt;/svg&gt;
+
+  &lt;/span&gt;
+
+
+  &lt;/span&gt;
+
+  &lt;span
+    
+      class=&#34;dark:text-neutral-300&#34;
+    &gt;ただし、Linuxには学習コストがかかる場合があるため、WindowsやmacOSと比較して、初心者にとっては使いにくい場合もある。&lt;/span&gt;
+&lt;/div&gt;
+
+
+
+&lt;h2 class=&#34;relative group&#34;&gt;Ubuntu 
+    &lt;div id=&#34;ubuntu&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#ubuntu&#34; aria-label=&#34;アンカー&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;まず、Linuxディストリビューションの中で最も人気のあるOSであろう。特にデスクトップ環境(GUI環境)も非常に洗練されていて初めて使うのであればこれが良い。そして何より情報が豊富である。&lt;/p&gt;</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="//localhost:1313/posts/2023-01-11/feature.jpg" />
+    </item>
+    
+  </channel>
+</rss>

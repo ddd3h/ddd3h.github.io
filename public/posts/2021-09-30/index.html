@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="jp" dir="ltr" class="scroll-smooth" data-default-appearance="light"
-  data-auto-appearance="false"><head>
+  data-auto-appearance="false"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8" />
   
   <meta http-equiv="content-language" content="ja" />
@@ -15,7 +15,7 @@
   <meta name="keywords" content="日記, " />
   
   
-  <link rel="canonical" href="/posts/2021-09-30/" />
+  <link rel="canonical" href="//localhost:1313/posts/2021-09-30/" />
   
   
   
@@ -26,8 +26,8 @@
   
   
   
-  <link type="text/css" rel="stylesheet" href="/css/main.bundle.min.2b8b793b5350f23c027e845b237b267c85c08a4a6128dfad2b43b25f354c42eb4629bb7f88b75e09b52056c28e0d057594a8185bd540bd7bece42b3be6399cdf.css"
-    integrity="sha512-K4t5O1NQ8jwCfoRbI3smfIXAikphKN&#43;tK0OyXzVMQutGKbt/iLdeCbUgVsKODQV1lKgYW9VAvXvs5Cs75jmc3w==" />
+  <link type="text/css" rel="stylesheet" href="/css/main.bundle.min.67eb0befb1fb57e6528684f3a2ff6e0606a82100504705b66488d54a9f3fda9c2605c9bf3b70163208427288637a7b4d1a168384c1115e417458eae6b44b329c.css"
+    integrity="sha512-Z&#43;sL77H7V&#43;ZShoTzov9uBgaoIQBQRwW2ZIjVSp8/2pwmBcm/O3AWMghCcohjentNGhaDhMERXkF0WOrmtEsynA==" />
   
   
   <script type="text/javascript" src="/js/appearance.min.516a16745bea5a9bd011138d254cc0fd3973cd55ce6e15f3dec763e7c7c2c7448f8fe7b54cca811cb821b0c7e12cd161caace1dd794ac3d34d40937cbcc9ee12.js"
@@ -44,11 +44,14 @@
   
   
   
-  <script defer type="text/javascript" id="script-bundle" src="/js/main.bundle.min.4f0cf5a047cfe92e760a28aa0ce562bcec47ac85e8d3688f34141e48cb6c5387ea1309752aab48e1b240841a2d7db986c44458619fe32b20bdac27d2c5a199c8.js"
-    integrity="sha512-Twz1oEfP6S52CiiqDOVivOxHrIXo02iPNBQeSMtsU4fqEwl1KqtI4bJAhBotfbmGxERYYZ/jKyC9rCfSxaGZyA==" data-copy="" data-copied=""></script>
   
   
-  <script src="/js/zoom.min.js"></script>
+  <script defer type="text/javascript" id="script-bundle" src="/js/main.bundle.min.efbf3b6b987689fffaf2d7b73173d2690c0279a04d444b0537a77d7f4ff6e6d493445400cb0cf56bc0f0f123e19f15394e63cae34e67f069bd013dd5c73df56e.js"
+    integrity="sha512-7787a5h2if/68te3MXPSaQwCeaBNREsFN6d9f0/25tSTRFQAywz1a8Dw8SPhnxU5TmPK405n8Gm9AT3Vxz31bg==" data-copy="" data-copied=""></script>
+  
+  
+  
+  <script src="/lib/zoom/zoom.min.37d2094687372da3f7343a221a470f6b8806f7891aa46a5a03966af7f0ebd38b9fe536cb154e6ad28f006d184b294525a7c4054b6bbb4be62d8b453b42db99bd.js" integrity="sha512-N9IJRoc3LaP3NDoiGkcPa4gG94kapGpaA5Zq9/Dr04uf5TbLFU5q0o8AbRhLKUUlp8QFS2u7S&#43;Yti0U7QtuZvQ=="></script>
   
   
   
@@ -63,7 +66,7 @@
   
   
   
-  <meta property="og:url" content="/posts/2021-09-30/">
+  <meta property="og:url" content="//localhost:1313/posts/2021-09-30/">
   <meta property="og:site_name" content="西濱大将 (Daisuke Nishihama)">
   <meta property="og:title" content="相対論を用いてタイムトラベルを語るのは強引か？">
   <meta property="og:description" content="タイムトラベルという言葉を用いるとき，ときどき半半ば強引に「相対論によると」光速に近ければ時間は遅くなるという話が存在する．確かに光速で進む物体の時間は静止系よりも時間がゆっくり進むことになるし，一種のタイムトラベルとも言えそうである．
@@ -72,21 +75,18 @@
 まず，結論を先に話すと双子のパラドックスの問題解消のために，一般相対論を出すものもいるが，一般相対論なんかを使わずとも特殊相対論で十分に解消できる．
 さらに，光速で進む物体の時間は静止系よりも時間がゆっくり進むし，慣性系に戻ってきても時間は相対的には遅れている．つまり，同い年だったのに数年後には10歳差ということもありうる．
 相対論の復習 # 光速 \(c\) に近い速度で進む物体においてはNewtonの運動方程式は適応できない．このような状況では相対論的効果も考慮し，考えなくてはいけない．
-世界距離 # 今回のタイトルでは「世界距離」という言葉を使わせていただいたが，書籍によっては「世界間隔」と表記するものも多い．どちらも同じことを指しているので本サイトでは前者で統一する．
-世界距離は四次元座標 \(x^\mu\)，Minkowski計量 \(\eta_{\mu \nu}\)を用いて
-$$ ds^2 = \eta_{\mu \nu} dx^\mu dx^\nu $$
-と表せる．ここで地球に観測者がいる系を静止系と呼び，光速で移動している系を移動系ということにする．静止系において光速で移動している観測者を見るとその移動距離は \(c^2 dt^2\) であるから世界距離">
+世界距離 # 今回のタイトルでは「世界距離」という言葉を使わせていただいたが，書籍によっては「世界間隔」と表記するものも多い．どちらも同じことを指しているので本サイトでは前者で統一する．">
   <meta property="og:locale" content="ja">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2021-09-30T20:50:09+09:00">
     <meta property="article:modified_time" content="2021-09-30T20:50:09+09:00">
     <meta property="article:tag" content="日記">
-    <meta property="og:image" content="/posts/2021-09-30/feature.jpg">
+    <meta property="og:image" content="//localhost:1313/posts/2021-09-30/feature.jpg">
 
   
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="/posts/2021-09-30/feature.jpg">
+  <meta name="twitter:image" content="//localhost:1313/posts/2021-09-30/feature.jpg">
   <meta name="twitter:title" content="相対論を用いてタイムトラベルを語るのは強引か？">
   <meta name="twitter:description" content="タイムトラベルという言葉を用いるとき，ときどき半半ば強引に「相対論によると」光速に近ければ時間は遅くなるという話が存在する．確かに光速で進む物体の時間は静止系よりも時間がゆっくり進むことになるし，一種のタイムトラベルとも言えそうである．
 しかし，双子のパラドックスという概念を引き合いにしてその理屈はおかしいと主張する人が少数いる．
@@ -94,10 +94,7 @@ $$ ds^2 = \eta_{\mu \nu} dx^\mu dx^\nu $$
 まず，結論を先に話すと双子のパラドックスの問題解消のために，一般相対論を出すものもいるが，一般相対論なんかを使わずとも特殊相対論で十分に解消できる．
 さらに，光速で進む物体の時間は静止系よりも時間がゆっくり進むし，慣性系に戻ってきても時間は相対的には遅れている．つまり，同い年だったのに数年後には10歳差ということもありうる．
 相対論の復習 # 光速 \(c\) に近い速度で進む物体においてはNewtonの運動方程式は適応できない．このような状況では相対論的効果も考慮し，考えなくてはいけない．
-世界距離 # 今回のタイトルでは「世界距離」という言葉を使わせていただいたが，書籍によっては「世界間隔」と表記するものも多い．どちらも同じことを指しているので本サイトでは前者で統一する．
-世界距離は四次元座標 \(x^\mu\)，Minkowski計量 \(\eta_{\mu \nu}\)を用いて
-$$ ds^2 = \eta_{\mu \nu} dx^\mu dx^\nu $$
-と表せる．ここで地球に観測者がいる系を静止系と呼び，光速で移動している系を移動系ということにする．静止系において光速で移動している観測者を見るとその移動距離は \(c^2 dt^2\) であるから世界距離">
+世界距離 # 今回のタイトルでは「世界距離」という言葉を使わせていただいたが，書籍によっては「世界間隔」と表記するものも多い．どちらも同じことを指しているので本サイトでは前者で統一する．">
 
   
   <script type="application/ld+json">
@@ -108,12 +105,12 @@ $$ ds^2 = \eta_{\mu \nu} dx^\mu dx^\nu $$
     "name": "相対論を用いてタイムトラベルを語るのは強引か？",
     "headline": "相対論を用いてタイムトラベルを語るのは強引か？",
     
-    "abstract": "タイムトラベルという言葉を用いるとき，ときどき半半ば強引に「相対論によると」光速に近ければ時間は遅くなるという話が存在する．確かに光速で進む物体の時間は静止系よりも時間がゆっくり進むことになるし，一種のタイムトラベルとも言えそうである．\nしかし，双子のパラドックスという概念を引き合いにしてその理屈はおかしいと主張する人が少数いる．\n実際どうなのか検討する記事である．\nまず，結論を先に話すと双子のパラドックスの問題解消のために，一般相対論を出すものもいるが，一般相対論なんかを使わずとも特殊相対論で十分に解消できる．\nさらに，光速で進む物体の時間は静止系よりも時間がゆっくり進むし，慣性系に戻ってきても時間は相対的には遅れている．つまり，同い年だったのに数年後には10歳差ということもありうる．\n相対論の復習 # 光速 \\(c\\) に近い速度で進む物体においてはNewtonの運動方程式は適応できない．このような状況では相対論的効果も考慮し，考えなくてはいけない．\n世界距離 # 今回のタイトルでは「世界距離」という言葉を使わせていただいたが，書籍によっては「世界間隔」と表記するものも多い．どちらも同じことを指しているので本サイトでは前者で統一する．\n世界距離は四次元座標 \\(x^\\mu\\)，Minkowski計量 \\(\\eta_{\\mu \\nu}\\)を用いて\n$$ ds^2 = \\eta_{\\mu \\nu} dx^\\mu dx^\\nu $$\nと表せる．ここで地球に観測者がいる系を静止系と呼び，光速で移動している系を移動系ということにする．静止系において光速で移動している観測者を見るとその移動距離は \\(c^2 dt^2\\) であるから世界距離",
+    "abstract": "\u003cp\u003eタイムトラベルという言葉を用いるとき，ときどき半半ば強引に「相対論によると」光速に近ければ時間は遅くなるという話が存在する．確かに光速で進む物体の時間は静止系よりも時間がゆっくり進むことになるし，一種のタイムトラベルとも言えそうである．\u003c\/p\u003e\n\u003cp\u003eしかし，双子のパラドックスという概念を引き合いにしてその理屈はおかしいと主張する人が少数いる．\u003c\/p\u003e\n\u003cp\u003e実際どうなのか検討する記事である．\u003c\/p\u003e\n\u003cp\u003eまず，結論を先に話すと双子のパラドックスの問題解消のために，一般相対論を出すものもいるが，\u003cstrong\u003e一般相対論なんかを使わずとも特殊相対論で十分に解消できる\u003c\/strong\u003e．\u003c\/p\u003e\n\u003cp\u003eさらに，光速で進む物体の時間は静止系よりも時間がゆっくり進むし，慣性系に戻ってきても時間は相対的には遅れている．つまり，同い年だったのに数年後には10歳差ということもありうる．\u003c\/p\u003e\n\n\n\u003ch2 class=\u0022relative group\u0022\u003e相対論の復習 \n    \u003cdiv id=\u0022%E7%9B%B8%E5%AF%BE%E8%AB%96%E3%81%AE%E5%BE%A9%E7%BF%92\u0022 class=\u0022anchor\u0022\u003e\u003c\/div\u003e\n    \n    \u003cspan\n        class=\u0022absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100\u0022\u003e\n        \u003ca class=\u0022group-hover:text-primary-300 dark:group-hover:text-neutral-700\u0022\n            style=\u0022text-decoration-line: none !important;\u0022 href=\u0022#%E7%9B%B8%E5%AF%BE%E8%AB%96%E3%81%AE%E5%BE%A9%E7%BF%92\u0022 aria-label=\u0022アンカー\u0022\u003e#\u003c\/a\u003e\n    \u003c\/span\u003e        \n    \n\u003c\/h2\u003e\n\u003cp\u003e光速 \\(c\\) に近い速度で進む物体においてはNewtonの運動方程式は適応できない．このような状況では相対論的効果も考慮し，考えなくてはいけない．\u003c\/p\u003e\n\n\n\u003ch3 class=\u0022relative group\u0022\u003e世界距離 \n    \u003cdiv id=\u0022%E4%B8%96%E7%95%8C%E8%B7%9D%E9%9B%A2\u0022 class=\u0022anchor\u0022\u003e\u003c\/div\u003e\n    \n    \u003cspan\n        class=\u0022absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100\u0022\u003e\n        \u003ca class=\u0022group-hover:text-primary-300 dark:group-hover:text-neutral-700\u0022\n            style=\u0022text-decoration-line: none !important;\u0022 href=\u0022#%E4%B8%96%E7%95%8C%E8%B7%9D%E9%9B%A2\u0022 aria-label=\u0022アンカー\u0022\u003e#\u003c\/a\u003e\n    \u003c\/span\u003e        \n    \n\u003c\/h3\u003e\n\u003cp\u003e今回のタイトルでは「世界距離」という言葉を使わせていただいたが，書籍によっては「世界間隔」と表記するものも多い．どちらも同じことを指しているので本サイトでは前者で統一する．\u003c\/p\u003e",
     "inLanguage": "ja",
-    "url" : "\/posts\/2021-09-30\/",
+    "url" : "\/\/localhost:1313\/posts\/2021-09-30\/",
     "author" : {
       "@type": "Person",
-      "name": "Daisuke NISHIHAMA"
+      "name": ""
     },
     "copyrightYear": "2021",
     "dateCreated": "2021-09-30T20:50:09\u002b09:00",
@@ -131,35 +128,11 @@ $$ ds^2 = \eta_{\mu \nu} dx^\mu dx^\nu $$
 
   
   
-  <meta name="author" content="Daisuke NISHIHAMA" />
-  
-  
-  
-  <link href="mailto:daisukenishihama63@gmail.com" rel="me" />
-  
-  
-  <link href="https://facebook.com/daisuke.nishihama.63" rel="me" />
-  
-  
-  <link href="https://github.com/ddd3h" rel="me" />
-  
-  
-  <link href="https://instagram.com/daisukenishihama/" rel="me" />
-  
-  
-  <link href="https://www.researchgate.net/profile/Daisuke-Nishihama-2" rel="me" />
-  
-  
-  <link href="https://twitter.com/daisuke0603N" rel="me" />
-  
-  
-  <link href="https://youtube.com/channel/UCI_JWuhXxkzlesbNqTQd34w" rel="me" />
-  
   
   
   
 
-<script src="/lib/jquery/jquery.slim.min.js" integrity=""></script>
+<script src="/lib/jquery/jquery.slim.min.b0dca576e87d7eaa5850ae4e61759c065786cdb6489d68fcc82240539eebd5da522bdb4fda085ffd245808c8fe2acb2516408eb774ef26b5f6015fc6737c0ea8.js" integrity="sha512-sNylduh9fqpYUK5OYXWcBleGzbZInWj8yCJAU57r1dpSK9tP2ghf/SRYCMj&#43;KsslFkCOt3TvJrX2AV/Gc3wOqA=="></script>
 
 
 
@@ -171,13 +144,13 @@ $$ ds^2 = \eta_{\mu \nu} dx^\mu dx^\nu $$
 
 
 
-<link type="text/css" rel="stylesheet" href="/lib/katex/katex.min.7c7c1a59e6eec00ecd485e5083f69fe14783c7d5ea52962938682e6e8df25aef9bd88411e14790c1b6f8d938bb81502336d56823f23d4c4a187aef689b0702ea.css" integrity="sha512-fHwaWebuwA7NSF5Qg/af4UeDx9XqUpYpOGgubo3yWu&#43;b2IQR4UeQwbb42Ti7gVAjNtVoI/I9TEoYeu9omwcC6g==" />
+<link type="text/css" rel="stylesheet" href="/lib/katex/katex.min.68e17230ccd917b97b7a2def38a8108918599d8aa4f580bfb8cce5e13d23e4de43dcaba5f9000553cb2c10d0d1300aabfe5c433a3305ebd752609f0762a63e59.css" integrity="sha512-aOFyMMzZF7l7ei3vOKgQiRhZnYqk9YC/uMzl4T0j5N5D3Kul&#43;QAFU8ssENDRMAqr/lxDOjMF69dSYJ8HYqY&#43;WQ==" />
 
 
-<script defer src="/lib/katex/katex.min.2d037120c479ad7bfba3e6f597cf8dd4464c7e11bb88567d1e19db2644e9e338cdaf95afb2def902a51e143c5e4546bb979bc40f2522022a7ffebf8414b2c2c8.js" integrity="sha512-LQNxIMR5rXv7o&#43;b1l8&#43;N1EZMfhG7iFZ9HhnbJkTp4zjNr5Wvst75AqUeFDxeRUa7l5vEDyUiAip//r&#43;EFLLCyA=="></script>
+<script defer src="/lib/katex/katex.min.50f14e69d6a8da7128ae3b63974c544ed377c36d096b5e3750f114e84c89d668b9301d9b0ed3248969aa183aa2e3bc4d2c1e73d5dcb7d462890c45a18d424589.js" integrity="sha512-UPFOadao2nEorjtjl0xUTtN3w20Ja143UPEU6EyJ1mi5MB2bDtMkiWmqGDqi47xNLB5z1dy31GKJDEWhjUJFiQ=="></script>
 
 
-<script defer src="/lib/katex/auto-render.min.8968ae052e67b7aafad1f0b3dba35dd19a9ed276e4d594c841b9772afee462c5fec8a314147ce3687dbe02733abe9d97b3e80d99a0405562634a6b8fc3be847e.js" integrity="sha512-iWiuBS5nt6r60fCz26Nd0Zqe0nbk1ZTIQbl3Kv7kYsX&#43;yKMUFHzjaH2&#43;AnM6vp2Xs&#43;gNmaBAVWJjSmuPw76Efg=="
+<script defer src="/lib/katex/auto-render.min.6095714e3aadb63b14ddc4af69346ab12974c1b460654345f8d1860a0b68fcc51b22f68b757433193090bb80afc8965b65cb607e5541d0f5f0f4b2e64d69b9ff.js" integrity="sha512-YJVxTjqttjsU3cSvaTRqsSl0wbRgZUNF&#43;NGGCgto/MUbIvaLdXQzGTCQu4CvyJZbZctgflVB0PXw9LLmTWm5/w=="
   onload="renderMathInElement(document.body);"></script>
 
 
@@ -311,8 +284,14 @@ $$ ds^2 = \eta_{\mu \nu} dx^\mu dx^\nu $$
 
 
 
+
+
+
+
   
   
+
+
 
   
   
@@ -321,7 +300,7 @@ $$ ds^2 = \eta_{\mu \nu} dx^\mu dx^\nu $$
   
 </head>
 <body
-  class="flex flex-col h-screen px-6 m-auto text-lg leading-7 max-w-7xl bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32">
+  class="flex flex-col h-screen px-6 m-auto text-lg leading-7 max-w-7xl bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32 scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600">
   <div id="the-top" class="absolute flex self-center">
     <a class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
       href="#main-content"><span
@@ -338,8 +317,10 @@ $$ ds^2 = \eta_{\mu \nu} dx^\mu dx^\nu $$
         <a href="/" class="flex">
             <span class="sr-only">西濱大将 (Daisuke Nishihama)</span>
 
+            
             <img src="/img/logo.png" width="50" height="50"
                 class="logo max-h-[5rem] max-w-[5rem] object-scale-down object-left nozoom" alt="西濱大将 (Daisuke Nishihama)" />
+            
 
         </a>
     </div>
@@ -360,7 +341,7 @@ $$ ds^2 = \eta_{\mu \nu} dx^\mu dx^\nu $$
   <div>
   <div class="cursor-pointer flex items-center nested-menu">
     
-    <a  class="text-base font-medium text-gray-500 hover:text-gray-900" title="">
+    <a  class="text-base font-medium text-gray-500 hover:text-primary-600 dark:hover:text-primary-400" title="">
       著者
     </a>
     <span>
@@ -389,30 +370,30 @@ $$ ds^2 = \eta_{\mu \nu} dx^\mu dx^\nu $$
     <div class="pt-2 p-5 mt-2 rounded-xl backdrop-blur shadow-2xl">
       <div class="flex flex-col space-y-3">
         
-        <a href="/cv/"  class="flex items-center">
+        <a href="/cv/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
           
-          <p class="text-sm font-sm text-gray-500 hover:text-gray-900" title="">
+          <p class="text-sm font-sm" title="">
             来歴
           </p>
         </a>
         
-        <a href="/res-dev/"  class="flex items-center">
+        <a href="/res-dev/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
           
-          <p class="text-sm font-sm text-gray-500 hover:text-gray-900" title="">
+          <p class="text-sm font-sm" title="">
             研究・開発
           </p>
         </a>
         
-        <a href="/presentation/"  class="flex items-center">
+        <a href="/presentation/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
           
-          <p class="text-sm font-sm text-gray-500 hover:text-gray-900" title="">
+          <p class="text-sm font-sm" title="">
             講演・口頭発表等
           </p>
         </a>
         
-        <a href="/award/"  class="flex items-center">
+        <a href="/award/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
           
-          <p class="text-sm font-sm text-gray-500 hover:text-gray-900" title="">
+          <p class="text-sm font-sm" title="">
             受賞
           </p>
         </a>
@@ -426,34 +407,37 @@ $$ ds^2 = \eta_{\mu \nu} dx^\mu dx^\nu $$
 
             
             
-  <a href="/posts/"  class="flex items-center">
+  <a href="/posts/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
     
-    <p class="text-base font-medium text-gray-500 hover:text-gray-900" title="">
+    <p class="text-base font-medium" title="">
         投稿
     </p>
 </a>
 
 
+
             
             
-  <a href="/categories/"  class="flex items-center">
+  <a href="/categories/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
     
-    <p class="text-base font-medium text-gray-500 hover:text-gray-900" title="">
+    <p class="text-base font-medium" title="">
         カテゴリ
     </p>
 </a>
 
 
+
             
             
-  <a href="/data/"  class="flex items-center">
+  <a href="/data/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
     
-    <p class="text-base font-medium text-gray-500 hover:text-gray-900" title="">
+    <p class="text-base font-medium" title="">
         データ
     </p>
 </a>
 
 
+
             
             
 
@@ -461,7 +445,7 @@ $$ ds^2 = \eta_{\mu \nu} dx^\mu dx^\nu $$
 
 
             
-            <button id="search-button" aria-label="Search" class="text-base hover:text-primary-600 dark:hover:text-primary-400 h-12"
+            <button id="search-button" aria-label="Search" class="text-base hover:text-primary-600 dark:hover:text-primary-400"
                 title="">
                 
 
@@ -478,9 +462,9 @@ $$ ds^2 = \eta_{\mu \nu} dx^\mu dx^\nu $$
             
             
             <div
-                class="ltr:mr-14 rtl:ml-14 cursor-pointer text-sm text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400">
-                <button id="appearance-switcher" aria-label="Dark mode switcher" type="button">
-                    <div class="flex items-center justify-center h-12 dark:hidden">
+                class="ltr:mr-14 rtl:ml-14 flex items-center">
+                <button id="appearance-switcher" aria-label="Dark mode switcher" type="button" class="text-base hover:text-primary-600 dark:hover:text-primary-400">
+                    <div class="flex items-center justify-center dark:hidden">
                         
 
   <span class="relative block icon">
@@ -490,7 +474,7 @@ $$ ds^2 = \eta_{\mu \nu} dx^\mu dx^\nu $$
 
 
                     </div>
-                    <div class="items-center justify-center hidden h-12 dark:flex">
+                    <div class="items-center justify-center hidden dark:flex">
                         
 
   <span class="relative block icon">
@@ -505,7 +489,7 @@ $$ ds^2 = \eta_{\mu \nu} dx^\mu dx^\nu $$
             
 
         </nav>
-        <div class="flex md:hidden items-center space-x-5 md:ml-12">
+        <div class="flex md:hidden items-center space-x-5 md:ml-12 h-12">
 
             <span></span>
 
@@ -528,8 +512,8 @@ $$ ds^2 = \eta_{\mu \nu} dx^\mu dx^\nu $$
 
             
             
-            <button id="appearance-switcher-mobile" aria-label="Dark mode switcher" type="button" style="margin-right:5px">
-                <div class="flex items-center justify-center h-12 dark:hidden">
+            <button id="appearance-switcher-mobile" aria-label="Dark mode switcher" type="button" class="text-base hover:text-primary-600 dark:hover:text-primary-400" style="margin-right:5px">
+                <div class="flex items-center justify-center dark:hidden">
                     
 
   <span class="relative block icon">
@@ -539,7 +523,7 @@ $$ ds^2 = \eta_{\mu \nu} dx^\mu dx^\nu $$
 
 
                 </div>
-                <div class="items-center justify-center hidden h-12 dark:flex">
+                <div class="items-center justify-center hidden dark:flex">
                     
 
   <span class="relative block icon">
@@ -556,8 +540,7 @@ $$ ds^2 = \eta_{\mu \nu} dx^\mu dx^\nu $$
     </div>
     <div class="-my-2 -mr-2 md:hidden">
 
-        <label id="menu-button" for="menu-controller" class="block">
-            <input type="checkbox" id="menu-controller" class="hidden" />
+        <label id="menu-button" class="block">
             
             <div class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400">
                 
@@ -574,7 +557,7 @@ $$ ds^2 = \eta_{\mu \nu} dx^\mu dx^\nu $$
                 <ul
                     class="flex space-y-2 mt-3 flex-col items-end w-full px-6 py-6 mx-auto overflow-visible list-none ltr:text-right rtl:text-left max-w-7xl">
 
-                    <li>
+                    <li id="menu-close-button">
                         <span
                             class="cursor-pointer inline-block align-text-bottom hover:text-primary-600 dark:hover:text-primary-400">
 
@@ -590,9 +573,9 @@ $$ ds^2 = \eta_{\mu \nu} dx^\mu dx^\nu $$
 
                      
   <li class="mt-1">
-    <a class="flex items-center">
+    <a class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
         
-        <p class="text-bg font-bg text-gray-500 hover:text-gray-900" title="">
+        <p class="text-bg font-bg" title="">
             著者
         </p>
         <span>
@@ -620,36 +603,36 @@ $$ ds^2 = \eta_{\mu \nu} dx^\mu dx^\nu $$
 </li>
 
 <li class="mt-1">
-    <a href="/cv/"  class="flex items-center">
+    <a href="/cv/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
         
-        <p class="text-sm font-small text-gray-500 hover:text-gray-900" title="">
+        <p class="text-sm font-small" title="">
             来歴
         </p>
     </a>
 </li>
 
 <li class="mt-1">
-    <a href="/res-dev/"  class="flex items-center">
+    <a href="/res-dev/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
         
-        <p class="text-sm font-small text-gray-500 hover:text-gray-900" title="">
+        <p class="text-sm font-small" title="">
             研究・開発
         </p>
     </a>
 </li>
 
 <li class="mt-1">
-    <a href="/presentation/"  class="flex items-center">
+    <a href="/presentation/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
         
-        <p class="text-sm font-small text-gray-500 hover:text-gray-900" title="">
+        <p class="text-sm font-small" title="">
             講演・口頭発表等
         </p>
     </a>
 </li>
 
 <li class="mt-1">
-    <a href="/award/"  class="flex items-center">
+    <a href="/award/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
         
-        <p class="text-sm font-small text-gray-500 hover:text-gray-900" title="">
+        <p class="text-sm font-small" title="">
             受賞
         </p>
     </a>
@@ -659,13 +642,14 @@ $$ ds^2 = \eta_{\mu \nu} dx^\mu dx^\nu $$
 
 
 
+
                     
 
                     
   <li class="mt-1">
-    <a href="/posts/"  class="flex items-center">
+    <a href="/posts/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
         
-        <p class="text-bg font-bg text-gray-500 hover:text-gray-900" title="">
+        <p class="text-bg font-bg" title="">
             投稿
         </p>
     </a>
@@ -673,13 +657,14 @@ $$ ds^2 = \eta_{\mu \nu} dx^\mu dx^\nu $$
 
 
 
+
                     
 
                     
   <li class="mt-1">
-    <a href="/categories/"  class="flex items-center">
+    <a href="/categories/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
         
-        <p class="text-bg font-bg text-gray-500 hover:text-gray-900" title="">
+        <p class="text-bg font-bg" title="">
             カテゴリ
         </p>
     </a>
@@ -687,17 +672,19 @@ $$ ds^2 = \eta_{\mu \nu} dx^\mu dx^\nu $$
 
 
 
+
                     
 
                     
   <li class="mt-1">
-    <a href="/data/"  class="flex items-center">
+    <a href="/data/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
         
-        <p class="text-bg font-bg text-gray-500 hover:text-gray-900" title="">
+        <p class="text-bg font-bg" title="">
             データ
         </p>
     </a>
 </li>
+
 
 
 
@@ -774,42 +761,45 @@ $$ ds^2 = \eta_{\mu \nu} dx^\mu dx^\nu $$
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div style="cursor: default;" class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2021-09-30 20:50:09 &#43;0900 JST">2021年 9月 30日</time>
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  <time datetime="2021-09-30T20:50:09&#43;09:00">2021年 9月 30日</time>
   
 
   
   
 </div>
+
 
 
 
@@ -828,26 +818,31 @@ $$ ds^2 = \eta_{\mu \nu} dx^\mu dx^\nu $$
     
 
     
+      
+      
+
+      
+
+      
 
     
 
-    
-  
   </header>
   
   <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
     
      <div
-      class="order-first sm:max-w-prose lg:ml-auto px-0 lg:order-last lg:max-w-xs ltr:lg:pl-8 rtl:lg:pr-8">
+      class="order-first lg:ml-auto px-0 lg:order-last ltr:lg:pl-8 rtl:lg:pr-8">
       <div class="toc ltr:pl-5 rtl:pr-5 print:hidden lg:sticky lg:top-10">
 
-         <details open class="mt-0 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 hidden lg:block">
+         <details open id="TOCView"
+  class="toc-right mt-0 overflow-y-scroll overscroll-contain scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600 rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 hidden lg:block">
   <summary
     class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
     目次
   </summary>
   <div
-    class="min-w-[220px] py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    class="min-w-[220px] py-2 border-dotted ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
     <li><a href="#相対論の復習">相対論の復習</a>
@@ -862,7 +857,7 @@ $$ ds^2 = \eta_{\mu \nu} dx^\mu dx^\nu $$
 </nav>
   </div>
 </details>
-<details class="mt-0 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 lg:hidden">
+<details class="toc-inside mt-0 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 lg:hidden">
   <summary
     class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
     目次
@@ -884,6 +879,34 @@ $$ ds^2 = \eta_{\mu \nu} dx^\mu dx^\nu $$
   </div>
 </details>
 
+<script>
+
+  var margin = 200;
+  var marginError = 50;
+
+  (function () {
+    var $window = $(window);
+    var $toc = $('#TOCView');
+    var tocHeight = $toc.height();
+
+    function onResize() {
+      var windowAndMarginHeight = $window.height() - margin;
+      if(tocHeight >= windowAndMarginHeight) {
+        $toc.css("overflow-y", "scroll")
+        $toc.css("max-height", (windowAndMarginHeight + marginError) + "px")
+      } else {
+        $toc.css("overflow-y", "hidden")
+        $toc.css("max-height", "9999999px")
+      }
+    }
+
+    $window.on('resize', onResize);
+    $(document).ready(onResize);
+  })();
+
+
+
+</script>
    </div>
       </div>
       
@@ -893,7 +916,7 @@ $$ ds^2 = \eta_{\mu \nu} dx^\mu dx^\nu $$
         
 
 
-        <div class="max-w-prose mb-20">
+        <div class="article-content max-w-prose mb-20">
           
 
 <p>タイムトラベルという言葉を用いるとき，ときどき半半ば強引に「相対論によると」光速に近ければ時間は遅くなるという話が存在する．確かに光速で進む物体の時間は静止系よりも時間がゆっくり進むことになるし，一種のタイムトラベルとも言えそうである．</p>
@@ -901,24 +924,28 @@ $$ ds^2 = \eta_{\mu \nu} dx^\mu dx^\nu $$
 <p>実際どうなのか検討する記事である．</p>
 <p>まず，結論を先に話すと双子のパラドックスの問題解消のために，一般相対論を出すものもいるが，<strong>一般相対論なんかを使わずとも特殊相対論で十分に解消できる</strong>．</p>
 <p>さらに，光速で進む物体の時間は静止系よりも時間がゆっくり進むし，慣性系に戻ってきても時間は相対的には遅れている．つまり，同い年だったのに数年後には10歳差ということもありうる．</p>
+
+
 <h2 class="relative group">相対論の復習 
-    <div id="相対論の復習" class="anchor"></div>
+    <div id="%E7%9B%B8%E5%AF%BE%E8%AB%96%E3%81%AE%E5%BE%A9%E7%BF%92" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%e7%9b%b8%e5%af%be%e8%ab%96%e3%81%ae%e5%be%a9%e7%bf%92" aria-label="アンカー">#</a>
+            style="text-decoration-line: none !important;" href="#%E7%9B%B8%E5%AF%BE%E8%AB%96%E3%81%AE%E5%BE%A9%E7%BF%92" aria-label="アンカー">#</a>
     </span>        
     
 </h2>
 <p>光速 \(c\) に近い速度で進む物体においてはNewtonの運動方程式は適応できない．このような状況では相対論的効果も考慮し，考えなくてはいけない．</p>
+
+
 <h3 class="relative group">世界距離 
-    <div id="世界距離" class="anchor"></div>
+    <div id="%E4%B8%96%E7%95%8C%E8%B7%9D%E9%9B%A2" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%e4%b8%96%e7%95%8c%e8%b7%9d%e9%9b%a2" aria-label="アンカー">#</a>
+            style="text-decoration-line: none !important;" href="#%E4%B8%96%E7%95%8C%E8%B7%9D%E9%9B%A2" aria-label="アンカー">#</a>
     </span>        
     
 </h3>
@@ -941,41 +968,36 @@ $$</p>
 ds^2 = ds&rsquo;^2
 $$</p>
 <p>がいえる．ゆえに，\(dt&rsquo; = 0\) がいえて時間は静止しているように見えることが分かる．</p>
+
+
 <h3 class="relative group">双子のパラドックス 
-    <div id="双子のパラドックス" class="anchor"></div>
+    <div id="%E5%8F%8C%E5%AD%90%E3%81%AE%E3%83%91%E3%83%A9%E3%83%89%E3%83%83%E3%82%AF%E3%82%B9" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%e5%8f%8c%e5%ad%90%e3%81%ae%e3%83%91%e3%83%a9%e3%83%89%e3%83%83%e3%82%af%e3%82%b9" aria-label="アンカー">#</a>
+            style="text-decoration-line: none !important;" href="#%E5%8F%8C%E5%AD%90%E3%81%AE%E3%83%91%E3%83%A9%E3%83%89%E3%83%83%E3%82%AF%E3%82%B9" aria-label="アンカー">#</a>
     </span>        
     
 </h3>
 <p>ここでどんなパラドックスが生じるかといえば以上の議論は<strong>あくまでも相対的な事柄</strong>でしか無い．</p>
 <p>つまり，光速で移動している系（移動系）から地球を見れば地球が光速で移動しているわけである．つまり，移動系から見れば静止系の時間が止まっているし，静止系から見れば移動系の時間が止まっているのである．</p>
 <p>
-
-
-
-
-  
-  
-  
     <figure>
-      <img class="my-0 rounded-md" src="/img/20210319130057.png" alt="" />
+      <img class="my-0 rounded-md" loading="lazy" src="/img/20210319130057.png" alt="" />
       
     </figure>
-  
-
 </p>
 <p>すなわち双子A, Bのうち片方Bだけが光速で地球から旅をして帰ってきたとき異なる時間を持つ（お互い相手の時計は止まってると思っている）二人が出会うため，矛盾が生じてしまう．これを双子パラドックスと呼んでいる．</p>
+
+
 <h2 class="relative group">双子のパラドックスの解消 
-    <div id="双子のパラドックスの解消" class="anchor"></div>
+    <div id="%E5%8F%8C%E5%AD%90%E3%81%AE%E3%83%91%E3%83%A9%E3%83%89%E3%83%83%E3%82%AF%E3%82%B9%E3%81%AE%E8%A7%A3%E6%B6%88" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%e5%8f%8c%e5%ad%90%e3%81%ae%e3%83%91%e3%83%a9%e3%83%89%e3%83%83%e3%82%af%e3%82%b9%e3%81%ae%e8%a7%a3%e6%b6%88" aria-label="アンカー">#</a>
+            style="text-decoration-line: none !important;" href="#%E5%8F%8C%E5%AD%90%E3%81%AE%E3%83%91%E3%83%A9%E3%83%89%E3%83%83%E3%82%AF%E3%82%B9%E3%81%AE%E8%A7%A3%E6%B6%88" aria-label="アンカー">#</a>
     </span>        
     
 </h2>
@@ -983,23 +1005,29 @@ $$</p>
 <p><mark>ゆえに，移動系から見てはいけないのだ．</mark></p>
 <p>地球（静止系）は常に慣性系であるのでこちらで議論した結末は問題なく正しい．ゆえに，<mark>双子の片方Bは光速で移動しているため時間は静止しているため出発時と同じ年齢で時間は一切進まずに帰ってくる</mark>，というのが正解となる．</p>
 <p>一般相対論など不必要であるし，きちんと慣性系のみだけで議論すればいいだけの話である．</p>
+
+
 <h2 class="relative group">相対論を用いてタイムトラベルを話すのは&hellip; 
-    <div id="相対論を用いてタイムトラベルを話すのは" class="anchor"></div>
+    <div id="%E7%9B%B8%E5%AF%BE%E8%AB%96%E3%82%92%E7%94%A8%E3%81%84%E3%81%A6%E3%82%BF%E3%82%A4%E3%83%A0%E3%83%88%E3%83%A9%E3%83%99%E3%83%AB%E3%82%92%E8%A9%B1%E3%81%99%E3%81%AE%E3%81%AF" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%e7%9b%b8%e5%af%be%e8%ab%96%e3%82%92%e7%94%a8%e3%81%84%e3%81%a6%e3%82%bf%e3%82%a4%e3%83%a0%e3%83%88%e3%83%a9%e3%83%99%e3%83%ab%e3%82%92%e8%a9%b1%e3%81%99%e3%81%ae%e3%81%af" aria-label="アンカー">#</a>
+            style="text-decoration-line: none !important;" href="#%E7%9B%B8%E5%AF%BE%E8%AB%96%E3%82%92%E7%94%A8%E3%81%84%E3%81%A6%E3%82%BF%E3%82%A4%E3%83%A0%E3%83%88%E3%83%A9%E3%83%99%E3%83%AB%E3%82%92%E8%A9%B1%E3%81%99%E3%81%AE%E3%81%AF" aria-label="アンカー">#</a>
     </span>        
     
 </h2>
 <p>タイムトラベルというのが何なのかの定義付けにはよるが，上で議論したように実際に移動した系とそうでない系で時間に隔たりができる．</p>
 <p>それゆえ，タイムトラベルと呼ぶのは問題ないだろうし強引とまでは言い難いのかもしれない．</p>
 
+          
+          
+          
         </div>
-                
+        
         
 
+        
         
   
   <section class="flex flex-row flex-wrap justify-center pt-4 text-xl">
@@ -1008,7 +1036,7 @@ $$</p>
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="https://twitter.com/intent/tweet/?url=/posts/2021-09-30/&amp;text=%e7%9b%b8%e5%af%be%e8%ab%96%e3%82%92%e7%94%a8%e3%81%84%e3%81%a6%e3%82%bf%e3%82%a4%e3%83%a0%e3%83%88%e3%83%a9%e3%83%99%e3%83%ab%e3%82%92%e8%aa%9e%e3%82%8b%e3%81%ae%e3%81%af%e5%bc%b7%e5%bc%95%e3%81%8b%ef%bc%9f"
+      href="https://twitter.com/intent/tweet/?url=//localhost:1313/posts/2021-09-30/&amp;text=%e7%9b%b8%e5%af%be%e8%ab%96%e3%82%92%e7%94%a8%e3%81%84%e3%81%a6%e3%82%bf%e3%82%a4%e3%83%a0%e3%83%88%e3%83%a9%e3%83%99%e3%83%ab%e3%82%92%e8%aa%9e%e3%82%8b%e3%81%ae%e3%81%af%e5%bc%b7%e5%bc%95%e3%81%8b%ef%bc%9f"
       title="Twitterに投稿する"
       aria-label="Twitterに投稿する"
       >
@@ -1026,7 +1054,7 @@ $$</p>
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="https://www.facebook.com/sharer/sharer.php?u=/posts/2021-09-30/&amp;quote=%e7%9b%b8%e5%af%be%e8%ab%96%e3%82%92%e7%94%a8%e3%81%84%e3%81%a6%e3%82%bf%e3%82%a4%e3%83%a0%e3%83%88%e3%83%a9%e3%83%99%e3%83%ab%e3%82%92%e8%aa%9e%e3%82%8b%e3%81%ae%e3%81%af%e5%bc%b7%e5%bc%95%e3%81%8b%ef%bc%9f"
+      href="https://www.facebook.com/sharer/sharer.php?u=//localhost:1313/posts/2021-09-30/&amp;quote=%e7%9b%b8%e5%af%be%e8%ab%96%e3%82%92%e7%94%a8%e3%81%84%e3%81%a6%e3%82%bf%e3%82%a4%e3%83%a0%e3%83%88%e3%83%a9%e3%83%99%e3%83%ab%e3%82%92%e8%aa%9e%e3%82%8b%e3%81%ae%e3%81%af%e5%bc%b7%e5%bc%95%e3%81%8b%ef%bc%9f"
       title="Facebookでシェアする"
       aria-label="Facebookでシェアする"
       >
@@ -1045,7 +1073,7 @@ $$</p>
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="https://pinterest.com/pin/create/bookmarklet/?url=/posts/2021-09-30/&amp;description=%e7%9b%b8%e5%af%be%e8%ab%96%e3%82%92%e7%94%a8%e3%81%84%e3%81%a6%e3%82%bf%e3%82%a4%e3%83%a0%e3%83%88%e3%83%a9%e3%83%99%e3%83%ab%e3%82%92%e8%aa%9e%e3%82%8b%e3%81%ae%e3%81%af%e5%bc%b7%e5%bc%95%e3%81%8b%ef%bc%9f"
+      href="https://pinterest.com/pin/create/bookmarklet/?url=//localhost:1313/posts/2021-09-30/&amp;description=%e7%9b%b8%e5%af%be%e8%ab%96%e3%82%92%e7%94%a8%e3%81%84%e3%81%a6%e3%82%bf%e3%82%a4%e3%83%a0%e3%83%88%e3%83%a9%e3%83%99%e3%83%ab%e3%82%92%e8%aa%9e%e3%82%8b%e3%81%ae%e3%81%af%e5%bc%b7%e5%bc%95%e3%81%8b%ef%bc%9f"
       title="Pinterestでピンする"
       aria-label="Pinterestでピンする"
       >
@@ -1064,7 +1092,7 @@ $$</p>
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="mailto:?body=/posts/2021-09-30/&amp;subject=%e7%9b%b8%e5%af%be%e8%ab%96%e3%82%92%e7%94%a8%e3%81%84%e3%81%a6%e3%82%bf%e3%82%a4%e3%83%a0%e3%83%88%e3%83%a9%e3%83%99%e3%83%ab%e3%82%92%e8%aa%9e%e3%82%8b%e3%81%ae%e3%81%af%e5%bc%b7%e5%bc%95%e3%81%8b%ef%bc%9f"
+      href="mailto:?body=//localhost:1313/posts/2021-09-30/&amp;subject=%e7%9b%b8%e5%af%be%e8%ab%96%e3%82%92%e7%94%a8%e3%81%84%e3%81%a6%e3%82%bf%e3%82%a4%e3%83%a0%e3%83%88%e3%83%a9%e3%83%99%e3%83%ab%e3%82%92%e8%aa%9e%e3%82%8b%e3%81%ae%e3%81%af%e5%bc%b7%e5%bc%95%e3%81%8b%ef%bc%9f"
       title=" Eメールを送る"
       aria-label=" Eメールを送る"
       >
@@ -1085,13 +1113,21 @@ $$</p>
           
       </div>
      
-     <script>
+      
+      
+        
+        
+          
+          
+        
+      <script>
         var oid = "views_posts\/2021-09-30\/index.md"
         var oid_likes = "likes_posts\/2021-09-30\/index.md"
       </script>
       
       
-      <script type="text/javascript" src="/js/page.min.f94e5beb747249fb2315a14fc6417e483411d48b59dc1376bbafa8c37fce65d397d5401be15c7461670ec7bb90ac2bf148d7d48eaf02f317cd9dc04d4851fd31.js" integrity="sha512-&#43;U5b63RySfsjFaFPxkF&#43;SDQR1ItZ3BN2u6&#43;ow3/OZdOX1UAb4Vx0YWcOx7uQrCvxSNfUjq8C8xfNncBNSFH9MQ=="></script>
+      <script type="text/javascript" src="/js/page.min.0860cf4e04fa2d72cc33ddba263083464d48f67de06114529043cb4623319efed4f484fd7f1730df5abea0e2da6f3538855634081d02f2d6e920b956f063e823.js" integrity="sha512-CGDPTgT6LXLMM926JjCDRk1I9n3gYRRSkEPLRiMxnv7U9IT9fxcw31q&#43;oOLabzU4hVY0CB0C8tbpILlW8GPoIw=="></script>
+      
   
     </section>
   <footer class="pt-8 max-w-prose print:hidden">
@@ -1117,7 +1153,7 @@ $$</p>
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2022-09-12 20:50:09 &#43;0900 JST">2022年 9月 12日</time>
+                    <time datetime="2022-09-12T20:50:09&#43;09:00">2022年 9月 12日</time>
                   
                 </span>
               </span>
@@ -1143,7 +1179,7 @@ $$</p>
 
       <div id="top-scroller" class="pointer-events-none absolute top-[110vh] bottom-0 w-12 ltr:right-0 rtl:left-0">
   <a href="#the-top"
-    class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 mb-16 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 backdrop-blur hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 mb-16 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
     aria-label="TOPへスクロール" title="TOPへスクロール">
     &uarr;
   </a>
@@ -1156,13 +1192,19 @@ $$</p>
       <ul class="flex flex-col list-none sm:flex-row">
         
         <li class="flex mb-1 ltr:text-right rtl:text-left sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0">
-          <a class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2" href="/tags/"
-            title="">Tags</a>
+          <a class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center" href="/tags/"
+            title="">
+            
+            Tags
+          </a>
         </li>
         
         <li class="flex mb-1 ltr:text-right rtl:text-left sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0">
-          <a class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2" href="/categories/"
-            title="">Categories</a>
+          <a class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center" href="/categories/"
+            title="">
+            
+            Categories
+          </a>
         </li>
         
       </ul>
@@ -1176,7 +1218,7 @@ $$</p>
     <p class="text-sm text-neutral-500 dark:text-neutral-400">
       &copy;
       2024
-      Daisuke NISHIHAMA
+      
     </p>
     
 
@@ -1198,10 +1240,11 @@ $$</p>
   <script type="text/javascript" src="/js/process.min.ee03488f19c93c2efb199e2e3014ea5f3cb2ce7d45154adb3399a158cac27ca52831db249ede5bb602700ef87eb02434139de0858af1818ab0fb4182472204a4.js" integrity="sha512-7gNIjxnJPC77GZ4uMBTqXzyyzn1FFUrbM5mhWMrCfKUoMdsknt5btgJwDvh&#43;sCQ0E53ghYrxgYqw&#43;0GCRyIEpA=="></script>
   
   
-</footer><div
+</footer>
+<div
   id="search-wrapper"
   class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh]"
-  data-url="/"
+  data-url="//localhost:1313/"
   style="z-index:500"
 >
   <div

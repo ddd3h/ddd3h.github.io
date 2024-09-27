@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="jp" dir="ltr" class="scroll-smooth" data-default-appearance="light"
-  data-auto-appearance="false"><head>
+  data-auto-appearance="false"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8" />
   
   <meta http-equiv="content-language" content="ja" />
@@ -15,7 +15,7 @@
   
   
   
-  <link rel="canonical" href="/posts/2023-07-27/" />
+  <link rel="canonical" href="//localhost:1313/posts/2023-07-27/" />
   
   
   
@@ -26,8 +26,8 @@
   
   
   
-  <link type="text/css" rel="stylesheet" href="/css/main.bundle.min.2b8b793b5350f23c027e845b237b267c85c08a4a6128dfad2b43b25f354c42eb4629bb7f88b75e09b52056c28e0d057594a8185bd540bd7bece42b3be6399cdf.css"
-    integrity="sha512-K4t5O1NQ8jwCfoRbI3smfIXAikphKN&#43;tK0OyXzVMQutGKbt/iLdeCbUgVsKODQV1lKgYW9VAvXvs5Cs75jmc3w==" />
+  <link type="text/css" rel="stylesheet" href="/css/main.bundle.min.67eb0befb1fb57e6528684f3a2ff6e0606a82100504705b66488d54a9f3fda9c2605c9bf3b70163208427288637a7b4d1a168384c1115e417458eae6b44b329c.css"
+    integrity="sha512-Z&#43;sL77H7V&#43;ZShoTzov9uBgaoIQBQRwW2ZIjVSp8/2pwmBcm/O3AWMghCcohjentNGhaDhMERXkF0WOrmtEsynA==" />
   
   
   <script type="text/javascript" src="/js/appearance.min.516a16745bea5a9bd011138d254cc0fd3973cd55ce6e15f3dec763e7c7c2c7448f8fe7b54cca811cb821b0c7e12cd161caace1dd794ac3d34d40937cbcc9ee12.js"
@@ -44,11 +44,14 @@
   
   
   
-  <script defer type="text/javascript" id="script-bundle" src="/js/main.bundle.min.4f0cf5a047cfe92e760a28aa0ce562bcec47ac85e8d3688f34141e48cb6c5387ea1309752aab48e1b240841a2d7db986c44458619fe32b20bdac27d2c5a199c8.js"
-    integrity="sha512-Twz1oEfP6S52CiiqDOVivOxHrIXo02iPNBQeSMtsU4fqEwl1KqtI4bJAhBotfbmGxERYYZ/jKyC9rCfSxaGZyA==" data-copy="" data-copied=""></script>
   
   
-  <script src="/js/zoom.min.js"></script>
+  <script defer type="text/javascript" id="script-bundle" src="/js/main.bundle.min.efbf3b6b987689fffaf2d7b73173d2690c0279a04d444b0537a77d7f4ff6e6d493445400cb0cf56bc0f0f123e19f15394e63cae34e67f069bd013dd5c73df56e.js"
+    integrity="sha512-7787a5h2if/68te3MXPSaQwCeaBNREsFN6d9f0/25tSTRFQAywz1a8Dw8SPhnxU5TmPK405n8Gm9AT3Vxz31bg==" data-copy="" data-copied=""></script>
+  
+  
+  
+  <script src="/lib/zoom/zoom.min.37d2094687372da3f7343a221a470f6b8806f7891aa46a5a03966af7f0ebd38b9fe536cb154e6ad28f006d184b294525a7c4054b6bbb4be62d8b453b42db99bd.js" integrity="sha512-N9IJRoc3LaP3NDoiGkcPa4gG94kapGpaA5Zq9/Dr04uf5TbLFU5q0o8AbRhLKUUlp8QFS2u7S&#43;Yti0U7QtuZvQ=="></script>
   
   
   
@@ -63,36 +66,26 @@
   
   
   
-  <meta property="og:url" content="/posts/2023-07-27/">
+  <meta property="og:url" content="//localhost:1313/posts/2023-07-27/">
   <meta property="og:site_name" content="西濱大将 (Daisuke Nishihama)">
   <meta property="og:title" content="後輩のためのLinux知識">
   <meta property="og:description" content="はじめに # Linuxを使う上で、知っておくと便利な知識をまとめています。
 基本的には、自分の優秀な後輩たちに向けて書いたつもりです。
-サーバーに接続 # サーバ側がsshd(ssh daemon)が起動している場合は、sshコマンドを使って接続できます。
-ssh # 基本形は以下の通りです。
-ssh [user]@[host] [user]にはサーバ側に登録されているユーザー名を入れます。
-[host]にはサーバのホスト名、IPアドレス、ドメインなどを入れます。
-ホスト名は、DNSサーバなどで変換されている必要がありますが、IPアドレスはそのまま使えます。 (ローカル)ネットワーク外から接続するには、グローバルIPアドレスが必要です。 sshコマンドの主なオプションは次の通りです。
-オプション 意味 -p ポート番号 接続に使用するポート番号を指定する -l ユーザー名 接続に使用するユーザー名を指定する -i IDファイル 接続に使用する公開鍵ファイルを指定する -C 全ての通信を圧縮する -c 暗号化方法 通信を暗号化する方法を指定する（「3des」「blowfish」「des」が指定可能） -1 SSHv1（SSHプロトコルバージョン1）だけを使用する -2 SSHv2（SSHプロトコルバージョン2）だけを使用する -4 IPv4だけを使用する -6 IPv6だけを使用する -K GSSAPI（Generic Security Services API）による認証を許可する -k GSSAPIによる認証を許可しない -A 認証エージェントを転送する（1つ目のサーバに接続後、続けて別のサーバに接続する際に、最初に使った秘密鍵をそのまま使用する） -a 認証エージェントを転送しない -X X11のポートフォワーディングを有効にする（リモートマシンのXアプリケーションが実行できるようになる） -x X11のポートフォワーディングを無効にする -Y 信頼されたX11転送（Trusted X11）を有効にする -f コマンドを実行する際にsshをバックグラウンドにする（Xアプリケーションを実行する際に使用） -F 設定ファイル 設定ファイルを指定する -o 設定パラメータ 設定パラメータを指定する（設定ファイルに書かれた内容より優先される） -E ログファイル名 エラーを指定したファイルに記録する -q エラーメッセージや診断メッセージを表示しない（quiet mode） -v デバッグメッセージを表示する（verbose mode） サーバーとクライアント間でファイルを転送する # サーバにあるファイルを、ローカルPCなどに持ってきたい時、逆にローカルPCにあるデータをサーバに転送したいときなどにはscpコマンドが有効です。">
+サーバーに接続 # サーバ側がsshd(ssh daemon)が起動している場合は、sshコマンドを使って接続できます。">
   <meta property="og:locale" content="ja">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2023-07-27T09:00:09+09:00">
     <meta property="article:modified_time" content="2023-07-27T09:00:09+09:00">
-    <meta property="og:image" content="/posts/2023-07-27/feature.png">
+    <meta property="og:image" content="//localhost:1313/posts/2023-07-27/feature.png">
 
   
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="/posts/2023-07-27/feature.png">
+  <meta name="twitter:image" content="//localhost:1313/posts/2023-07-27/feature.png">
   <meta name="twitter:title" content="後輩のためのLinux知識">
   <meta name="twitter:description" content="はじめに # Linuxを使う上で、知っておくと便利な知識をまとめています。
 基本的には、自分の優秀な後輩たちに向けて書いたつもりです。
-サーバーに接続 # サーバ側がsshd(ssh daemon)が起動している場合は、sshコマンドを使って接続できます。
-ssh # 基本形は以下の通りです。
-ssh [user]@[host] [user]にはサーバ側に登録されているユーザー名を入れます。
-[host]にはサーバのホスト名、IPアドレス、ドメインなどを入れます。
-ホスト名は、DNSサーバなどで変換されている必要がありますが、IPアドレスはそのまま使えます。 (ローカル)ネットワーク外から接続するには、グローバルIPアドレスが必要です。 sshコマンドの主なオプションは次の通りです。
-オプション 意味 -p ポート番号 接続に使用するポート番号を指定する -l ユーザー名 接続に使用するユーザー名を指定する -i IDファイル 接続に使用する公開鍵ファイルを指定する -C 全ての通信を圧縮する -c 暗号化方法 通信を暗号化する方法を指定する（「3des」「blowfish」「des」が指定可能） -1 SSHv1（SSHプロトコルバージョン1）だけを使用する -2 SSHv2（SSHプロトコルバージョン2）だけを使用する -4 IPv4だけを使用する -6 IPv6だけを使用する -K GSSAPI（Generic Security Services API）による認証を許可する -k GSSAPIによる認証を許可しない -A 認証エージェントを転送する（1つ目のサーバに接続後、続けて別のサーバに接続する際に、最初に使った秘密鍵をそのまま使用する） -a 認証エージェントを転送しない -X X11のポートフォワーディングを有効にする（リモートマシンのXアプリケーションが実行できるようになる） -x X11のポートフォワーディングを無効にする -Y 信頼されたX11転送（Trusted X11）を有効にする -f コマンドを実行する際にsshをバックグラウンドにする（Xアプリケーションを実行する際に使用） -F 設定ファイル 設定ファイルを指定する -o 設定パラメータ 設定パラメータを指定する（設定ファイルに書かれた内容より優先される） -E ログファイル名 エラーを指定したファイルに記録する -q エラーメッセージや診断メッセージを表示しない（quiet mode） -v デバッグメッセージを表示する（verbose mode） サーバーとクライアント間でファイルを転送する # サーバにあるファイルを、ローカルPCなどに持ってきたい時、逆にローカルPCにあるデータをサーバに転送したいときなどにはscpコマンドが有効です。">
+サーバーに接続 # サーバ側がsshd(ssh daemon)が起動している場合は、sshコマンドを使って接続できます。">
 
   
   <script type="application/ld+json">
@@ -103,12 +96,12 @@ ssh [user]@[host] [user]にはサーバ側に登録されているユーザー�
     "name": "後輩のためのLinux知識",
     "headline": "後輩のためのLinux知識",
     
-    "abstract": "はじめに # Linuxを使う上で、知っておくと便利な知識をまとめています。\n基本的には、自分の優秀な後輩たちに向けて書いたつもりです。\nサーバーに接続 # サーバ側がsshd(ssh daemon)が起動している場合は、sshコマンドを使って接続できます。\nssh # 基本形は以下の通りです。\nssh [user]@[host] [user]にはサーバ側に登録されているユーザー名を入れます。\n[host]にはサーバのホスト名、IPアドレス、ドメインなどを入れます。\nホスト名は、DNSサーバなどで変換されている必要がありますが、IPアドレスはそのまま使えます。 (ローカル)ネットワーク外から接続するには、グローバルIPアドレスが必要です。 sshコマンドの主なオプションは次の通りです。\nオプション 意味 -p ポート番号 接続に使用するポート番号を指定する -l ユーザー名 接続に使用するユーザー名を指定する -i IDファイル 接続に使用する公開鍵ファイルを指定する -C 全ての通信を圧縮する -c 暗号化方法 通信を暗号化する方法を指定する（「3des」「blowfish」「des」が指定可能） -1 SSHv1（SSHプロトコルバージョン1）だけを使用する -2 SSHv2（SSHプロトコルバージョン2）だけを使用する -4 IPv4だけを使用する -6 IPv6だけを使用する -K GSSAPI（Generic Security Services API）による認証を許可する -k GSSAPIによる認証を許可しない -A 認証エージェントを転送する（1つ目のサーバに接続後、続けて別のサーバに接続する際に、最初に使った秘密鍵をそのまま使用する） -a 認証エージェントを転送しない -X X11のポートフォワーディングを有効にする（リモートマシンのXアプリケーションが実行できるようになる） -x X11のポートフォワーディングを無効にする -Y 信頼されたX11転送（Trusted X11）を有効にする -f コマンドを実行する際にsshをバックグラウンドにする（Xアプリケーションを実行する際に使用） -F 設定ファイル 設定ファイルを指定する -o 設定パラメータ 設定パラメータを指定する（設定ファイルに書かれた内容より優先される） -E ログファイル名 エラーを指定したファイルに記録する -q エラーメッセージや診断メッセージを表示しない（quiet mode） -v デバッグメッセージを表示する（verbose mode） サーバーとクライアント間でファイルを転送する # サーバにあるファイルを、ローカルPCなどに持ってきたい時、逆にローカルPCにあるデータをサーバに転送したいときなどにはscpコマンドが有効です。",
+    "abstract": "\u003ch2 class=\u0022relative group\u0022\u003eはじめに \n    \u003cdiv id=\u0022%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB\u0022 class=\u0022anchor\u0022\u003e\u003c\/div\u003e\n    \n    \u003cspan\n        class=\u0022absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100\u0022\u003e\n        \u003ca class=\u0022group-hover:text-primary-300 dark:group-hover:text-neutral-700\u0022\n            style=\u0022text-decoration-line: none !important;\u0022 href=\u0022#%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB\u0022 aria-label=\u0022アンカー\u0022\u003e#\u003c\/a\u003e\n    \u003c\/span\u003e        \n    \n\u003c\/h2\u003e\n\u003cp\u003eLinuxを使う上で、知っておくと便利な知識をまとめています。\u003c\/p\u003e\n\u003cp\u003e基本的には、自分の優秀な後輩たちに向けて書いたつもりです。\u003c\/p\u003e\n\n\n\u003ch2 class=\u0022relative group\u0022\u003eサーバーに接続 \n    \u003cdiv id=\u0022%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%81%AB%E6%8E%A5%E7%B6%9A\u0022 class=\u0022anchor\u0022\u003e\u003c\/div\u003e\n    \n    \u003cspan\n        class=\u0022absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100\u0022\u003e\n        \u003ca class=\u0022group-hover:text-primary-300 dark:group-hover:text-neutral-700\u0022\n            style=\u0022text-decoration-line: none !important;\u0022 href=\u0022#%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%81%AB%E6%8E%A5%E7%B6%9A\u0022 aria-label=\u0022アンカー\u0022\u003e#\u003c\/a\u003e\n    \u003c\/span\u003e        \n    \n\u003c\/h2\u003e\n\u003cp\u003eサーバ側がsshd(ssh daemon)が起動している場合は、sshコマンドを使って接続できます。\u003c\/p\u003e",
     "inLanguage": "ja",
-    "url" : "\/posts\/2023-07-27\/",
+    "url" : "\/\/localhost:1313\/posts\/2023-07-27\/",
     "author" : {
       "@type": "Person",
-      "name": "Daisuke NISHIHAMA"
+      "name": ""
     },
     "copyrightYear": "2023",
     "dateCreated": "2023-07-27T09:00:09\u002b09:00",
@@ -126,35 +119,15 @@ ssh [user]@[host] [user]にはサーバ側に登録されているユーザー�
 
   
   
-  <meta name="author" content="Daisuke NISHIHAMA" />
-  
-  
-  
-  <link href="mailto:daisukenishihama63@gmail.com" rel="me" />
-  
-  
-  <link href="https://facebook.com/daisuke.nishihama.63" rel="me" />
-  
-  
-  <link href="https://github.com/ddd3h" rel="me" />
-  
-  
-  <link href="https://instagram.com/daisukenishihama/" rel="me" />
-  
-  
-  <link href="https://www.researchgate.net/profile/Daisuke-Nishihama-2" rel="me" />
-  
-  
-  <link href="https://twitter.com/daisuke0603N" rel="me" />
-  
-  
-  <link href="https://youtube.com/channel/UCI_JWuhXxkzlesbNqTQd34w" rel="me" />
-  
   
   
   
 
-<script src="/lib/jquery/jquery.slim.min.js" integrity=""></script>
+<script src="/lib/jquery/jquery.slim.min.b0dca576e87d7eaa5850ae4e61759c065786cdb6489d68fcc82240539eebd5da522bdb4fda085ffd245808c8fe2acb2516408eb774ef26b5f6015fc6737c0ea8.js" integrity="sha512-sNylduh9fqpYUK5OYXWcBleGzbZInWj8yCJAU57r1dpSK9tP2ghf/SRYCMj&#43;KsslFkCOt3TvJrX2AV/Gc3wOqA=="></script>
+
+
+
+
 
 
 
@@ -175,6 +148,8 @@ ssh [user]@[host] [user]にはサーバ側に登録されているユーザー�
 
   
   
+
+
 
   
   
@@ -183,7 +158,7 @@ ssh [user]@[host] [user]にはサーバ側に登録されているユーザー�
   
 </head>
 <body
-  class="flex flex-col h-screen px-6 m-auto text-lg leading-7 max-w-7xl bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32">
+  class="flex flex-col h-screen px-6 m-auto text-lg leading-7 max-w-7xl bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32 scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600">
   <div id="the-top" class="absolute flex self-center">
     <a class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
       href="#main-content"><span
@@ -200,8 +175,10 @@ ssh [user]@[host] [user]にはサーバ側に登録されているユーザー�
         <a href="/" class="flex">
             <span class="sr-only">西濱大将 (Daisuke Nishihama)</span>
 
+            
             <img src="/img/logo.png" width="50" height="50"
                 class="logo max-h-[5rem] max-w-[5rem] object-scale-down object-left nozoom" alt="西濱大将 (Daisuke Nishihama)" />
+            
 
         </a>
     </div>
@@ -222,7 +199,7 @@ ssh [user]@[host] [user]にはサーバ側に登録されているユーザー�
   <div>
   <div class="cursor-pointer flex items-center nested-menu">
     
-    <a  class="text-base font-medium text-gray-500 hover:text-gray-900" title="">
+    <a  class="text-base font-medium text-gray-500 hover:text-primary-600 dark:hover:text-primary-400" title="">
       著者
     </a>
     <span>
@@ -251,30 +228,30 @@ ssh [user]@[host] [user]にはサーバ側に登録されているユーザー�
     <div class="pt-2 p-5 mt-2 rounded-xl backdrop-blur shadow-2xl">
       <div class="flex flex-col space-y-3">
         
-        <a href="/cv/"  class="flex items-center">
+        <a href="/cv/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
           
-          <p class="text-sm font-sm text-gray-500 hover:text-gray-900" title="">
+          <p class="text-sm font-sm" title="">
             来歴
           </p>
         </a>
         
-        <a href="/res-dev/"  class="flex items-center">
+        <a href="/res-dev/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
           
-          <p class="text-sm font-sm text-gray-500 hover:text-gray-900" title="">
+          <p class="text-sm font-sm" title="">
             研究・開発
           </p>
         </a>
         
-        <a href="/presentation/"  class="flex items-center">
+        <a href="/presentation/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
           
-          <p class="text-sm font-sm text-gray-500 hover:text-gray-900" title="">
+          <p class="text-sm font-sm" title="">
             講演・口頭発表等
           </p>
         </a>
         
-        <a href="/award/"  class="flex items-center">
+        <a href="/award/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
           
-          <p class="text-sm font-sm text-gray-500 hover:text-gray-900" title="">
+          <p class="text-sm font-sm" title="">
             受賞
           </p>
         </a>
@@ -288,34 +265,37 @@ ssh [user]@[host] [user]にはサーバ側に登録されているユーザー�
 
             
             
-  <a href="/posts/"  class="flex items-center">
+  <a href="/posts/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
     
-    <p class="text-base font-medium text-gray-500 hover:text-gray-900" title="">
+    <p class="text-base font-medium" title="">
         投稿
     </p>
 </a>
 
 
+
             
             
-  <a href="/categories/"  class="flex items-center">
+  <a href="/categories/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
     
-    <p class="text-base font-medium text-gray-500 hover:text-gray-900" title="">
+    <p class="text-base font-medium" title="">
         カテゴリ
     </p>
 </a>
 
 
+
             
             
-  <a href="/data/"  class="flex items-center">
+  <a href="/data/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
     
-    <p class="text-base font-medium text-gray-500 hover:text-gray-900" title="">
+    <p class="text-base font-medium" title="">
         データ
     </p>
 </a>
 
 
+
             
             
 
@@ -323,7 +303,7 @@ ssh [user]@[host] [user]にはサーバ側に登録されているユーザー�
 
 
             
-            <button id="search-button" aria-label="Search" class="text-base hover:text-primary-600 dark:hover:text-primary-400 h-12"
+            <button id="search-button" aria-label="Search" class="text-base hover:text-primary-600 dark:hover:text-primary-400"
                 title="">
                 
 
@@ -340,9 +320,9 @@ ssh [user]@[host] [user]にはサーバ側に登録されているユーザー�
             
             
             <div
-                class="ltr:mr-14 rtl:ml-14 cursor-pointer text-sm text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400">
-                <button id="appearance-switcher" aria-label="Dark mode switcher" type="button">
-                    <div class="flex items-center justify-center h-12 dark:hidden">
+                class="ltr:mr-14 rtl:ml-14 flex items-center">
+                <button id="appearance-switcher" aria-label="Dark mode switcher" type="button" class="text-base hover:text-primary-600 dark:hover:text-primary-400">
+                    <div class="flex items-center justify-center dark:hidden">
                         
 
   <span class="relative block icon">
@@ -352,7 +332,7 @@ ssh [user]@[host] [user]にはサーバ側に登録されているユーザー�
 
 
                     </div>
-                    <div class="items-center justify-center hidden h-12 dark:flex">
+                    <div class="items-center justify-center hidden dark:flex">
                         
 
   <span class="relative block icon">
@@ -367,7 +347,7 @@ ssh [user]@[host] [user]にはサーバ側に登録されているユーザー�
             
 
         </nav>
-        <div class="flex md:hidden items-center space-x-5 md:ml-12">
+        <div class="flex md:hidden items-center space-x-5 md:ml-12 h-12">
 
             <span></span>
 
@@ -390,8 +370,8 @@ ssh [user]@[host] [user]にはサーバ側に登録されているユーザー�
 
             
             
-            <button id="appearance-switcher-mobile" aria-label="Dark mode switcher" type="button" style="margin-right:5px">
-                <div class="flex items-center justify-center h-12 dark:hidden">
+            <button id="appearance-switcher-mobile" aria-label="Dark mode switcher" type="button" class="text-base hover:text-primary-600 dark:hover:text-primary-400" style="margin-right:5px">
+                <div class="flex items-center justify-center dark:hidden">
                     
 
   <span class="relative block icon">
@@ -401,7 +381,7 @@ ssh [user]@[host] [user]にはサーバ側に登録されているユーザー�
 
 
                 </div>
-                <div class="items-center justify-center hidden h-12 dark:flex">
+                <div class="items-center justify-center hidden dark:flex">
                     
 
   <span class="relative block icon">
@@ -418,8 +398,7 @@ ssh [user]@[host] [user]にはサーバ側に登録されているユーザー�
     </div>
     <div class="-my-2 -mr-2 md:hidden">
 
-        <label id="menu-button" for="menu-controller" class="block">
-            <input type="checkbox" id="menu-controller" class="hidden" />
+        <label id="menu-button" class="block">
             
             <div class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400">
                 
@@ -436,7 +415,7 @@ ssh [user]@[host] [user]にはサーバ側に登録されているユーザー�
                 <ul
                     class="flex space-y-2 mt-3 flex-col items-end w-full px-6 py-6 mx-auto overflow-visible list-none ltr:text-right rtl:text-left max-w-7xl">
 
-                    <li>
+                    <li id="menu-close-button">
                         <span
                             class="cursor-pointer inline-block align-text-bottom hover:text-primary-600 dark:hover:text-primary-400">
 
@@ -452,9 +431,9 @@ ssh [user]@[host] [user]にはサーバ側に登録されているユーザー�
 
                      
   <li class="mt-1">
-    <a class="flex items-center">
+    <a class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
         
-        <p class="text-bg font-bg text-gray-500 hover:text-gray-900" title="">
+        <p class="text-bg font-bg" title="">
             著者
         </p>
         <span>
@@ -482,36 +461,36 @@ ssh [user]@[host] [user]にはサーバ側に登録されているユーザー�
 </li>
 
 <li class="mt-1">
-    <a href="/cv/"  class="flex items-center">
+    <a href="/cv/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
         
-        <p class="text-sm font-small text-gray-500 hover:text-gray-900" title="">
+        <p class="text-sm font-small" title="">
             来歴
         </p>
     </a>
 </li>
 
 <li class="mt-1">
-    <a href="/res-dev/"  class="flex items-center">
+    <a href="/res-dev/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
         
-        <p class="text-sm font-small text-gray-500 hover:text-gray-900" title="">
+        <p class="text-sm font-small" title="">
             研究・開発
         </p>
     </a>
 </li>
 
 <li class="mt-1">
-    <a href="/presentation/"  class="flex items-center">
+    <a href="/presentation/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
         
-        <p class="text-sm font-small text-gray-500 hover:text-gray-900" title="">
+        <p class="text-sm font-small" title="">
             講演・口頭発表等
         </p>
     </a>
 </li>
 
 <li class="mt-1">
-    <a href="/award/"  class="flex items-center">
+    <a href="/award/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
         
-        <p class="text-sm font-small text-gray-500 hover:text-gray-900" title="">
+        <p class="text-sm font-small" title="">
             受賞
         </p>
     </a>
@@ -521,13 +500,14 @@ ssh [user]@[host] [user]にはサーバ側に登録されているユーザー�
 
 
 
+
                     
 
                     
   <li class="mt-1">
-    <a href="/posts/"  class="flex items-center">
+    <a href="/posts/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
         
-        <p class="text-bg font-bg text-gray-500 hover:text-gray-900" title="">
+        <p class="text-bg font-bg" title="">
             投稿
         </p>
     </a>
@@ -535,13 +515,14 @@ ssh [user]@[host] [user]にはサーバ側に登録されているユーザー�
 
 
 
+
                     
 
                     
   <li class="mt-1">
-    <a href="/categories/"  class="flex items-center">
+    <a href="/categories/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
         
-        <p class="text-bg font-bg text-gray-500 hover:text-gray-900" title="">
+        <p class="text-bg font-bg" title="">
             カテゴリ
         </p>
     </a>
@@ -549,17 +530,19 @@ ssh [user]@[host] [user]にはサーバ側に登録されているユーザー�
 
 
 
+
                     
 
                     
   <li class="mt-1">
-    <a href="/data/"  class="flex items-center">
+    <a href="/data/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
         
-        <p class="text-bg font-bg text-gray-500 hover:text-gray-900" title="">
+        <p class="text-bg font-bg" title="">
             データ
         </p>
     </a>
 </li>
+
 
 
 
@@ -636,42 +619,45 @@ ssh [user]@[host] [user]にはサーバ側に登録されているユーザー�
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div style="cursor: default;" class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2023-07-27 09:00:09 &#43;0900 JST">2023年 7月 27日</time>
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  <time datetime="2023-07-27T09:00:09&#43;09:00">2023年 7月 27日</time>
   
 
   
   
 </div>
+
 
 
 
@@ -690,26 +676,31 @@ ssh [user]@[host] [user]にはサーバ側に登録されているユーザー�
     
 
     
+      
+      
+
+      
+
+      
 
     
 
-    
-  
   </header>
   
   <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
     
      <div
-      class="order-first sm:max-w-prose lg:ml-auto px-0 lg:order-last lg:max-w-xs ltr:lg:pl-8 rtl:lg:pr-8">
+      class="order-first lg:ml-auto px-0 lg:order-last ltr:lg:pl-8 rtl:lg:pr-8">
       <div class="toc ltr:pl-5 rtl:pr-5 print:hidden lg:sticky lg:top-10">
 
-         <details open class="mt-0 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 hidden lg:block">
+         <details open id="TOCView"
+  class="toc-right mt-0 overflow-y-scroll overscroll-contain scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600 rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 hidden lg:block">
   <summary
     class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
     目次
   </summary>
   <div
-    class="min-w-[220px] py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    class="min-w-[220px] py-2 border-dotted ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
     <li><a href="#はじめに">はじめに</a></li>
@@ -807,7 +798,7 @@ ssh [user]@[host] [user]にはサーバ側に登録されているユーザー�
 </nav>
   </div>
 </details>
-<details class="mt-0 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 lg:hidden">
+<details class="toc-inside mt-0 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 lg:hidden">
   <summary
     class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
     目次
@@ -912,6 +903,34 @@ ssh [user]@[host] [user]にはサーバ側に登録されているユーザー�
   </div>
 </details>
 
+<script>
+
+  var margin = 200;
+  var marginError = 50;
+
+  (function () {
+    var $window = $(window);
+    var $toc = $('#TOCView');
+    var tocHeight = $toc.height();
+
+    function onResize() {
+      var windowAndMarginHeight = $window.height() - margin;
+      if(tocHeight >= windowAndMarginHeight) {
+        $toc.css("overflow-y", "scroll")
+        $toc.css("max-height", (windowAndMarginHeight + marginError) + "px")
+      } else {
+        $toc.css("overflow-y", "hidden")
+        $toc.css("max-height", "9999999px")
+      }
+    }
+
+    $window.on('resize', onResize);
+    $(document).ready(onResize);
+  })();
+
+
+
+</script>
    </div>
       </div>
       
@@ -921,30 +940,36 @@ ssh [user]@[host] [user]にはサーバ側に登録されているユーザー�
         
 
 
-        <div class="max-w-prose mb-20">
-          <h2 class="relative group">はじめに 
-    <div id="はじめに" class="anchor"></div>
+        <div class="article-content max-w-prose mb-20">
+          
+
+<h2 class="relative group">はじめに 
+    <div id="%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%e3%81%af%e3%81%98%e3%82%81%e3%81%ab" aria-label="アンカー">#</a>
+            style="text-decoration-line: none !important;" href="#%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB" aria-label="アンカー">#</a>
     </span>        
     
 </h2>
 <p>Linuxを使う上で、知っておくと便利な知識をまとめています。</p>
 <p>基本的には、自分の優秀な後輩たちに向けて書いたつもりです。</p>
+
+
 <h2 class="relative group">サーバーに接続 
-    <div id="サーバーに接続" class="anchor"></div>
+    <div id="%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%81%AB%E6%8E%A5%E7%B6%9A" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%e3%82%b5%e3%83%bc%e3%83%90%e3%83%bc%e3%81%ab%e6%8e%a5%e7%b6%9a" aria-label="アンカー">#</a>
+            style="text-decoration-line: none !important;" href="#%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%81%AB%E6%8E%A5%E7%B6%9A" aria-label="アンカー">#</a>
     </span>        
     
 </h2>
 <p>サーバ側がsshd(ssh daemon)が起動している場合は、sshコマンドを使って接続できます。</p>
+
+
 <h3 class="relative group">ssh 
     <div id="ssh" class="anchor"></div>
     
@@ -971,114 +996,118 @@ ssh [user]@[host] [user]にはサーバ側に登録されているユーザー�
 </ul>
 <p>sshコマンドの主なオプションは次の通りです。</p>
 <table>
-<thead>
-<tr>
-<th>オプション</th>
-<th>意味</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>-p ポート番号</td>
-<td>接続に使用するポート番号を指定する</td>
-</tr>
-<tr>
-<td>-l ユーザー名</td>
-<td>接続に使用するユーザー名を指定する</td>
-</tr>
-<tr>
-<td>-i IDファイル</td>
-<td>接続に使用する公開鍵ファイルを指定する</td>
-</tr>
-<tr>
-<td>-C</td>
-<td>全ての通信を圧縮する</td>
-</tr>
-<tr>
-<td>-c 暗号化方法</td>
-<td>通信を暗号化する方法を指定する（「3des」「blowfish」「des」が指定可能）</td>
-</tr>
-<tr>
-<td>-1</td>
-<td>SSHv1（SSHプロトコルバージョン1）だけを使用する</td>
-</tr>
-<tr>
-<td>-2</td>
-<td>SSHv2（SSHプロトコルバージョン2）だけを使用する</td>
-</tr>
-<tr>
-<td>-4</td>
-<td>IPv4だけを使用する</td>
-</tr>
-<tr>
-<td>-6</td>
-<td>IPv6だけを使用する</td>
-</tr>
-<tr>
-<td>-K</td>
-<td>GSSAPI（Generic Security Services API）による認証を許可する</td>
-</tr>
-<tr>
-<td>-k</td>
-<td>GSSAPIによる認証を許可しない</td>
-</tr>
-<tr>
-<td>-A</td>
-<td>認証エージェントを転送する（1つ目のサーバに接続後、続けて別のサーバに接続する際に、最初に使った秘密鍵をそのまま使用する）</td>
-</tr>
-<tr>
-<td>-a</td>
-<td>認証エージェントを転送しない</td>
-</tr>
-<tr>
-<td>-X</td>
-<td>X11のポートフォワーディングを有効にする（リモートマシンのXアプリケーションが実行できるようになる）</td>
-</tr>
-<tr>
-<td>-x</td>
-<td>X11のポートフォワーディングを無効にする</td>
-</tr>
-<tr>
-<td>-Y</td>
-<td>信頼されたX11転送（Trusted X11）を有効にする</td>
-</tr>
-<tr>
-<td>-f</td>
-<td>コマンドを実行する際にsshをバックグラウンドにする（Xアプリケーションを実行する際に使用）</td>
-</tr>
-<tr>
-<td>-F 設定ファイル</td>
-<td>設定ファイルを指定する</td>
-</tr>
-<tr>
-<td>-o 設定パラメータ</td>
-<td>設定パラメータを指定する（設定ファイルに書かれた内容より優先される）</td>
-</tr>
-<tr>
-<td>-E ログファイル名</td>
-<td>エラーを指定したファイルに記録する</td>
-</tr>
-<tr>
-<td>-q</td>
-<td>エラーメッセージや診断メッセージを表示しない（quiet mode）</td>
-</tr>
-<tr>
-<td>-v</td>
-<td>デバッグメッセージを表示する（verbose mode）</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">オプション</th>
+          <th style="text-align: left">意味</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">-p ポート番号</td>
+          <td style="text-align: left">接続に使用するポート番号を指定する</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">-l ユーザー名</td>
+          <td style="text-align: left">接続に使用するユーザー名を指定する</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">-i IDファイル</td>
+          <td style="text-align: left">接続に使用する公開鍵ファイルを指定する</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">-C</td>
+          <td style="text-align: left">全ての通信を圧縮する</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">-c 暗号化方法</td>
+          <td style="text-align: left">通信を暗号化する方法を指定する（「3des」「blowfish」「des」が指定可能）</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">-1</td>
+          <td style="text-align: left">SSHv1（SSHプロトコルバージョン1）だけを使用する</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">-2</td>
+          <td style="text-align: left">SSHv2（SSHプロトコルバージョン2）だけを使用する</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">-4</td>
+          <td style="text-align: left">IPv4だけを使用する</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">-6</td>
+          <td style="text-align: left">IPv6だけを使用する</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">-K</td>
+          <td style="text-align: left">GSSAPI（Generic Security Services API）による認証を許可する</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">-k</td>
+          <td style="text-align: left">GSSAPIによる認証を許可しない</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">-A</td>
+          <td style="text-align: left">認証エージェントを転送する（1つ目のサーバに接続後、続けて別のサーバに接続する際に、最初に使った秘密鍵をそのまま使用する）</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">-a</td>
+          <td style="text-align: left">認証エージェントを転送しない</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">-X</td>
+          <td style="text-align: left">X11のポートフォワーディングを有効にする（リモートマシンのXアプリケーションが実行できるようになる）</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">-x</td>
+          <td style="text-align: left">X11のポートフォワーディングを無効にする</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">-Y</td>
+          <td style="text-align: left">信頼されたX11転送（Trusted X11）を有効にする</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">-f</td>
+          <td style="text-align: left">コマンドを実行する際にsshをバックグラウンドにする（Xアプリケーションを実行する際に使用）</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">-F 設定ファイル</td>
+          <td style="text-align: left">設定ファイルを指定する</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">-o 設定パラメータ</td>
+          <td style="text-align: left">設定パラメータを指定する（設定ファイルに書かれた内容より優先される）</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">-E ログファイル名</td>
+          <td style="text-align: left">エラーを指定したファイルに記録する</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">-q</td>
+          <td style="text-align: left">エラーメッセージや診断メッセージを表示しない（quiet mode）</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">-v</td>
+          <td style="text-align: left">デバッグメッセージを表示する（verbose mode）</td>
+      </tr>
+  </tbody>
 </table>
+
+
 <h2 class="relative group">サーバーとクライアント間でファイルを転送する 
-    <div id="サーバーとクライアント間でファイルを転送する" class="anchor"></div>
+    <div id="%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%81%A8%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88%E9%96%93%E3%81%A7%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E8%BB%A2%E9%80%81%E3%81%99%E3%82%8B" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%e3%82%b5%e3%83%bc%e3%83%90%e3%83%bc%e3%81%a8%e3%82%af%e3%83%a9%e3%82%a4%e3%82%a2%e3%83%b3%e3%83%88%e9%96%93%e3%81%a7%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab%e3%82%92%e8%bb%a2%e9%80%81%e3%81%99%e3%82%8b" aria-label="アンカー">#</a>
+            style="text-decoration-line: none !important;" href="#%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%81%A8%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88%E9%96%93%E3%81%A7%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E8%BB%A2%E9%80%81%E3%81%99%E3%82%8B" aria-label="アンカー">#</a>
     </span>        
     
 </h2>
 <p>サーバにあるファイルを、ローカルPCなどに持ってきたい時、逆にローカルPCにあるデータをサーバに転送したいときなどには<code>scp</code>コマンドが有効です。</p>
+
+
 <h3 class="relative group">scp 
     <div id="scp" class="anchor"></div>
     
@@ -1095,13 +1124,15 @@ ssh [user]@[host] [user]にはサーバ側に登録されているユーザー�
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">scp user1@xxx.xxx.x.x:/home/user1/test.txt /home/user2/
 </span></span></code></pre></div><p><code>/home/user1/1.txt</code>と<code>/home/user1/2.txt</code>という２つ（複数）のファイル転送したい場合は連続して書けば問題ありません。例を以下に示します。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">scp user1@xxx.xxx.x.x:/home/user1/1.txt user1@xxx.xxx.x.x:/home/user1/2.txt /home/user2/
-</span></span></code></pre></div><h3 class="relative group">ワイルドカード 
-    <div id="ワイルドカード" class="anchor"></div>
+</span></span></code></pre></div>
+
+<h3 class="relative group">ワイルドカード 
+    <div id="%E3%83%AF%E3%82%A4%E3%83%AB%E3%83%89%E3%82%AB%E3%83%BC%E3%83%89" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%e3%83%af%e3%82%a4%e3%83%ab%e3%83%89%e3%82%ab%e3%83%bc%e3%83%89" aria-label="アンカー">#</a>
+            style="text-decoration-line: none !important;" href="#%E3%83%AF%E3%82%A4%E3%83%AB%E3%83%89%E3%82%AB%E3%83%BC%E3%83%89" aria-label="アンカー">#</a>
     </span>        
     
 </h3>
@@ -1119,17 +1150,21 @@ ssh [user]@[host] [user]にはサーバ側に登録されているユーザー�
 <p>その場合は次のようになります。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">scp user1@xxx.xxx.x.x:/home/user1/<span class="se">\*</span>.txt /home/user2/
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">scp user1@xxx.xxx.x.x:/home/user1/<span class="se">\{</span>1,2<span class="o">}</span>.txt /home/user2/
-</span></span></code></pre></div><h2 class="relative group">現在のディレクトリを確認する 
-    <div id="現在のディレクトリを確認する" class="anchor"></div>
+</span></span></code></pre></div>
+
+<h2 class="relative group">現在のディレクトリを確認する 
+    <div id="%E7%8F%BE%E5%9C%A8%E3%81%AE%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA%E3%82%92%E7%A2%BA%E8%AA%8D%E3%81%99%E3%82%8B" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%e7%8f%be%e5%9c%a8%e3%81%ae%e3%83%87%e3%82%a3%e3%83%ac%e3%82%af%e3%83%88%e3%83%aa%e3%82%92%e7%a2%ba%e8%aa%8d%e3%81%99%e3%82%8b" aria-label="アンカー">#</a>
+            style="text-decoration-line: none !important;" href="#%E7%8F%BE%E5%9C%A8%E3%81%AE%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA%E3%82%92%E7%A2%BA%E8%AA%8D%E3%81%99%E3%82%8B" aria-label="アンカー">#</a>
     </span>        
     
 </h2>
 <p>現在のディレクトリ（これを<strong>カレントディレクトリ</strong>、もしくは<strong>ワーキングディレクトリ</strong>といいます。）がどこかを確認するには、<code>pwd</code>コマンド(Print Working Directoryの略です。)を使います。</p>
+
+
 <h3 class="relative group">pwd 
     <div id="pwd" class="anchor"></div>
     
@@ -1142,17 +1177,21 @@ ssh [user]@[host] [user]にはサーバ側に登録されているユーザー�
 </h3>
 <p>基本形は以下の通りです。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">pwd</span>
-</span></span></code></pre></div><h2 class="relative group">カレントディレクトリの移動 
-    <div id="カレントディレクトリの移動" class="anchor"></div>
+</span></span></code></pre></div>
+
+<h2 class="relative group">カレントディレクトリの移動 
+    <div id="%E3%82%AB%E3%83%AC%E3%83%B3%E3%83%88%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA%E3%81%AE%E7%A7%BB%E5%8B%95" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%e3%82%ab%e3%83%ac%e3%83%b3%e3%83%88%e3%83%87%e3%82%a3%e3%83%ac%e3%82%af%e3%83%88%e3%83%aa%e3%81%ae%e7%a7%bb%e5%8b%95" aria-label="アンカー">#</a>
+            style="text-decoration-line: none !important;" href="#%E3%82%AB%E3%83%AC%E3%83%B3%E3%83%88%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA%E3%81%AE%E7%A7%BB%E5%8B%95" aria-label="アンカー">#</a>
     </span>        
     
 </h2>
 <p>カレントディレクトリを移動するには、<code>cd</code>コマンド(Change Directoryの略です。)を使います。</p>
+
+
 <h3 class="relative group">cd 
     <div id="cd" class="anchor"></div>
     
@@ -1166,13 +1205,15 @@ ssh [user]@[host] [user]にはサーバ側に登録されているユーザー�
 <p>基本形は以下の通りです。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> <span class="o">[</span>移動先のディレクトリ<span class="o">]</span>
 </span></span></code></pre></div><p>相対パスでも、絶対パスでも大丈夫です。</p>
+
+
 <h3 class="relative group">相対パス 
-    <div id="相対パス" class="anchor"></div>
+    <div id="%E7%9B%B8%E5%AF%BE%E3%83%91%E3%82%B9" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%e7%9b%b8%e5%af%be%e3%83%91%e3%82%b9" aria-label="アンカー">#</a>
+            style="text-decoration-line: none !important;" href="#%E7%9B%B8%E5%AF%BE%E3%83%91%E3%82%B9" aria-label="アンカー">#</a>
     </span>        
     
 </h3>
@@ -1190,13 +1231,15 @@ ssh [user]@[host] [user]にはサーバ側に登録されているユーザー�
 </li>
 </ol>
 <p>相対パスは、絶対パスよりも簡潔に表現できるため、こちらの方がよく使用されます。</p>
+
+
 <h3 class="relative group">絶対パス 
-    <div id="絶対パス" class="anchor"></div>
+    <div id="%E7%B5%B6%E5%AF%BE%E3%83%91%E3%82%B9" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%e7%b5%b6%e5%af%be%e3%83%91%e3%82%b9" aria-label="アンカー">#</a>
+            style="text-decoration-line: none !important;" href="#%E7%B5%B6%E5%AF%BE%E3%83%91%E3%82%B9" aria-label="アンカー">#</a>
     </span>        
     
 </h3>
@@ -1211,17 +1254,21 @@ ssh [user]@[host] [user]にはサーバ側に登録されているユーザー�
 </li>
 </ol>
 <p>絶対パスは、常に同じファイルやディレクトリを指し、相対パスよりも完全に指定されているため、より明確で正確な指定が可能です。ただし、長くて複雑な表現になる場合があるため、相対パスよりも煩雑な場合があります。</p>
+
+
 <h2 class="relative group">ディレクトリ内一覧を確認する 
-    <div id="ディレクトリ内一覧を確認する" class="anchor"></div>
+    <div id="%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA%E5%86%85%E4%B8%80%E8%A6%A7%E3%82%92%E7%A2%BA%E8%AA%8D%E3%81%99%E3%82%8B" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%e3%83%87%e3%82%a3%e3%83%ac%e3%82%af%e3%83%88%e3%83%aa%e5%86%85%e4%b8%80%e8%a6%a7%e3%82%92%e7%a2%ba%e8%aa%8d%e3%81%99%e3%82%8b" aria-label="アンカー">#</a>
+            style="text-decoration-line: none !important;" href="#%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA%E5%86%85%E4%B8%80%E8%A6%A7%E3%82%92%E7%A2%BA%E8%AA%8D%E3%81%99%E3%82%8B" aria-label="アンカー">#</a>
     </span>        
     
 </h2>
 <p><code>ls</code>コマンドを使用すると、現在のディレクトリ内のファイルとディレクトリの一覧を表示することができます。</p>
+
+
 <h3 class="relative group">ls 
     <div id="ls" class="anchor"></div>
     
@@ -1248,13 +1295,15 @@ ssh [user]@[host] [user]にはサーバ側に登録されているユーザー�
 </span></span></code></pre></div><p>さらに、以下のように入力することで、特定のディレクトリ内のファイルとディレクトリの一覧を表示することができます。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ls /home/user1/
 </span></span></code></pre></div><p><code>ls</code>コマンドは、ファイルやディレクトリの一覧表示の他、様々なオプションを利用することで、より詳細な情報を取得することができます。</p>
+
+
 <h2 class="relative group">ファイルの中身を見る 
-    <div id="ファイルの中身を見る" class="anchor"></div>
+    <div id="%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AE%E4%B8%AD%E8%BA%AB%E3%82%92%E8%A6%8B%E3%82%8B" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab%e3%81%ae%e4%b8%ad%e8%ba%ab%e3%82%92%e8%a6%8b%e3%82%8b" aria-label="アンカー">#</a>
+            style="text-decoration-line: none !important;" href="#%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AE%E4%B8%AD%E8%BA%AB%E3%82%92%E8%A6%8B%E3%82%8B" aria-label="アンカー">#</a>
     </span>        
     
 </h2>
@@ -1264,6 +1313,8 @@ ssh [user]@[host] [user]にはサーバ側に登録されているユーザー�
 <li><code>head</code>: 最初10行を表示する</li>
 <li><code>tail</code>: 末尾10行を表示する</li>
 </ul>
+
+
 <h3 class="relative group">cat 
     <div id="cat" class="anchor"></div>
     
@@ -1276,7 +1327,9 @@ ssh [user]@[host] [user]にはサーバ側に登録されているユーザー�
 </h3>
 <p>基本形は以下の通りです。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cat <span class="o">[</span>ファイル名<span class="o">]</span>
-</span></span></code></pre></div><h3 class="relative group">head 
+</span></span></code></pre></div>
+
+<h3 class="relative group">head 
     <div id="head" class="anchor"></div>
     
     <span
@@ -1290,7 +1343,9 @@ ssh [user]@[host] [user]にはサーバ側に登録されているユーザー�
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">head <span class="o">[</span>ファイル名<span class="o">]</span>
 </span></span></code></pre></div><p>10行とはいわず、任意の行数を表示したい場合は、<code>-n</code>オプションを使います。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">head -n <span class="o">[</span>行数<span class="o">]</span> <span class="o">[</span>ファイル名<span class="o">]</span>
-</span></span></code></pre></div><h3 class="relative group">tail 
+</span></span></code></pre></div>
+
+<h3 class="relative group">tail 
     <div id="tail" class="anchor"></div>
     
     <span
@@ -1304,17 +1359,21 @@ ssh [user]@[host] [user]にはサーバ側に登録されているユーザー�
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">tail <span class="o">[</span>ファイル名<span class="o">]</span>
 </span></span></code></pre></div><p>10行とはいわず、任意の行数を表示したい場合は、<code>-n</code>オプションを使います。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">tail -n <span class="o">[</span>行数<span class="o">]</span> <span class="o">[</span>ファイル名<span class="o">]</span>
-</span></span></code></pre></div><h2 class="relative group">ディレクトリをツリー構造で表示する 
-    <div id="ディレクトリをツリー構造で表示する" class="anchor"></div>
+</span></span></code></pre></div>
+
+<h2 class="relative group">ディレクトリをツリー構造で表示する 
+    <div id="%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA%E3%82%92%E3%83%84%E3%83%AA%E3%83%BC%E6%A7%8B%E9%80%A0%E3%81%A7%E8%A1%A8%E7%A4%BA%E3%81%99%E3%82%8B" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%e3%83%87%e3%82%a3%e3%83%ac%e3%82%af%e3%83%88%e3%83%aa%e3%82%92%e3%83%84%e3%83%aa%e3%83%bc%e6%a7%8b%e9%80%a0%e3%81%a7%e8%a1%a8%e7%a4%ba%e3%81%99%e3%82%8b" aria-label="アンカー">#</a>
+            style="text-decoration-line: none !important;" href="#%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA%E3%82%92%E3%83%84%E3%83%AA%E3%83%BC%E6%A7%8B%E9%80%A0%E3%81%A7%E8%A1%A8%E7%A4%BA%E3%81%99%E3%82%8B" aria-label="アンカー">#</a>
     </span>        
     
 </h2>
 <p><code>tree</code>コマンドを使うと、ディレクトリをツリー構造で表示することができます。</p>
+
+
 <h3 class="relative group">tree 
     <div id="tree" class="anchor"></div>
     
@@ -1328,17 +1387,21 @@ ssh [user]@[host] [user]にはサーバ側に登録されているユーザー�
 <p>基本形は以下の通りです。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">tree <span class="o">[</span>ディレクトリ<span class="o">]</span>
 </span></span></code></pre></div><p>[ディレクトリ]の部分は空白の場合はカレントディレクトリのツリーを表示します。</p>
+
+
 <h2 class="relative group">ファイルがたくさんあるので限定したい 
-    <div id="ファイルがたくさんあるので限定したい" class="anchor"></div>
+    <div id="%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%8C%E3%81%9F%E3%81%8F%E3%81%95%E3%82%93%E3%81%82%E3%82%8B%E3%81%AE%E3%81%A7%E9%99%90%E5%AE%9A%E3%81%97%E3%81%9F%E3%81%84" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab%e3%81%8c%e3%81%9f%e3%81%8f%e3%81%95%e3%82%93%e3%81%82%e3%82%8b%e3%81%ae%e3%81%a7%e9%99%90%e5%ae%9a%e3%81%97%e3%81%9f%e3%81%84" aria-label="アンカー">#</a>
+            style="text-decoration-line: none !important;" href="#%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%8C%E3%81%9F%E3%81%8F%E3%81%95%E3%82%93%E3%81%82%E3%82%8B%E3%81%AE%E3%81%A7%E9%99%90%E5%AE%9A%E3%81%97%E3%81%9F%E3%81%84" aria-label="アンカー">#</a>
     </span>        
     
 </h2>
 <p><code>grep</code>コマンドを使うと、ファイルの中から特定の文字列を検索することができます。</p>
+
+
 <h3 class="relative group">grep 
     <div id="grep" class="anchor"></div>
     
@@ -1352,13 +1415,15 @@ ssh [user]@[host] [user]にはサーバ側に登録されているユーザー�
 <p>基本形は以下の通りです。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">grep <span class="o">[</span>検索文字列<span class="o">]</span> <span class="o">[</span>ファイル名<span class="o">]</span>
 </span></span></code></pre></div><p><code>-r</code>オプションをつけると、ディレクトリ内のファイルを再帰的に検索します。</p>
+
+
 <h3 class="relative group">パイプライン 
-    <div id="パイプライン" class="anchor"></div>
+    <div id="%E3%83%91%E3%82%A4%E3%83%97%E3%83%A9%E3%82%A4%E3%83%B3" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%e3%83%91%e3%82%a4%e3%83%97%e3%83%a9%e3%82%a4%e3%83%b3" aria-label="アンカー">#</a>
+            style="text-decoration-line: none !important;" href="#%E3%83%91%E3%82%A4%E3%83%97%E3%83%A9%E3%82%A4%E3%83%B3" aria-label="アンカー">#</a>
     </span>        
     
 </h3>
@@ -1368,17 +1433,21 @@ ssh [user]@[host] [user]にはサーバ側に登録されているユーザー�
 </span></span></code></pre></div><p>他にも<code>tree</code>コマンドと組み合わせて利用することもできます。これで再帰的に探査することもできます。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">tree -f <span class="p">|</span> grep <span class="o">[</span>検索文字列<span class="o">]</span>
 </span></span></code></pre></div><p><code>tree</code>コマンドに<code>-f</code>オプションをつけると、 ディレクトリとファイル名も表示されるようになります。</p>
+
+
 <h2 class="relative group">ファイルを作成する 
-    <div id="ファイルを作成する" class="anchor"></div>
+    <div id="%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E4%BD%9C%E6%88%90%E3%81%99%E3%82%8B" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab%e3%82%92%e4%bd%9c%e6%88%90%e3%81%99%e3%82%8b" aria-label="アンカー">#</a>
+            style="text-decoration-line: none !important;" href="#%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E4%BD%9C%E6%88%90%E3%81%99%E3%82%8B" aria-label="アンカー">#</a>
     </span>        
     
 </h2>
 <p><code>touch</code>コマンドを使うと、ファイルを作成することができます。</p>
+
+
 <h3 class="relative group">touch 
     <div id="touch" class="anchor"></div>
     
@@ -1391,17 +1460,21 @@ ssh [user]@[host] [user]にはサーバ側に登録されているユーザー�
 </h3>
 <p>基本形は以下の通りです。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">touch <span class="o">[</span>ファイル名<span class="o">]</span>
-</span></span></code></pre></div><h2 class="relative group">ディレクトリを作成する 
-    <div id="ディレクトリを作成する" class="anchor"></div>
+</span></span></code></pre></div>
+
+<h2 class="relative group">ディレクトリを作成する 
+    <div id="%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA%E3%82%92%E4%BD%9C%E6%88%90%E3%81%99%E3%82%8B" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%e3%83%87%e3%82%a3%e3%83%ac%e3%82%af%e3%83%88%e3%83%aa%e3%82%92%e4%bd%9c%e6%88%90%e3%81%99%e3%82%8b" aria-label="アンカー">#</a>
+            style="text-decoration-line: none !important;" href="#%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA%E3%82%92%E4%BD%9C%E6%88%90%E3%81%99%E3%82%8B" aria-label="アンカー">#</a>
     </span>        
     
 </h2>
 <p><code>mkdir</code>コマンドを使うと、ディレクトリを作成することができます。</p>
+
+
 <h3 class="relative group">mkdir 
     <div id="mkdir" class="anchor"></div>
     
@@ -1414,17 +1487,21 @@ ssh [user]@[host] [user]にはサーバ側に登録されているユーザー�
 </h3>
 <p>基本形は以下の通りです。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mkdir <span class="o">[</span>ディレクトリ名<span class="o">]</span>
-</span></span></code></pre></div><h2 class="relative group">ファイルを削除する 
-    <div id="ファイルを削除する" class="anchor"></div>
+</span></span></code></pre></div>
+
+<h2 class="relative group">ファイルを削除する 
+    <div id="%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E5%89%8A%E9%99%A4%E3%81%99%E3%82%8B" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab%e3%82%92%e5%89%8a%e9%99%a4%e3%81%99%e3%82%8b" aria-label="アンカー">#</a>
+            style="text-decoration-line: none !important;" href="#%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E5%89%8A%E9%99%A4%E3%81%99%E3%82%8B" aria-label="アンカー">#</a>
     </span>        
     
 </h2>
 <p><code>rm</code>コマンドを使うと、ファイルを削除することができます。</p>
+
+
 <h3 class="relative group">rm 
     <div id="rm" class="anchor"></div>
     
@@ -1439,64 +1516,68 @@ ssh [user]@[host] [user]にはサーバ側に登録されているユーザー�
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">rm <span class="o">[</span>ファイル名<span class="o">]</span>
 </span></span></code></pre></div><p>オプションは以下の通りです。</p>
 <table>
-<thead>
-<tr>
-<th>短いオプション</th>
-<th>長いオプション</th>
-<th>意味</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>-f</td>
-<td>&ndash;force</td>
-<td>存在しないファイルを無視する（確認も行わない）</td>
-</tr>
-<tr>
-<td>-i</td>
-<td>&ndash;interactive</td>
-<td>削除前に確認する</td>
-</tr>
-<tr>
-<td>-v</td>
-<td>&ndash;verbose</td>
-<td>経過を表示する</td>
-</tr>
-<tr>
-<td>-d</td>
-<td>&ndash;directory</td>
-<td>unlinkでディレクトリを削除する</td>
-</tr>
-<tr>
-<td>-r,-R</td>
-<td>&ndash;recursive</td>
-<td>ディレクトリを再帰的に削除する</td>
-</tr>
-<tr>
-<td></td>
-<td>&ndash;preserve-root</td>
-<td>「/」を削除しない（デフォルト）（※）</td>
-</tr>
-<tr>
-<td></td>
-<td>&ndash;no-preserve-root</td>
-<td>「/」を特別なものとして扱わない（※）</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">短いオプション</th>
+          <th style="text-align: left">長いオプション</th>
+          <th style="text-align: left">意味</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">-f</td>
+          <td style="text-align: left">&ndash;force</td>
+          <td style="text-align: left">存在しないファイルを無視する（確認も行わない）</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">-i</td>
+          <td style="text-align: left">&ndash;interactive</td>
+          <td style="text-align: left">削除前に確認する</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">-v</td>
+          <td style="text-align: left">&ndash;verbose</td>
+          <td style="text-align: left">経過を表示する</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">-d</td>
+          <td style="text-align: left">&ndash;directory</td>
+          <td style="text-align: left">unlinkでディレクトリを削除する</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">-r,-R</td>
+          <td style="text-align: left">&ndash;recursive</td>
+          <td style="text-align: left">ディレクトリを再帰的に削除する</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"></td>
+          <td style="text-align: left">&ndash;preserve-root</td>
+          <td style="text-align: left">「/」を削除しない（デフォルト）（※）</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"></td>
+          <td style="text-align: left">&ndash;no-preserve-root</td>
+          <td style="text-align: left">「/」を特別なものとして扱わない（※）</td>
+      </tr>
+  </tbody>
 </table>
 <p>また、ディレクトリを削除するときは<code>-r</code>オプションを追加します。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">rm -r <span class="o">[</span>ディレクトリ名<span class="o">]</span>
-</span></span></code></pre></div><h2 class="relative group">ファイルを編集する 
-    <div id="ファイルを編集する" class="anchor"></div>
+</span></span></code></pre></div>
+
+<h2 class="relative group">ファイルを編集する 
+    <div id="%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E7%B7%A8%E9%9B%86%E3%81%99%E3%82%8B" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab%e3%82%92%e7%b7%a8%e9%9b%86%e3%81%99%e3%82%8b" aria-label="アンカー">#</a>
+            style="text-decoration-line: none !important;" href="#%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E7%B7%A8%E9%9B%86%E3%81%99%E3%82%8B" aria-label="アンカー">#</a>
     </span>        
     
 </h2>
 <p>以下のコマンドで、ファイルを編集することができます。</p>
+
+
 <h3 class="relative group">vi 
     <div id="vi" class="anchor"></div>
     
@@ -1508,6 +1589,8 @@ ssh [user]@[host] [user]にはサーバ側に登録されているユーザー�
     
 </h3>
 <p>viは、UnixおよびLinuxシステムで最も一般的に使用されるテキストエディターの1つです。viは、コマンドラインで操作され、キーボードのみを使用してテキストを編集します。viは、テキストエディターとして非常に強力であり、様々な機能を備えています。ただし、初心者にとっては使い方が難しいと感じる場合があります。</p>
+
+
 <h3 class="relative group">vim 
     <div id="vim" class="anchor"></div>
     
@@ -1519,6 +1602,8 @@ ssh [user]@[host] [user]にはサーバ側に登録されているユーザー�
     
 </h3>
 <p>vimは、viの拡張版であり、viと同じコマンドを使用しながら、より高度な機能を備えています。vimは、開発者やシステム管理者によく使用されます。vimには、様々なモードがあり、コマンドを入力する前に、iキーを押すことでインサートモードに入り、テキストを編集することができます。また、vimは、カラーコーディング、シンタックスハイライト、マクロ機能、プラグインなどの機能を備えています。</p>
+
+
 <h3 class="relative group">nano 
     <div id="nano" class="anchor"></div>
     
@@ -1531,13 +1616,15 @@ ssh [user]@[host] [user]にはサーバ側に登録されているユーザー�
 </h3>
 <p>nanoは、viやvimと比べて、より簡単に使用できるテキストエディターです。nanoは、コマンドラインで操作されますが、viやvimとは異なり、テキスト編集のためのショートカットを提供します。nanoは、初心者にとっては非常に使いやすく、シンプルなテキスト編集に適しています。nanoは、カスタマイズ機能や高度な編集機能は少ないですが、基本的な編集には十分な機能を備えています。</p>
 <hr>
+
+
 <h2 class="relative group">ユーザー関連のコマンド 
-    <div id="ユーザー関連のコマンド" class="anchor"></div>
+    <div id="%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E9%96%A2%E9%80%A3%E3%81%AE%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%e3%83%a6%e3%83%bc%e3%82%b6%e3%83%bc%e9%96%a2%e9%80%a3%e3%81%ae%e3%82%b3%e3%83%9e%e3%83%b3%e3%83%89" aria-label="アンカー">#</a>
+            style="text-decoration-line: none !important;" href="#%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E9%96%A2%E9%80%A3%E3%81%AE%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89" aria-label="アンカー">#</a>
     </span>        
     
 </h2>
@@ -1549,6 +1636,8 @@ ssh [user]@[host] [user]にはサーバ側に登録されているユーザー�
 <li><code>su</code>: ユーザーを切り替える</li>
 <li><code>gpasswd</code>: グループ管理をする</li>
 </ul>
+
+
 <h3 class="relative group">whoami 
     <div id="whoami" class="anchor"></div>
     
@@ -1561,7 +1650,9 @@ ssh [user]@[host] [user]にはサーバ側に登録されているユーザー�
 </h3>
 <p>現在ログインしているユーザー名を表示するには、<code>whoami</code>コマンドを使います。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">whoami
-</span></span></code></pre></div><h3 class="relative group">useradd 
+</span></span></code></pre></div>
+
+<h3 class="relative group">useradd 
     <div id="useradd" class="anchor"></div>
     
     <span
@@ -1576,41 +1667,43 @@ ssh [user]@[host] [user]にはサーバ側に登録されているユーザー�
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">useradd -m <span class="o">[</span>ユーザー名<span class="o">]</span>
 </span></span></code></pre></div><p>主なオプションは次のようになります。</p>
 <table>
-<thead>
-<tr>
-<th>短いオプション</th>
-<th>長いオプション</th>
-<th>意味</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>-m</td>
-<td>&ndash;create-home</td>
-<td>ユーザーのホームディレクトリが存在しない場合、作成する</td>
-</tr>
-<tr>
-<td>-M</td>
-<td>&ndash;no-create-home</td>
-<td>ユーザーのホームディレクトリを作成しない</td>
-</tr>
-<tr>
-<td>-b</td>
-<td>&ndash;base-dir BASE_DIR</td>
-<td>ホームディクトリのベースとなるディレクトリ（/homeなど）</td>
-</tr>
-<tr>
-<td>-d ディレクトリ</td>
-<td>&ndash;home-dir ディレクトリ</td>
-<td>ユーザーのホームディレクトリ（通常はユーザー名と同じにする）</td>
-</tr>
-<tr>
-<td>-k ディレクトリ</td>
-<td>&ndash;skel ディレクトリ</td>
-<td>ひな型ディレクトリ（デフォルトは/etc/skel）を指定する（※2）</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">短いオプション</th>
+          <th style="text-align: left">長いオプション</th>
+          <th style="text-align: left">意味</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">-m</td>
+          <td style="text-align: left">&ndash;create-home</td>
+          <td style="text-align: left">ユーザーのホームディレクトリが存在しない場合、作成する</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">-M</td>
+          <td style="text-align: left">&ndash;no-create-home</td>
+          <td style="text-align: left">ユーザーのホームディレクトリを作成しない</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">-b</td>
+          <td style="text-align: left">&ndash;base-dir BASE_DIR</td>
+          <td style="text-align: left">ホームディクトリのベースとなるディレクトリ（/homeなど）</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">-d ディレクトリ</td>
+          <td style="text-align: left">&ndash;home-dir ディレクトリ</td>
+          <td style="text-align: left">ユーザーのホームディレクトリ（通常はユーザー名と同じにする）</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">-k ディレクトリ</td>
+          <td style="text-align: left">&ndash;skel ディレクトリ</td>
+          <td style="text-align: left">ひな型ディレクトリ（デフォルトは/etc/skel）を指定する（※2）</td>
+      </tr>
+  </tbody>
 </table>
+
+
 <h3 class="relative group">userdel 
     <div id="userdel" class="anchor"></div>
     
@@ -1624,7 +1717,9 @@ ssh [user]@[host] [user]にはサーバ側に登録されているユーザー�
 <p>基本形は以下の通りです。</p>
 <p>基本的には<code>-r</code>オプションをつけることが多いかと思います。これによって、ホームディレクトリも削除されます。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">userdel -r <span class="o">[</span>ユーザー名<span class="o">]</span>
-</span></span></code></pre></div><h3 class="relative group">passwd 
+</span></span></code></pre></div>
+
+<h3 class="relative group">passwd 
     <div id="passwd" class="anchor"></div>
     
     <span
@@ -1638,51 +1733,53 @@ ssh [user]@[host] [user]にはサーバ側に登録されているユーザー�
 <p>ユーザー名を指定すると、そのユーザーのパスワードを変更することができます。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">passwd <span class="o">[</span>ユーザー名<span class="o">]</span>
 </span></span></code></pre></div><table>
-<thead>
-<tr>
-<th>オプション</th>
-<th>意味</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>-l</td>
-<td>指定したユーザーをロックする</td>
-</tr>
-<tr>
-<td>-u</td>
-<td>指定したユーザーのロックを解除する</td>
-</tr>
-<tr>
-<td>-d</td>
-<td>パスワードを削除する</td>
-</tr>
-<tr>
-<td>-S</td>
-<td>パスワードの状態を表示する</td>
-</tr>
-<tr>
-<td>-n 日数</td>
-<td>パスワード変更後、再度変更可能になるまでの日数を設定する</td>
-</tr>
-<tr>
-<td>-x 日数</td>
-<td>パスワードが有効な日数を設定する</td>
-</tr>
-<tr>
-<td>-w 日数</td>
-<td>パスワード失効前に警告を表示する日数を設定する</td>
-</tr>
-<tr>
-<td>-i 日数</td>
-<td>パスワードが有効期限に達した後、パスワードを無効にするまでの猶予期間を設定する （これ以上期限切れのままにしているとログインできなくなる）</td>
-</tr>
-<tr>
-<td>&ndash;stdin</td>
-<td>新しいパスワードを標準入力から読み込む</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">オプション</th>
+          <th style="text-align: left">意味</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">-l</td>
+          <td style="text-align: left">指定したユーザーをロックする</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">-u</td>
+          <td style="text-align: left">指定したユーザーのロックを解除する</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">-d</td>
+          <td style="text-align: left">パスワードを削除する</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">-S</td>
+          <td style="text-align: left">パスワードの状態を表示する</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">-n 日数</td>
+          <td style="text-align: left">パスワード変更後、再度変更可能になるまでの日数を設定する</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">-x 日数</td>
+          <td style="text-align: left">パスワードが有効な日数を設定する</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">-w 日数</td>
+          <td style="text-align: left">パスワード失効前に警告を表示する日数を設定する</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">-i 日数</td>
+          <td style="text-align: left">パスワードが有効期限に達した後、パスワードを無効にするまでの猶予期間を設定する （これ以上期限切れのままにしているとログインできなくなる）</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">&ndash;stdin</td>
+          <td style="text-align: left">新しいパスワードを標準入力から読み込む</td>
+      </tr>
+  </tbody>
 </table>
+
+
 <h3 class="relative group">su 
     <div id="su" class="anchor"></div>
     
@@ -1702,6 +1799,8 @@ ssh [user]@[host] [user]にはサーバ側に登録されているユーザー�
 </span></span></code></pre></div><p>もしくは</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo -s/-i
 </span></span></code></pre></div><p>です。こっちのほうが今風らしい。</p>
+
+
 <h3 class="relative group">gpasswd 
     <div id="gpasswd" class="anchor"></div>
     
@@ -1714,78 +1813,84 @@ ssh [user]@[host] [user]にはサーバ側に登録されているユーザー�
 </h3>
 <p>基本形は以下の通りです。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">gpasswd <span class="o">[</span>オプション<span class="o">]</span> <span class="o">[</span>ユーザー名<span class="o">]</span> <span class="o">[</span>グループ名<span class="o">]</span>
-</span></span></code></pre></div><h4 class="relative group">sudo権限を与えたい 
-    <div id="sudo権限を与えたい" class="anchor"></div>
+</span></span></code></pre></div>
+
+<h4 class="relative group">sudo権限を与えたい 
+    <div id="sudo%E6%A8%A9%E9%99%90%E3%82%92%E4%B8%8E%E3%81%88%E3%81%9F%E3%81%84" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#sudo%e6%a8%a9%e9%99%90%e3%82%92%e4%b8%8e%e3%81%88%e3%81%9f%e3%81%84" aria-label="アンカー">#</a>
+            style="text-decoration-line: none !important;" href="#sudo%E6%A8%A9%E9%99%90%E3%82%92%E4%B8%8E%E3%81%88%E3%81%9F%E3%81%84" aria-label="アンカー">#</a>
     </span>        
     
 </h4>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">gpasswd -a <span class="o">[</span>ユーザー名<span class="o">]</span> sudo
-</span></span></code></pre></div><h4 class="relative group">sudo権限を剥奪したい 
-    <div id="sudo権限を剥奪したい" class="anchor"></div>
+</span></span></code></pre></div>
+
+<h4 class="relative group">sudo権限を剥奪したい 
+    <div id="sudo%E6%A8%A9%E9%99%90%E3%82%92%E5%89%A5%E5%A5%AA%E3%81%97%E3%81%9F%E3%81%84" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#sudo%e6%a8%a9%e9%99%90%e3%82%92%e5%89%a5%e5%a5%aa%e3%81%97%e3%81%9f%e3%81%84" aria-label="アンカー">#</a>
+            style="text-decoration-line: none !important;" href="#sudo%E6%A8%A9%E9%99%90%E3%82%92%E5%89%A5%E5%A5%AA%E3%81%97%E3%81%9F%E3%81%84" aria-label="アンカー">#</a>
     </span>        
     
 </h4>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">gpasswd -d <span class="o">[</span>ユーザー名<span class="o">]</span> sudo
 </span></span></code></pre></div><p>オプションは以下のとおりです。</p>
 <table>
-<thead>
-<tr>
-<th>短いオプション</th>
-<th>長いオプション</th>
-<th>意味</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>-a ユーザー</td>
-<td>&ndash;add ユーザー</td>
-<td>ユーザーをグループに所属させる</td>
-</tr>
-<tr>
-<td>-d ユーザー</td>
-<td>&ndash;delete ユーザー</td>
-<td>ユーザーをグループのメンバーから外す</td>
-</tr>
-<tr>
-<td>-r</td>
-<td>&ndash;delete-password</td>
-<td>グループのパスワードを削除する</td>
-</tr>
-<tr>
-<td>-R</td>
-<td>&ndash;restrict</td>
-<td>グループへのアクセスをメンバーのみに制限する</td>
-</tr>
-<tr>
-<td>-A ユーザー</td>
-<td>&ndash;administrators ユーザー</td>
-<td>グループの管理者を設定する（ユーザーは複数指定可能）</td>
-</tr>
-<tr>
-<td>-M ユーザー</td>
-<td>&ndash;members ユーザー</td>
-<td>メンバーのリストを設定する（ユーザーは複数指定可能）</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">短いオプション</th>
+          <th style="text-align: left">長いオプション</th>
+          <th style="text-align: left">意味</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">-a ユーザー</td>
+          <td style="text-align: left">&ndash;add ユーザー</td>
+          <td style="text-align: left">ユーザーをグループに所属させる</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">-d ユーザー</td>
+          <td style="text-align: left">&ndash;delete ユーザー</td>
+          <td style="text-align: left">ユーザーをグループのメンバーから外す</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">-r</td>
+          <td style="text-align: left">&ndash;delete-password</td>
+          <td style="text-align: left">グループのパスワードを削除する</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">-R</td>
+          <td style="text-align: left">&ndash;restrict</td>
+          <td style="text-align: left">グループへのアクセスをメンバーのみに制限する</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">-A ユーザー</td>
+          <td style="text-align: left">&ndash;administrators ユーザー</td>
+          <td style="text-align: left">グループの管理者を設定する（ユーザーは複数指定可能）</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">-M ユーザー</td>
+          <td style="text-align: left">&ndash;members ユーザー</td>
+          <td style="text-align: left">メンバーのリストを設定する（ユーザーは複数指定可能）</td>
+      </tr>
+  </tbody>
 </table>
 <hr>
+
+
 <h2 class="relative group">パーミッション関連のコマンド 
-    <div id="パーミッション関連のコマンド" class="anchor"></div>
+    <div id="%E3%83%91%E3%83%BC%E3%83%9F%E3%83%83%E3%82%B7%E3%83%A7%E3%83%B3%E9%96%A2%E9%80%A3%E3%81%AE%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%e3%83%91%e3%83%bc%e3%83%9f%e3%83%83%e3%82%b7%e3%83%a7%e3%83%b3%e9%96%a2%e9%80%a3%e3%81%ae%e3%82%b3%e3%83%9e%e3%83%b3%e3%83%89" aria-label="アンカー">#</a>
+            style="text-decoration-line: none !important;" href="#%E3%83%91%E3%83%BC%E3%83%9F%E3%83%83%E3%82%B7%E3%83%A7%E3%83%B3%E9%96%A2%E9%80%A3%E3%81%AE%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89" aria-label="アンカー">#</a>
     </span>        
     
 </h2>
@@ -1793,6 +1898,8 @@ ssh [user]@[host] [user]にはサーバ側に登録されているユーザー�
 <li><code>ls -l</code>: パーミッションを確認する</li>
 <li><code>chmod</code>: パーミッションを変更する</li>
 </ul>
+
+
 <h3 class="relative group">ls -l 
     <div id="ls--l" class="anchor"></div>
     
@@ -1823,58 +1930,60 @@ drwxrwxr-x 28 nishihama nishihama 4096  6月 26 15:19 anaconda3/
 <p>また、アクセス権は数値で表すことができます。下表のとおり、読み取り（r = 4）、書き込み（w = 2）</p>
 <p>実行（x = 1）であることが分かります。つまり全権限（rwx）は「4+2+1=7」であることが分かります。</p>
 <table>
-<thead>
-<tr>
-<th>記号表記</th>
-<th>2進数</th>
-<th>8進数</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>---</code></td>
-<td>000</td>
-<td>0</td>
-</tr>
-<tr>
-<td><code>--x</code></td>
-<td>001</td>
-<td>1</td>
-</tr>
-<tr>
-<td><code>-w-</code></td>
-<td>010</td>
-<td>2</td>
-</tr>
-<tr>
-<td><code>-wx</code></td>
-<td>011</td>
-<td>3</td>
-</tr>
-<tr>
-<td><code>r--</code></td>
-<td>100</td>
-<td>4</td>
-</tr>
-<tr>
-<td><code>r-x</code></td>
-<td>101</td>
-<td>5</td>
-</tr>
-<tr>
-<td><code>rw-</code></td>
-<td>110</td>
-<td>6</td>
-</tr>
-<tr>
-<td><code>rwx</code></td>
-<td>111</td>
-<td>7</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">記号表記</th>
+          <th style="text-align: left">2進数</th>
+          <th style="text-align: left">8進数</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>---</code></td>
+          <td style="text-align: left">000</td>
+          <td style="text-align: left">0</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>--x</code></td>
+          <td style="text-align: left">001</td>
+          <td style="text-align: left">1</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>-w-</code></td>
+          <td style="text-align: left">010</td>
+          <td style="text-align: left">2</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>-wx</code></td>
+          <td style="text-align: left">011</td>
+          <td style="text-align: left">3</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>r--</code></td>
+          <td style="text-align: left">100</td>
+          <td style="text-align: left">4</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>r-x</code></td>
+          <td style="text-align: left">101</td>
+          <td style="text-align: left">5</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>rw-</code></td>
+          <td style="text-align: left">110</td>
+          <td style="text-align: left">6</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>rwx</code></td>
+          <td style="text-align: left">111</td>
+          <td style="text-align: left">7</td>
+      </tr>
+  </tbody>
 </table>
 <img src="2023-07-28-16-47-53.png" width=400px>
 <p>そして、このアクセス権をパーミッション755と表記します。</p>
+
+
 <h3 class="relative group">chmod 
     <div id="chmod" class="anchor"></div>
     
@@ -1889,86 +1998,88 @@ drwxrwxr-x 28 nishihama nishihama 4096  6月 26 15:19 anaconda3/
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">chmod <span class="o">[</span>パーミッション<span class="o">]</span> <span class="o">[</span>ファイル名<span class="o">]</span>
 </span></span></code></pre></div><p>もしくは次のような演算形式で書きます。</p>
 <table>
-<thead>
-<tr>
-<th>カテゴリー</th>
-<th>説明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>u</td>
-<td>　所有者</td>
-</tr>
-<tr>
-<td>g</td>
-<td>　グループ</td>
-</tr>
-<tr>
-<td>o</td>
-<td>　その他のユーザ</td>
-</tr>
-<tr>
-<td>a</td>
-<td>　全てのユーザ</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">カテゴリー</th>
+          <th style="text-align: left">説明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">u</td>
+          <td style="text-align: left">　所有者</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">g</td>
+          <td style="text-align: left">　グループ</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">o</td>
+          <td style="text-align: left">　その他のユーザ</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">a</td>
+          <td style="text-align: left">　全てのユーザ</td>
+      </tr>
+  </tbody>
 </table>
 <table>
-<thead>
-<tr>
-<th>定義</th>
-<th>説明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>+</td>
-<td>　アクセス権の追加</td>
-</tr>
-<tr>
-<td>-</td>
-<td>　アクセス権の削除</td>
-</tr>
-<tr>
-<td>=</td>
-<td>　アクセス権の指定</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">定義</th>
+          <th style="text-align: left">説明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">+</td>
+          <td style="text-align: left">　アクセス権の追加</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">　アクセス権の削除</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">=</td>
+          <td style="text-align: left">　アクセス権の指定</td>
+      </tr>
+  </tbody>
 </table>
 <table>
-<thead>
-<tr>
-<th>権限</th>
-<th>説明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>r</td>
-<td>　読み取り権限</td>
-</tr>
-<tr>
-<td>w</td>
-<td>　書き込み権限</td>
-</tr>
-<tr>
-<td>x</td>
-<td>　実行権限</td>
-</tr>
-<tr>
-<td>s</td>
-<td>　SUID または SGID</td>
-</tr>
-<tr>
-<td>t</td>
-<td>　スティッキービット</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">権限</th>
+          <th style="text-align: left">説明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">r</td>
+          <td style="text-align: left">　読み取り権限</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">w</td>
+          <td style="text-align: left">　書き込み権限</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">x</td>
+          <td style="text-align: left">　実行権限</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">s</td>
+          <td style="text-align: left">　SUID または SGID</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">t</td>
+          <td style="text-align: left">　スティッキービット</td>
+      </tr>
+  </tbody>
 </table>
 <p>例えば、以下のように使います。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">chmod go+w testdata.txt
 </span></span></code></pre></div><p>groupとotherのパーミッションにwriteのアクセス権を追加しました。</p>
+
+
 <h3 class="relative group">chown 
     <div id="chown" class="anchor"></div>
     
@@ -1981,10 +2092,14 @@ drwxrwxr-x 28 nishihama nishihama 4096  6月 26 15:19 anaconda3/
 </h3>
 <p>所有権を変更します。</p>
 
+          
+          
+          
         </div>
-                
+        
         
 
+        
         
   
   <section class="flex flex-row flex-wrap justify-center pt-4 text-xl">
@@ -1993,7 +2108,7 @@ drwxrwxr-x 28 nishihama nishihama 4096  6月 26 15:19 anaconda3/
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="https://twitter.com/intent/tweet/?url=/posts/2023-07-27/&amp;text=%e5%be%8c%e8%bc%a9%e3%81%ae%e3%81%9f%e3%82%81%e3%81%aeLinux%e7%9f%a5%e8%ad%98"
+      href="https://twitter.com/intent/tweet/?url=//localhost:1313/posts/2023-07-27/&amp;text=%e5%be%8c%e8%bc%a9%e3%81%ae%e3%81%9f%e3%82%81%e3%81%aeLinux%e7%9f%a5%e8%ad%98"
       title="Twitterに投稿する"
       aria-label="Twitterに投稿する"
       >
@@ -2011,7 +2126,7 @@ drwxrwxr-x 28 nishihama nishihama 4096  6月 26 15:19 anaconda3/
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="https://www.facebook.com/sharer/sharer.php?u=/posts/2023-07-27/&amp;quote=%e5%be%8c%e8%bc%a9%e3%81%ae%e3%81%9f%e3%82%81%e3%81%aeLinux%e7%9f%a5%e8%ad%98"
+      href="https://www.facebook.com/sharer/sharer.php?u=//localhost:1313/posts/2023-07-27/&amp;quote=%e5%be%8c%e8%bc%a9%e3%81%ae%e3%81%9f%e3%82%81%e3%81%aeLinux%e7%9f%a5%e8%ad%98"
       title="Facebookでシェアする"
       aria-label="Facebookでシェアする"
       >
@@ -2030,7 +2145,7 @@ drwxrwxr-x 28 nishihama nishihama 4096  6月 26 15:19 anaconda3/
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="https://pinterest.com/pin/create/bookmarklet/?url=/posts/2023-07-27/&amp;description=%e5%be%8c%e8%bc%a9%e3%81%ae%e3%81%9f%e3%82%81%e3%81%aeLinux%e7%9f%a5%e8%ad%98"
+      href="https://pinterest.com/pin/create/bookmarklet/?url=//localhost:1313/posts/2023-07-27/&amp;description=%e5%be%8c%e8%bc%a9%e3%81%ae%e3%81%9f%e3%82%81%e3%81%aeLinux%e7%9f%a5%e8%ad%98"
       title="Pinterestでピンする"
       aria-label="Pinterestでピンする"
       >
@@ -2049,7 +2164,7 @@ drwxrwxr-x 28 nishihama nishihama 4096  6月 26 15:19 anaconda3/
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="mailto:?body=/posts/2023-07-27/&amp;subject=%e5%be%8c%e8%bc%a9%e3%81%ae%e3%81%9f%e3%82%81%e3%81%aeLinux%e7%9f%a5%e8%ad%98"
+      href="mailto:?body=//localhost:1313/posts/2023-07-27/&amp;subject=%e5%be%8c%e8%bc%a9%e3%81%ae%e3%81%9f%e3%82%81%e3%81%aeLinux%e7%9f%a5%e8%ad%98"
       title=" Eメールを送る"
       aria-label=" Eメールを送る"
       >
@@ -2070,13 +2185,21 @@ drwxrwxr-x 28 nishihama nishihama 4096  6月 26 15:19 anaconda3/
           
       </div>
      
-     <script>
+      
+      
+        
+        
+          
+          
+        
+      <script>
         var oid = "views_posts\/2023-07-27\/index.md"
         var oid_likes = "likes_posts\/2023-07-27\/index.md"
       </script>
       
       
-      <script type="text/javascript" src="/js/page.min.f94e5beb747249fb2315a14fc6417e483411d48b59dc1376bbafa8c37fce65d397d5401be15c7461670ec7bb90ac2bf148d7d48eaf02f317cd9dc04d4851fd31.js" integrity="sha512-&#43;U5b63RySfsjFaFPxkF&#43;SDQR1ItZ3BN2u6&#43;ow3/OZdOX1UAb4Vx0YWcOx7uQrCvxSNfUjq8C8xfNncBNSFH9MQ=="></script>
+      <script type="text/javascript" src="/js/page.min.0860cf4e04fa2d72cc33ddba263083464d48f67de06114529043cb4623319efed4f484fd7f1730df5abea0e2da6f3538855634081d02f2d6e920b956f063e823.js" integrity="sha512-CGDPTgT6LXLMM926JjCDRk1I9n3gYRRSkEPLRiMxnv7U9IT9fxcw31q&#43;oOLabzU4hVY0CB0C8tbpILlW8GPoIw=="></script>
+      
   
     </section>
   <footer class="pt-8 max-w-prose print:hidden">
@@ -2107,7 +2230,7 @@ drwxrwxr-x 28 nishihama nishihama 4096  6月 26 15:19 anaconda3/
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2023-06-17 20:50:09 &#43;0900 JST">2023年 6月 17日</time>
+                    <time datetime="2023-06-17T20:50:09&#43;09:00">2023年 6月 17日</time>
                   
                 </span>
               </span>
@@ -2124,7 +2247,7 @@ drwxrwxr-x 28 nishihama nishihama 4096  6月 26 15:19 anaconda3/
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2023-12-13 09:00:09 &#43;0900 JST">2023年 12月 13日</time>
+                    <time datetime="2023-12-13T09:00:09&#43;09:00">2023年 12月 13日</time>
                   
                 </span>
               </span>
@@ -2150,7 +2273,7 @@ drwxrwxr-x 28 nishihama nishihama 4096  6月 26 15:19 anaconda3/
 
       <div id="top-scroller" class="pointer-events-none absolute top-[110vh] bottom-0 w-12 ltr:right-0 rtl:left-0">
   <a href="#the-top"
-    class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 mb-16 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 backdrop-blur hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 mb-16 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
     aria-label="TOPへスクロール" title="TOPへスクロール">
     &uarr;
   </a>
@@ -2163,13 +2286,19 @@ drwxrwxr-x 28 nishihama nishihama 4096  6月 26 15:19 anaconda3/
       <ul class="flex flex-col list-none sm:flex-row">
         
         <li class="flex mb-1 ltr:text-right rtl:text-left sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0">
-          <a class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2" href="/tags/"
-            title="">Tags</a>
+          <a class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center" href="/tags/"
+            title="">
+            
+            Tags
+          </a>
         </li>
         
         <li class="flex mb-1 ltr:text-right rtl:text-left sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0">
-          <a class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2" href="/categories/"
-            title="">Categories</a>
+          <a class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center" href="/categories/"
+            title="">
+            
+            Categories
+          </a>
         </li>
         
       </ul>
@@ -2183,7 +2312,7 @@ drwxrwxr-x 28 nishihama nishihama 4096  6月 26 15:19 anaconda3/
     <p class="text-sm text-neutral-500 dark:text-neutral-400">
       &copy;
       2024
-      Daisuke NISHIHAMA
+      
     </p>
     
 
@@ -2205,10 +2334,11 @@ drwxrwxr-x 28 nishihama nishihama 4096  6月 26 15:19 anaconda3/
   <script type="text/javascript" src="/js/process.min.ee03488f19c93c2efb199e2e3014ea5f3cb2ce7d45154adb3399a158cac27ca52831db249ede5bb602700ef87eb02434139de0858af1818ab0fb4182472204a4.js" integrity="sha512-7gNIjxnJPC77GZ4uMBTqXzyyzn1FFUrbM5mhWMrCfKUoMdsknt5btgJwDvh&#43;sCQ0E53ghYrxgYqw&#43;0GCRyIEpA=="></script>
   
   
-</footer><div
+</footer>
+<div
   id="search-wrapper"
   class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh]"
-  data-url="/"
+  data-url="//localhost:1313/"
   style="z-index:500"
 >
   <div
