@@ -1,0 +1,72 @@
+# -- Main Menu --
+# The main menu is displayed in the header at the top of the page.
+# Acceptable parameters are name, pageRef, page, url, title, weight.
+# 
+# The simplest menu configuration is to provide:
+#   name = The name to be displayed for this menu link
+#   pageRef = The identifier of the page or section to link to
+#
+# By default the menu is ordered alphabetically. This can be
+# overridden by providing a weight value. The menu will then be
+# ordered by weight from lowest to highest.
+
+
+[[main]]
+  name = "著者"
+  weight = 2
+
+[[main]]
+name = "来歴"
+parent = "著者"
+pageRef = "cv"
+weight = 2
+
+[[main]]
+name = "研究・開発"
+parent = "著者"
+pageRef = "res-dev"
+weight = 3
+
+[[main]]
+name = "講演・口頭発表等"
+parent = "著者"
+pageRef = "presentation"
+weight = 4
+
+[[main]]
+name = "受賞"
+parent = "著者"
+pageRef = "award"
+weight = 5
+
+
+[[main]]
+  name = "データ"
+  pageRef = "data"
+  weight = 100
+
+[[main]]
+  name = "投稿"
+  pageRef = "posts"
+  weight = 30
+
+[[main]]
+  name = "カテゴリ"
+  pageRef = "categories"
+  weight = 40
+
+
+# -- Footer Menu --
+# The footer menu is displayed at the bottom of the page, just before
+# the copyright notice. Configure as per the main menu above.
+
+
+ [[footer]]
+   name = "Tags"
+   pageRef = "tags"
+   weight = 10
+
+ [[footer]]
+   name = "Categories"
+   pageRef = "categories"
+   weight = 20
