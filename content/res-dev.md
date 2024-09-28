@@ -11,7 +11,7 @@ showPagination: false
 
 - 潮汐力と気圧の関係に関する研究, *Saitama University - (2022.03)*, [PDF (2MB)](/pdf/特別研究I_潮汐力と気圧の関係に関する研究.pdf)
 - スペースバルーンを用いた成層圏の高エネルギー現象の解明研究, *Saitama University - (2023.03)*, [PDF (1.2MB)](/pdf/anco2022.pdf)
-- 宇宙論的シミュレーションデータベースIllustris-TNGを用いた銀河周辺物質の速度と元素分布構造の解明, *Saitama University - (2024.04)*, [WEB: res2023](https://res2023.ddd3h.net/)
+- 宇宙論的シミュレーションデータベースIllustris-TNGを用いた銀河周辺物質の速度と元素分布構造の解明, *Saitama University - (2024.04)*
 
 ## 開発
 

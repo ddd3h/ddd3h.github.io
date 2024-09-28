@@ -33,7 +33,7 @@ showPagination: false
 ## 2023
 - 2023年03月 ANCO-project 通信班 開発執行責任
 - 2023年03月 Mach50に入会
-- 2023年04月 宇宙物理学実験研究室 [{{< icon "external-link-alt-solid" >}}](https://www.heal.phy.saitama-u.ac.jp/) に配属 (指導教員：佐藤浩介)
+- 2023年04月 宇宙物理学実験研究室に配属 (指導教員：佐藤浩介)
 - 2023年05月 Medi Hub株式会社に入社（同年12月退社）
 - 2023年05月 ZO MOTORS株式会社に入社（同年12月退社）
 
@@ -41,7 +41,7 @@ showPagination: false
 - 2024年03月 Mach50 飛翔体シミュレーション開発責任者
 - 2024年03月 埼玉大学理学部物理学科を卒業
 - 2024年04月 大阪大学大学院理学研究科に入学
-	- 宇宙進化グループ [{{< icon "external-link-alt-solid" >}}](https://astro-osaka.jp/OUTAP/index.html) に配属 
+	- 宇宙進化グループに配属 (指導教員: 長峯健太郎)
 - 2024年05月 えひめ南予成層圏気球共同実験運営
 
 

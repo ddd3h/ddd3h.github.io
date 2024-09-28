@@ -30,16 +30,6 @@
     </item>
     
     <item>
-      <title></title>
-      <link>//localhost:1313/en/data/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>//localhost:1313/en/data/</guid>
-      <description>&lt;p&gt;data.md&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
       <title>Award</title>
       <link>//localhost:1313/en/award/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -125,6 +115,63 @@
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Mar 2022: Appointed IT Advisor, MediHub Inc.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Data</title>
+      <link>//localhost:1313/en/data/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/en/data/</guid>
+      <description>&lt;p&gt;You can download it using wget command etc.&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;Date&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;Title&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;Key&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;2022-01-08&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;//localhost:1313/pdf/aipsamp.pdf&#34;&gt;Findings gained through computational physics&lt;/a&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;span class=&#34;flex&#34; style=&#34;cursor: pointer;&#34;&gt;
+  &lt;span class=&#34;rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400&#34;&gt;
+    Report
+  &lt;/span&gt;
+&lt;/span&gt;
+&lt;span class=&#34;flex&#34; style=&#34;cursor: pointer;&#34;&gt;
+  &lt;span class=&#34;rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400&#34;&gt;
+    Document
+  &lt;/span&gt;
+&lt;/span&gt;
+&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;2023-02-08&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;//localhost:1313/pdf/Python%e8%ac%9b%e5%ba%a7_slide.pdf&#34;&gt;Python講座_slide&lt;/a&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;span class=&#34;flex&#34; style=&#34;cursor: pointer;&#34;&gt;
+  &lt;span class=&#34;rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400&#34;&gt;
+    スライド
+  &lt;/span&gt;
+&lt;/span&gt;
+&lt;span class=&#34;flex&#34; style=&#34;cursor: pointer;&#34;&gt;
+  &lt;span class=&#34;rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400&#34;&gt;
+    資料
+  &lt;/span&gt;
+&lt;/span&gt;
+&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
       
     </item>
     
