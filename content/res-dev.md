@@ -12,6 +12,10 @@ showPagination: false
 - 潮汐力と気圧の関係に関する研究, *Saitama University - (2022.03)*, [PDF (2MB)](/pdf/特別研究I_潮汐力と気圧の関係に関する研究.pdf)
 - スペースバルーンを用いた成層圏の高エネルギー現象の解明研究, *Saitama University - (2023.03)*, [PDF (1.2MB)](/pdf/anco2022.pdf)
 - 宇宙論的シミュレーションデータベースIllustris-TNGを用いた銀河周辺物質の速度と元素分布構造の解明, *Saitama University - (2024.04)*
+- オゾンと放射線の関わりを解き明かす—ANCO-Project, *JAXA/ISAS - (2022.11)*, [Web](https://jaxa.repo.nii.ac.jp/records/49009)
+- 成層圏における放射線量の測定と無線通信による画像のリアルタイム転送∼ ANCO-project ∼, *JAXA/ISAS - (2023.10)*, [Web](https://jaxa.repo.nii.ac.jp/records/2000171)
+- 宇宙論的シミュレーションを用いたAGNフィードバックによるバブル形成と化学汚染への影響の解明, *Galaxy-IGM@弘前大学 - (2024.08)*
+
 
 ## 開発
 
