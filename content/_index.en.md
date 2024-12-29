@@ -14,18 +14,21 @@ layout: "simple"
 - **Birthplace** : Japan, Saitama
 - **Affiliation**：
   - Theoretical Astrophysics Group, Graduate School of Science, Osaka University
-  - Simulation Manager, Mach50
+  - Research and Development Scientist, Mach50
+  - Member of the Japanese Astronomical Society
+  - Director of Chart Co., Ltd.
+  
+  - Representative of OHM Space Development Institute
 - **Field**：Computational Astronomy, Astrophysics, Computational Physics, Information and Communication Engineering
 - **Others**：
   - [CV](/en/cv)
   - [R&D](/en/res-dev.en)
   - [Presentation](/en/presentation.en)
   - [Awards](/en/award.en)
-  - [Token](/token.en)
 
 ## Contacts
 
-- **Address**: 1-1, Machikaneyama-cho, Toyonaka, Osaka 560-0043, Japan
+- **Address**: 1-1, Machikaneyama, Toyonaka, Osaka 560-0043, Japan
 - **E-mail1**: [daisukenishihama63@gmail.com](mailto:daisukenishihama63@gmail.com)
 - **Email2**: [nishihama@astro-osaka.jp](mailto:nishihama@astro-osaka.jp)
 

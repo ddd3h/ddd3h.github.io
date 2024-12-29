@@ -16,6 +16,8 @@ layout: "simple"
   - 大阪大学大学院 理学研究科（宇宙進化グループ）
   - Mach50 開発研究員
   - 日本天文学会員
+  - Chart株式会社 取締役
+  - 宇宙開発研究所OHM 代表
 - **専門**：天文学、宇宙物理学、計算物理学、情報通信工学
 - **その他**：
   - [来歴](/cv)
@@ -23,7 +25,6 @@ layout: "simple"
   - [講演・口頭発表等](/presentation)
   - [受賞](/award)
   - [ほしいものリスト](https://www.amazon.jp/hz/wishlist/ls/Z9LGVOFMHAOG?ref_=wl_share)
-  - [トークン](/token)
 
 ## 連絡先
 
