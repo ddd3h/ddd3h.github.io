@@ -90,7 +90,7 @@ draft: false
 
 ## ログ
 
-- [LOG 一覧](log.html)
+- [LOG 一覧](./log/)
 - 口述試験
   - [神戸大学大学院口述試験記録 (248KB)](kobe_interview.pdf)
   - [大阪大学大学院口述試験1記録 (314KB)](osaka1_interview.pdf)
