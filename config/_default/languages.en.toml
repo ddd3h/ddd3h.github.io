@@ -1,22 +1,22 @@
 languageCode = "en"
 languageName = "English"
-displayName = "EN"
-isoCode = "en"
-weight = 2
-rtl = false
-
+weight = 1
 title = "Daisuke Nishihama (西濱大将)"
-logo = "img/logo.png"
-description = "Daisuke Nishihama's home page"
-# copyright = "Copy, _right?_ :thinking_face:"
 
-dateFormat = "2006年 1月 2日"
+[params]
+  displayName = "English"
+  isoCode = "en"
+  rtl = false
+  dateFormat = "2 January 2006"
+  logo = "img/logo.png"
+  description = "Daisuke Nishihama's home page"
 
-[author]
+[params.author]
   name = "Daisuke Nishihama"
+  email = "daisukenishihama63@gmail.com"
   image = "img/profile.jpg"
-  headline = "Daisuke Nishihama's home page"
-  bio = "Physicist around the corner."
+  headline = "A powerful, lightweight theme for Hugo."
+  bio = ""
    links = [
      { email = "mailto:daisukenishihama63@gmail.com" },
   #   { link = "https://link-to-some-website.com/" },

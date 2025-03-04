@@ -1,18 +1,17 @@
 languageCode = "ja"
 languageName = "日本語"
-displayName = "JP"
-isoCode = "jp"
 weight = 1
-rtl = false
-
 title = "西濱大将 (Daisuke Nishihama)"
-logo = "img/logo.png"
-description = "西濱大将 (Daisuke Nishihama) の公式ホームページ"
-# copyright = "Copy, _right?_ :thinking_face:"
 
-dateFormat = "2006年 1月 2日"
+[params]
+  displayName = "日本語"
+  isoCode = "ja"
+  rtl = false
+  dateFormat = "2006年 01月 02日"
+  logo = "img/logo.png"
+  description = "西濱大将 (Daisuke Nishihama) の公式ホームページ"
 
-[author]
+[params.author]
   name = "Daisuke NISHIHAMA"
   image = "img/profile.jpg"
   headline = "西濱大将のホームページ"
