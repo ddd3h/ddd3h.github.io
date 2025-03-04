@@ -2,18 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Daisuke Nishihama (西濱大将)</title>
-    <link>/en/categories/</link>
+    <link>https://ddd3h.github.io/en/categories/</link>
     <description>Recent content in Categories on Daisuke Nishihama (西濱大将)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>© 2025 </copyright>
-    <lastBuildDate>Wed, 13 Dec 2023 09:00:09 +0900</lastBuildDate><atom:link href="/en/categories/index.xml" rel="self" type="application/rss+xml" />
+    <managingEditor>daisukenishihama63@gmail.com (Daisuke Nishihama)</managingEditor>
+    <webMaster>daisukenishihama63@gmail.com (Daisuke Nishihama)</webMaster>
+    <copyright>© 2025 Daisuke Nishihama</copyright>
+    <lastBuildDate>Wed, 13 Dec 2023 09:00:09 +0900</lastBuildDate><atom:link href="https://ddd3h.github.io/en/categories/index.xml" rel="self" type="application/rss+xml" />
+    
     <item>
       <title>Linux</title>
-      <link>/en/categories/linux/</link>
+      <link>https://ddd3h.github.io/en/categories/linux/</link>
       <pubDate>Wed, 13 Dec 2023 09:00:09 +0900</pubDate>
-      
-      <guid>/en/categories/linux/</guid>
+      <author>daisukenishihama63@gmail.com (Daisuke Nishihama)</author>
+      <guid>https://ddd3h.github.io/en/categories/linux/</guid>
       <description></description>
       
     </item>

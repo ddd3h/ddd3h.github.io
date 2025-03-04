@@ -2,18 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Researches on 西濱大将 (Daisuke Nishihama)</title>
-    <link>/research/</link>
+    <link>https://ddd3h.github.io/research/</link>
     <description>Recent content in Researches on 西濱大将 (Daisuke Nishihama)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <copyright>© 2025 </copyright>
-    <atom:link href="/research/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>© 2025 Daisuke NISHIHAMA</copyright>
+    <atom:link href="https://ddd3h.github.io/research/index.xml" rel="self" type="application/rss+xml" />
+    
     <item>
       <title>オゾンと放射線の関わりを解き明かす—ANCO-Project</title>
-      <link>/research/anco/</link>
+      <link>https://ddd3h.github.io/research/anco/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/research/anco/</guid>
+      <guid>https://ddd3h.github.io/research/anco/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;&lt;a href=&#34;https://jaxa.repo.nii.ac.jp/?action=repository_uri&amp;amp;item_id=49009&#34; target=&#34;_blank&#34;&gt;オゾンと放射線の関わりを解き明かす—ANCO-Project&lt;/a&gt; 
     &lt;div id=&#34;%E3%82%AA%E3%82%BE%E3%83%B3%E3%81%A8%E6%94%BE%E5%B0%84%E7%B7%9A%E3%81%AE%E9%96%A2%E3%82%8F%E3%82%8A%E3%82%92%E8%A7%A3%E3%81%8D%E6%98%8E%E3%81%8B%E3%81%99anco-projecthttpsjaxareponiiacjpactionrepository_uriitem_id49009&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -38,7 +39,7 @@
 &lt;/h3&gt;
 &lt;a
   class=&#34;!rounded-md bg-primary-600 px-4 py-2 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700&#34;
-  href=&#34;/pdf/SA6000177041.pdf&#34;
+  href=&#34;https://ddd3h.github.io/pdf/SA6000177041.pdf&#34;
   
   
   role=&#34;button&#34;
@@ -61,13 +62,13 @@
     
     <item>
       <title>理学部学生にとても役立つ『Python講座』- 埼玉大学</title>
-      <link>/research/python-saitama-uni/</link>
+      <link>https://ddd3h.github.io/research/python-saitama-uni/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/research/python-saitama-uni/</guid>
+      <guid>https://ddd3h.github.io/research/python-saitama-uni/</guid>
       <description>&lt;a
   class=&#34;!rounded-md bg-primary-600 px-4 py-2 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700&#34;
-  href=&#34;/pdf/Python%e8%ac%9b%e5%ba%a7_slide.pdf&#34;
+  href=&#34;https://ddd3h.github.io/pdf/Python%e8%ac%9b%e5%ba%a7_slide.pdf&#34;
   
   
   role=&#34;button&#34;

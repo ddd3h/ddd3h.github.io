@@ -2,18 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Daisuke Nishihama (西濱大将)</title>
-    <link>/en/</link>
+    <link>https://ddd3h.github.io/en/</link>
     <description>Recent content on Daisuke Nishihama (西濱大将)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>© 2025 </copyright>
-    <lastBuildDate>Wed, 13 Dec 2023 09:00:09 +0900</lastBuildDate><atom:link href="/en/index.xml" rel="self" type="application/rss+xml" />
+    <managingEditor>daisukenishihama63@gmail.com (Daisuke Nishihama)</managingEditor>
+    <webMaster>daisukenishihama63@gmail.com (Daisuke Nishihama)</webMaster>
+    <copyright>© 2025 Daisuke Nishihama</copyright>
+    <lastBuildDate>Wed, 13 Dec 2023 09:00:09 +0900</lastBuildDate><atom:link href="https://ddd3h.github.io/en/index.xml" rel="self" type="application/rss+xml" />
+    
     <item>
       <title>How To Enable Android USB Tethering On M1 Mac</title>
-      <link>/en/posts/2023-12-13/</link>
+      <link>https://ddd3h.github.io/en/posts/2023-12-13/</link>
       <pubDate>Wed, 13 Dec 2023 09:00:09 +0900</pubDate>
-      
-      <guid>/en/posts/2023-12-13/</guid>
+      <author>daisukenishihama63@gmail.com (Daisuke Nishihama)</author>
+      <guid>https://ddd3h.github.io/en/posts/2023-12-13/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Introduction 
     &lt;div id=&#34;introduction&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -26,15 +29,15 @@
 &lt;/h2&gt;
 &lt;p&gt;At some point, Macs quit supporting USB tethering.&lt;/p&gt;
 &lt;p&gt;WiFi tethering is faster than Bluetooth tethering, but it drains the battery. This was a significant bottleneck. I still wanted to use USB tethering, so I lowered the security level of my Mac and attempted to build my own build for my environment to support USB tethering.&lt;/p&gt;</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/posts/2023-12-13/feature.png" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://ddd3h.github.io/posts/2023-12-13/feature.png" />
     </item>
     
     <item>
       <title>Award</title>
-      <link>/en/award/</link>
+      <link>https://ddd3h.github.io/en/award/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/en/award/</guid>
+      <author>daisukenishihama63@gmail.com (Daisuke Nishihama)</author>
+      <guid>https://ddd3h.github.io/en/award/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;Aug 2021 Saitama University Student Commendation Award&lt;/li&gt;
 &lt;/ul&gt;</description>
@@ -43,10 +46,10 @@
     
     <item>
       <title>CV</title>
-      <link>/en/cv/</link>
+      <link>https://ddd3h.github.io/en/cv/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/en/cv/</guid>
+      <author>daisukenishihama63@gmail.com (Daisuke Nishihama)</author>
+      <guid>https://ddd3h.github.io/en/cv/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;June 2000: Born in Sōka City, Saitama Prefecture, Japan&lt;/li&gt;
 &lt;li&gt;August 2014: Supervised Japanese localization for the email app &amp;ldquo;Bluemail&amp;rdquo; (Retired in January 2017)&lt;/li&gt;
@@ -157,10 +160,10 @@
     
     <item>
       <title>Data</title>
-      <link>/en/data/</link>
+      <link>https://ddd3h.github.io/en/data/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/en/data/</guid>
+      <author>daisukenishihama63@gmail.com (Daisuke Nishihama)</author>
+      <guid>https://ddd3h.github.io/en/data/</guid>
       <description>&lt;p&gt;You can download it using wget command etc.&lt;/p&gt;
 &lt;table&gt;
   &lt;thead&gt;
@@ -175,7 +178,7 @@
   &lt;tbody&gt;
       &lt;tr&gt;
           &lt;td style=&#34;text-align: left&#34;&gt;2022-01-08&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;/pdf/aipsamp.pdf&#34;&gt;Findings gained through computational physics&lt;/a&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://ddd3h.github.io/pdf/aipsamp.pdf&#34;&gt;Findings gained through computational physics&lt;/a&gt;&lt;/td&gt;
           &lt;td style=&#34;text-align: left&#34;&gt;&lt;span class=&#34;flex&#34; style=&#34;cursor: pointer;&#34;&gt;
   &lt;span class=&#34;rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400&#34;&gt;
     Report
@@ -192,7 +195,7 @@
       &lt;/tr&gt;
       &lt;tr&gt;
           &lt;td style=&#34;text-align: left&#34;&gt;2023-02-08&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;/pdf/Python%e8%ac%9b%e5%ba%a7_slide.pdf&#34;&gt;Python講座_slide&lt;/a&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://ddd3h.github.io/pdf/Python%e8%ac%9b%e5%ba%a7_slide.pdf&#34;&gt;Python講座_slide&lt;/a&gt;&lt;/td&gt;
           &lt;td style=&#34;text-align: left&#34;&gt;&lt;span class=&#34;flex&#34; style=&#34;cursor: pointer;&#34;&gt;
   &lt;span class=&#34;rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400&#34;&gt;
     スライド
@@ -214,12 +217,12 @@
     
     <item>
       <title>Presentation</title>
-      <link>/en/presentation/</link>
+      <link>https://ddd3h.github.io/en/presentation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/en/presentation/</guid>
+      <author>daisukenishihama63@gmail.com (Daisuke Nishihama)</author>
+      <guid>https://ddd3h.github.io/en/presentation/</guid>
       <description>&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;/research/anco&#34;&gt;Uncovering the relationship between ozone and radiation―ANCO-Project&lt;/a&gt; (2022.11)&lt;br&gt;
+&lt;li&gt;&lt;a href=&#34;https://ddd3h.github.io/research/anco&#34;&gt;Uncovering the relationship between ozone and radiation―ANCO-Project&lt;/a&gt; (2022.11)&lt;br&gt;
 Institute of Space and Astronautical Science, Japan Aerospace Exploration Agency (JAXA)(ISAS)
 Balloon Symposium FY 2022 (November 7-8, 2022. Hybrid event (JAXA Sagamihara Campus &amp;amp; online)) &lt;a href=&#34;https://jaxa.repo.nii.ac.jp/?action=repository_uri&amp;amp;item_id=49009&#34; target=&#34;_blank&#34;&gt;(external link/JAXA 
 
@@ -229,7 +232,7 @@ Balloon Symposium FY 2022 (November 7-8, 2022. Hybrid event (JAXA Sagamihara Cam
   &lt;/span&gt;
 
 )&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/research/python-saitama-uni&#34;&gt;Very useful &amp;ldquo;Python course&amp;rdquo; for science students - Saitama University&lt;/a&gt; (2023.02)&lt;br&gt;
+&lt;li&gt;&lt;a href=&#34;https://ddd3h.github.io/research/python-saitama-uni&#34;&gt;Very useful &amp;ldquo;Python course&amp;rdquo; for science students - Saitama University&lt;/a&gt; (2023.02)&lt;br&gt;
 Saitama University, Institute of Science and Engineering, Faculty of Science/HiSEP, HiSEP-6 &lt;span class=&#34;flex&#34; style=&#34;cursor: pointer;&#34;&gt;
   &lt;span class=&#34;rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400&#34;&gt;
      invited 
@@ -242,10 +245,10 @@ Saitama University, Institute of Science and Engineering, Faculty of Science/HiS
     
     <item>
       <title>R&amp;D</title>
-      <link>/en/res-dev/</link>
+      <link>https://ddd3h.github.io/en/res-dev/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/en/res-dev/</guid>
+      <author>daisukenishihama63@gmail.com (Daisuke Nishihama)</author>
+      <guid>https://ddd3h.github.io/en/res-dev/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Research 
     &lt;div id=&#34;research&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -257,8 +260,8 @@ Saitama University, Institute of Science and Engineering, Faculty of Science/HiS
     
 &lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;Study on the Relationship between Tidal Forces and Atmospheric Pressure, &lt;em&gt;Saitama University - (2022.03)&lt;/em&gt;,&lt;a href=&#34;/pdf/%e7%89%b9%e5%88%a5%e7%a0%94%e7%a9%b6I_%e6%bd%ae%e6%b1%90%e5%8a%9b%e3%81%a8%e6%b0%97%e5%9c%a7%e3%81%ae%e9%96%a2%e4%bf%82%e3%81%ab%e9%96%a2%e3%81%99%e3%82%8b%e7%a0%94%e7%a9%b6.pdf&#34;&gt;PDF (2MB)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Study on Stratospheric High Energy Phenomena Using Space Balloons, &lt;em&gt;Saitama University - (2023.03)&lt;/em&gt;, &lt;a href=&#34;/pdf/anco2022.pdf&#34;&gt;PDF (1.2MB)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Study on the Relationship between Tidal Forces and Atmospheric Pressure, &lt;em&gt;Saitama University - (2022.03)&lt;/em&gt;,&lt;a href=&#34;https://ddd3h.github.io/pdf/%e7%89%b9%e5%88%a5%e7%a0%94%e7%a9%b6I_%e6%bd%ae%e6%b1%90%e5%8a%9b%e3%81%a8%e6%b0%97%e5%9c%a7%e3%81%ae%e9%96%a2%e4%bf%82%e3%81%ab%e9%96%a2%e3%81%99%e3%82%8b%e7%a0%94%e7%a9%b6.pdf&#34;&gt;PDF (2MB)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Study on Stratospheric High Energy Phenomena Using Space Balloons, &lt;em&gt;Saitama University - (2023.03)&lt;/em&gt;, &lt;a href=&#34;https://ddd3h.github.io/pdf/anco2022.pdf&#34;&gt;PDF (1.2MB)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 
@@ -273,9 +276,9 @@ Saitama University, Institute of Science and Engineering, Faculty of Science/HiS
     
 &lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;Development of a system to measure airspeed by attaching a pitot tube to the nose of a hybrid rocket &lt;em&gt;CORE - (2021.03)&lt;/em&gt; &lt;a href=&#34;/pdf/duo_report.pdf&#34;&gt;PDF (35.4MB)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Development of a system to measure airspeed by attaching a pitot tube to the nose of a hybrid rocket &lt;em&gt;CORE - (2021.03)&lt;/em&gt; &lt;a href=&#34;https://ddd3h.github.io/pdf/duo_report.pdf&#34;&gt;PDF (35.4MB)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Development of &amp;ldquo;FOPY&amp;rdquo;, a Python version of &amp;ldquo;FROGS&amp;rdquo;, a flight simulation that was already under development in MATLAB &lt;em&gt;&lt;a href=&#34;https://www.corerocket.net/&#34; target=&#34;_blank&#34;&gt;CORE&lt;/a&gt; - (2021.06)&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;Development of an algorithm for sensor-based 0-m goal without using machine learning, etc., and demonstration of its effectiveness in April 2022, &lt;em&gt;&lt;a href=&#34;https://akatoki-saidai.github.io/&#34; target=&#34;_blank&#34;&gt;AKTK&lt;/a&gt; - (2022.04)&lt;/em&gt;, &lt;a href=&#34;/pdf/sc2_1_report.pdf&#34;&gt;PDF (3.9MB)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Development of an algorithm for sensor-based 0-m goal without using machine learning, etc., and demonstration of its effectiveness in April 2022, &lt;em&gt;&lt;a href=&#34;https://akatoki-saidai.github.io/&#34; target=&#34;_blank&#34;&gt;AKTK&lt;/a&gt; - (2022.04)&lt;/em&gt;, &lt;a href=&#34;https://ddd3h.github.io/pdf/sc2_1_report.pdf&#34;&gt;PDF (3.9MB)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Development of a program for GUI display of received data used in the ANCO-project space balloon project, &lt;em&gt;&lt;a href=&#34;https://akatoki-saidai.github.io/&#34; target=&#34;_blank&#34;&gt;AKTK&lt;/a&gt; - (2022.09)&lt;/em&gt;, &lt;a href=&#34;https://github.com/Akatoki-Saidai/GroundSystem_GUI_Project&#34; target=&#34;_blank&#34;&gt;GitHub
 
   &lt;span class=&#34;relative inline-block align-text-bottom icon&#34;&gt;
@@ -290,10 +293,10 @@ Saitama University, Institute of Science and Engineering, Faculty of Science/HiS
     
     <item>
       <title>Token</title>
-      <link>/en/token/</link>
+      <link>https://ddd3h.github.io/en/token/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/en/token/</guid>
+      <author>daisukenishihama63@gmail.com (Daisuke Nishihama)</author>
+      <guid>https://ddd3h.github.io/en/token/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;PGP Public Key 
     &lt;div id=&#34;pgp-public-key&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -322,7 +325,7 @@ Saitama University, Institute of Science and Engineering, Faculty of Science/HiS
       &lt;/tr&gt;
       &lt;tr&gt;
           &lt;td style=&#34;text-align: left&#34;&gt;Public Key&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;/data/ddd3h.pub&#34;&gt;ddd3h.pub&lt;/a&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://ddd3h.github.io/data/ddd3h.pub&#34;&gt;ddd3h.pub&lt;/a&gt;&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
           &lt;td style=&#34;text-align: left&#34;&gt;date of expiry&lt;/td&gt;
@@ -355,7 +358,7 @@ Saitama University, Institute of Science and Engineering, Faculty of Science/HiS
     
 &lt;/h3&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;bc1qujz56us7dlvmdrqkpha5sf87e4wwy4j0qry3d6
-&lt;/code&gt;&lt;/pre&gt;&lt;img src=&#34;/img/bitcoin.png&#34; width=&#34;180px&#34;&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;img src=&#34;https://ddd3h.github.io/img/bitcoin.png&#34; width=&#34;180px&#34;&gt;
 
 
 &lt;h3 class=&#34;relative group&#34;&gt;Ethereum 
@@ -369,16 +372,16 @@ Saitama University, Institute of Science and Engineering, Faculty of Science/HiS
     
 &lt;/h3&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;0x80821a0e2f8946C3aE3C9001EE3986C5e1fa11BD
-&lt;/code&gt;&lt;/pre&gt;&lt;img src=&#34;/img/ethereum.png&#34; width=&#34;180px&#34;&gt;</description>
+&lt;/code&gt;&lt;/pre&gt;&lt;img src=&#34;https://ddd3h.github.io/img/ethereum.png&#34; width=&#34;180px&#34;&gt;</description>
       
     </item>
     
     <item>
       <title>Welcome to ddd3hLab</title>
-      <link>/en/philosophy/</link>
+      <link>https://ddd3h.github.io/en/philosophy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/en/philosophy/</guid>
+      <author>daisukenishihama63@gmail.com (Daisuke Nishihama)</author>
+      <guid>https://ddd3h.github.io/en/philosophy/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Purpose of this site 
     &lt;div id=&#34;purpose-of-this-site&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -389,7 +392,7 @@ Saitama University, Institute of Science and Engineering, Faculty of Science/HiS
     &lt;/span&gt;        
     
 &lt;/h2&gt;
-&lt;p&gt;ddd3hLab is a website established to record and summarize my own research and development of what I, &lt;a href=&#34;/en/author&#34;&gt;Daisuke Nishihama&lt;/a&gt;, am interested in on a daily basis, and to occasionally publish my ramblings.&lt;/p&gt;</description>
+&lt;p&gt;ddd3hLab is a website established to record and summarize my own research and development of what I, &lt;a href=&#34;https://ddd3h.github.io/en/author&#34;&gt;Daisuke Nishihama&lt;/a&gt;, am interested in on a daily basis, and to occasionally publish my ramblings.&lt;/p&gt;</description>
       
     </item>
     

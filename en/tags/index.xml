@@ -2,11 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Daisuke Nishihama (西濱大将)</title>
-    <link>/en/tags/</link>
+    <link>https://ddd3h.github.io/en/tags/</link>
     <description>Recent content in Tags on Daisuke Nishihama (西濱大将)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>© 2025 </copyright>
-    <atom:link href="/en/tags/index.xml" rel="self" type="application/rss+xml" />
+    <managingEditor>daisukenishihama63@gmail.com (Daisuke Nishihama)</managingEditor>
+    <webMaster>daisukenishihama63@gmail.com (Daisuke Nishihama)</webMaster>
+    <copyright>© 2025 Daisuke Nishihama</copyright>
+    <atom:link href="https://ddd3h.github.io/en/tags/index.xml" rel="self" type="application/rss+xml" />
+    
   </channel>
 </rss>
