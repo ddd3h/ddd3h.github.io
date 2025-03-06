@@ -44,6 +44,8 @@ showPagination: false
   - Assigned to the Cosmic Evolution Group (Advisor: Kentarō Nagamine)
 - May 2024: Managed operations for the Ehime Nanyo Stratospheric Balloon Joint Experiment
 
+## 2025
+- April 2025: Appointed as a Director at Chart Inc.
 
 [^1]: Official name is "Saitama University Aerospace Engineering Circle AKATOKI".
 

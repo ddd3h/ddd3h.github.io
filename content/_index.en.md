@@ -14,9 +14,9 @@ layout: "simple"
 - **Birthplace** : Japan, Saitama
 - **Affiliation**：
   - Theoretical Astrophysics Group, Graduate School of Science, Osaka University
-  - Research and Development Scientist, Mach50
+  - Chart Co., Ltd. Director and Rocket PM
   - Member of the Japanese Astronomical Society
-  - Director of Chart Co., Ltd.
+  - Research and Development Scientist, Mach50
   
   - Representative of OHM Space Development Institute
 - **Field**：Computational Astronomy, Astrophysics, Computational Physics, Information and Communication Engineering
