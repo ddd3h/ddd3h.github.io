@@ -89,11 +89,11 @@
         class=&#34;my-0 rounded-md&#34;
         loading=&#34;lazy&#34;
         srcset=&#34;
-        /posts/tng_catcher/feature_hu11220885823776263596.png 330w,
-        /posts/tng_catcher/feature_hu4211239867561495784.png 660w,
-        /posts/tng_catcher/feature_hu1875891602794942580.png 1024w,
-        /posts/tng_catcher/feature_hu11340992175895270733.png 2x&#34;
-        src=&#34;https://ddd3h.github.io/posts/tng_catcher/feature_hu4211239867561495784.png&#34;
+        /posts/tng_catcher/feature_hu_5e4f825c80db708a.png 330w,
+        /posts/tng_catcher/feature_hu_4996e65d12a58950.png 660w,
+        /posts/tng_catcher/feature_hu_80115811a4fe2bd2.png 1024w,
+        /posts/tng_catcher/feature_hu_a8179d339f5c9444.png 2x&#34;
+        src=&#34;https://ddd3h.github.io/posts/tng_catcher/feature_hu_4996e65d12a58950.png&#34;
         alt=&#34;&#34;
       /&gt;
       
@@ -221,7 +221,7 @@
           &lt;th style=&#34;text-align: left&#34;&gt;Title&lt;/th&gt;
           &lt;th style=&#34;text-align: left&#34;&gt;Key&lt;/th&gt;
           &lt;th style=&#34;text-align: left&#34;&gt;&lt;/th&gt;
-          &lt;th style=&#34;text-align: left&#34;&gt;&lt;/th&gt;
+          &lt;th&gt;&lt;/th&gt;
       &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
@@ -239,8 +239,8 @@
   &lt;/span&gt;
 &lt;/span&gt;
 &lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
           &lt;td style=&#34;text-align: left&#34;&gt;2023-02-08&lt;/td&gt;
@@ -256,8 +256,8 @@
   &lt;/span&gt;
 &lt;/span&gt;
 &lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
       &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;</description>
@@ -303,26 +303,26 @@
 &lt;table&gt;
   &lt;thead&gt;
       &lt;tr&gt;
-          &lt;th style=&#34;text-align: left&#34;&gt;Key Name&lt;/th&gt;
-          &lt;th style=&#34;text-align: left&#34;&gt;ddd3h&lt;/th&gt;
+          &lt;th&gt;Key Name&lt;/th&gt;
+          &lt;th&gt;ddd3h&lt;/th&gt;
       &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
       &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;Key Type&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;RSA 4096bit&lt;/td&gt;
+          &lt;td&gt;Key Type&lt;/td&gt;
+          &lt;td&gt;RSA 4096bit&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;Fingerprint&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;3C92 5E43 8FF2 C1C3 CAEE 9345 9F34 9343 8A1E 71BA&lt;/td&gt;
+          &lt;td&gt;Fingerprint&lt;/td&gt;
+          &lt;td&gt;3C92 5E43 8FF2 C1C3 CAEE 9345 9F34 9343 8A1E 71BA&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;Public Key&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://ddd3h.github.io/data/ddd3h.pub&#34;&gt;ddd3h.pub&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;Public Key&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&#34;https://ddd3h.github.io/data/ddd3h.pub&#34;&gt;ddd3h.pub&lt;/a&gt;&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;date of expiry&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;Indefinite period&lt;/td&gt;
+          &lt;td&gt;date of expiry&lt;/td&gt;
+          &lt;td&gt;Indefinite period&lt;/td&gt;
       &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
