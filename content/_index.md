@@ -22,7 +22,7 @@ layout: "simple"
   - [来歴](/cv)
   - [研究・開発](/res-dev)
   - [講演・口頭発表等](/presentation)
-  - [受賞](/award)
+  - [資格・受賞歴](/award)
 
 ## 連絡先
 
