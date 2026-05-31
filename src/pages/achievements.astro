@@ -1,0 +1,133 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Sidebar from '../components/Sidebar.astro';
+import { useTranslations } from '../i18n/utils';
+import { achievements } from '../data/achievements';
+
+const lang = 'en';
+const t = useTranslations(lang);
+
+const typeLabels: Record<string, string> = {
+  oral: t('achievements.oral'),
+  poster: t('achievements.poster'),
+  paper: t('achievements.paper'),
+  award: t('achievements.award'),
+  grant: t('achievements.grant'),
+  other: t('achievements.other'),
+};
+
+const typeBadgeColor: Record<string, string> = {
+  oral: '#2a6496',
+  poster: '#27ae60',
+  paper: '#8e44ad',
+  award: '#e67e22',
+  grant: '#16a085',
+  other: '#7f8c8d',
+};
+
+function formatDate(dateStr: string): string {
+  const [year, month] = dateStr.split('-');
+  if (!month || month === '00') return year;
+  const d = new Date(Number(year), Number(month) - 1);
+  return d.toLocaleDateString('en-US', { year: 'numeric', month: 'long' });
+}
+
+// Group by type: papers first, then oral, poster, others
+const papers = achievements.filter(a => a.type === 'paper').sort((a, b) => b.date.localeCompare(a.date));
+const orals = achievements.filter(a => a.type === 'oral').sort((a, b) => b.date.localeCompare(a.date));
+const posters = achievements.filter(a => a.type === 'poster').sort((a, b) => b.date.localeCompare(a.date));
+const others = achievements.filter(a => !['paper','oral','poster'].includes(a.type)).sort((a, b) => b.date.localeCompare(a.date));
+
+const groups = [
+  { label: 'Papers & Publications', items: papers },
+  { label: 'Oral Presentations', items: orals },
+  { label: 'Poster Presentations', items: posters },
+  ...(others.length ? [{ label: 'Other', items: others }] : []),
+].filter(g => g.items.length > 0);
+---
+
+<BaseLayout lang={lang} currentPath="/achievements/">
+  <div class="resume">
+    <Sidebar lang={lang} />
+    <div class="main-content">
+      <div class="ach-header">
+        <h1 class="ach-title">{t('achievements.title')}</h1>
+        <p class="ach-subtitle">{t('achievements.subtitle')}</p>
+      </div>
+
+      {groups.map(group => (
+        <section class="ach-group">
+          <div class="section-title">{group.label}</div>
+          <div class="ach-list">
+            {group.items.map((item, i) => (
+              <div class="ach-entry">
+                <div class="ach-meta">
+                  <span class="ach-badge" style={`background: ${typeBadgeColor[item.type]}`}>
+                    {typeLabels[item.type]}
+                  </span>
+                  <span class="ach-date">{formatDate(item.date)}</span>
+                </div>
+                <div class="ach-item-title">
+                  {item.url
+                    ? <a href={item.url} target="_blank" rel="noopener">{item[lang].title}</a>
+                    : item[lang].title
+                  }
+                </div>
+                <div class="ach-authors">{item.authors}</div>
+                <div class="ach-venue">{item[lang].venue}</div>
+                {item[lang].note && <div class="ach-note">{item[lang].note}</div>}
+                {item.doi && (
+                  <div class="ach-note">
+                    DOI: <a href={`https://doi.org/${item.doi}`} target="_blank" rel="noopener">{item.doi}</a>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </section>
+      ))}
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .ach-header { margin-bottom: 1.75rem; }
+  .ach-title { font-size: 1.5rem; font-weight: 700; color: var(--text); margin-bottom: 0.25rem; }
+  .ach-subtitle { color: var(--text-muted); font-size: 0.88rem; }
+  .ach-group { margin-bottom: 2rem; }
+  .ach-list { display: flex; flex-direction: column; }
+  .ach-entry {
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .ach-entry:last-child { border-bottom: none; }
+  .ach-meta { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.35rem; }
+  .ach-badge {
+    color: #fff;
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 0.15rem 0.55rem;
+    border-radius: 12px;
+    white-space: nowrap;
+  }
+  .ach-date { font-size: 0.78rem; color: var(--text-muted); }
+  .ach-item-title {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 0.2rem;
+    line-height: 1.45;
+  }
+  .ach-item-title a { color: var(--accent); }
+  .ach-authors {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    margin-bottom: 0.2rem;
+    line-height: 1.5;
+  }
+  .ach-venue { font-size: 0.82rem; color: var(--accent); margin-bottom: 0.15rem; }
+  .ach-note { font-size: 0.75rem; color: var(--text-muted); font-style: italic; }
+  .ach-note a { color: var(--accent); }
+</style>

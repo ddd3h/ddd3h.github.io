@@ -1,0 +1,46 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getCollection, render } from 'astro:content';
+import { useTranslations } from '../../../i18n/utils';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', ({ data }) => data.lang === 'ja');
+  return posts.map(post => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+const lang = 'ja';
+const t = useTranslations(lang);
+
+function formatDate(date: Date): string {
+  return date.toLocaleDateString('ja-JP', { year: 'numeric', month: 'long', day: 'numeric' });
+}
+---
+
+<BaseLayout
+  lang={lang}
+  currentPath={`/ja/blog/${post.id}/`}
+  title={`${post.data.title} | 西濱大将`}
+  ogImage={`https://ddd3h.com/og/${post.id}.png`}
+  ogDescription={post.data.description}
+>
+  <div class="blog-post-container">
+    <a href="/ja/blog/" class="blog-post-back">{t('blog.back')}</a>
+    <div class="blog-post-date">{formatDate(post.data.date)}</div>
+    <h1 class="blog-post-title">{post.data.title}</h1>
+    {post.data.tags && (
+      <div class="blog-post-tags">
+        {post.data.tags.map(tag => (
+          <span class="blog-tag">{tag}</span>
+        ))}
+      </div>
+    )}
+    <div class="blog-post-content">
+      <Content />
+    </div>
+  </div>
+</BaseLayout>

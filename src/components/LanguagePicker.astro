@@ -1,0 +1,48 @@
+---
+import type { Lang } from '../i18n/utils';
+
+interface Props {
+  lang: Lang;
+  currentPath: string;
+}
+
+const { lang, currentPath } = Astro.props;
+
+function getAltPath(currentLang: Lang, path: string): string {
+  if (currentLang === 'en') {
+    return '/ja' + (path === '/' ? '/' : path);
+  } else {
+    return path.replace(/^\/ja/, '') || '/';
+  }
+}
+
+const altLang: Lang = lang === 'en' ? 'ja' : 'en';
+const altPath = getAltPath(lang, currentPath);
+const altLabel = lang === 'en' ? '日本語' : 'English';
+---
+
+<a href={altPath} class="lang-switcher" aria-label={altLabel} title={altLabel}>
+  <span class="lang-icon">🌐</span>
+</a>
+
+<style>
+  .lang-switcher {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    color: #bdc3c7;
+    padding: 0.35rem 0.85rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    border: 1px solid rgba(255,255,255,0.15);
+    transition: background 0.15s, color 0.15s;
+  }
+  .lang-switcher:hover {
+    color: #fff;
+    background: rgba(255,255,255,0.1);
+    text-decoration: none;
+  }
+  .lang-icon {
+    font-size: 0.85rem;
+  }
+</style>

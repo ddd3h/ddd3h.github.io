@@ -1,0 +1,44 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import { useTranslations } from '../../i18n/utils';
+
+const lang = 'en';
+const t = useTranslations(lang);
+
+const posts = (await getCollection('blog', ({ data }) => data.lang === 'en'))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+function formatDate(date: Date): string {
+  return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+}
+---
+
+<BaseLayout lang={lang} currentPath="/blog/">
+  <div class="blog-header">
+    <h1 class="blog-title-main">{t('blog.title')}</h1>
+    <p class="blog-subtitle">{t('blog.subtitle')}</p>
+  </div>
+
+  {posts.length === 0 ? (
+    <div class="blog-empty">{t('blog.empty')}</div>
+  ) : (
+    <div class="blog-grid">
+      {posts.map(post => (
+        <article class="blog-card">
+          <div class="blog-card-date">{formatDate(post.data.date)}</div>
+          <h2 class="blog-card-title">{post.data.title}</h2>
+          <p class="blog-card-desc">{post.data.description}</p>
+          {post.data.tags && (
+            <div class="blog-card-tags">
+              {post.data.tags.map(tag => (
+                <span class="blog-tag">{tag}</span>
+              ))}
+            </div>
+          )}
+          <a href={`/blog/${post.id}/`} class="blog-card-link">{t('blog.readMore')} →</a>
+        </article>
+      ))}
+    </div>
+  )}
+</BaseLayout>

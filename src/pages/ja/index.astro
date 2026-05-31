@@ -1,0 +1,105 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Sidebar from '../../components/Sidebar.astro';
+import { useTranslations } from '../../i18n/utils';
+import { site } from '../../data/site';
+import { experience, education, projects, committees, certifications } from '../../data/resume';
+
+const lang = 'ja';
+const t = useTranslations(lang);
+---
+
+<BaseLayout lang={lang} currentPath="/ja/">
+  <div class="resume">
+    <Sidebar lang={lang} />
+    <div class="main-content">
+
+      <section class="section">
+        <div class="section-title">{t('main.profile')}</div>
+        {site.profileText[lang].split('\n\n').map(para => (
+          <p class="profile-text">{para.trim()}</p>
+        ))}
+      </section>
+
+      <section class="section">
+        <div class="section-title">{t('main.experience')}</div>
+        <div class="subsection-title">技術・研究</div>
+        {experience.filter(e => e.category === 'technical').map(e => (
+          <div class="entry">
+            <div>
+              <div class="entry-title">{e[lang].title}</div>
+              <div class="entry-org">{e[lang].org}</div>
+              {e[lang].desc && <div class="entry-desc">{e[lang].desc}</div>}
+            </div>
+            <div class="entry-date">{e.start} — {e.end ?? t('present')}</div>
+          </div>
+        ))}
+        <div class="subsection-title">教育</div>
+        {experience.filter(e => e.category === 'teaching').map(e => (
+          <div class="entry">
+            <div>
+              <div class="entry-title">{e[lang].title}</div>
+              <div class="entry-org">{e[lang].org}</div>
+              {e[lang].desc && <div class="entry-desc">{e[lang].desc}</div>}
+            </div>
+            <div class="entry-date">{e.start} — {e.end ?? t('present')}</div>
+          </div>
+        ))}
+      </section>
+
+      <section class="section">
+        <div class="section-title">{t('main.education')}</div>
+        {education.map(e => (
+          <div class="entry">
+            <div>
+              <div class="entry-title">{e[lang].title}</div>
+              <div class="entry-org">{e[lang].org}</div>
+              {e[lang].desc && <div class="entry-desc">{e[lang].desc}</div>}
+            </div>
+            <div class="entry-date">
+              {e.start} — {e.end ?? t('present')}
+            </div>
+          </div>
+        ))}
+      </section>
+
+      {committees.length > 0 && (
+        <section class="section">
+          <div class="section-title">{t('main.committees')}</div>
+          {committees.map(c => (
+            <div class="entry">
+              <div>
+                <div class="entry-title">{c[lang].role}</div>
+                <div class="entry-org">{c[lang].org}</div>
+                {c[lang].desc && <div class="entry-desc">{c[lang].desc}</div>}
+              </div>
+              <div class="entry-date">{c.start} — {c.end ?? t('present')}</div>
+            </div>
+          ))}
+        </section>
+      )}
+
+      {certifications.length > 0 && (
+        <section class="section">
+          <div class="section-title">{t('main.certifications')}</div>
+          <ul class="cert-list">
+            {certifications.map(c => (
+              <li class="cert-item">{c[lang]}</li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+      <section class="section">
+        <div class="section-title">{t('main.extra')}</div>
+        {projects.map(p => (
+          <div class="extra-entry">
+            <div class="extra-title">{p[lang].title}</div>
+            <div class="extra-desc">{p[lang].desc}</div>
+          </div>
+        ))}
+      </section>
+
+    </div>
+  </div>
+</BaseLayout>

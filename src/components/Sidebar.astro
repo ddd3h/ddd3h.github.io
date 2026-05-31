@@ -1,0 +1,184 @@
+---
+import type { Lang } from '../i18n/utils';
+import { site } from '../data/site';
+import { technicalSkills, spokenLanguages, personality, interests } from '../data/resume';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const loc = site.location[lang];
+const titleLines = site.title[lang].split('\n');
+---
+
+<aside class="sidebar">
+  <div class="sidebar-header">
+    <div class="avatar">
+      <img src="/profile.jpg" alt={site.name} />
+    </div>
+    <div>
+      <div class="sidebar-name">{site.name}</div>
+      <div class="sidebar-name-ja">{site.nameJa}</div>
+      {titleLines.map(line => (
+        <div class="sidebar-title">{line}</div>
+      ))}
+    </div>
+  </div>
+
+  <button class="sidebar-toggle" id="sidebar-toggle" aria-expanded="false" aria-label="Toggle details">
+    <span class="toggle-chevron">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+        <path d="M3 5l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </span>
+  </button>
+
+  <div class="sidebar-body" id="sidebar-body">
+  <div class="sidebar-contact">
+    <div class="contact-item">
+      <span class="contact-icon">📍</span>
+      <span>{loc}</span>
+    </div>
+    <div class="contact-item">
+      <span class="contact-icon">🎂</span>
+      <span>{site.birthday[lang]}</span>
+    </div>
+    {site.contact.email && (
+      <div class="contact-item">
+        <span class="contact-icon">✉️</span>
+        <a href={`mailto:${site.contact.email}`}>{site.contact.email}</a>
+      </div>
+    )}
+    {site.contact.github && (
+      <div class="contact-item">
+        <span class="contact-icon">🐙</span>
+        <a href={`https://github.com/${site.contact.github}`} target="_blank" rel="noopener">
+          github.com/{site.contact.github}
+        </a>
+      </div>
+    )}
+    {site.contact.twitter && (
+      <div class="contact-item">
+        <span class="contact-icon">🐦</span>
+        <a href={`https://twitter.com/${site.contact.twitter}`} target="_blank" rel="noopener">
+          @{site.contact.twitter}
+        </a>
+      </div>
+    )}
+    {site.contact.instagram && (
+      <div class="contact-item">
+        <span class="contact-icon">📷</span>
+        <a href={`https://instagram.com/${site.contact.instagram}`} target="_blank" rel="noopener">
+          @{site.contact.instagram}
+        </a>
+      </div>
+    )}
+  </div>
+
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">{lang === 'en' ? 'Languages' : '言語'}</div>
+    {spokenLanguages.map(l => (
+      <div class="lang-item">
+        <div class="lang-name">{l[lang].name}</div>
+        <div class="lang-level">{l[lang].level}</div>
+      </div>
+    ))}
+  </div>
+
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">{lang === 'en' ? 'Technical' : '技術'}</div>
+    {technicalSkills.map(skill => (
+      <div class="skill-item">
+        <div class="skill-name"><span>{skill.name}</span></div>
+        <div class="skill-bar">
+          <div class="skill-fill" style={`width: ${skill.level}%`}></div>
+        </div>
+      </div>
+    ))}
+  </div>
+
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">{lang === 'en' ? 'Personality' : '性格'}</div>
+    <div class="tag-list">
+      {personality[lang].map(tag => (
+        <span class="tag">{tag}</span>
+      ))}
+    </div>
+  </div>
+
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">{lang === 'en' ? 'Interests' : '興味・関心'}</div>
+    <div class="tag-list">
+      {interests[lang].map(tag => (
+        <span class="tag">{tag}</span>
+      ))}
+    </div>
+  </div>
+  </div><!-- /sidebar-body -->
+</aside>
+
+<script>
+  const toggle = document.getElementById('sidebar-toggle');
+  const body = document.getElementById('sidebar-body');
+  if (toggle && body) {
+    toggle.addEventListener('click', () => {
+      const open = body.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  }
+</script>
+
+<style>
+  .sidebar-toggle {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    .sidebar-toggle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.4rem 0;
+      margin-bottom: 0.25rem;
+      color: var(--sidebar-muted);
+      transition: color 0.2s;
+    }
+    .sidebar-toggle:hover { color: #fff; }
+
+    .toggle-chevron {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.15);
+      background: rgba(255,255,255,0.06);
+      flex-shrink: 0;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .sidebar-toggle:hover .toggle-chevron {
+      background: rgba(255,255,255,0.12);
+      border-color: rgba(255,255,255,0.3);
+    }
+
+    .toggle-chevron svg {
+      transition: transform 0.25s ease;
+    }
+    .sidebar-toggle[aria-expanded="true"] .toggle-chevron svg {
+      transform: rotate(180deg);
+    }
+
+    .sidebar-body {
+      display: none;
+    }
+    .sidebar-body.open {
+      display: block;
+    }
+  }
+</style>

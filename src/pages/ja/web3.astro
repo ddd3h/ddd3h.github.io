@@ -1,0 +1,455 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Sidebar from '../../components/Sidebar.astro';
+import { useTranslations } from '../../i18n/utils';
+import QRCode from 'qrcode';
+
+const lang = 'ja';
+const t = useTranslations(lang);
+
+const gpgKey = {
+  uid: 'Daisuke Nishihama <daisukenishihama63@gmail.com>',
+  keyId: '39774AEAF0E74ADE',
+  fingerprint: 'BEF6 5AFB B6D1 BFB3 8DCE  3B8B 3977 4AEA F0E7 4ADE',
+  algorithm: 'Ed25519',
+  created: '2026-05-31',
+  expires: '2027-05-31',
+  subkeyFingerprint: 'E887 8F49 5FD8 3B77 FAC4  4A97 1142 830A 516F DE5E',
+  subkeyAlgorithm: 'Cv25519 [E]',
+  armoredKey: `-----BEGIN PGP PUBLIC KEY BLOCK-----
+
+mDMEahwSwBYJKwYBBAHaRw8BAQdAWO0wwn0ASR9aQGXPrOSXAklSnefSNcxb3808
+bZxA2Wy0MERhaXN1a2UgTmlzaGloYW1hIDxkYWlzdWtlbmlzaGloYW1hNjNAZ21h
+aWwuY29tPoi1BBMWCgBdFiEEvvZa+7bRv7ONzjuLOXdK6vDnSt4FAmocEsAbFIAA
+AAAABAAObWFudTIsMi41KzEuMTIsMCwzAhsDBQkB4TOABQsJCAcCAiICBhUKCQgL
+AgQWAgMBAh4HAheAAAoJEDl3Surw50re75ABANMFuyVb6+Tbi1l/Tb7wlpVo3xTk
+0TahSJDQJxQ61D3qAQCm40ou3QKlA3J7xO/rWJv1loEhn6YzTu5ogSzJYQ+lD7g4
+BGocEsASCisGAQQBl1UBBQEBB0BOfWb1vpVaHxi8x3pqXqbYsZ/pfDGMyW11I453
+BiiWNgMBCAeImgQYFgoAQhYhBL72Wvu20b+zjc47izl3Surw50reBQJqHBLAGxSA
+AAAAAAQADm1hbnUyLDIuNSsxLjEyLDAsMwIbDAUJAeEzgAAKCRA5d0rq8OdK3syF
+AP9/Zdcx7zf7Xv1S7GRCRq2Fctq7ms2qkdiDnm7O4pRUiQD/Y4lv7T8gECUs5wr7
+Dl74zUaTtd5cD/BwITqkXh5xcAo=
+=x00u
+-----END PGP PUBLIC KEY BLOCK-----`,
+};
+
+const cryptoAddresses = [
+  {
+    id: 'bitcoin',
+    name: 'Bitcoin',
+    symbol: 'BTC',
+    address: 'bc1qhgm26cq6vm8989cgq6xsy79pw2t35lx2meafva',
+    explorerUrl: 'https://mempool.space/address/bc1qhgm26cq6vm8989cgq6xsy79pw2t35lx2meafva',
+    color: '#f7931a',
+    icon: '₿',
+  },
+  {
+    id: 'ethereum',
+    name: 'Ethereum',
+    symbol: 'ETH',
+    address: '0x9457537e11e91686bCF8b2403B23040Fc824E959',
+    explorerUrl: 'https://etherscan.io/address/0x9457537e11e91686bCF8b2403B23040Fc824E959',
+    color: '#627eea',
+    icon: '♦',
+  },
+  {
+    id: 'polygon',
+    name: 'Polygon',
+    symbol: 'MATIC / POL',
+    address: '0x9457537e11e91686bCF8b2403B23040Fc824E959',
+    explorerUrl: 'https://polygonscan.com/address/0x9457537e11e91686bCF8b2403B23040Fc824E959',
+    color: '#8247e5',
+    icon: '⬡',
+  },
+  {
+    id: 'solana',
+    name: 'Solana',
+    symbol: 'SOL',
+    address: 'BiJBspHymReWNoWpaKCNB4BJH2gyN8EBg1CDcZSTCnUj',
+    explorerUrl: 'https://solscan.io/account/BiJBspHymReWNoWpaKCNB4BJH2gyN8EBg1CDcZSTCnUj',
+    color: '#9945ff',
+    icon: '◎',
+  },
+];
+
+const cryptoWithQR = await Promise.all(
+  cryptoAddresses.map(async chain => ({
+    ...chain,
+    qrSvg: await QRCode.toString(chain.address, {
+      type: 'svg',
+      margin: 1,
+      color: { dark: '#333333', light: '#ffffff' },
+    }),
+  }))
+);
+---
+
+<BaseLayout lang={lang} currentPath="/ja/web3/">
+  <div class="resume">
+    <Sidebar lang={lang} />
+    <div class="main-content">
+      <div class="fin-header">
+        <h1 class="fin-title">{t('finance.title')}</h1>
+        <p class="fin-subtitle">{t('finance.subtitle')}</p>
+      </div>
+
+      <section class="section">
+        <div class="section-title">{t('finance.gpg')}</div>
+        <p class="fin-note">{t('finance.gpg.note')}</p>
+        <div class="gpg-card">
+          <div class="gpg-meta">
+            <div class="gpg-meta-row">
+              <span class="gpg-label">{t('finance.gpg.fingerprint')}</span>
+              <code class="gpg-fingerprint">{gpgKey.fingerprint}</code>
+            </div>
+            <div class="gpg-meta-row">
+              <span class="gpg-label">{t('finance.gpg.keyid')}</span>
+              <code class="gpg-value">{gpgKey.keyId}</code>
+            </div>
+            <div class="gpg-meta-row">
+              <span class="gpg-label">{t('finance.gpg.algorithm')}</span>
+              <span class="gpg-value">{gpgKey.algorithm} (sign) · {gpgKey.subkeyAlgorithm}</span>
+            </div>
+            <div class="gpg-meta-row">
+              <span class="gpg-label">{t('finance.gpg.created')}</span>
+              <span class="gpg-value">{gpgKey.created}</span>
+            </div>
+            <div class="gpg-meta-row">
+              <span class="gpg-label">{t('finance.gpg.expires')}</span>
+              <span class="gpg-value">{gpgKey.expires}</span>
+            </div>
+          </div>
+          <div class="gpg-key-block">
+            <div class="gpg-key-header">
+              <span class="gpg-label">{t('finance.gpg.fullkey')}</span>
+              <button class="copy-btn" id="gpg-copy-btn" data-key={gpgKey.armoredKey} data-copied-text={t('finance.copied')}>
+                {t('finance.gpg.copykey')}
+              </button>
+            </div>
+            <pre class="gpg-key-pre"><code>{gpgKey.armoredKey}</code></pre>
+          </div>
+          <p class="gpg-verify-hint">{t('finance.gpg.verify')}</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-title">{t('finance.crypto')}</div>
+        <p class="fin-note">{t('finance.note')}</p>
+        <div class="crypto-list">
+          {cryptoWithQR.map(chain => (
+            <div class="crypto-card">
+              <div class="crypto-header">
+                <span class="crypto-icon" style={`color: ${chain.color}`}>{chain.icon}</span>
+                <div>
+                  <div class="crypto-name">{chain.name}</div>
+                  <div class="crypto-symbol">{chain.symbol}</div>
+                </div>
+              </div>
+              <div class="crypto-address-row">
+                <code class="crypto-address" id={`addr-${chain.id}`}>{chain.address}</code>
+                <button
+                  class="copy-btn"
+                  data-address={chain.address}
+                  data-id={chain.id}
+                  data-copied-text={t('finance.copied')}
+                  aria-label={`${chain.name}のアドレスをコピー`}
+                >
+                  {t('finance.copy')}
+                </button>
+                <button
+                  class="qr-btn"
+                  data-qr-target={`qr-${chain.id}`}
+                  aria-label={`${chain.name}のQRコードを表示`}
+                >
+                  QR
+                </button>
+              </div>
+              <div class="qr-wrap" id={`qr-${chain.id}`} aria-hidden="true">
+                <div class="qr-svg" set:html={chain.qrSvg} />
+              </div>
+              <a
+                href={chain.explorerUrl}
+                target="_blank"
+                rel="noopener"
+                class="explorer-link"
+              >
+                {t('finance.explorer')} ↗
+              </a>
+            </div>
+          ))}
+        </div>
+      </section>
+    </div>
+  </div>
+</BaseLayout>
+
+<script>
+  document.querySelectorAll('.copy-btn').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      const el = btn as HTMLElement;
+      const text = el.dataset.address ?? el.dataset.key ?? '';
+      const copiedText = el.dataset.copiedText ?? 'Copied!';
+      await navigator.clipboard.writeText(text);
+      const original = btn.textContent;
+      btn.textContent = copiedText;
+      btn.classList.add('copied');
+      setTimeout(() => {
+        btn.textContent = original;
+        btn.classList.remove('copied');
+      }, 2000);
+    });
+  });
+
+  document.querySelectorAll('.qr-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const el = btn as HTMLElement;
+      const target = document.getElementById(el.dataset.qrTarget ?? '');
+      if (!target) return;
+      const open = target.classList.toggle('qr-open');
+      target.setAttribute('aria-hidden', open ? 'false' : 'true');
+      btn.classList.toggle('qr-active', open);
+    });
+  });
+</script>
+
+<style>
+  .fin-header { margin-bottom: 1.75rem; }
+  .fin-title { font-size: 1.5rem; font-weight: 700; color: var(--text); margin-bottom: 0.25rem; }
+  .fin-subtitle { color: var(--text-muted); font-size: 0.88rem; }
+  .fin-note {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+  .crypto-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .crypto-card {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.25rem 1.5rem;
+    background: var(--card-bg);
+  }
+  .crypto-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.85rem;
+  }
+  .crypto-icon {
+    font-size: 1.6rem;
+    line-height: 1;
+  }
+  .crypto-name {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text);
+  }
+  .crypto-symbol {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .crypto-address-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.65rem;
+    flex-wrap: wrap;
+  }
+  .crypto-address {
+    font-family: 'SF Mono', 'Fira Code', monospace;
+    font-size: 0.78rem;
+    color: var(--text);
+    background: #f0f0f0;
+    padding: 0.35rem 0.65rem;
+    border-radius: 4px;
+    word-break: break-all;
+    flex: 1;
+    min-width: 0;
+  }
+  .copy-btn {
+    flex-shrink: 0;
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 0.35rem 0.85rem;
+    font-size: 0.78rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+  .copy-btn:hover { background: var(--accent-light); }
+  .copy-btn.copied { background: #27ae60; }
+  .explorer-link {
+    font-size: 0.78rem;
+    color: var(--accent);
+    display: inline-block;
+  }
+  .explorer-link:hover { text-decoration: underline; }
+
+  .gpg-card {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.25rem 1.5rem;
+    background: var(--card-bg);
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+  }
+  .gpg-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .gpg-meta-row {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+  .gpg-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+    min-width: 7rem;
+    flex-shrink: 0;
+  }
+  .gpg-fingerprint {
+    font-family: 'SF Mono', 'Fira Code', monospace;
+    font-size: 0.78rem;
+    color: var(--text);
+    word-break: break-all;
+    letter-spacing: 0.04em;
+  }
+  .gpg-value {
+    font-family: 'SF Mono', 'Fira Code', monospace;
+    font-size: 0.78rem;
+    color: var(--text);
+  }
+  .gpg-key-block {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .gpg-key-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+  }
+  .gpg-key-pre {
+    background: #f0f0f0;
+    border-radius: 4px;
+    padding: 0.85rem 1rem;
+    overflow-x: auto;
+    margin: 0;
+  }
+  .gpg-key-pre code {
+    font-family: 'SF Mono', 'Fira Code', monospace;
+    font-size: 0.72rem;
+    color: var(--text);
+    white-space: pre;
+    word-break: normal;
+  }
+  .gpg-verify-hint {
+    font-size: 0.76rem;
+    color: var(--text-muted);
+    margin: 0;
+    font-family: 'SF Mono', 'Fira Code', monospace;
+  }
+
+  .qr-btn {
+    flex-shrink: 0;
+    background: transparent;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    border-radius: 4px;
+    padding: 0.35rem 0.65rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s;
+    font-family: 'SF Mono', 'Fira Code', monospace;
+  }
+  .qr-btn:hover, .qr-btn.qr-active {
+    background: var(--accent);
+    color: #fff;
+  }
+  .qr-wrap {
+    display: none;
+    margin: 0.5rem 0;
+  }
+  .qr-wrap.qr-open {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .qr-svg {
+    width: 140px;
+    height: 140px;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+  }
+  .qr-svg :global(svg) {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  @media (max-width: 768px) {
+    .crypto-card,
+    .gpg-card {
+      padding: 1rem;
+      min-width: 0;
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+    .crypto-list {
+      min-width: 0;
+    }
+    .crypto-address-row {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    .crypto-address {
+      width: 100%;
+      font-size: 0.72rem;
+      word-break: break-all;
+    }
+    .copy-btn,
+    .qr-btn {
+      width: 100%;
+      text-align: center;
+    }
+    .gpg-meta-row {
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+    .gpg-label {
+      min-width: unset;
+    }
+    .gpg-key-pre {
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    .gpg-key-pre code {
+      font-size: 0.65rem;
+    }
+    .gpg-verify-hint {
+      font-size: 0.68rem;
+      word-break: break-all;
+    }
+    .gpg-key-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+</style>
