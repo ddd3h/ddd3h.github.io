@@ -25,8 +25,9 @@ function formatDate(date: Date): string {
   lang={lang}
   currentPath={`/ja/blog/${post.id}/`}
   title={`${post.data.title} | 西濱大将`}
-  ogImage={`https://ddd3h.com/og/${post.id}.png`}
+  ogImage={`https://ddd3h.github.io/og/${post.id}.png`}
   ogDescription={post.data.description}
+  ogType="article"
 >
   <div class="blog-post-container">
     <a href="/ja/blog/" class="blog-post-back">{t('blog.back')}</a>

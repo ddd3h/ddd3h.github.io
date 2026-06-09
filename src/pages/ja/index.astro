@@ -10,6 +10,23 @@ const t = useTranslations(lang);
 ---
 
 <BaseLayout lang={lang} currentPath="/ja/">
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "西濱大将",
+    "alternateName": "Daisuke Nishihama",
+    "url": "https://ddd3h.github.io/ja/",
+    "sameAs": [
+      "https://github.com/ddd3h",
+      "https://twitter.com/daisuke0603N",
+      "https://instagram.com/_ddd3h"
+    ],
+    "jobTitle": "博士後期課程学生（宇宙物理学）",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "大阪大学"
+    }
+  })} />
   <div class="resume">
     <Sidebar lang={lang} />
     <div class="main-content">

@@ -21,7 +21,7 @@ export const experience: Entry[] = [
   {
     en: {
       title: 'Chart Inc.',
-      org: 'Director & Rocket Development Lead',
+      org: 'Chief Technology Officer (CTO), Board Member & Rocket Development Lead',
     },
     ja: {
       title: 'Chart Inc.',
@@ -96,7 +96,7 @@ export const education: Entry[] = [
     en: {
       title: "Ph.D. of Science (in progress)",
       org: 'The University of Osaka, Graduate School of Science, Department of Earth and Space Science',
-      desc: 'Osaka University Theoretical Astrophysics group, OUTAP member.'
+      desc: 'OUTAP / Supervisor: Kentaro Nagamine'
     },
     ja: {
       title: '博士（理学）（在学中）',
@@ -110,12 +110,12 @@ export const education: Entry[] = [
     en: {
       title: "Master of Science in Astrophysics",
       org: 'The University of Osaka, Graduate School of Science, Department of Earth and Space Science',
-      desc: 'Osaka University Theoretical Astrophysics group, OUTAP member.',
+      desc: 'OUTAP / Supervisor: Kentaro Nagamine',
     },
     ja: {
       title: '修士（理学）',
       org: '大阪大学大学院 理学研究科 宇宙地球科学専攻',
-      desc: '宇宙進化グループ'
+      desc: '宇宙進化グループ / 指導教員：長峰健太郎',
     },
     start: '2024',
     end: '2026',
@@ -124,10 +124,12 @@ export const education: Entry[] = [
   en: {
     title: "Bachelor of Science in Physics",
     org: "Saitama University, Department of Physics, Faculty of Science",
+    desc: 'Supervisor: Kousuke Sato',
   },
   ja: {
     title: "学士（理学）",
     org: "埼玉大学 理学部 物理学科",
+    desc: '指導教員：佐藤浩介',
   },
   start: "2020",
   end: "2024",

@@ -17,9 +17,9 @@ export const site = {
     ja: '2000年6月3日生まれ',
   },
   profileText: {
-  en: `Ph.D. Student at Osaka University, Director of Chart Inc., Educator, and Engineer.`,
+  en: `Ph.D. Student at Osaka University | CTO & Board Member at Chart Inc. | Educator | Engineer`,
     
-    ja: `大阪大学の博士課程学生、Chart株式会社 取締役、教育者・エンジニア`,
+    ja: `大阪大学大学院博士後期課程学生｜Chart株式会社 取締役｜教育者｜エンジニア`,
   },
   contact: {
     email: 'daisukenishihama63@gmail.com',
