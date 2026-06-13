@@ -25,4 +25,5 @@ pnpm-debug.log*
 
 # development files
 .claude/
+.vscode/.serena/
 .vscode/
