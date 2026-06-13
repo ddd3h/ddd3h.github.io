@@ -120,6 +120,19 @@ const jaPath = lang === 'en'
     padding: 0;
   }
 
+  /* Speed up View Transitions page cross-fade (browser default ~0.25s) */
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation-duration: 0.1s;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    ::view-transition-old(root),
+    ::view-transition-new(root) {
+      animation: none;
+    }
+  }
+
   :root {
     --accent: #2a6496;
     --accent-light: #3a85c8;
