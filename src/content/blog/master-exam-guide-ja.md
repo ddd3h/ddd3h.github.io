@@ -20,25 +20,25 @@ lang: ja
 
 - 2023年度入学分
 - 2022年度入学分
-- [2021年度入学分 (19.9MB)](osaka/osaka2021.pdf)✓
-  - [大問1 (4.7MB)](osaka/osaka2021-1.pdf)✓
-  - [大問2 (6.6MB)](osaka/osaka2021-2.pdf)✓
-  - [大問3 (4.1MB)](osaka/osaka2021-3.pdf)✓
-  - [大問4 (6.2MB)](osaka/osaka2021-4.pdf)✓
-- [2020年度入学分 (17.1MB)](osaka/osaka2020.pdf)
-  - [大問1 (4.1MB)](osaka/osaka2020-1.pdf)✓
-  - [大問2 (完答せず、不明点あり) (2.4MB)](osaka/osaka2020-2.pdf)
-  - [大問3 (7.5MB)](osaka/osaka2020-3.pdf)✓
-  - [大問4 (4.7MB)](osaka/osaka2020-4.pdf)
-- [2019年度入学分 (15.1MB)](osaka/osaka2019.pdf)
-  - [大問1 (5.1MB)](osaka/osaka2019-1.pdf)
-  - [大問2 (4.5MB)](osaka/osaka2019-2.pdf)
-  - [大問3 (解答途中) (2MB)](osaka/osaka2019-3.pdf)
-  - [大問4 (5.1MB)](osaka/osaka2019-4.pdf)
+- [2021年度入学分 (19.9MB)](/blog/master-exam-guide-ja/osaka/osaka2021.pdf)✓
+  - [大問1 (4.7MB)](/blog/master-exam-guide-ja/osaka/osaka2021-1.pdf)✓
+  - [大問2 (6.6MB)](/blog/master-exam-guide-ja/osaka/osaka2021-2.pdf)✓
+  - [大問3 (4.1MB)](/blog/master-exam-guide-ja/osaka/osaka2021-3.pdf)✓
+  - [大問4 (6.2MB)](/blog/master-exam-guide-ja/osaka/osaka2021-4.pdf)✓
+- [2020年度入学分 (17.1MB)](/blog/master-exam-guide-ja/osaka/osaka2020.pdf)
+  - [大問1 (4.1MB)](/blog/master-exam-guide-ja/osaka/osaka2020-1.pdf)✓
+  - [大問2 (完答せず、不明点あり) (2.4MB)](/blog/master-exam-guide-ja/osaka/osaka2020-2.pdf)
+  - [大問3 (7.5MB)](/blog/master-exam-guide-ja/osaka/osaka2020-3.pdf)✓
+  - [大問4 (4.7MB)](/blog/master-exam-guide-ja/osaka/osaka2020-4.pdf)
+- [2019年度入学分 (15.1MB)](/blog/master-exam-guide-ja/osaka/osaka2019.pdf)
+  - [大問1 (5.1MB)](/blog/master-exam-guide-ja/osaka/osaka2019-1.pdf)
+  - [大問2 (4.5MB)](/blog/master-exam-guide-ja/osaka/osaka2019-2.pdf)
+  - [大問3 (解答途中) (2MB)](/blog/master-exam-guide-ja/osaka/osaka2019-3.pdf)
+  - [大問4 (5.1MB)](/blog/master-exam-guide-ja/osaka/osaka2019-4.pdf)
 - 2018年度入学分
-  - [大問1 (3.3MB)](osaka/osaka2018-1.pdf)
-  - [大問2 (1.6MB)](osaka/osaka2018-2.pdf)
-  - [大問3 (1.9MB)](osaka/osaka2018-3.pdf)
+  - [大問1 (3.3MB)](/blog/master-exam-guide-ja/osaka/osaka2018-1.pdf)
+  - [大問2 (1.6MB)](/blog/master-exam-guide-ja/osaka/osaka2018-2.pdf)
+  - [大問3 (1.9MB)](/blog/master-exam-guide-ja/osaka/osaka2018-3.pdf)
   - 大問4
 - 以下、掲載不可のため個別に連絡
 
@@ -47,19 +47,19 @@ lang: ja
 - 2023年度入学分
 - 2022年度入学分
 
-  - [大問1(数学A) (3.3MB)](kobe/kobe2022-1.pdf)✓
-  - [大問2(数学B) (3.2MB)](kobe/kobe2022-2.pdf)✓
-- [2021年度入学分 (10.2MB)](kobe/kobe2021.pdf)
-  - [大問1(数学A) (3.6MB)](kobe/kobe2021-1.pdf)
-  - [大問2(数学B) (4.5MB)](kobe/kobe2021-2.pdf)
+  - [大問1(数学A) (3.3MB)](/blog/master-exam-guide-ja/kobe/kobe2022-1.pdf)✓
+  - [大問2(数学B) (3.2MB)](/blog/master-exam-guide-ja/kobe/kobe2022-2.pdf)✓
+- [2021年度入学分 (10.2MB)](/blog/master-exam-guide-ja/kobe/kobe2021.pdf)
+  - [大問1(数学A) (3.6MB)](/blog/master-exam-guide-ja/kobe/kobe2021-1.pdf)
+  - [大問2(数学B) (4.5MB)](/blog/master-exam-guide-ja/kobe/kobe2021-2.pdf)
 
-- [2020年度入学分 (7.3MB)](kobe/kobe2020.pdf)
-  - [大問1(数学A) (3.7MB)](kobe/kobe2020-1.pdf)
-  - [大問2(数学B) (4.2MB)](kobe/kobe2020-2.pdf)
+- [2020年度入学分 (7.3MB)](/blog/master-exam-guide-ja/kobe/kobe2020.pdf)
+  - [大問1(数学A) (3.7MB)](/blog/master-exam-guide-ja/kobe/kobe2020-1.pdf)
+  - [大問2(数学B) (4.2MB)](/blog/master-exam-guide-ja/kobe/kobe2020-2.pdf)
 
 - 2019年度入学分
-  - [大問1(数学A) (3.4MB)](kobe/kobe2019-1.pdf)
-  - [大問2(数学B) (1.5MB)](kobe/kobe2019-2.pdf)
+  - [大問1(数学A) (3.4MB)](/blog/master-exam-guide-ja/kobe/kobe2019-1.pdf)
+  - [大問2(数学B) (1.5MB)](/blog/master-exam-guide-ja/kobe/kobe2019-2.pdf)
 
 ### 埼玉大学大学院/物理学PG専攻
 
@@ -86,7 +86,7 @@ lang: ja
 
 ## ログ
 
-- [LOG 一覧](./log.pdf)
+- [LOG 一覧](/blog/master-exam-guide-ja/log.pdf)
 - 口述試験
   - [神戸大学大学院口述試験記録 (248KB)](kobe_interview.pdf)
   - [大阪大学大学院口述試験1記録 (314KB)](osaka1_interview.pdf)
