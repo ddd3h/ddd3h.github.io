@@ -74,11 +74,11 @@ lang: ja
 ## 出願書類
 
 - 大阪大学大学院
-  - [卒業研究計画 (80KB)](res2023-plan.pdf)
+  - [卒業研究計画 (80KB)](/blog/master-exam-guide-ja/res2023-plan.pdf)
   - その他（掲載不可のため個別に連絡）
 
 - 神戸大学大学院
-  - [kobeA4 (138KB)](kobeA4_submitted.pdf)
+  - [kobeA4 (138KB)](/blog/master-exam-guide-ja/kobeA4_submitted.pdf)
 - 埼玉大学大学院
   - なし
 
@@ -88,19 +88,19 @@ lang: ja
 
 - [LOG 一覧](/blog/master-exam-guide-ja/log.pdf)
 - 口述試験
-  - [神戸大学大学院口述試験記録 (248KB)](kobe_interview.pdf)
-  - [大阪大学大学院口述試験1記録 (314KB)](osaka1_interview.pdf)
-  - [大阪大学大学院口述試験2記録 (79KB)](osaka2_interview.pdf)
-  - [埼玉大学大学院口述試験記録 (89KB)](saitama_interview.pdf)
+  - [神戸大学大学院口述試験記録 (248KB)](/blog/master-exam-guide-ja/kobe_interview.pdf)
+  - [大阪大学大学院口述試験1記録 (314KB)](/blog/master-exam-guide-ja/osaka1_interview.pdf)
+  - [大阪大学大学院口述試験2記録 (79KB)](/blog/master-exam-guide-ja/osaka2_interview.pdf)
+  - [埼玉大学大学院口述試験記録 (89KB)](/blog/master-exam-guide-ja/saitama_interview.pdf)
 
 
 
 
 ## その他
 
-- [慣性モーメント (214KB)](慣性モーメント.pdf)
-- [非同次微分方程式 (4.4MB)](非同次微分方程式.pdf)
-- [量子２後輩の期末 (8.2MB)](量子2吉田さん.pdf)
+- [慣性モーメント (214KB)](/blog/master-exam-guide-ja/慣性モーメント.pdf)
+- [非同次微分方程式 (4.4MB)](/blog/master-exam-guide-ja/非同次微分方程式.pdf)
+- [量子２後輩の期末 (8.2MB)](/blog/master-exam-guide-ja/量子2吉田さん.pdf)
 - TOEIC
   - どこの研究室の先輩も630 -- 650点とかあれば大丈夫というので、自分もそんぐらいで出願した。
   - 自分は神戸はReadingとListeningの配点的なもので630点ぐらいのやつを出して、阪大・埼大は680点ぐらいのやつを出した。
