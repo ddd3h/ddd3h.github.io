@@ -15,7 +15,7 @@ interface Props {
 
 const { title = 'Daisuke Nishihama | 西濱大将', lang, currentPath = '/', ogImage, ogDescription, ogType = 'website' } = Astro.props;
 const siteUrl = 'https://ddd3h.github.io';
-const resolvedOgImage = ogImage ?? `${siteUrl}/profile.jpg`;
+const resolvedOgImage = ogImage ?? `${siteUrl}/profile.png`;
 const t = useTranslations(lang);
 
 const homePath = lang === 'en' ? '/' : '/ja/';
