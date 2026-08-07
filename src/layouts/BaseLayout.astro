@@ -471,8 +471,17 @@ const switcherLabel = lang === 'en' ? '日本語' : 'English';
   @media (max-width: 768px) {
     .topnav-inner { padding: 1.2rem 1.25rem 0.4rem; flex-wrap: wrap; gap: 0.8rem; }
     .col { padding: 1.8rem 1.25rem 3rem; }
-    .hero { margin-bottom: 1.8rem; }
-    .hero-avatar { width: 96px; height: 96px; }
+    /* Side by side, the avatar plus its gap ate ~40% of a 390px column and left
+       the name/role/meta wrapping onto 5-7 lines. Stacking hands the text the
+       full measure; `align-items` has to be reset because the desktop rule
+       centres on the cross axis, which becomes horizontal once we go column. */
+    .hero {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.9rem;
+      margin-bottom: 1.8rem;
+    }
+    .hero-avatar { width: 88px; height: 88px; }
     .col-hung .section { grid-template-columns: 1fr; gap: 0.8rem; }
     .entry { flex-direction: column; gap: 0.1rem; }
     .blog-item { flex-direction: column; gap: 0.1rem; }
