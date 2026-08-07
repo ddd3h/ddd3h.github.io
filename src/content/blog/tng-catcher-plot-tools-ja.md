@@ -82,13 +82,13 @@ test.simple_plot(x, y, z, bins=301, log=True, fast=False, savefig="")
 
 `numpy.histogram2d`を使用して、データを2次元配列に変換して描画を行う。
 
-<img src="2023-07-13-01-05-12.png" width=400px>
+<img src="/blog/tng-catcher-plot-tools-ja/2023-07-13-01-05-12.png" width=400px>
 
 デフォルトでは300×300に設定してある。
 
 Pythonの仕様により、`bins=301`と+1されている。
 
-<img src="2023-07-13-01-18-05.png" width=400px>
+<img src="/blog/tng-catcher-plot-tools-ja/2023-07-13-01-18-05.png" width=400px>
 
 このとき、集計する際にそれぞれの点では重み付けを行う。
 
@@ -113,7 +113,7 @@ plt.colorbar()
 plt.savefig("cg_sub.png",dpi=400)
 ```
 
-<img src="2023-07-14-10-14-41.png" width=400px>
+<img src="/blog/tng-catcher-plot-tools-ja/2023-07-14-10-14-41.png" width=400px>
 
 ### 観測対象を回転させる
 
@@ -125,7 +125,7 @@ plt.savefig("cg_sub.png",dpi=400)
 test.simple_plot('x','y','Density')
 ```
 
-<img src="2023-07-13-01-20-21.png" width=400px>
+<img src="/blog/tng-catcher-plot-tools-ja/2023-07-13-01-20-21.png" width=400px>
 
 #### `rot_x()`, `rot_y()`, `rot_z()`メソッド
 
@@ -133,11 +133,11 @@ test.simple_plot('x','y','Density')
 
 先程、プロットした図は横軸にx軸、縦軸にy軸をとっているので、次のような座標系になります。
 
-<img src="2023-07-14-09-55-39.png" width=400px>
+<img src="/blog/tng-catcher-plot-tools-ja/2023-07-14-09-55-39.png" width=400px>
 
 それゆえ、銀河は次のような位置にあることになり、おおよそy軸に対して-45°すればいいことも分かります。
 
-<img src="2023-07-14-09-55-26.png" width=400px>
+<img src="/blog/tng-catcher-plot-tools-ja/2023-07-14-09-55-26.png" width=400px>
 
 この場合、`rot_y()`メソッドを使用します。
 
@@ -151,7 +151,7 @@ test.rot_y(-45)
 test.simple_plot('x','y','Density',fast=True)
 ```
 
-<img src="2023-07-14-10-38-19.png" width=400px>
+<img src="/blog/tng-catcher-plot-tools-ja/2023-07-14-10-38-19.png" width=400px>
 
 再度、xy平面をプロットしてみると、銀河が45°回転していることが分かります。そして、もう少し別の軸を回転したほうが良さそうです。そこで、zy平面をプロットしてみます。
 
@@ -159,7 +159,7 @@ test.simple_plot('x','y','Density',fast=True)
 test.simple_plot('z','y','Density',fast=True)
 ```
 
-<img src="2023-07-14-10-40-08.png" width=400px>
+<img src="/blog/tng-catcher-plot-tools-ja/2023-07-14-10-40-08.png" width=400px>
 
 今度は、x軸に対して60°回転したほうが良さそうです。そこで、`rot_x()`メソッドを使用します。
 
@@ -168,7 +168,7 @@ test.rot_x(60)
 test.simple_plot('z','y','Density',fast=True)
 ```
 
-<img src="2023-07-14-10-41-38.png" width=400px>
+<img src="/blog/tng-catcher-plot-tools-ja/2023-07-14-10-41-38.png" width=400px>
 
 いい感じに回転ができました。
 
@@ -176,7 +176,7 @@ test.simple_plot('z','y','Density',fast=True)
 test.simple_plot('x','y','Density',fast=True)
 ```
 
-<img src="2023-07-14-10-42-39.png" width=400px>
+<img src="/blog/tng-catcher-plot-tools-ja/2023-07-14-10-42-39.png" width=400px>
 
 
 #### `save_rot()`メソッド

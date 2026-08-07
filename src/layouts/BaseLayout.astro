@@ -3,6 +3,8 @@ import type { Lang } from '../i18n/utils';
 import { useTranslations } from '../i18n/utils';
 import LanguagePicker from '../components/LanguagePicker.astro';
 import { ClientRouter } from 'astro:transitions';
+import { getImage } from 'astro:assets';
+import profileSrc from '../assets/profile.jpg';
 
 interface Props {
   title?: string;
@@ -11,11 +13,45 @@ interface Props {
   ogImage?: string;
   ogDescription?: string;
   ogType?: string;
+  /** Language-switcher target. Pages whose counterpart lives at a different slug
+   *  (blog posts) pass an explicit path; everything else swaps the /ja prefix. */
+  altPath?: string;
+  /** False when no equivalent page exists in the other locale, which suppresses
+   *  the hreflang alternates — they must point at a real translation. */
+  hasTranslation?: boolean;
+  /** ISO date for `article:published_time`; only meaningful when ogType is 'article'. */
+  publishedTime?: string;
 }
 
-const { title = 'Daisuke Nishihama | 西濱大将', lang, currentPath = '/', ogImage, ogDescription, ogType = 'website' } = Astro.props;
+const {
+  title = 'Daisuke Nishihama | 西濱大将',
+  lang,
+  currentPath = '/',
+  ogImage,
+  ogDescription,
+  ogType = 'website',
+  altPath,
+  hasTranslation = true,
+  publishedTime,
+} = Astro.props;
+const ogLocale = lang === 'ja' ? 'ja_JP' : 'en_US';
+const ogLocaleAlt = lang === 'ja' ? 'en_US' : 'ja_JP';
 const siteUrl = 'https://ddd3h.github.io';
-const resolvedOgImage = ogImage ?? `${siteUrl}/profile.png`;
+// Default OGP image is derived from the same source as the avatar, so there is no
+// unoptimized copy sitting in public/. Pages that pass `ogImage` use the 1200x630
+// satori-generated card from /og/[slug].png instead.
+// 1000px matches the source crop — asking for more would only upscale it.
+const ogFallback = await getImage({
+  src: profileSrc,
+  width: 1000,
+  height: 1000,
+  format: 'jpeg',
+  quality: 80,
+});
+const resolvedOgImage = ogImage ?? `${siteUrl}${ogFallback.src}`;
+// The fallback is square; the satori cards are 1200x630. Declare what is actually there.
+const ogImageWidth = ogImage ? 1200 : 1000;
+const ogImageHeight = ogImage ? 630 : 1000;
 const t = useTranslations(lang);
 
 const homePath = lang === 'en' ? '/' : '/ja/';
@@ -30,6 +66,9 @@ const enPath = lang === 'ja'
 const jaPath = lang === 'en'
   ? (currentPath === '/' ? '/ja/' : `/ja${currentPath}`)
   : currentPath;
+
+const switcherHref = altPath ?? (lang === 'en' ? jaPath : enPath);
+const switcherLabel = lang === 'en' ? '日本語' : 'English';
 ---
 
 <!doctype html>
@@ -38,21 +77,38 @@ const jaPath = lang === 'en'
     <meta charset="UTF-8" />
     <meta name="description" content={ogDescription ?? 'Daisuke Nishihama — Astrophysicist & Rocket Engineer'} />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="/logo.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="canonical" href={canonicalUrl} />
-    <link rel="alternate" hreflang="en" href={`${siteUrl}${enPath}`} />
-    <link rel="alternate" hreflang="ja" href={`${siteUrl}${jaPath}`} />
-    <link rel="alternate" hreflang="x-default" href={`${siteUrl}${enPath}`} />
+    {hasTranslation && (
+      <>
+        <link rel="alternate" hreflang="en" href={`${siteUrl}${enPath}`} />
+        <link rel="alternate" hreflang="ja" href={`${siteUrl}${jaPath}`} />
+        <link rel="alternate" hreflang="x-default" href={`${siteUrl}${enPath}`} />
+      </>
+    )}
     <!-- OGP -->
     <meta property="og:type" content={ogType} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={ogDescription ?? 'Daisuke Nishihama — Astrophysicist & Rocket Engineer'} />
     <meta property="og:image" content={resolvedOgImage} />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
+    <meta property="og:image:width" content={String(ogImageWidth)} />
+    <meta property="og:image:height" content={String(ogImageHeight)} />
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:site_name" content="Daisuke Nishihama" />
+    <meta property="og:locale" content={ogLocale} />
+    {hasTranslation && <meta property="og:locale:alternate" content={ogLocaleAlt} />}
+    {ogType === 'article' && publishedTime && (
+      <>
+        <meta property="article:published_time" content={publishedTime} />
+        <meta property="article:author" content="Daisuke Nishihama" />
+      </>
+    )}
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@daisuke0603N" />
+    <meta name="twitter:creator" content="@daisuke0603N" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={ogDescription ?? 'Daisuke Nishihama — Astrophysicist & Rocket Engineer'} />
     <meta name="twitter:image" content={resolvedOgImage} />
@@ -60,13 +116,13 @@ const jaPath = lang === 'en'
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Noto+Sans+JP:wght@300;400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap"
       rel="stylesheet"
       media="print"
       onload="this.media='all'"
     />
     <noscript>
-      <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet" />
     </noscript>
     <title>{title}</title>
     <ClientRouter />
@@ -74,13 +130,8 @@ const jaPath = lang === 'en'
   <body>
     <nav class="topnav">
       <div class="topnav-inner">
-        <a href={homePath} class="topnav-brand">
-          <img src="/logo.png" alt="Daisuke Nishihama" class="topnav-logo" />
-        </a>
-        <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle menu" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-        <div class="topnav-links" id="nav-links">
+        <a href={homePath} class="topnav-brand">Daisuke Nishihama</a>
+        <div class="topnav-links">
           <a href={homePath} class:list={['topnav-link', { active: currentPath === '/' || currentPath === '/ja/' }]}>
             {t('nav.home')}
           </a>
@@ -93,7 +144,7 @@ const jaPath = lang === 'en'
           <a href={web3Path} class:list={['topnav-link', { active: currentPath.includes('/web3') }]}>
             {t('nav.web3')}
           </a>
-          <LanguagePicker lang={lang} currentPath={currentPath} />
+          <LanguagePicker href={switcherHref} label={switcherLabel} lang={lang === 'en' ? 'ja' : 'en'} />
         </div>
       </div>
     </nav>
@@ -102,16 +153,6 @@ const jaPath = lang === 'en'
     </main>
   </body>
 </html>
-
-<script>
-  const btn = document.getElementById('nav-hamburger');
-  const links = document.getElementById('nav-links');
-  btn?.addEventListener('click', () => {
-    const open = links?.classList.toggle('open');
-    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-    btn.classList.toggle('active', !!open);
-  });
-</script>
 
 <style is:global>
   *, *::before, *::after {
@@ -134,605 +175,308 @@ const jaPath = lang === 'en'
   }
 
   :root {
-    --accent: #2a6496;
-    --accent-light: #3a85c8;
-    --sidebar-bg: #2c3e50;
-    --sidebar-text: #ecf0f1;
-    --sidebar-muted: #bdc3c7;
-    --body-bg: #f5f5f5;
-    --card-bg: #ffffff;
-    --text: #333333;
-    --text-muted: #777777;
-    --border: #e0e0e0;
-    --tag-bg: #eaf2ff;
-    --tag-text: #2a6496;
+    --bg: #FFFFFF;
+    --ink: #1A1D21;
+    --muted: #6B7178;
+    --line: #E7E9EC;
+    --link: #1B4A8F;
+    --code-bg: #F4F5F7;
     --font-main: 'Lato', 'Noto Sans JP', sans-serif;
+    --font-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+
+    /* Single-column shell: section labels hang in a fixed left gutter. */
+    --measure: 800px;
+    --label-w: 118px;
+    --gutter: 1.6rem;
   }
 
   html {
     font-family: var(--font-main);
-    background: var(--body-bg);
-    color: var(--text);
+    background: var(--bg);
+    color: var(--ink);
     font-size: 15px;
-    line-height: 1.6;
+    line-height: 1.65;
+    -webkit-text-size-adjust: 100%;
+    /* Reserve the scrollbar gutter from the first frame. Without it the page paints
+       at full viewport width, then the scrollbar appears once the content runs past
+       the fold and the centred column jumps ~7.5px left. `scrollbar-gutter` is the
+       right tool and works in Firefox, but reserved nothing in the Chrome build this
+       was measured on — so keep `overflow-y: scroll` as the fallback underneath it. */
+    overflow-y: scroll;
+    scrollbar-gutter: stable;
   }
 
-  body {
-    min-height: 100vh;
-  }
+  body { min-height: 100vh; }
 
-  a {
-    color: var(--accent);
-    text-decoration: none;
-  }
-  a:hover {
-    text-decoration: underline;
-  }
+  a { color: var(--link); text-decoration: none; }
+  a:hover { text-decoration: underline; }
 
-  /* Top Nav */
-  .topnav {
-    background: var(--sidebar-bg);
-    color: var(--sidebar-text);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-  }
+  :focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
+
+  /* ---------- Top nav: a plain text row, no bar ---------- */
   .topnav-inner {
-    max-width: 1100px;
+    max-width: var(--measure);
     margin: 0 auto;
-    padding: 0 1.5rem;
+    padding: 1.6rem 2rem 0.4rem;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 52px;
+    align-items: baseline;
+    gap: 1.1rem;
+    font-size: 0.82rem;
+    color: var(--muted);
   }
   .topnav-brand {
     font-weight: 700;
-    font-size: 1.1rem;
-    color: var(--sidebar-text);
-    letter-spacing: 0.05em;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+    margin-right: auto;
   }
-  .topnav-brand:hover { text-decoration: none; opacity: 0.85; }
-  .topnav-logo {
-    height: 32px;
-    width: auto;
-    display: block;
-    object-fit: contain;
-  }
+  .topnav-brand:hover { text-decoration: none; }
   .topnav-links {
     display: flex;
-    align-items: center;
-    gap: 0.25rem;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 1.1rem;
   }
-  .topnav-link {
-    color: var(--sidebar-muted);
-    padding: 0.35rem 0.85rem;
-    border-radius: 4px;
-    font-size: 0.9rem;
-    transition: background 0.15s, color 0.15s;
-  }
-  .topnav-link:hover, .topnav-link.active {
-    color: #fff;
-    background: rgba(255,255,255,0.1);
-    text-decoration: none;
-  }
+  .topnav-link { color: var(--muted); }
+  .topnav-link.active { color: var(--ink); }
 
-  /* Hamburger button */
-  .nav-hamburger {
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    gap: 5px;
-    width: 36px;
-    height: 36px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 4px;
-    border-radius: 4px;
-  }
-  .nav-hamburger span {
-    display: block;
-    width: 22px;
-    height: 2px;
-    background: var(--sidebar-muted);
-    border-radius: 2px;
-    transition: transform 0.2s, opacity 0.2s;
-  }
-  .nav-hamburger.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-  .nav-hamburger.active span:nth-child(2) { opacity: 0; }
-  .nav-hamburger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
-  @media (max-width: 768px) {
-    .nav-hamburger { display: flex; }
-    .topnav-links {
-      display: flex;
-      flex-direction: column;
-      position: fixed;
-      top: 52px;
-      right: 0;
-      bottom: 0;
-      width: 220px;
-      background: var(--sidebar-bg);
-      padding: 1rem 1.25rem;
-      gap: 0.25rem;
-      box-shadow: -4px 0 16px rgba(0,0,0,0.25);
-      z-index: 99;
-      transform: translateX(100%);
-      transition: transform 0.25s ease;
-      align-items: flex-end;
-    }
-    .topnav-links.open { transform: translateX(0); }
-    .topnav-inner { position: relative; }
-  }
-
-  main {
-    max-width: 1100px;
+  /* ---------- Page shell ---------- */
+  .col {
+    max-width: var(--measure);
     margin: 0 auto;
-    padding: 2rem 1.5rem;
+    padding: 2.4rem 2rem 4rem;
   }
 
-  /* Resume Layout */
-  .resume {
-    display: grid;
-    grid-template-columns: 280px 1fr;
-    gap: 0;
-    background: var(--card-bg);
-    border-radius: 8px;
-    box-shadow: 0 2px 20px rgba(0,0,0,0.08);
-    overflow: hidden;
-    min-height: 80vh;
-  }
-
-  /* Sidebar */
-  .sidebar {
-    background: var(--sidebar-bg);
-    color: var(--sidebar-text);
-    padding: 2rem 1.5rem;
-  }
-
-  .sidebar-header {
-    text-align: center;
-    margin-bottom: 1.75rem;
-    padding-bottom: 1.5rem;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-  }
-
-  .avatar {
-    width: 110px;
-    height: 110px;
-    border-radius: 50%;
-    border: 3px solid rgba(255,255,255,0.2);
-    margin: 0 auto 1rem;
+  /* Identity block on the home page */
+  .hero {
     display: flex;
+    gap: 1.9rem;
     align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, var(--accent), var(--accent-light));
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: white;
+    margin-bottom: 2.6rem;
+  }
+  .hero-avatar {
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    flex: none;
     overflow: hidden;
   }
-  .avatar img {
+  .hero-avatar img {
+    display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    /* Not a drag handle. `draggable="false"` on the element covers mouse drag;
+       these stop the long-press/selection affordances that go with it. */
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-drag: none;
   }
+  .hero-name { font-size: 1.5rem; font-weight: 700; letter-spacing: -0.02em; line-height: 1.2; }
+  .hero-name-ja { font-size: 0.95rem; color: var(--muted); }
+  .hero-role { font-size: 0.92rem; margin-top: 0.3rem; }
+  .hero-meta { font-size: 0.82rem; color: var(--muted); margin-top: 0.5rem; }
 
-  .sidebar-name {
-    font-size: 1.3rem;
-    font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: 0.35rem;
-  }
-  .sidebar-name-ja {
-    font-size: 0.95rem;
-    color: var(--sidebar-muted);
-    margin-bottom: 0.5rem;
-    font-weight: 300;
-  }
-  .sidebar-title {
-    font-size: 0.78rem;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--sidebar-muted);
-    line-height: 1.4;
-  }
+  /* Title block on the non-home pages */
+  .page-head { margin-bottom: 2.6rem; }
+  .page-title { font-size: 1.5rem; font-weight: 700; letter-spacing: -0.02em; line-height: 1.2; }
+  .page-subtitle { font-size: 0.9rem; color: var(--muted); margin-top: 0.3rem; }
 
-  .sidebar-contact {
-    margin-bottom: 1.5rem;
-  }
-  .contact-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 0.5rem;
-    margin-bottom: 0.5rem;
-    font-size: 0.82rem;
-    color: var(--sidebar-muted);
-    word-break: break-all;
-  }
-  .contact-item a {
-    color: var(--sidebar-muted);
-  }
-  .contact-item a:hover { color: #fff; }
-  .contact-icon { flex-shrink: 0; margin-top: 2px; }
+  /* Hanging-label sections. Only inside .col-hung; blog pages stay flush. */
+  /* The hero and page titles are page-level, not section-level, so they sit on
+     the column's left edge — the same margin as the nav brand and the section
+     labels — rather than being pushed into the section content column. */
 
-  .sidebar-section {
-    margin-bottom: 1.5rem;
+  .section { margin-bottom: 2.4rem; }
+  .col-hung .section {
+    display: grid;
+    grid-template-columns: var(--label-w) 1fr;
+    gap: var(--gutter);
   }
-  .sidebar-section-title {
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    color: var(--accent-light);
-    margin-bottom: 0.75rem;
-    font-weight: 700;
-  }
-
-  .skill-item {
-    margin-bottom: 0.6rem;
-  }
-  .skill-name {
-    font-size: 0.82rem;
-    margin-bottom: 0.25rem;
-    display: flex;
-    justify-content: space-between;
-  }
-  .skill-bar {
-    height: 4px;
-    background: rgba(255,255,255,0.1);
-    border-radius: 2px;
-    overflow: hidden;
-  }
-  .skill-fill {
-    height: 100%;
-    background: var(--accent-light);
-    border-radius: 2px;
-  }
-
-  .lang-item {
-    margin-bottom: 0.75rem;
-  }
-  .lang-name {
-    font-size: 0.82rem;
-    font-weight: 700;
-    margin-bottom: 0.2rem;
-  }
-  .lang-level {
-    font-size: 0.75rem;
-    color: var(--sidebar-muted);
-  }
-
-  .tag-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.4rem;
-  }
-  .tag {
-    background: rgba(255,255,255,0.08);
-    color: var(--sidebar-muted);
-    padding: 0.2rem 0.55rem;
-    border-radius: 12px;
-    font-size: 0.75rem;
-  }
-
-  /* Main Content */
-  .main-content {
-    padding: 2rem 2.5rem;
-  }
-
-  .section {
-    margin-bottom: 2.25rem;
-  }
-
   .section-title {
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    color: var(--accent);
-    font-weight: 700;
-    margin-bottom: 1rem;
-    padding-bottom: 0.4rem;
-    border-bottom: 2px solid var(--border);
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--muted);
+    padding-top: 0.2rem;
   }
-
+  .section-body {
+    display: flex;
+    flex-direction: column;
+    gap: 1.15rem;
+    min-width: 0;
+  }
+  /* A hairline above turns these into group boundaries rather than another line
+     of body text. The rule is the one piece of ornament this layout keeps, because
+     without it the labels sat inside the content column and read as prose. */
   .subsection-title {
     font-size: 0.72rem;
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    color: var(--text-muted);
-    font-weight: 700;
-    margin: 1.25rem 0 0.75rem;
-    padding-left: 0.5rem;
-    border-left: 3px solid var(--accent-light);
+    color: var(--muted);
+    border-top: 1px solid var(--line);
+    padding-top: 0.9rem;
+    margin-bottom: -0.5rem;
   }
 
-  .profile-text {
-    color: var(--text);
-    font-size: 0.9rem;
-    line-height: 1.7;
-    margin-bottom: 0.85rem;
-  }
-  .profile-text:last-child { margin-bottom: 0; }
+  .profile-text { font-size: 0.96rem; }
 
-  .entry {
-    display: grid;
-    grid-template-columns: 1fr 130px;
-    gap: 0.5rem;
-    margin-bottom: 1.4rem;
-    padding-bottom: 1.4rem;
-    border-bottom: 1px solid var(--border);
-  }
-  .entry:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
-
-  .entry-title {
-    font-size: 0.95rem;
-    font-weight: 700;
-    color: var(--text);
-    margin-bottom: 0.15rem;
-  }
-  .entry-org {
-    font-size: 0.82rem;
-    color: var(--accent);
-    margin-bottom: 0.4rem;
-  }
-  .entry-desc {
-    font-size: 0.82rem;
-    color: var(--text-muted);
-    line-height: 1.6;
-  }
+  /* ---------- Entry rows ---------- */
+  .entry { display: flex; gap: 1rem; align-items: baseline; }
+  .entry-main { flex: 1; min-width: 0; }
+  .entry-title { font-weight: 600; font-size: 0.96rem; }
+  .entry-org { color: var(--muted); font-size: 0.88rem; }
+  .entry-desc { color: var(--muted); font-size: 0.88rem; margin-top: 0.15rem; }
   .entry-date {
-    font-size: 0.78rem;
-    color: var(--text-muted);
-    text-align: right;
-    padding-top: 0.15rem;
+    color: var(--muted);
+    font-size: 0.82rem;
     white-space: nowrap;
+    font-variant-numeric: tabular-nums;
   }
 
-  .extra-entry {
-    margin-bottom: 1.2rem;
-    padding-bottom: 1.2rem;
-    border-bottom: 1px solid var(--border);
-  }
-  .extra-entry:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
-  .extra-title {
-    font-size: 0.9rem;
-    font-weight: 700;
-    color: var(--text);
-    margin-bottom: 0.3rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-  .extra-title::before {
-    content: '▶';
-    font-size: 0.6rem;
-    color: var(--accent);
-  }
-  .extra-desc {
-    font-size: 0.82rem;
-    color: var(--text-muted);
-    line-height: 1.6;
-  }
+  /* Shared by the profile roles and the certifications list. */
+  .plain-list { list-style: none; }
+  .plain-item { font-size: 0.92rem; }
 
-  /* Certifications */
-  .cert-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  .cert-item {
-    font-size: 0.85rem;
-    color: var(--text);
-    padding: 0.2rem 0;
-  }
-
-  /* Blog */
-  .blog-header {
-    margin-bottom: 2rem;
-  }
-  .blog-title-main {
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--text);
-    margin-bottom: 0.5rem;
-  }
-  .blog-subtitle {
-    color: var(--text-muted);
-    font-size: 0.9rem;
-  }
-
-  .blog-grid {
+  /* ---------- Details block (skills / languages / tags) ---------- */
+  .detail-list {
     display: grid;
-    gap: 1.25rem;
+    grid-template-columns: 96px 1fr;
+    gap: 0.3rem 1rem;
+    font-size: 0.88rem;
   }
+  .detail-list dt { color: var(--muted); }
+  .detail-list dd { min-width: 0; }
 
-  .blog-card {
-    background: var(--card-bg);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 1.5rem;
-    transition: box-shadow 0.2s, border-color 0.2s;
-  }
-  .blog-card:hover {
-    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-    border-color: var(--accent-light);
-  }
-
-  .blog-card-date {
+  .tag-list { display: flex; flex-wrap: wrap; gap: 0.3rem; }
+  .tag {
     font-size: 0.78rem;
-    color: var(--text-muted);
-    margin-bottom: 0.5rem;
-  }
-  .blog-card-title {
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: var(--text);
-    margin-bottom: 0.5rem;
-    line-height: 1.3;
-  }
-  .blog-card-desc {
-    font-size: 0.85rem;
-    color: var(--text-muted);
-    line-height: 1.6;
-    margin-bottom: 1rem;
-  }
-  .blog-card-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.35rem;
-    margin-bottom: 1rem;
-  }
-  .blog-tag {
-    background: var(--tag-bg);
-    color: var(--tag-text);
-    padding: 0.15rem 0.55rem;
-    border-radius: 12px;
-    font-size: 0.75rem;
-  }
-  .blog-card-link {
-    font-size: 0.85rem;
-    font-weight: 700;
-    color: var(--accent);
+    color: var(--muted);
+    border: 1px solid var(--line);
+    border-radius: 2px;
+    padding: 0.1rem 0.45rem;
   }
 
-  /* Blog Post */
-  .blog-post-container {
-    background: var(--card-bg);
-    border-radius: 8px;
-    box-shadow: 0 2px 20px rgba(0,0,0,0.08);
-    padding: 2.5rem 3rem;
-    max-width: 800px;
-    margin: 0 auto;
+  /* ---------- Achievements ---------- */
+  .ach-entry { display: flex; flex-direction: column; gap: 0.1rem; }
+  .ach-meta {
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+    font-size: 0.78rem;
+    color: var(--muted);
   }
-  .blog-post-back {
-    font-size: 0.85rem;
-    color: var(--accent);
-    margin-bottom: 1.5rem;
-    display: block;
+  .ach-type { font-weight: 600; }
+  .ach-date { font-variant-numeric: tabular-nums; }
+  .ach-item-title { font-weight: 600; font-size: 0.96rem; line-height: 1.45; }
+  .ach-authors { font-size: 0.84rem; color: var(--muted); }
+  .ach-venue { font-size: 0.88rem; color: var(--muted); }
+  .ach-note { font-size: 0.82rem; color: var(--muted); }
+
+  /* ---------- Blog ---------- */
+  .blog-list { display: flex; flex-direction: column; }
+  .blog-item {
+    display: flex;
+    gap: 1rem;
+    align-items: baseline;
+    padding: 1.15rem 0;
+    border-bottom: 1px solid var(--line);
   }
-  .blog-post-date {
+  .blog-item:first-child { padding-top: 0; }
+  .blog-item:last-child { border-bottom: none; }
+  .blog-item-main { flex: 1; min-width: 0; }
+  .blog-item-title { font-size: 1.05rem; font-weight: 600; letter-spacing: -0.01em; line-height: 1.35; }
+  .blog-item-title a { color: var(--ink); }
+  .blog-item-desc { font-size: 0.88rem; color: var(--muted); margin-top: 0.2rem; }
+  .blog-item-date {
     font-size: 0.82rem;
-    color: var(--text-muted);
-    margin-bottom: 0.5rem;
+    color: var(--muted);
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
   }
+  .blog-tags { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: 0.45rem; }
+  .blog-tag {
+    font-size: 0.75rem;
+    color: var(--muted);
+    border: 1px solid var(--line);
+    border-radius: 2px;
+    padding: 0.05rem 0.4rem;
+  }
+  .blog-empty { color: var(--muted); padding: 2rem 0; }
+
+  /* ---------- Blog post ---------- */
+  .blog-post-back { font-size: 0.85rem; display: inline-block; margin-bottom: 1.5rem; }
+  .blog-post-date { font-size: 0.82rem; color: var(--muted); }
   .blog-post-title {
     font-size: 1.8rem;
     font-weight: 700;
-    line-height: 1.3;
-    margin-bottom: 0.75rem;
+    letter-spacing: -0.02em;
+    line-height: 1.25;
+    margin: 0.3rem 0 0.6rem;
   }
   .blog-post-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.35rem;
-    margin-bottom: 2rem;
+    gap: 0.3rem;
     padding-bottom: 1.5rem;
-    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--line);
   }
-  .blog-post-content {
-    font-size: 0.95rem;
-    line-height: 1.8;
-    color: var(--text);
-  }
+  .blog-post-content { font-size: 0.96rem; line-height: 1.8; }
   .blog-post-content h2 {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: 700;
-    margin: 2rem 0 0.75rem;
-    color: var(--text);
-    padding-bottom: 0.4rem;
-    border-bottom: 1px solid var(--border);
+    letter-spacing: -0.01em;
+    margin: 2.2rem 0 0.6rem;
   }
-  .blog-post-content h3 {
-    font-size: 1.1rem;
-    font-weight: 700;
-    margin: 1.5rem 0 0.5rem;
-  }
-  .blog-post-content p {
-    margin-bottom: 1rem;
-  }
-  .blog-post-content ul, .blog-post-content ol {
-    margin: 0.75rem 0 1rem 1.5rem;
-  }
-  .blog-post-content li {
-    margin-bottom: 0.4rem;
-  }
-  .blog-post-content strong {
-    color: var(--text);
-  }
+  .blog-post-content h3 { font-size: 1.02rem; font-weight: 600; margin: 1.6rem 0 0.4rem; }
+  .blog-post-content p { margin-bottom: 1rem; }
+  .blog-post-content ul, .blog-post-content ol { margin: 0.75rem 0 1rem 1.5rem; }
+  .blog-post-content li { margin-bottom: 0.4rem; }
   .blog-post-content code {
-    background: #f0f0f0;
+    background: var(--code-bg);
     padding: 0.15em 0.4em;
-    border-radius: 3px;
+    border-radius: 2px;
     font-size: 0.88em;
-    font-family: 'SF Mono', 'Fira Code', monospace;
+    font-family: var(--font-mono);
   }
   .blog-post-content pre {
-    background: #1e1e1e;
-    color: #d4d4d4;
+    background: var(--code-bg);
+    color: var(--ink);
+    border: 1px solid var(--line);
     padding: 1rem 1.25rem;
-    border-radius: 6px;
+    border-radius: 2px;
     overflow-x: auto;
     margin: 1rem 0;
   }
-  .blog-post-content pre code {
-    background: none;
-    padding: 0;
-    font-size: 0.85em;
+  .blog-post-content pre code { background: none; padding: 0; font-size: 0.85em; }
+  .blog-post-content img { max-width: 100%; height: auto; display: block; margin: 1rem 0; }
+  .blog-post-content table { display: block; overflow-x: auto; border-collapse: collapse; margin: 1rem 0; }
+  .blog-post-content th, .blog-post-content td {
+    border: 1px solid var(--line);
+    padding: 0.35rem 0.6rem;
+    font-size: 0.9rem;
+    text-align: left;
   }
-  .blog-post-content img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 4px;
-    margin: 1rem auto;
-  }
-
-  .blog-empty {
-    text-align: center;
-    padding: 3rem;
-    color: var(--text-muted);
+  .blog-post-content blockquote {
+    border-left: 2px solid var(--line);
+    padding-left: 1rem;
+    color: var(--muted);
+    margin: 1rem 0;
   }
 
-  /* Responsive */
+  /* ---------- Responsive ---------- */
   @media (max-width: 768px) {
-    .resume {
-      grid-template-columns: 1fr;
-      overflow-x: hidden;
-    }
-    .sidebar {
-      padding: 1.5rem;
-      min-width: 0;
-    }
-    .sidebar-header {
-      text-align: left;
-      display: flex;
-      gap: 1rem;
-      align-items: flex-start;
-    }
-    .avatar {
-      width: 70px;
-      height: 70px;
-      font-size: 1.5rem;
-      flex-shrink: 0;
-    }
-    .main-content {
-      padding: 1.5rem;
-      min-width: 0;
-      overflow-x: hidden;
-    }
-    .entry {
-      grid-template-columns: 1fr;
-    }
-    .entry-date {
-      text-align: left;
-    }
-    .blog-post-container {
-      padding: 1.5rem;
-    }
-    .blog-post-title {
-      font-size: 1.4rem;
-    }
+    .topnav-inner { padding: 1.2rem 1.25rem 0.4rem; flex-wrap: wrap; gap: 0.8rem; }
+    .col { padding: 1.8rem 1.25rem 3rem; }
+    .hero { margin-bottom: 1.8rem; }
+    .hero-avatar { width: 96px; height: 96px; }
+    .col-hung .section { grid-template-columns: 1fr; gap: 0.8rem; }
+    .entry { flex-direction: column; gap: 0.1rem; }
+    .blog-item { flex-direction: column; gap: 0.1rem; }
+    .detail-list { grid-template-columns: 1fr; gap: 0; }
+    .detail-list dt { margin-top: 0.5rem; }
+    .blog-post-title { font-size: 1.4rem; }
   }
 </style>

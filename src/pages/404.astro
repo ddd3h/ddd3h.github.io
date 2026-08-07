@@ -1,0 +1,94 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+// GitHub Pages serves this single file for every missing path, so the locale is
+// not known at build time. English is rendered; the script below swaps the copy
+// when the path was under /ja/. Without JS the English copy stands.
+const lang = 'en';
+
+const COPY = {
+  en: {
+    title: 'Page not found',
+    subtitle: 'The page you asked for doesn’t exist, or it moved.',
+    nav: [['/', 'Home'], ['/achievements/', 'Achievements'], ['/blog/', 'Blog'], ['/web3/', 'Web3']],
+  },
+  ja: {
+    title: 'ページが見つかりません',
+    subtitle: 'お探しのページは存在しないか、移動した可能性があります。',
+    nav: [['/ja/', 'ホーム'], ['/ja/achievements/', '実績'], ['/ja/blog/', 'ブログ'], ['/ja/web3/', 'Web3']],
+  },
+};
+---
+
+<BaseLayout
+  lang={lang}
+  currentPath="/404/"
+  title="Page not found | Daisuke Nishihama"
+  ogDescription="The page you asked for doesn’t exist, or it moved."
+  altPath="/ja/"
+  hasTranslation={false}
+>
+  <div class="col">
+    <div class="page-head">
+      <h1 class="page-title" id="nf-title">{COPY.en.title}</h1>
+      <p class="page-subtitle" id="nf-subtitle">{COPY.en.subtitle}</p>
+    </div>
+    <ul class="nf-links" id="nf-links">
+      {COPY.en.nav.map(([href, label]) => (
+        <li><a href={href}>{label}</a></li>
+      ))}
+    </ul>
+  </div>
+</BaseLayout>
+
+<script define:vars={{ COPY }}>
+  // A single rendered block, retitled in place — rendering both locales would put
+  // two h1 elements in the document even with one of them hidden.
+  const isJa = location.pathname.startsWith('/ja/');
+  const copy = isJa ? COPY.ja : COPY.en;
+
+  document.getElementById('nf-title').textContent = copy.title;
+  document.getElementById('nf-subtitle').textContent = copy.subtitle;
+  document.documentElement.lang = isJa ? 'ja' : 'en';
+
+  const list = document.getElementById('nf-links');
+  list.replaceChildren(...copy.nav.map(([href, label]) => {
+    const li = document.createElement('li');
+    const a = document.createElement('a');
+    a.href = href;
+    a.textContent = label;
+    li.appendChild(a);
+    return li;
+  }));
+
+  // BaseLayout renders this page's chrome as English, since the locale is unknown
+  // at build time. Localise the nav, and point the language switcher at a page that
+  // exists — currentPath is "/404/", so its default target would be /ja/404/.
+  if (isJa) {
+    document.querySelectorAll('.topnav-link').forEach((a, i) => {
+      const entry = COPY.ja.nav[i];
+      if (!entry) return;
+      a.href = entry[0];
+      a.textContent = entry[1];
+    });
+    const brand = document.querySelector('.topnav-brand');
+    if (brand) brand.href = '/ja/';
+  }
+
+  const sw = document.querySelector('.lang-switcher');
+  if (sw) {
+    sw.href = isJa ? '/' : '/ja/';
+    sw.textContent = isJa ? 'English' : '日本語';
+    sw.lang = isJa ? 'en' : 'ja';
+  }
+</script>
+
+<style>
+  .nf-links {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.1rem;
+    font-size: 0.92rem;
+  }
+</style>

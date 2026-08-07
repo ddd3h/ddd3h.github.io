@@ -14,31 +14,36 @@ function formatDate(date: Date): string {
 }
 ---
 
-<BaseLayout lang={lang} currentPath="/ja/blog/">
-  <div class="blog-header">
-    <h1 class="blog-title-main">{t('blog.title')}</h1>
-    <p class="blog-subtitle">{t('blog.subtitle')}</p>
-  </div>
-
-  {posts.length === 0 ? (
-    <div class="blog-empty">{t('blog.empty')}</div>
-  ) : (
-    <div class="blog-grid">
-      {posts.map(post => (
-        <article class="blog-card">
-          <div class="blog-card-date">{formatDate(post.data.date)}</div>
-          <h2 class="blog-card-title">{post.data.title}</h2>
-          <p class="blog-card-desc">{post.data.description}</p>
-          {post.data.tags && (
-            <div class="blog-card-tags">
-              {post.data.tags.map(tag => (
-                <span class="blog-tag">{tag}</span>
-              ))}
-            </div>
-          )}
-          <a href={`/ja/blog/${post.id}/`} class="blog-card-link">{t('blog.readMore')} →</a>
-        </article>
-      ))}
+<BaseLayout lang={lang} currentPath="/ja/blog/" title={t('meta.blog.title')} ogDescription={t('meta.blog.description')}>
+  <div class="col">
+    <div class="page-head">
+      <h1 class="page-title">{t('blog.title')}</h1>
+      <p class="page-subtitle">{t('blog.subtitle')}</p>
     </div>
-  )}
+
+    {posts.length === 0 ? (
+      <div class="blog-empty">{t('blog.empty')}</div>
+    ) : (
+      <div class="blog-list">
+        {posts.map(post => (
+          <article class="blog-item">
+            <div class="blog-item-main">
+              <h2 class="blog-item-title">
+                <a href={`/ja/blog/${post.id}/`}>{post.data.title}</a>
+              </h2>
+              <p class="blog-item-desc">{post.data.description}</p>
+              {post.data.tags && (
+                <div class="blog-tags">
+                  {post.data.tags.map(tag => (
+                    <span class="blog-tag">{tag}</span>
+                  ))}
+                </div>
+              )}
+            </div>
+            <div class="blog-item-date">{formatDate(post.data.date)}</div>
+          </article>
+        ))}
+      </div>
+    )}
+  </div>
 </BaseLayout>

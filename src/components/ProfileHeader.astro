@@ -1,0 +1,41 @@
+---
+import { Image } from 'astro:assets';
+import type { Lang } from '../i18n/utils';
+import { site } from '../data/site';
+import profile from '../assets/profile.jpg';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const titleLines = site.title[lang].split('\n');
+---
+
+<header class="hero">
+  <div class="hero-avatar">
+    <Image
+      src={profile}
+      alt={site.name}
+      width={256}
+      height={256}
+      format="webp"
+      quality={80}
+      loading="eager"
+      fetchpriority="high"
+      draggable={false}
+    />
+  </div>
+  <div>
+    <h1 class="hero-name">{site.name}</h1>
+    <div class="hero-name-ja">{site.nameJa}</div>
+    {titleLines.map(line => <div class="hero-role">{line}</div>)}
+    <div class="hero-meta">
+      <span>{site.location[lang]}</span>
+      <span aria-hidden="true"> · </span>
+      <span>{site.birthday[lang]}</span>
+      <span aria-hidden="true"> · </span>
+      <span>{site.birthplace[lang]}</span>
+    </div>
+  </div>
+</header>

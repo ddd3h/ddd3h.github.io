@@ -536,11 +536,11 @@ drwxrwxr-x 28 nishihama nishihama 4096  6月 26 15:19 anaconda3/
 ```
 最初の文字がパーミッション(アクセス権)を表しています。
 
-<img src="2023-07-28-16-46-22.png" width=500px>
+<img src="/blog/linux-for-juniors-ja/2023-07-28-16-46-22.png" width=500px>
 
 アクセス権は次のように構成されています。
 
-<img src="2023-07-28-16-46-51.png" width=500px>
+<img src="/blog/linux-for-juniors-ja/2023-07-28-16-46-51.png" width=500px>
 
 ファイルの種別の表示は3つあり「 - 」はファイル、「 d 」はディレクトリ、「 l 」はリンクを表します。
 
@@ -559,7 +559,7 @@ drwxrwxr-x 28 nishihama nishihama 4096  6月 26 15:19 anaconda3/
 | `rw-`     | 110   | 6     |
 | `rwx`      | 111   | 7     |
 
-<img src="2023-07-28-16-47-53.png" width=400px>
+<img src="/blog/linux-for-juniors-ja/2023-07-28-16-47-53.png" width=400px>
 
 そして、このアクセス権をパーミッション755と表記します。
 

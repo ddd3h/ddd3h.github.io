@@ -1,15 +1,19 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import Sidebar from '../../components/Sidebar.astro';
+import ProfileHeader from '../../components/ProfileHeader.astro';
+import ResumeDetails from '../../components/ResumeDetails.astro';
 import { useTranslations } from '../../i18n/utils';
 import { site } from '../../data/site';
 import { experience, education, projects, committees, certifications } from '../../data/resume';
 
 const lang = 'ja';
 const t = useTranslations(lang);
+
+const technical = experience.filter(e => e.category === 'technical');
+const teaching = experience.filter(e => e.category === 'teaching');
 ---
 
-<BaseLayout lang={lang} currentPath="/ja/">
+<BaseLayout lang={lang} currentPath="/ja/" title={t('meta.home.title')} ogDescription={t('meta.home.description')}>
   <script type="application/ld+json" slot="head" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "Person",
@@ -17,106 +21,136 @@ const t = useTranslations(lang);
     "alternateName": "Daisuke Nishihama",
     "url": "https://ddd3h.github.io/ja/",
     "sameAs": [
+      "https://orcid.org/0009-0007-7716-1290",
+      "https://www.researchgate.net/profile/Daisuke-Nishihama-2",
       "https://github.com/ddd3h",
+      "https://zenn.dev/ddd3h",
+      "https://qiita.com/ddd3h",
       "https://twitter.com/daisuke0603N",
       "https://instagram.com/_ddd3h"
     ],
-    "jobTitle": "博士後期課程学生（宇宙物理学）",
+    "birthPlace": { "@type": "Place", "name": "埼玉県草加市" },
+    "homeLocation": { "@type": "Place", "name": "大阪府" },
+    "identifier": {
+      "@type": "PropertyValue",
+      "propertyID": "ORCID",
+      "value": "https://orcid.org/0009-0007-7716-1290"
+    },
+    "jobTitle": "博士課程学生（宇宙物理学）",
     "worksFor": {
       "@type": "Organization",
       "name": "大阪大学"
     }
   })} />
-  <div class="resume">
-    <Sidebar lang={lang} />
-    <div class="main-content">
 
-      <section class="section">
-        <div class="section-title">{t('main.profile')}</div>
-        {site.profileText[lang].split('\n\n').map(para => (
-          <p class="profile-text">{para.trim()}</p>
-        ))}
-      </section>
+  <div class="col col-hung">
+    <ProfileHeader lang={lang} />
 
-      <section class="section">
-        <div class="section-title">{t('main.experience')}</div>
-        <div class="subsection-title">技術・研究</div>
-        {experience.filter(e => e.category === 'technical').map(e => (
+    <section class="section">
+      <h2 class="section-title">{t('main.profile')}</h2>
+      <div class="section-body">
+        <ul class="plain-list">
+          {site.profileText[lang].map(line => (
+            <li class="plain-item">{line}</li>
+          ))}
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">{t('main.experience')}</h2>
+      <div class="section-body">
+        <div class="subsection-title">技術</div>
+        {technical.map(e => (
           <div class="entry">
-            <div>
+            <div class="entry-main">
               <div class="entry-title">{e[lang].title}</div>
               <div class="entry-org">{e[lang].org}</div>
               {e[lang].desc && <div class="entry-desc">{e[lang].desc}</div>}
             </div>
-            <div class="entry-date">{e.start} — {e.end ?? t('present')}</div>
+            <div class="entry-date">{e.start} – {e.end ?? t('present')}</div>
           </div>
         ))}
         <div class="subsection-title">教育</div>
-        {experience.filter(e => e.category === 'teaching').map(e => (
+        {teaching.map(e => (
           <div class="entry">
-            <div>
+            <div class="entry-main">
               <div class="entry-title">{e[lang].title}</div>
               <div class="entry-org">{e[lang].org}</div>
               {e[lang].desc && <div class="entry-desc">{e[lang].desc}</div>}
             </div>
-            <div class="entry-date">{e.start} — {e.end ?? t('present')}</div>
+            <div class="entry-date">{e.start} – {e.end ?? t('present')}</div>
           </div>
         ))}
-      </section>
+      </div>
+    </section>
 
-      <section class="section">
-        <div class="section-title">{t('main.education')}</div>
+    <section class="section">
+      <h2 class="section-title">{t('main.education')}</h2>
+      <div class="section-body">
         {education.map(e => (
           <div class="entry">
-            <div>
+            <div class="entry-main">
               <div class="entry-title">{e[lang].title}</div>
               <div class="entry-org">{e[lang].org}</div>
               {e[lang].desc && <div class="entry-desc">{e[lang].desc}</div>}
             </div>
-            <div class="entry-date">
-              {e.start} — {e.end ?? t('present')}
-            </div>
+            <div class="entry-date">{e.start} – {e.end ?? t('present')}</div>
           </div>
         ))}
-      </section>
+      </div>
+    </section>
 
-      {committees.length > 0 && (
-        <section class="section">
-          <div class="section-title">{t('main.committees')}</div>
+    {committees.length > 0 && (
+      <section class="section">
+        <h2 class="section-title">{t('main.committees')}</h2>
+        <div class="section-body">
           {committees.map(c => (
             <div class="entry">
-              <div>
+              <div class="entry-main">
                 <div class="entry-title">{c[lang].role}</div>
-                <div class="entry-org">{c[lang].org}</div>
+                {c[lang].org && <div class="entry-org">{c[lang].org}</div>}
                 {c[lang].desc && <div class="entry-desc">{c[lang].desc}</div>}
               </div>
-              <div class="entry-date">{c.start} — {c.end ?? t('present')}</div>
+              <div class="entry-date">{c.start} – {c.end ?? t('present')}</div>
             </div>
           ))}
-        </section>
-      )}
+        </div>
+      </section>
+    )}
 
-      {certifications.length > 0 && (
-        <section class="section">
-          <div class="section-title">{t('main.certifications')}</div>
-          <ul class="cert-list">
+    {certifications.length > 0 && (
+      <section class="section">
+        <h2 class="section-title">{t('main.certifications')}</h2>
+        <div class="section-body">
+          <ul class="plain-list">
             {certifications.map(c => (
-              <li class="cert-item">{c[lang]}</li>
+              <li class="plain-item">{c[lang]}</li>
             ))}
           </ul>
-        </section>
-      )}
+        </div>
+      </section>
+    )}
 
-      <section class="section">
-        <div class="section-title">{t('main.extra')}</div>
+    <section class="section">
+      <h2 class="section-title">{t('main.extra')}</h2>
+      <div class="section-body">
         {projects.map(p => (
-          <div class="extra-entry">
-            <div class="extra-title">{p[lang].title}</div>
-            <div class="extra-desc">{p[lang].desc}</div>
+          <div class="entry">
+            <div class="entry-main">
+              <div class="entry-title">{p[lang].title}</div>
+              <div class="entry-desc">{p[lang].desc}</div>
+            </div>
           </div>
         ))}
-      </section>
+      </div>
+    </section>
 
-    </div>
+    <section class="section">
+      <h2 class="section-title">詳細</h2>
+      <div class="section-body">
+        <ResumeDetails lang={lang} />
+      </div>
+    </section>
   </div>
 </BaseLayout>

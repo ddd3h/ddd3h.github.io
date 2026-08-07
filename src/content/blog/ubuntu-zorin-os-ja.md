@@ -154,7 +154,7 @@ alias pip "pip3.10"
 
 ## Julia
 
-<img src="julia.png" width=200px>
+<img src="/blog/ubuntu-zorin-os-ja/julia.png" width=200px>
 
 そもそもJuliaを知らない人のために
 

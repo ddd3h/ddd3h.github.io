@@ -62,7 +62,7 @@ export const experience: Entry[] = [
     en: {
       title: 'Sundai Education Center Inc.',
       org: 'Professorial Lecturer',
-      desc: 'Teaching science and mathematics to high school students preparing for university entrance examinations.',
+      desc: 'Teaching science to junior high school students.',
     },
     ja: {
       title: '駿台教育センター株式会社',
@@ -77,7 +77,7 @@ export const experience: Entry[] = [
     en: {
       title: 'Waseda Academy Co., Ltd.',
       org: 'Class Teacher',
-      desc: 'Teaching science and mathematics to high school students preparing for university entrance examinations.',
+      desc: 'Teaching science and mathematics to elementary and junior high school students.',
     },
     ja: {
       title: '株式会社早稲田アカデミー',
@@ -94,14 +94,15 @@ export const experience: Entry[] = [
 export const education: Entry[] = [
   {
     en: {
-      title: "Ph.D. of Science (in progress)",
+      // Currently enrolled, so this names the programme, not a conferred degree.
+      title: "Doctoral Program in Science",
       org: 'The University of Osaka, Graduate School of Science, Department of Earth and Space Science',
-      desc: 'OUTAP / Supervisor: Kentaro Nagamine'
+      desc: 'Cosmic Evolution Group (OUTAP) / Supervisor: Kentaro Nagamine'
     },
     ja: {
-      title: '博士（理学）（在学中）',
+      title: '博士課程',
       org: '大阪大学大学院 理学研究科 宇宙地球科学専攻',
-      desc: '宇宙進化グループ',
+      desc: '宇宙進化グループ（OUTAP） / 指導教員：長峰健太郎',
     },
     start: '2026',
     end: null,
@@ -110,12 +111,12 @@ export const education: Entry[] = [
     en: {
       title: "Master of Science in Astrophysics",
       org: 'The University of Osaka, Graduate School of Science, Department of Earth and Space Science',
-      desc: 'OUTAP / Supervisor: Kentaro Nagamine',
+      desc: 'Cosmic Evolution Group (OUTAP) / Supervisor: Kentaro Nagamine',
     },
     ja: {
       title: '修士（理学）',
       org: '大阪大学大学院 理学研究科 宇宙地球科学専攻',
-      desc: '宇宙進化グループ / 指導教員：長峰健太郎',
+      desc: '宇宙進化グループ（OUTAP） / 指導教員：長峰健太郎',
     },
     start: '2024',
     end: '2026',
@@ -123,7 +124,7 @@ export const education: Entry[] = [
   {
   en: {
     title: "Bachelor of Science in Physics",
-    org: "Saitama University, Department of Physics, Faculty of Science",
+    org: "Saitama University, Faculty of Science, Department of Physics",
     desc: 'Supervisor: Kousuke Sato',
   },
   ja: {
@@ -193,23 +194,19 @@ export const projects: Project[] = [
 ];
 
 // ----- SKILLS -----
-// level: 0–100
-export const technicalSkills = [
-  { name: 'Python', level: 100 },
-  { name: 'C / C++', level: 70 },
-  { name: 'Julia', level: 80 },
-  { name: 'Rust', level: 70 },
-  { name: 'TypeScript', level: 60 },
-  { name: 'HTML / CSS', level: 100 },
-  { name: 'Git', level: 80 },
-  { name: 'IoT / Microcontrollers', level: 72 },
+// Grouped rather than a flat list, so a reader can tell what each thing is for.
+// Most entries are evidenced by the public repos at github.com/ddd3h; the
+// embedded/telemetry work is not on GitHub and is carried over from the resume.
+// One flat line, but ordered by kind — languages, scientific computing, ML,
+// web, embedded, tooling — so it still reads in groups without the labels.
+export const technicalSkills: string[] = [
+  'Python', 'TypeScript / JavaScript', 'C / C++', 'Julia', 'Rust', 'Shell',
+  'NumPy', 'pandas', 'Matplotlib', 'Jupyter', 'HDF5',
+  'scikit-learn', 'LightGBM', 'Optuna', 'MLflow', 'Prefect',
+  'React', 'Next.js', 'Astro', 'Tauri', 'Tailwind CSS', 'FastAPI', 'Prisma', 'Socket.IO',
+  'IoT / microcontrollers', 'Telemetry systems',
+  'Git', 'Docker', 'LaTeX',
 ];
-
-// ----- PERSONALITY TAGS -----
-export const personality = {
-  en: ['Ambitious', 'Open-minded', 'Team Player', 'Intellectually curious'],
-  ja: ['向上心が強い', 'オープンマインド', 'チームプレイヤー', '知的好奇心旺盛'],
-};
 
 // ----- INTEREST TAGS -----
 export const interests = {
@@ -227,7 +224,7 @@ export type CommitteeEntry = {
 
 export const committees: CommitteeEntry[] = [
   {
-    en: { role: '3rd President of Akatoki', org: 'Space Engineering Circle Akatoki, 3rd Generation President' },
+    en: { role: '3rd President of Akatoki', org: 'Akatoki Space Engineering Circle, Saitama University' },
     ja: { role: 'あかとき 第3代代表', org: '埼玉大学宇宙工学サークルあかとき' },
     start: '2022.04',
     end: '2023.03',
@@ -240,21 +237,21 @@ export const committees: CommitteeEntry[] = [
   },
   {
     en: { role: 'Ehime Nanyo Joint Balloon Experiment Operations Committee / Japan-Mongolia Joint Balloon Experiment Safety Review Committee', org: 'Committee Member' },
-    ja: { role: '委員', org: 'えひめ南予共同気球実験運営委員会・日本モンゴル共同気球実験安全審査委員会' },
-    start: '2024.03',
-    end: '2026.12',
+    ja: { role: 'えひめ南予共同気球実験運営委員会・日本モンゴル共同気球実験安全審査委員会', org: '委員' },
+    start: '2024',
+    end: '2026',
   },
   {
     en: { role: 'Japanese Astronomical Society Member', org: '' },
     ja: { role: '日本天文学会 会員', org: '' },
     start: '2024',
-    end: '2026',
+    end: null,
   },
   {
     en: { role: 'Secretariat / Session Chair, Galaxy & Galaxy Cluster Division', org: '55th Summer School of Astronomy and Astrophysics for Young Researchers' },
     ja: { role: '事務局・銀河・銀河団分科会座長団', org: '第55回 天文・天体物理若手夏の学校' },
-    start: '2025.03',
-    end: '2025.12',
+    start: '2025',
+    end: '2025',
   },
 ];
 
@@ -265,25 +262,28 @@ export type Certification = {
   year?: string;
 };
 
+// English follows the wording of the Act on Educational Personnel Certification:
+// 専修免許状 = advanced (master's-level), 一種免許状 = type I (bachelor's-level).
+// Advanced first, since it supersedes type I for the same school level and subject.
 export const certifications: Certification[] = [
   {
-    en: 'High School Teacher Type 1 License (Science)',
-    ja: '高等学校教諭一種免許状（理科）',
-  },
-  {
-    en: 'Junior High School Teacher Type 1 License (Science)',
-    ja: '中学校教諭一種免許状（理科）',
-  },
-  {
-    en: 'High School Teacher Specialized License (Science)',
+    en: "Advanced Teacher's License, Senior High School (Science)",
     ja: '高等学校教諭専修免許状（理科）',
   },
   {
-    en: 'Junior High School Teacher Specialized License (Science)',
+    en: "Advanced Teacher's License, Junior High School (Science)",
     ja: '中学校教諭専修免許状（理科）',
   },
   {
-    en: 'Ordinary Motor Vehicle Type 1 Driver\'s License (AT)',
+    en: "Type I Teacher's License, Senior High School (Science)",
+    ja: '高等学校教諭一種免許状（理科）',
+  },
+  {
+    en: "Type I Teacher's License, Junior High School (Science)",
+    ja: '中学校教諭一種免許状（理科）',
+  },
+  {
+    en: "Class 1 Ordinary Driver's License (automatic transmission only)",
     ja: '普通自動車第一種運転免許（AT限定）',
   },
 ];

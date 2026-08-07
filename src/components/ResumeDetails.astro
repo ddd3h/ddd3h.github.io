@@ -1,0 +1,90 @@
+---
+import type { Lang } from '../i18n/utils';
+import { site } from '../data/site';
+import { technicalSkills, spokenLanguages, interests } from '../data/resume';
+import Icon from './Icon.astro';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+
+
+// Email is the only actual way to reach him; the rest are profiles, so they get
+// their own row. Built as a list, so anything commented out in site.ts drops away.
+// `label` names the service and the handle, since the icon alone has to carry
+// the meaning — it becomes both the tooltip and the accessible name.
+const c = site.contact;
+type IconName = 'github' | 'orcid' | 'researchgate' | 'zenn' | 'qiita' | 'twitter' | 'instagram';
+type MetaLink = { href: string; label: string; icon: IconName };
+const links: MetaLink[] = [];
+if (c.github) links.push({ href: `https://github.com/${c.github}`, label: `GitHub — github.com/${c.github}`, icon: 'github' });
+if (c.orcid) links.push({ href: `https://orcid.org/${c.orcid}`, label: `ORCID — ${c.orcid}`, icon: 'orcid' });
+if (c.researchgate) links.push({ href: `https://www.researchgate.net/profile/${c.researchgate}`, label: `ResearchGate — ${c.researchgate}`, icon: 'researchgate' });
+if (c.zenn) links.push({ href: `https://zenn.dev/${c.zenn}`, label: `Zenn — zenn.dev/${c.zenn}`, icon: 'zenn' });
+if (c.qiita) links.push({ href: `https://qiita.com/${c.qiita}`, label: `Qiita — qiita.com/${c.qiita}`, icon: 'qiita' });
+if (c.twitter) links.push({ href: `https://x.com/${c.twitter}`, label: `X — x.com/${c.twitter}`, icon: 'twitter' });
+if (c.instagram) links.push({ href: `https://instagram.com/${c.instagram}`, label: `Instagram — instagram.com/${c.instagram}`, icon: 'instagram' });
+
+const labels = {
+  en: { email: 'Email', links: 'Links', skills: 'Skills', languages: 'Languages', interests: 'Interests' },
+  ja: { email: 'メール', links: 'リンク', skills: 'スキル', languages: '言語', interests: '興味' },
+}[lang];
+---
+
+<dl class="detail-list">
+  {c.email && (
+    <>
+      <dt>{labels.email}</dt>
+      <dd><a href={`mailto:${c.email}`}>{c.email}</a></dd>
+    </>
+  )}
+
+  {links.length > 0 && (
+    <>
+      <dt>{labels.links}</dt>
+      <dd class="link-line">
+        {links.map(l => (
+          <a href={l.href} class="link-icon" title={l.label} aria-label={l.label}>
+            <Icon name={l.icon} size={19} />
+          </a>
+        ))}
+      </dd>
+    </>
+  )}
+
+  <dt>{labels.skills}</dt>
+  <dd>{technicalSkills.join(', ')}</dd>
+
+  <dt>{labels.languages}</dt>
+  <dd>
+    {spokenLanguages.map(l => (
+      <div>{l[lang].name} — {l[lang].level}</div>
+    ))}
+  </dd>
+
+  <dt>{labels.interests}</dt>
+  <dd>
+    <div class="tag-list">
+      {interests[lang].map(i => <span class="tag">{i}</span>)}
+    </div>
+  </dd>
+</dl>
+
+<style>
+  .link-line {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.55rem 0.85rem;
+  }
+  .link-icon {
+    display: flex;
+    color: var(--muted);
+    /* Widen the tap target past the 19px glyph without disturbing the row. */
+    padding: 0.15rem;
+    margin: -0.15rem;
+  }
+  .link-icon:hover { color: var(--ink); }
+</style>

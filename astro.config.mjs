@@ -8,7 +8,9 @@ export default defineConfig({
   integrations: [mdx(), sitemap()],
   prefetch: {
     prefetchAll: true,
-    defaultStrategy: 'viewport',
+    // 'hover' rather than 'viewport': the blog index links to every post, and the
+    // viewport strategy fired all of them at once against the critical path.
+    defaultStrategy: 'hover',
   },
   i18n: {
     defaultLocale: 'en',
