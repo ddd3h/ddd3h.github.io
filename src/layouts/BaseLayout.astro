@@ -3,8 +3,6 @@ import type { Lang } from '../i18n/utils';
 import { useTranslations } from '../i18n/utils';
 import LanguagePicker from '../components/LanguagePicker.astro';
 import { ClientRouter } from 'astro:transitions';
-import { getImage } from 'astro:assets';
-import profileSrc from '../assets/profile.jpg';
 
 interface Props {
   title?: string;
@@ -38,21 +36,14 @@ const ogLocale = lang === 'ja' ? 'ja_JP' : 'en_US';
 const ogLocaleAlt = lang === 'ja' ? 'en_US' : 'ja_JP';
 // Derived from `site` in astro.config.mjs so the domain lives in exactly one place.
 const siteUrl = Astro.site.href.replace(/\/$/, '');
-// Default OGP image is derived from the same source as the avatar, so there is no
-// unoptimized copy sitting in public/. Pages that pass `ogImage` use the 1200x630
-// satori-generated card from /og/[slug].png instead.
-// 1000px matches the source crop — asking for more would only upscale it.
-const ogFallback = await getImage({
-  src: profileSrc,
-  width: 1000,
-  height: 1000,
-  format: 'jpeg',
-  quality: 80,
-});
-const resolvedOgImage = ogImage ?? `${siteUrl}${ogFallback.src}`;
-// The fallback is square; the satori cards are 1200x630. Declare what is actually there.
-const ogImageWidth = ogImage ? 1200 : 1000;
-const ogImageHeight = ogImage ? 630 : 1000;
+// Every page shares one branded card except blog posts, which pass `ogImage`
+// pointing at the 1200x630 card that /og/[slug].png generates from their title.
+// The default lives at a fixed path rather than a hashed asset URL so that social
+// caches keep resolving it across rebuilds.
+const resolvedOgImage = ogImage ?? `${siteUrl}/og-default.jpg`;
+// The default card is 16:9; the satori cards are 1.91:1. Declare what is there.
+const ogImageWidth = 1200;
+const ogImageHeight = ogImage ? 630 : 675;
 const t = useTranslations(lang);
 
 const homePath = lang === 'en' ? '/' : '/ja/';
