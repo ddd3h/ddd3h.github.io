@@ -4,7 +4,7 @@ import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://ddd3h.github.io',
+  site: 'https://www.ddd3h.com',
   integrations: [mdx(), sitemap()],
   prefetch: {
     prefetchAll: true,

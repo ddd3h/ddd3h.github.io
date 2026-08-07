@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ddd3h.github.io/sitemap-index.xml
+Sitemap: https://www.ddd3h.com/sitemap-index.xml

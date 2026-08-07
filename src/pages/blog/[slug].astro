@@ -13,6 +13,7 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props;
 const { Content } = await render(post);
+const siteUrl = Astro.site.href.replace(/\/$/, '');
 const lang = 'en';
 const t = useTranslations(lang);
 
@@ -25,7 +26,7 @@ function formatDate(date: Date): string {
   lang={lang}
   currentPath={`/blog/${post.id}/`}
   title={`${post.data.title} | Daisuke Nishihama`}
-  ogImage={`https://ddd3h.github.io/og/${post.id}.png`}
+  ogImage={`${siteUrl}/og/${post.id}.png`}
   ogDescription={post.data.description}
   ogType="article"
   altPath="/ja/blog/"
@@ -41,10 +42,10 @@ function formatDate(date: Date): string {
     datePublished: post.data.date.toISOString(),
     inLanguage: 'en',
     keywords: post.data.tags?.join(', '),
-    image: `https://ddd3h.github.io/og/${post.id}.png`,
-    mainEntityOfPage: { '@type': 'WebPage', '@id': `https://ddd3h.github.io/blog/${post.id}/` },
-    author: { '@type': 'Person', name: 'Daisuke Nishihama', url: 'https://ddd3h.github.io/' },
-    publisher: { '@type': 'Person', name: 'Daisuke Nishihama', url: 'https://ddd3h.github.io/' },
+    image: `${siteUrl}/og/${post.id}.png`,
+    mainEntityOfPage: { '@type': 'WebPage', '@id': `${siteUrl}/blog/${post.id}/` },
+    author: { '@type': 'Person', name: 'Daisuke Nishihama', url: `${siteUrl}/` },
+    publisher: { '@type': 'Person', name: 'Daisuke Nishihama', url: `${siteUrl}/` },
   })} />
   <div class="col">
     <a href="/blog/" class="blog-post-back">{t('blog.back')}</a>

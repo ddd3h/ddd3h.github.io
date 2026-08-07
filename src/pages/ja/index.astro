@@ -6,6 +6,7 @@ import { useTranslations } from '../../i18n/utils';
 import { site } from '../../data/site';
 import { experience, education, projects, committees, certifications } from '../../data/resume';
 
+const siteUrl = Astro.site.href.replace(/\/$/, '');
 const lang = 'ja';
 const t = useTranslations(lang);
 
@@ -19,7 +20,7 @@ const teaching = experience.filter(e => e.category === 'teaching');
     "@type": "Person",
     "name": "西濱大将",
     "alternateName": "Daisuke Nishihama",
-    "url": "https://ddd3h.github.io/ja/",
+    "url": `${siteUrl}/ja/`,
     "sameAs": [
       "https://orcid.org/0009-0007-7716-1290",
       "https://www.researchgate.net/profile/Daisuke-Nishihama-2",

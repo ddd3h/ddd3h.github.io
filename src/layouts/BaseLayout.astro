@@ -36,7 +36,8 @@ const {
 } = Astro.props;
 const ogLocale = lang === 'ja' ? 'ja_JP' : 'en_US';
 const ogLocaleAlt = lang === 'ja' ? 'en_US' : 'ja_JP';
-const siteUrl = 'https://ddd3h.github.io';
+// Derived from `site` in astro.config.mjs so the domain lives in exactly one place.
+const siteUrl = Astro.site.href.replace(/\/$/, '');
 // Default OGP image is derived from the same source as the avatar, so there is no
 // unoptimized copy sitting in public/. Pages that pass `ogImage` use the 1200x630
 // satori-generated card from /og/[slug].png instead.
