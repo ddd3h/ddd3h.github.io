@@ -443,6 +443,8 @@ const switcherLabel = lang === 'en' ? '日本語' : 'English';
     margin: 1rem 0;
   }
   .blog-post-content pre code { background: none; padding: 0; font-size: 0.85em; }
+  /* Shiki writes its theme background inline; force the site's code surface. */
+  .blog-post-content pre.astro-code { background-color: var(--code-bg) !important; font-family: var(--font-mono); line-height: 1.6; }
   .blog-post-content img { max-width: 100%; height: auto; display: block; margin: 1rem 0; }
   .blog-post-content table { display: block; overflow-x: auto; border-collapse: collapse; margin: 1rem 0; }
   .blog-post-content th, .blog-post-content td {
@@ -457,6 +459,47 @@ const switcherLabel = lang === 'en' ? '日本語' : 'English';
     color: var(--muted);
     margin: 1rem 0;
   }
+
+  .blog-post-content img.logo { display: inline-block; margin: 0 0.3rem 0 0; vertical-align: -3px; }
+
+  /* ---------- Diagrams (inline SVG in posts) ----------
+     One shared vocabulary so every figure looks the same: .box (neutral node),
+     .acc (the one highlighted node, --link), .ln / .ln-acc (connectors),
+     .mut (secondary text), .mono (code text). No hard-coded colours. */
+  /* Below ~560px the 13px labels would shrink past legibility, so the figure
+     scrolls sideways instead of scaling down further. */
+  .blog-post-content figure.diagram { margin: 1.6rem 0; overflow-x: auto; }
+  .blog-post-content figure.diagram figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.82rem;
+    line-height: 1.6;
+    color: var(--muted);
+  }
+  svg.dg {
+    display: block;
+    width: 100%;
+    max-width: 720px;
+    min-width: 560px;
+    height: auto;
+    font-family: var(--font-main);
+    font-size: 13px;
+    fill: var(--ink);
+  }
+  svg.dg .box { fill: var(--code-bg); stroke: var(--line); stroke-width: 1.5; }
+  svg.dg .plain { fill: none; stroke: var(--line); stroke-width: 1.5; }
+  svg.dg .acc { fill: none; stroke: var(--link); stroke-width: 1.5; }
+  svg.dg .ln { fill: none; stroke: var(--muted); stroke-width: 1.5; }
+  svg.dg .ln-acc { fill: none; stroke: var(--link); stroke-width: 1.5; }
+  svg.dg .dash { stroke-dasharray: 4 3; }
+  svg.dg text { stroke: none; }
+  svg.dg .mut { fill: var(--muted); }
+  svg.dg .link { fill: var(--link); }
+  svg.dg .bold { font-weight: 700; }
+  svg.dg .mono { font-family: var(--font-mono); }
+  svg.dg .mid { text-anchor: middle; }
+  svg.dg .end { text-anchor: end; }
+  svg.dg .head { fill: var(--muted); stroke: none; }
+  svg.dg .head-acc { fill: var(--link); stroke: none; }
 
   /* ---------- Responsive ---------- */
   @media (max-width: 768px) {
