@@ -702,6 +702,26 @@ $ nano memo.txt
 | `:q!` | 保存せずに強制終了する(**失敗したときの脱出口**) |
 | `/文字列` | 検索する(ノーマルモードで入力) |
 
+### おすすめのエディタ: AstroNvim
+
+ここからは、僕のおすすめの話です。vim の仲間に、vim を作り直した **Neovim(`nvim`)** というエディタがあります。僕は、この Neovim を使いやすく設定済みにした **[AstroNvim](https://astronvim.com/)** を使っています。
+
+<figure class="diagram">
+<img src="/blog/linux-for-juniors-ja/astronvim.jpg" alt="AstroNvimの画面例。左にファイルの一覧、中央にコード、右にコードの構造が表示され、明るい配色と暗い配色の3種類が重なっている。" width="640">
+<figcaption>AstroNvim の画面例。ファイル一覧とコードの構造が、ターミナルの中に並ぶ。(画像: <a href="https://astronvim.com/" target="_blank" rel="noopener noreferrer">AstroNvim 公式サイト</a>)</figcaption>
+</figure>
+
+操作の基本は vim と同じなので、ここまでの `i`、`Esc`、`:wq` は、そのまま使えます。そのうえで、色分けやファイル一覧、補完が、入れるだけで使えるようになります。自分で設定ファイルを1から書く必要はありません。
+
+```term
+$ git clone --depth 1 https://github.com/AstroNvim/template ~/.config/nvim
+$ nvim
+```
+
+初回の起動時に、必要なプラグインが自動で入ります。詳しい手順や前提条件は、公式サイトで確認してください。
+
+とはいえ、サーバーで設定ファイルを少し直すだけなら、nano か vim の最低限で十分です。AstroNvim は、**エディタを使い込みたくなってから** 試せば間に合います。
+
 ---
 
 ## 9. ユーザーとグループ
@@ -715,6 +735,20 @@ $ nano memo.txt
 - **root**: UIDが0の、**何でもできる管理者** です。ファイルを消すのも、他人の設定を変えるのも自由です。
 
 普段の作業を一般ユーザーで行い、管理者権限が必要なときだけ `sudo` で一時的に借りる、というのが安全な使い方です。
+
+> **小ネタ：** 初めて `sudo` を使うと、環境によっては、次のメッセージが出ることがあります(macOS では有名です)。
+>
+> ```
+> We trust you have received the usual lecture from the local System Administrator.
+> It usually boils down to these three things:
+>
+>     #1) Respect the privacy of others.
+>     #2) Think before you type.
+>     #3) With great power comes great responsibility.
+> ```
+>
+> 日本語にすると、「他人のプライバシーを尊重すること」「打つ前に考えること」「大いなる力には、大いなる責任が伴うこと」の3つです。管理者の権限は、何でも壊せる強力なものなので、使う前に一呼吸おくように、という忠告です。
+> 最後の言葉は、映画『スパイダーマン』でベンおじさんがピーターに言う、あの名セリフとして有名です。`sudo` の開発者が、これを引用して遊び心を入れたものと思われます。
 
 <figure class="diagram">
 <svg class="dg" viewBox="0 0 720 208" role="img" aria-labelledby="dg7t">
@@ -781,6 +815,13 @@ $ sudo userdel -r bob                  # bob を削除(-r: ホームごと削除
 ```term
 $ sudo adduser bob
 ```
+
+<figure class="diagram">
+<img src="/blog/linux-for-juniors-ja/adduser.png" alt="sudo adduser bob を実行したときのターミナルの画面。ユーザーとグループとホームディレクトリが作られ、パスワードと名前などの入力を求められる。" width="600">
+<figcaption>`adduser` の実行例(イメージ)。ホームディレクトリの作成から、パスワードや名前の入力まで、順番に聞いてくれる。</figcaption>
+</figure>
+
+パスワードを2回入力したあと、「Full Name」などの情報は、空のまま Enter で飛ばして構いません。最後の確認は `Y` で進めます。
 
 ### パスワードの変更
 
@@ -1373,6 +1414,51 @@ LISTEN  127.0.0.1:5432
 
 **SSH(Secure Shell)** は、通信を暗号化したうえで、離れたマシンのシェルを操作する仕組みです。サーバー側では `sshd` というサービス(13章)が待ち受けています。
 
+### 昔の方法: telnet
+
+SSHが広まる前は、離れたマシンの操作に **telnet(テルネット)** が使われていました。使い方はSSHとほとんど同じで、サーバーのシェルをこちらの画面に映し、コマンドを打てます。ポート番号は `23` 番です。
+
+ただし、telnet は通信を **暗号化しません**。ログインに使うユーザー名とパスワードも、そのままの文字で、ネットワークを流れます。同じネットワークにいる人が通信を覗くと(盗聴)、パスワードが丸見えになります。
+
+<figure class="diagram">
+<svg class="dg" viewBox="0 0 720 230" role="img" aria-labelledby="dg15at">
+<title id="dg15at">telnet と SSH の違い。telnet ではパスワードが平文のまま流れ、盗聴者に読まれる。SSH では暗号化された文字列が流れ、盗聴者には読めない。</title>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="head" d="M0 0L10 5L0 10z"/></marker><marker id="aha" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="head-acc" d="M0 0L10 5L0 10z"/></marker></defs>
+<text class="bold" x="20" y="22">telnet(ポート23)</text>
+<rect class="box" x="20" y="34" width="110" height="44" rx="2"/>
+<text class="mid" x="75" y="61">自分のPC</text>
+<rect class="box" x="590" y="34" width="110" height="44" rx="2"/>
+<text class="mid" x="645" y="61">サーバー</text>
+<path class="ln" d="M130 56H590" marker-end="url(#ah)"/>
+<rect class="box" x="270" y="42" width="180" height="28" rx="2"/>
+<text class="mid mono" x="360" y="61">password: pass1234</text>
+<text class="mut" x="20" y="100" font-size="12">途中で覗かれると、そのまま読める → パスワードが盗まれる</text>
+<text class="bold" x="20" y="142">SSH(ポート22)</text>
+<rect class="box" x="20" y="154" width="110" height="44" rx="2"/>
+<text class="mid" x="75" y="181">自分のPC</text>
+<rect class="box" x="590" y="154" width="110" height="44" rx="2"/>
+<text class="mid" x="645" y="181">サーバー</text>
+<path class="ln-acc" d="M130 176H590" marker-end="url(#aha)"/>
+<rect class="box" x="270" y="162" width="180" height="28" rx="2"/>
+<rect class="acc" x="270" y="162" width="180" height="28" rx="2"/>
+<text class="mid mono link" x="360" y="181">Zk3#9fQ&amp;x7Lp…</text>
+<text class="mut" x="20" y="220" font-size="12">暗号化されているので、覗かれても意味が分からない</text>
+</svg>
+<figcaption>図15 telnet は文字がそのまま流れ、SSH は暗号化して流れる。</figcaption>
+</figure>
+
+SSHは、この問題を解決するために1995年に作られました。今は、**サーバーへのログインに telnet を使うことはありません。** サーバー側で telnet が有効になっている場合も、無効にするのが基本です。
+
+一方で、`telnet` コマンドは「相手のポートが開いているか」を確かめる道具として、今も使われることがあります。
+
+```term
+$ telnet server.example.com 22
+Connected to server.example.com.
+SSH-2.0-OpenSSH_9.6
+```
+
+このように、接続できて、相手のあいさつ(SSHのバージョン)が返れば、そのポートは開いています。確認が終わったら、`Ctrl + ]` のあとに `quit` と打って抜けます。
+
 ### 接続する
 
 ```term
@@ -1419,7 +1505,7 @@ Are you sure you want to continue connecting (yes/no)?
 <text class="mid link" x="360" y="96" font-size="12">③ 秘密鍵で署名して返す</text>
 <text class="mid mut" x="360" y="196" font-size="12">④ サーバーが公開鍵で検証。合っていればログイン成功</text>
 </svg>
-<figcaption>図15 秘密鍵そのものはネットワークに流れない。署名だけを送って、本人であることを証明する。</figcaption>
+<figcaption>図16 秘密鍵そのものはネットワークに流れない。署名だけを送って、本人であることを証明する。</figcaption>
 </figure>
 
 手順は次のとおりです。
