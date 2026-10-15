@@ -51,10 +51,16 @@ tags:
 
 ### Linuxを作った人
 
-<figure style="margin:1rem 0">
+<div style="display:flex;flex-wrap:wrap;gap:1.5rem;align-items:flex-end;margin:1rem 0">
+<figure style="margin:0">
 <img src="/blog/linux-for-juniors-ja/linus-torvalds.jpg" alt="リーナス・トーバルズの顔写真" width="200" style="margin:0">
 <figcaption style="font-size:0.75rem;line-height:1.5;color:var(--muted);margin-top:0.3rem">リーナス・トーバルズ<br>Photo: Krd / Von Sprat, <a href="https://commons.wikimedia.org/wiki/File:LinuxCon_Europe_Linus_Torvalds_03_(cropped).jpg" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a></figcaption>
 </figure>
+<figure style="margin:0">
+<img src="/blog/linux-for-juniors-ja/tux.svg" alt="Linuxのマスコットキャラクター、ペンギンのTux" width="160" style="margin:0">
+<figcaption style="font-size:0.75rem;line-height:1.5;color:var(--muted);margin-top:0.3rem">Linuxのマスコット「Tux(タックス)」<br>Original: Larry Ewing, The GIMP</figcaption>
+</figure>
+</div>
 
 Linuxは、**リーナス・トーバルズ(Linus Torvalds)** が作りました。1969年にフィンランドで生まれた彼は、1991年、大学生だった21歳のときに、趣味でOSのカーネルを作り始めました。
 
@@ -63,6 +69,8 @@ Linuxは、**リーナス・トーバルズ(Linus Torvalds)** が作りました
 リーナスは、今もLinuxカーネルの開発を取りまとめています。ソースコードを管理するツールの **Git** も、彼がLinuxの開発のために作ったものです。
 
 名前の「Linux」は、Linus と Unix を合わせたものです。
+
+なお、Linuxのマスコットは、ペンギンの **Tux(タックス)** です。リーナスがペンギン好きだったことから採用され、1996年のロゴコンテストで、Larry Ewing さんの作品が選ばれました。
 
 ### OSとカーネル
 
